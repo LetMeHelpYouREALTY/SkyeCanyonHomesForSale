@@ -5,6 +5,7 @@ import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
+import { getHeroImage } from '@/data/hero-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalSchema from '@/components/schema/hyperlocal-schema';
@@ -70,6 +71,8 @@ export default function AreaPage({ area }: AreaPageProps) {
         headline={area.headline}
         answerSummary={area.answerSummary}
         badges={area.zipCodes.map((z) => `Zip ${z}`)}
+        image={getHeroImage('area').src}
+        imageAlt={`${area.name} — ${getHeroImage('area').alt}`}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
         <p className="text-gray-700 text-lg leading-relaxed">{area.description}</p>

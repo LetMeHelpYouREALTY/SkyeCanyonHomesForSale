@@ -1,21 +1,21 @@
 'use client';
 
 import VoiceSearchIntegration from '@/components/voice-search-integration';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 
 export default function VoiceSearchPage() {
   return (
     <>
+      <PageHero
+        title="Voice-Activated Property Search"
+        subtitle="AI-powered voice search for Skye Canyon and northwest Las Vegas MLS listings."
+        image={getHeroImage('voice-search').src}
+        imageAlt={getHeroImage('voice-search').alt}
+        minHeight="sm"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Voice-Activated Property Search
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the future of real estate search with our AI-powered voice assistant.
-              Simply speak your requirements and discover properties that match your needs.
-            </p>
-          </div>
 
           <div className="mb-8">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-4xl mx-auto">

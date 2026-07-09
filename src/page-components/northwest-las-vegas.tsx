@@ -2,6 +2,8 @@
 
 import { Home, MapPin, Shield, TrendingUp } from 'lucide-react';
 import RealScoutListings from '@/components/realscout-listings';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -36,24 +38,13 @@ export default function NorthwestLasVegas() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-realscout-blue to-realscout-navy text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Northwest Las Vegas Skye Canyon Homes Real Estate
-            </h1>
-            <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-              Discover luxury homes in Las Vegas's most desirable northwest communities. From
-              guard-gated Skye Canyon to family-friendly Centennial Hills.
-            </p>
-            <div className="flex items-center justify-center text-lg">
-              <MapPin className="w-6 h-6 mr-2" />
-              <span>Serving Northwest Las Vegas, NV 89149, 89166, 89144</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Northwest Las Vegas Real Estate"
+        subtitle="Luxury homes in Skye Canyon, Centennial Hills, and surrounding northwest Las Vegas zip codes 89149, 89166, and 89144."
+        image={getHeroImage('northwest-las-vegas').src}
+        imageAlt={getHeroImage('northwest-las-vegas').alt}
+        badges={['89166', '89149', '89144']}
+      />
 
       {/* Current Listings */}
       <section className="py-16 bg-white">

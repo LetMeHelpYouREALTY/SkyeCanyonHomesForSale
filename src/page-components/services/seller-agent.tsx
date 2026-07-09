@@ -2,37 +2,33 @@
 
 import { CalendlyPopupButton } from '@/components/calendly-widget';
 import HomebotWidget from '@/components/homebot-widget';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 
 export default function SellerAgentServices() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
 
-      <section className="py-12 bg-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Skye Canyon Homes Seller's Agent Expert
-            </h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-              Professional listing and marketing services with proven results in the competitive
-              Skye Canyon market.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CalendlyPopupButton
-                text="Schedule a Listing Consultation"
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors"
-              />
-              <a
-                href="tel:+17025001902"
-                className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 border-2 border-green-400 transition-colors"
-              >
-                Call (702) 500-1902
-              </a>
-            </div>
-          </div>
+      <PageHero
+        title="Skye Canyon Seller's Agent Expert"
+        subtitle="Professional listing and marketing services with proven results in the Skye Canyon market."
+        image={getHeroImage('seller-agent').src}
+        imageAlt={getHeroImage('seller-agent').alt}
+      >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <CalendlyPopupButton
+            text="Schedule a Listing Consultation"
+            className="bg-white text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors"
+          />
+          <a
+            href="tel:+17025001902"
+            className="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/30 border-2 border-white/40 transition-colors"
+          >
+            Call (702) 500-1902
+          </a>
         </div>
-      </section>
+      </PageHero>
 
         {/* Home Valuation Widget */}
         <section className="py-16 bg-white">

@@ -5,6 +5,8 @@ import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function SkyeCanyonGuide() {
@@ -12,18 +14,12 @@ export default function SkyeCanyonGuide() {
     <>
       <div className="min-h-screen bg-gray-50">
 
-        {/* Community Overview */}
-        <section className="bg-gradient-to-br from-realscout-blue via-realscout-light to-realscout-navy text-white py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Skye Canyon Homes Community Guide Las Vegas 89166 Living
-            </h1>
-            <p className="text-xl opacity-90 mb-8">
-              Discover what makes Skye Canyon one of Las Vegas's most desirable guard-gated
-              communities
-            </p>
-          </div>
-        </section>
+        <PageHero
+          title="Skye Canyon Homes Community Guide Las Vegas 89166"
+          subtitle="Discover what makes Skye Canyon one of Las Vegas's most desirable master-planned communities."
+          image={getHeroImage('skye-canyon-guide').src}
+          imageAlt={getHeroImage('skye-canyon-guide').alt}
+        />
 
         {/* Current Listings */}
         <section className="py-16 bg-white">

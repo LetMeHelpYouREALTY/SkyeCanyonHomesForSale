@@ -18,6 +18,8 @@ import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import PerformanceInsights from '@/components/performance-insights';
 import RealScoutListings from '@/components/realscout-listings';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -77,6 +79,14 @@ export default function About() {
     <>
       <div className="min-h-screen bg-gray-50">
 
+        <PageHero
+          title="Meet Dr. Jan Duffy, REALTOR®"
+          subtitle="Your trusted Skye Canyon real estate expert — 15+ years specializing in northwest Las Vegas luxury homes."
+          image={getHeroImage('about').src}
+          imageAlt={getHeroImage('about').alt}
+          minHeight="sm"
+        />
+
         {/* Breadcrumb Navigation */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
           <Breadcrumb items={[{ label: 'About Dr. Duffy' }]} />
@@ -91,9 +101,9 @@ export default function About() {
                   <Award className="w-4 h-4 mr-2" />
                   <span className="text-sm font-medium">Skye Canyon Specialist</span>
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                  Meet Dr. Jan Duffy, REALTOR®
-                </h1>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                  Skye Canyon Real Estate Specialist
+                </h2>
                 <p className="text-xl mb-4 text-gray-700 font-medium">
                   Your Trusted Skye Canyon Real Estate Expert
                 </p>

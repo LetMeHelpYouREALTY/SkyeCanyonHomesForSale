@@ -6,27 +6,20 @@ import FAQSection from '@/components/faq-section';
 import MarketIntelligence from '@/components/market-intelligence';
 import MarketStats from '@/components/market-stats';
 import RealScoutListings from '@/components/realscout-listings';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 
 export default function MarketAnalysis() {
   return (
     <>
       <div className="min-h-screen bg-gray-50">
 
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-realscout-blue via-realscout-light to-realscout-navy text-white py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Skye Canyon Real Estate Market Trends Nevada 89166
-            </h1>
-            <p className="text-xl opacity-90 mb-8">
-              Comprehensive real estate market insights and trends for Skye Canyon, Las Vegas
-            </p>
-            <p className="text-lg opacity-80">
-              Stay informed with the latest market data, pricing trends, and investment
-              opportunities in Las Vegas's premier guard-gated community.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          title="Skye Canyon Real Estate Market Trends Nevada 89166"
+          subtitle="Comprehensive market insights and pricing trends for Skye Canyon, Las Vegas — stay informed on investment opportunities in northwest Las Vegas."
+          image={getHeroImage('market-analysis').src}
+          imageAlt={getHeroImage('market-analysis').alt}
+        />
 
         {/* Breadcrumb Navigation */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">

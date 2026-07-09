@@ -3,6 +3,8 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { CalendlyInline } from '@/components/calendly-widget';
 import HomebotWidget from '@/components/homebot-widget';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function Contact() {
@@ -10,16 +12,12 @@ export default function Contact() {
   return (
     <>
       <main className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Dr. Jan Duffy</h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Ready to find your dream home in Skye Canyon? Get expert guidance from Las Vegas's
-              premier luxury real estate specialist.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          title="Contact Dr. Jan Duffy"
+          subtitle="Ready to find your home in Skye Canyon? Get expert guidance from Las Vegas's premier luxury real estate specialist."
+          image={getHeroImage('contact').src}
+          imageAlt={getHeroImage('contact').alt}
+        />
 
         {/* Contact Form and Info */}
         <section className="py-16">

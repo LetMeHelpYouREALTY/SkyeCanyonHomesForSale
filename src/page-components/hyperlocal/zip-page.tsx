@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
+import { getHeroImage } from '@/data/hero-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalRealtorServices from '@/components/sections/hyperlocal-realtor-services';
@@ -78,6 +79,8 @@ export default function ZipPage({ zipArea }: ZipPageProps) {
           zipArea.medianPrice,
           zipArea.daysOnMarket ? `${zipArea.daysOnMarket} days on market` : undefined,
         ].filter(Boolean) as string[]}
+        image={getHeroImage('zip').src}
+        imageAlt={`${zipArea.zip} homes for sale — ${getHeroImage('zip').alt}`}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
         <p className="text-gray-700 text-lg leading-relaxed">{zipArea.description}</p>

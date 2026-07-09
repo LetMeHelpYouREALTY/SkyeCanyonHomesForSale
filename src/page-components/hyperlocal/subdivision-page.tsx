@@ -5,6 +5,7 @@ import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
+import { getHeroImage } from '@/data/hero-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalRealtorServices from '@/components/sections/hyperlocal-realtor-services';
@@ -92,6 +93,8 @@ export default function SubdivisionPage({ subdivision }: SubdivisionPageProps) {
         headline={`${subdivision.name} Homes for Sale — Skye Canyon NV ${subdivision.zip}`}
         answerSummary={subdivision.answerSummary}
         badges={[subdivision.builder, subdivision.priceRange, `${subdivision.bedrooms} bedrooms`]}
+        image={getHeroImage('subdivision').src}
+        imageAlt={getHeroImage('subdivision').alt}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
         <p className="text-gray-700 text-lg leading-relaxed">{subdivision.description}</p>

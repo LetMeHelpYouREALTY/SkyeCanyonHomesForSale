@@ -2,6 +2,8 @@
 
 import { CalendlyPopupButton } from '@/components/calendly-widget';
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 
 export default function BuyerAgentServices() {
   return (
@@ -19,32 +21,26 @@ export default function BuyerAgentServices() {
       <div className="min-h-screen bg-gray-50">
 
         <main>
-          <section className="py-12 bg-blue-600 text-white" role="banner">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Skye Canyon Homes Expert Buyer Agent
-                </h1>
-                <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-                  15+ years exclusive Skye Canyon specialization with direct builder relationships
-                  and off-market access. Average client saves $15K+.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <CalendlyPopupButton
-                    text="Schedule a Buyer Consultation"
-                    className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300 cursor-pointer"
-                  />
-                  <a
-                    href="tel:+17025001902"
-                    className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 border-2 border-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300"
-                    aria-label="Call Dr. Jan Duffy at (702) 500-1902"
-                  >
-                    Call (702) 500-1902
-                  </a>
-                </div>
-              </div>
+          <PageHero
+            title="Skye Canyon Expert Buyer Agent"
+            subtitle="15+ years exclusive Skye Canyon specialization with direct builder relationships and off-market access."
+            image={getHeroImage('buyer-agent').src}
+            imageAlt={getHeroImage('buyer-agent').alt}
+          >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <CalendlyPopupButton
+                text="Schedule a Buyer Consultation"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors cursor-pointer"
+              />
+              <a
+                href="tel:+17025001902"
+                className="bg-blue-600/80 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 border-2 border-white/40 transition-colors"
+                aria-label="Call Dr. Jan Duffy at (702) 500-1902"
+              >
+                Call (702) 500-1902
+              </a>
             </div>
-          </section>
+          </PageHero>
 
           <section className="py-16 bg-white" aria-labelledby="services-heading">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

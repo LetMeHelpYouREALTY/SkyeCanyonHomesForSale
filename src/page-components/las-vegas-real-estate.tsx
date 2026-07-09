@@ -4,6 +4,8 @@ import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function LasVegasRealEstate() {
@@ -11,17 +13,12 @@ export default function LasVegasRealEstate() {
     <>
       <div className="min-h-screen bg-gray-50">
 
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-realscout-blue via-realscout-light to-realscout-navy text-white py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Las Vegas Real Estate Homes for Sale Nevada MLS
-            </h1>
-            <p className="text-xl opacity-90 mb-8">
-              Comprehensive real estate services across all Las Vegas communities
-            </p>
-          </div>
-        </section>
+        <PageHero
+          title="Las Vegas Real Estate Homes for Sale"
+          subtitle="Comprehensive real estate services across Las Vegas communities — Skye Canyon specialist."
+          image={getHeroImage('las-vegas-real-estate').src}
+          imageAlt={getHeroImage('las-vegas-real-estate').alt}
+        />
 
         {/* Current Las Vegas Listings */}
         <section className="py-16 bg-white">

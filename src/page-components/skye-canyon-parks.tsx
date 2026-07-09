@@ -3,6 +3,8 @@
 import { MapPin, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
 import RealScoutListings from '@/components/realscout-listings';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 
 export default function SkyeCanyonParks() {
   const parksData = [
@@ -93,23 +95,13 @@ export default function SkyeCanyonParks() {
     <>
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
 
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Skye Canyon Homes Parks & Recreation
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Play, run, or splash in one of Skye Canyon's community parks. Perfect for those who
-              seek a fitness-inspired lifestyle and enjoy expansive outdoor recreation.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-              <span className="flex items-center gap-2">🌲 5 Community Parks</span>
-              <span className="flex items-center gap-2">🌊 Splash Pads & Pool</span>
-              <span className="flex items-center gap-2">💪 Sports Courts & Fields</span>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          title="Skye Canyon Parks & Recreation"
+          subtitle="Play, run, or splash in one of Skye Canyon's community parks — fitness-inspired outdoor recreation in Las Vegas NV 89166."
+          image={getHeroImage('skye-canyon-parks').src}
+          imageAlt={getHeroImage('skye-canyon-parks').alt}
+          badges={['5 Community Parks', 'Splash Pads & Pool', 'Sports Courts & Fields']}
+        />
 
         {/* Current Listings */}
         <section className="py-16 bg-white">

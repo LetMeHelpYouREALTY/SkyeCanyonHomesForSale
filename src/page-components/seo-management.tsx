@@ -2,6 +2,8 @@
 
 import { CheckCircle, Globe, Search, TrendingUp } from 'lucide-react';
 import SEOManagementDashboard from '@/components/seo-management-dashboard';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -9,34 +11,13 @@ export default function SEOManagement() {
   return (
     <>
       <main className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">SEO Management Dashboard</h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-              Complete Google Search Console setup, page indexing, and analytics configuration for
-              optimal search engine visibility.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-lg">
-              <div className="flex items-center space-x-2">
-                <Search className="w-5 h-5" />
-                <span>Search Console Setup</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Globe className="w-5 h-5" />
-                <span>Page Indexing</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <TrendingUp className="w-5 h-5" />
-                <span>Analytics Tracking</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5" />
-                <span>SEO Optimization</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          title="SEO Management Dashboard"
+          subtitle="Google Search Console setup, page indexing, and analytics configuration for search visibility."
+          image={getHeroImage('seo-management').src}
+          imageAlt={getHeroImage('seo-management').alt}
+          badges={['Search Console', 'Indexing', 'Analytics']}
+        />
 
         {/* Current SEO Status */}
         <section className="py-16">

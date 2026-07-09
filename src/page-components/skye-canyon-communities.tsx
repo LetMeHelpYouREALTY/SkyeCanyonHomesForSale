@@ -3,6 +3,8 @@
 import { Building2, Car, DollarSign, Home, MapPin, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
 import RealScoutListings from '@/components/realscout-listings';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 
 export default function SkyeCanyonCommunities() {
   const communitiesData = [
@@ -94,32 +96,13 @@ export default function SkyeCanyonCommunities() {
     <>
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
 
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Skye Canyon Homes New Construction Communities
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Discover luxury new construction homes by Century Communities in Skye Canyon. With
-              spacious one and two-story homes featuring up to six bedrooms and flexible floor plans
-              for every life stage.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-              <span className="flex items-center gap-2">
-                <Building2 className="w-4 h-4" />
-                Century Communities Builder
-              </span>
-              <span className="flex items-center gap-2">
-                <Home className="w-4 h-4" />3 Distinct Communities
-              </span>
-              <span className="flex items-center gap-2">
-                <DollarSign className="w-4 h-4" />
-                From High $500s
-              </span>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          title="Skye Canyon New Construction Communities"
+          subtitle="Luxury new construction homes by Century Communities — spacious floor plans with up to six bedrooms in Las Vegas NV 89166."
+          image={getHeroImage('skye-canyon-communities').src}
+          imageAlt={getHeroImage('skye-canyon-communities').alt}
+          badges={['Century Communities', '3 Communities', 'From High $500s']}
+        />
 
         {/* Current Listings */}
         <section className="py-16 bg-white">

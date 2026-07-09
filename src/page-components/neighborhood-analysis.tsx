@@ -6,6 +6,8 @@ import FAQSection from '@/components/faq-section';
 import NeighborhoodHeatmap from '@/components/neighborhood-heatmap';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function NeighborhoodAnalysis() {
@@ -13,33 +15,13 @@ export default function NeighborhoodAnalysis() {
     <>
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Las Vegas Neighborhood Analysis</h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-              Interactive market heat map with real-time data on pricing trends, market activity,
-              school ratings, and local insights across Las Vegas neighborhoods.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-lg">
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
-                <span>5 Key Neighborhoods</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <TrendingUp className="w-5 h-5" />
-                <span>Live Market Data</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Home className="w-5 h-5" />
-                <span>Price Comparisons</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Users className="w-5 h-5" />
-                <span>Community Insights</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          title="Las Vegas Neighborhood Analysis"
+          subtitle="Interactive market heat map with pricing trends, activity, and local insights across northwest Las Vegas neighborhoods."
+          image={getHeroImage('neighborhood-analysis').src}
+          imageAlt={getHeroImage('neighborhood-analysis').alt}
+          badges={['5 Key Neighborhoods', 'Live Market Data', 'Price Comparisons', 'Community Insights']}
+        />
 
         {/* Key Insights Overview */}
         <section className="py-16 bg-gray-50">

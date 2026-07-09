@@ -4,6 +4,8 @@ import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function LuxuryHomesLasVegas() {
@@ -11,17 +13,12 @@ export default function LuxuryHomesLasVegas() {
     <>
       <div className="min-h-screen bg-gray-50">
 
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-realscout-blue via-realscout-light to-realscout-navy text-white py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Luxury Homes Las Vegas Skye Canyon Summerlin
-            </h1>
-            <p className="text-xl opacity-90 mb-8">
-              Discover exclusive properties in Las Vegas's most prestigious communities
-            </p>
-          </div>
-        </section>
+        <PageHero
+          title="Luxury Homes Las Vegas & Skye Canyon"
+          subtitle="Exclusive properties in Las Vegas's most prestigious northwest communities."
+          image={getHeroImage('luxury-homes-las-vegas').src}
+          imageAlt={getHeroImage('luxury-homes-las-vegas').alt}
+        />
 
         {/* Current Luxury Listings */}
         <section className="py-16 bg-white">

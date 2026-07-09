@@ -3,6 +3,8 @@
 import { BookOpen, Clock, GraduationCap, MapPin, School, Star, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
 import RealScoutListings from '@/components/realscout-listings';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 
 const elementarySchools = [
   {
@@ -143,34 +145,13 @@ export default function SkyeCanyonSchools() {
 
       <div className="min-h-screen bg-white">
 
-        {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Skye Canyon Homes Schools Guide
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Exceptional education options for Skye Canyon families. Choose from excellent public
-                schools in Clark County School District or specialized charter programs.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-700">
-                <div className="flex items-center">
-                  <School className="w-4 h-4 mr-2 text-blue-600" />
-                  <span>9 Public Schools</span>
-                </div>
-                <div className="flex items-center">
-                  <GraduationCap className="w-4 h-4 mr-2 text-blue-600" />
-                  <span>Charter Options</span>
-                </div>
-                <div className="flex items-center">
-                  <Star className="w-4 h-4 mr-2 text-blue-600" />
-                  <span>Top-Rated Programs</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          title="Skye Canyon Schools Guide"
+          subtitle="Education options for Skye Canyon — Clark County School District public schools and charter programs in northwest Las Vegas NV 89166."
+          image={getHeroImage('skye-canyon-schools').src}
+          imageAlt={getHeroImage('skye-canyon-schools').alt}
+          badges={['9 Public Schools', 'Charter Options', 'CCSD District']}
+        />
 
         {/* Current Listings */}
         <section className="py-16 bg-white">

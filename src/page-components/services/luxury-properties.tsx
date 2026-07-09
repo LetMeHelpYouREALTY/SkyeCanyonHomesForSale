@@ -1,6 +1,8 @@
 'use client';
 
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 
 export default function LuxuryPropertyServices() {
   return (
@@ -21,26 +23,20 @@ export default function LuxuryPropertyServices() {
       <div className="min-h-screen bg-gray-50">
 
         <main>
-          <section className="py-12 bg-purple-600 text-white" role="banner">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Skye Canyon Homes Luxury Property Expert
-                </h1>
-                <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-                  Certified Luxury Home Marketing Specialist with $50M+ in transactions since 2009.
-                  98% of list price results.
-                </p>
-                <a
-                  href="tel:+17025001902"
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-300"
-                  aria-label="Call Dr. Jan Duffy at (702) 500-1902"
-                >
-                  Call (702) 500-1902
-                </a>
-              </div>
-            </div>
-          </section>
+          <PageHero
+            title="Skye Canyon Luxury Property Expert"
+            subtitle="Certified luxury home marketing specialist — premium Skye Canyon and northwest Las Vegas properties."
+            image={getHeroImage('luxury-properties').src}
+            imageAlt={getHeroImage('luxury-properties').alt}
+          >
+            <a
+              href="tel:+17025001902"
+              className="inline-block bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors"
+              aria-label="Call Dr. Jan Duffy at (702) 500-1902"
+            >
+              Call (702) 500-1902
+            </a>
+          </PageHero>
 
           <section className="py-16 bg-white" aria-labelledby="services-heading">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

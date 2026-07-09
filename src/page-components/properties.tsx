@@ -11,6 +11,8 @@ import StaticMapsDemo from '@/components/static-maps-demo';
 import EnhancedPropertyCard from '@/components/enhanced-property-card';
 import { sampleProperties, getLuxuryProperties, getGolfCourseProperties } from '@/data/sample-properties';
 import MapTest from '@/components/map-test';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 
 export default function Properties() {
   const searchParams = useSearchParams();
@@ -19,19 +21,13 @@ export default function Properties() {
     <>
       <div className="min-h-screen bg-gray-50">
 
-        {/* Header */}
-        <section className="bg-realscout-blue text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">
-                Skye Canyon Homes Properties MLS Listings Nevada 89166
-              </h1>
-              <p className="text-xl opacity-90">
-                Discover luxury homes in Las Vegas's premier community
-              </p>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          title="Skye Canyon Homes Properties MLS Listings Nevada 89166"
+          subtitle="Discover luxury homes in Las Vegas's premier northwest community."
+          image={getHeroImage('properties').src}
+          imageAlt={getHeroImage('properties').alt}
+          minHeight="sm"
+        />
 
         {/* Breadcrumb Navigation */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">

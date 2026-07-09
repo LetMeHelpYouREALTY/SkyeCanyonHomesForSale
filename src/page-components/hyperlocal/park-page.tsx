@@ -5,6 +5,7 @@ import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
+import { getHeroImage } from '@/data/hero-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalSchema from '@/components/schema/hyperlocal-schema';
@@ -77,6 +78,8 @@ export default function ParkPage({ park }: ParkPageProps) {
         headline={`${park.name} — Skye Canyon Las Vegas NV 89166`}
         answerSummary={park.answerSummary}
         badges={[park.size, park.hours, park.address].filter(Boolean) as string[]}
+        image={getHeroImage('park').src}
+        imageAlt={`${park.name} — ${getHeroImage('park').alt}`}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
         <p className="text-gray-700 text-lg leading-relaxed">{park.description}</p>

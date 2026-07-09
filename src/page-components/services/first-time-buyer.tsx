@@ -1,6 +1,8 @@
 'use client';
 
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
+import PageHero from '@/components/sections/page-hero';
+import { getHeroImage } from '@/data/hero-images';
 
 export default function FirstTimeBuyerServices() {
   return (
@@ -21,26 +23,20 @@ export default function FirstTimeBuyerServices() {
       <div className="min-h-screen bg-gray-50">
 
         <main>
-          <section className="py-12 bg-green-600 text-white" role="banner">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Skye Canyon Homes First-Time Buyer Expert
-                </h1>
-                <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-                  Specialized guidance for new buyers through HOA requirements, builder incentives,
-                  and community amenities. 200+ first-time buyers helped.
-                </p>
-                <a
-                  href="tel:+17025001902"
-                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors focus:outline-none focus:ring-2 focus:ring-green-300"
-                  aria-label="Call Dr. Jan Duffy at (702) 500-1902"
-                >
-                  Call (702) 500-1902
-                </a>
-              </div>
-            </div>
-          </section>
+          <PageHero
+            title="Skye Canyon First-Time Buyer Expert"
+            subtitle="Step-by-step guidance through financing, HOA requirements, builder incentives, and closing in 89166."
+            image={getHeroImage('first-time-buyer').src}
+            imageAlt={getHeroImage('first-time-buyer').alt}
+          >
+            <a
+              href="tel:+17025001902"
+              className="inline-block bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors"
+              aria-label="Call Dr. Jan Duffy at (702) 500-1902"
+            >
+              Call (702) 500-1902
+            </a>
+          </PageHero>
 
           <section className="py-16 bg-white" aria-labelledby="services-heading">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
