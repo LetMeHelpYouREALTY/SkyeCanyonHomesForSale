@@ -1,7 +1,6 @@
 'use client';
 
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
-import Footer from '@/components/footer';
 
 export default function LuxuryPropertyServices() {
   return (
@@ -100,7 +99,6 @@ export default function LuxuryPropertyServices() {
           </section>
         </main>
 
-        <Footer />
       </div>
     </>
   );

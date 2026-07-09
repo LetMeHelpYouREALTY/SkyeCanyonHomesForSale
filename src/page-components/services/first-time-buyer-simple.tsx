@@ -1,6 +1,5 @@
 'use client';
 
-import Footer from '@/components/footer';
 
 export default function FirstTimeBuyerServicesSimple() {
   return (
@@ -26,7 +25,6 @@ export default function FirstTimeBuyerServicesSimple() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

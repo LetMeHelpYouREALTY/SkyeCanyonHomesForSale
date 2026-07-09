@@ -1,6 +1,5 @@
 'use client';
 
-import Footer from '@/components/footer';
 
 export default function TestService() {
   return (
@@ -23,7 +22,6 @@ export default function TestService() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

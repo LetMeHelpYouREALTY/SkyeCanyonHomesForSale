@@ -1,5 +1,6 @@
 'use client';
 
+import { siteConfig } from '@/config/site.config';
 
 interface SchemaMarkupProps {
   pageType?: 'homepage' | 'service' | 'about' | 'properties' | 'generic';
@@ -8,340 +9,153 @@ interface SchemaMarkupProps {
     name: string;
     url: string;
   }>;
-  reviews?: Array<{
-    author: string;
-    rating: number;
-    reviewBody: string;
-    datePublished: string;
-  }>;
 }
 
 export default function ComprehensiveSchemaMarkup({
-  pageType = 'generic',
   serviceName,
   breadcrumbs = [],
-  reviews = [],
 }: SchemaMarkupProps) {
-  // Base LocalBusiness Schema
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': ['RealEstateAgent', 'LocalBusiness'],
-    '@id': 'https://skyecanyonhomesforsale.com/#localbusiness',
-    name: 'Dr. Jan Duffy - Skye Canyon Real Estate Expert',
-    alternateName: 'Skye Canyon Homes for Sale',
+    '@id': `${siteConfig.url}/#localbusiness`,
+    name: siteConfig.name,
+    alternateName: siteConfig.businessName,
     description:
-      'Premier Skye Canyon real estate specialist with 15+ years of exclusive community expertise. Luxury homes, investment properties, and comprehensive buyer/seller services in Las Vegas, Nevada.',
-    url: 'https://skyecanyonhomesforsale.com',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://skyecanyonhomesforsale.com/images/dr-jan-duffy-logo.png',
-      width: 300,
-      height: 100,
-    },
-    image: [
-      'https://skyecanyonhomesforsale.com/images/dr-jan-duffy-realtor.jpg',
-      'https://skyecanyonhomesforsale.com/images/skye-canyon-homes.jpg',
-      'https://skyecanyonhomesforsale.com/images/luxury-properties.jpg',
-    ],
-    telephone: '(702) 500-1902',
-    email: 'DrDuffy@SkyeCanyonHomesForSale.com',
+      'Premier Skye Canyon real estate specialist with exclusive community expertise. Luxury homes, investment properties, and buyer/seller services in Las Vegas, Nevada.',
+    url: siteConfig.url,
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '10111 W. Skye Canyon Park Drive',
-      addressLocality: 'Las Vegas',
-      addressRegion: 'NV',
-      postalCode: '89166',
-      addressCountry: 'US',
+      streetAddress: siteConfig.address.street,
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.state,
+      postalCode: siteConfig.address.zip,
+      addressCountry: siteConfig.address.country,
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 36.2469,
-      longitude: -115.3242,
+      latitude: siteConfig.geo.latitude,
+      longitude: siteConfig.geo.longitude,
     },
-    openingHours: ['Mo-Fr 08:00-20:00', 'Sa 09:00-18:00', 'Su 10:00-16:00'],
+    openingHours: siteConfig.openingHours,
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '08:00',
-        closes: '20:00',
+        opens: siteConfig.hours.weekdays.opens,
+        closes: siteConfig.hours.weekdays.closes,
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Saturday',
-        opens: '09:00',
-        closes: '18:00',
+        opens: siteConfig.hours.saturday.opens,
+        closes: siteConfig.hours.saturday.closes,
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Sunday',
-        opens: '10:00',
-        closes: '16:00',
+        opens: siteConfig.hours.sunday.opens,
+        closes: siteConfig.hours.sunday.closes,
       },
     ],
-    priceRange: '$$$',
-    currenciesAccepted: 'USD',
-    paymentAccepted: ['Cash', 'Check', 'Credit Card'],
     areaServed: [
-      {
-        '@type': 'City',
-        name: 'Las Vegas',
-        address: {
-          '@type': 'PostalAddress',
-          addressRegion: 'NV',
-          addressCountry: 'US',
-        },
-      },
       {
         '@type': 'Place',
         name: 'Skye Canyon',
         address: {
           '@type': 'PostalAddress',
-          postalCode: '89166',
-          addressLocality: 'Las Vegas',
-          addressRegion: 'NV',
-          addressCountry: 'US',
+          postalCode: siteConfig.address.zip,
+          addressLocality: siteConfig.address.city,
+          addressRegion: siteConfig.address.state,
+          addressCountry: siteConfig.address.country,
         },
       },
-    ],
-    serviceArea: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: 36.2469,
-        longitude: -115.3242,
-      },
-      geoRadius: '25000',
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Real Estate Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Buyer Agent Services',
-            description: 'Expert buyer representation for Skye Canyon properties',
-            serviceType: 'Real Estate Buyer Agent',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Luxury Property Sales',
-            description: 'Specialized luxury home marketing and sales',
-            serviceType: 'Luxury Real Estate',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'First-Time Buyer Assistance',
-            description: 'Comprehensive support for first-time homebuyers',
-            serviceType: 'First-Time Buyer Services',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'New Construction Sales',
-            description: 'New construction home sales and builder partnerships',
-            serviceType: 'New Construction Real Estate',
-          },
-        },
-      ],
-    },
-    knowsAbout: [
-      'Skye Canyon Real Estate',
-      'Las Vegas Luxury Homes',
-      'Investment Properties',
-      'New Construction',
-      'Golf Course Communities',
-      'First-Time Homebuyers',
-      'Market Analysis',
     ],
     hasCredential: {
       '@type': 'EducationalOccupationalCredential',
-      name: 'Nevada Real Estate License S.0197614',
+      name: `Nevada Real Estate License ${siteConfig.license}`,
       credentialCategory: 'license',
       recognizedBy: {
         '@type': 'Organization',
         name: 'Nevada Real Estate Division',
       },
     },
-    member: {
+    memberOf: {
       '@type': 'Organization',
-      name: 'National Association of REALTORS®',
+      name: siteConfig.brokerage,
     },
-    sameAs: [
-      'https://www.facebook.com/DrJanDuffyRealtor',
-      'https://www.linkedin.com/in/drjanduffy',
-      'https://www.instagram.com/drjanduffyrealtor',
-    ],
+    sameAs: Object.values(siteConfig.social),
   };
 
-  // Organization Schema
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': 'https://skyecanyonhomesforsale.com/#organization',
-    name: 'Dr. Jan Duffy Real Estate',
-    legalName: 'Dr. Jan Duffy Real Estate Services',
-    url: 'https://skyecanyonhomesforsale.com',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://skyecanyonhomesforsale.com/images/dr-jan-duffy-logo.png',
-    },
-    foundingDate: '2010',
-    founder: {
-      '@type': 'Person',
-      name: 'Dr. Jan Duffy',
-      jobTitle: 'REALTOR®',
-      hasCredential: {
-        '@type': 'EducationalOccupationalCredential',
-        name: 'Nevada Real Estate License S.0197614',
-      },
-    },
+    '@id': `${siteConfig.url}/#organization`,
+    name: siteConfig.legalName,
+    url: siteConfig.url,
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '(702) 500-1902',
+      telephone: siteConfig.phone,
       contactType: 'customer service',
       availableLanguage: 'English',
       areaServed: 'US-NV',
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '10111 W. Skye Canyon Park Drive',
-      addressLocality: 'Las Vegas',
-      addressRegion: 'NV',
-      postalCode: '89166',
-      addressCountry: 'US',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
+      streetAddress: siteConfig.address.street,
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.state,
+      postalCode: siteConfig.address.zip,
+      addressCountry: siteConfig.address.country,
     },
   };
 
-  // Service Schema (dynamic based on page)
   const getServiceSchema = () => {
     if (!serviceName) {
       return null;
     }
 
-    const serviceSchemas: Record<string, any> = {
+    const serviceSchemas: Record<string, object> = {
       'buyer-agent': {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Skye Canyon Buyer Agent Services',
-        description:
-          'Expert buyer representation for Skye Canyon luxury homes and investment properties with 15+ years of local expertise.',
-        provider: {
-          '@type': 'RealEstateAgent',
-          name: 'Dr. Jan Duffy',
-        },
+        description: 'Expert buyer representation for Skye Canyon homes and investment properties.',
+        provider: { '@type': 'RealEstateAgent', name: siteConfig.name },
         areaServed: 'Las Vegas, NV',
         serviceType: 'Real Estate Buyer Agent',
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Buyer Services',
-          itemListElement: [
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Property Search',
-                description: 'Comprehensive MLS search and property identification',
-              },
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Market Analysis',
-                description: 'Detailed comparative market analysis and pricing guidance',
-              },
-            },
-          ],
-        },
       },
       'first-time-buyer': {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Skye Canyon First-Time Buyer Services',
-        description:
-          'Comprehensive support for first-time homebuyers including loan guidance, inspection coordination, and closing assistance.',
-        provider: {
-          '@type': 'RealEstateAgent',
-          name: 'Dr. Jan Duffy',
-        },
+        description: 'Support for first-time homebuyers including loan guidance and closing assistance.',
+        provider: { '@type': 'RealEstateAgent', name: siteConfig.name },
         serviceType: 'First-Time Homebuyer Assistance',
       },
       'luxury-properties': {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Skye Canyon Luxury Property Services',
-        description:
-          'Specialized luxury home marketing and sales with premium service for high-end Skye Canyon properties.',
-        provider: {
-          '@type': 'RealEstateAgent',
-          name: 'Dr. Jan Duffy',
-        },
+        description: 'Luxury home marketing and sales for high-end Skye Canyon properties.',
+        provider: { '@type': 'RealEstateAgent', name: siteConfig.name },
         serviceType: 'Luxury Real Estate',
       },
       'new-construction': {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Skye Canyon New Construction Services',
-        description:
-          'New construction home sales with direct builder partnerships and comprehensive construction guidance.',
-        provider: {
-          '@type': 'RealEstateAgent',
-          name: 'Dr. Jan Duffy',
-        },
+        description: 'New construction home sales with builder partnerships.',
+        provider: { '@type': 'RealEstateAgent', name: siteConfig.name },
         serviceType: 'New Construction Real Estate',
       },
     };
 
-    return serviceSchemas[serviceName as keyof typeof serviceSchemas] || null;
+    return serviceSchemas[serviceName] ?? null;
   };
 
-  // Review Schema
-  const getReviewSchema = () => {
-    if (reviews.length === 0) {
-      return null;
-    }
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Dr. Jan Duffy Real Estate',
-      review: reviews.map((review) => ({
-        '@type': 'Review',
-        author: {
-          '@type': 'Person',
-          name: review.author,
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: review.rating,
-          bestRating: '5',
-          worstRating: '1',
-        },
-        reviewBody: review.reviewBody,
-        datePublished: review.datePublished,
-      })),
-    };
-  };
-
-  // Breadcrumb Schema
   const getBreadcrumbSchema = () => {
     if (breadcrumbs.length === 0) {
       return null;
@@ -359,24 +173,19 @@ export default function ComprehensiveSchemaMarkup({
     };
   };
 
-  // Website Schema
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://skyecanyonhomesforsale.com/#website',
-    name: 'Skye Canyon Homes for Sale',
-    alternateName: 'Dr. Jan Duffy Real Estate',
-    url: 'https://skyecanyonhomesforsale.com',
-    description:
-      'Premier Skye Canyon real estate website featuring luxury homes, market insights, and expert real estate services in Las Vegas, Nevada.',
-    publisher: {
-      '@id': 'https://skyecanyonhomesforsale.com/#organization',
-    },
+    '@id': `${siteConfig.url}/#website`,
+    name: siteConfig.businessName,
+    alternateName: siteConfig.name,
+    url: siteConfig.url,
+    publisher: { '@id': `${siteConfig.url}/#organization` },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://skyecanyonhomesforsale.com/properties?q={search_term_string}',
+        urlTemplate: `${siteConfig.url}/properties?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
     },
@@ -388,7 +197,6 @@ export default function ComprehensiveSchemaMarkup({
     organizationSchema,
     websiteSchema,
     getServiceSchema(),
-    getReviewSchema(),
     getBreadcrumbSchema(),
   ].filter(Boolean);
 

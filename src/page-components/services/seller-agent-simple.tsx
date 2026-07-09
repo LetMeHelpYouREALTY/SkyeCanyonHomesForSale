@@ -1,6 +1,5 @@
 'use client';
 
-import Footer from '@/components/footer';
 
 export default function SellerAgentServicesSimple() {
   return (
@@ -26,7 +25,6 @@ export default function SellerAgentServicesSimple() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

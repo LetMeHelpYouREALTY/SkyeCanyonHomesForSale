@@ -1,6 +1,5 @@
 'use client';
 
-import Footer from '@/components/footer';
 
 export default function PrivacyPolicy() {
   return (
@@ -88,7 +87,6 @@ export default function PrivacyPolicy() {
         </div>
       </main>
 
-      <Footer />
     </>
   );
 }

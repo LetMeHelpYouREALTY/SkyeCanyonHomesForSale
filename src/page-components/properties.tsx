@@ -6,7 +6,6 @@ import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 
 import FollowUpBossListings from '@/components/followup-boss-listings';
-import Footer from '@/components/footer';
 import RealScoutListings from '@/components/realscout-listings';
 import StaticMapsDemo from '@/components/static-maps-demo';
 import EnhancedPropertyCard from '@/components/enhanced-property-card';
@@ -181,7 +180,6 @@ export default function Properties() {
           ]}
         />
 
-        <Footer />
         <BackToTop />
       </div>
     </>

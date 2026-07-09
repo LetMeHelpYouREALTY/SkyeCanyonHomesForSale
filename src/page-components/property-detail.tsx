@@ -18,7 +18,6 @@ import {
   Wifi,
 } from 'lucide-react';
 import { useParams } from 'next/navigation';
-import Footer from '@/components/footer';
 import RealScoutListings from '@/components/realscout-listings';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -328,7 +327,6 @@ export default function PropertyDetail() {
         </div>
       </section>
 
-        <Footer />
       </div>
     </>
   );

@@ -1,7 +1,6 @@
 'use client';
 
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
-import Footer from '@/components/footer';
 
 export default function FirstTimeBuyerServices() {
   return (
@@ -102,7 +101,6 @@ export default function FirstTimeBuyerServices() {
           </section>
         </main>
 
-        <Footer />
       </div>
     </>
   );

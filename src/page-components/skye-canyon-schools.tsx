@@ -2,7 +2,6 @@
 
 import { BookOpen, Clock, GraduationCap, MapPin, School, Star, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
-import Footer from '@/components/footer';
 import RealScoutListings from '@/components/realscout-listings';
 
 const elementarySchools = [
@@ -451,7 +450,6 @@ export default function SkyeCanyonSchools() {
           pageType="skye-canyon"
         />
 
-        <Footer />
       </div>
     </>
   );

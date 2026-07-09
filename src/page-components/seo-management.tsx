@@ -1,7 +1,6 @@
 'use client';
 
 import { CheckCircle, Globe, Search, TrendingUp } from 'lucide-react';
-import Footer from '@/components/footer';
 import SEOManagementDashboard from '@/components/seo-management-dashboard';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -258,7 +257,6 @@ export default function SEOManagement() {
         </section>
       </main>
 
-      <Footer />
     </>
   );
 }

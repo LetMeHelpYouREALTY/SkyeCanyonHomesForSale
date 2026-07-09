@@ -1,7 +1,6 @@
 'use client';
 
 import { CalendlyPopupButton } from '@/components/calendly-widget';
-import Footer from '@/components/footer';
 import HomebotWidget from '@/components/homebot-widget';
 
 export default function SellerAgentServices() {
@@ -55,7 +54,6 @@ export default function SellerAgentServices() {
           </div>
         </section>
 
-        <Footer />
       </div>
     </>
   );

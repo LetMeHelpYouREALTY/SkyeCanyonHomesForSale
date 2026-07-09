@@ -2,7 +2,6 @@
 
 import { CalendlyPopupButton } from '@/components/calendly-widget';
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
-import Footer from '@/components/footer';
 
 export default function BuyerAgentServices() {
   return (
@@ -108,7 +107,6 @@ export default function BuyerAgentServices() {
           </section>
         </main>
 
-        <Footer />
       </div>
     </>
   );

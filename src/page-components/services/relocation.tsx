@@ -1,6 +1,5 @@
 'use client';
 
-import Footer from '@/components/footer';
 
 export default function RelocationServices() {
   return (
@@ -27,7 +26,6 @@ export default function RelocationServices() {
         </div>
       </section>
 
-        <Footer />
       </div>
     </>
   );

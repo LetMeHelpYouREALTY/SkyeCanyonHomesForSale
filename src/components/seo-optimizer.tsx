@@ -180,7 +180,7 @@ export default function SEOOptimizer({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(baseData) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(getStructuredData()) }}
     />
   );
 }

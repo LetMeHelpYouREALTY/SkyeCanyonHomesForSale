@@ -317,7 +317,7 @@ export default function SEOManagementDashboard() {
                     <div className="flex justify-between">
                       <span>Measurement ID:</span>
                       <span className="font-mono">
-                        {import.meta.env.VITE_GA_MEASUREMENT_ID || 'Not configured'}
+                        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'Not configured'}
                       </span>
                     </div>
                     <div className="flex justify-between">

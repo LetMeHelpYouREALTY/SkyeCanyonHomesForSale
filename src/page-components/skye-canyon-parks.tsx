@@ -2,7 +2,6 @@
 
 import { MapPin, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
-import Footer from '@/components/footer';
 import RealScoutListings from '@/components/realscout-listings';
 
 export default function SkyeCanyonParks() {
@@ -312,7 +311,6 @@ export default function SkyeCanyonParks() {
           </div>
         </section>
 
-        <Footer />
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 'use client';
 
-// Social media links with text labels
+import { siteConfig } from '@/config/site.config';
 
 export default function Footer() {
   const _scrollToSection = (sectionId: string) => {
@@ -104,19 +104,23 @@ export default function Footer() {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center">
                 <span className="mr-3">📞</span>
-                <span>(702) 500-1902</span>
+                <a href={`tel:${siteConfig.phoneTel}`} className="hover:text-white transition-colors">
+                  {siteConfig.phone}
+                </a>
               </div>
               <div className="flex items-center">
                 <span className="mr-3">✉️</span>
-                <span>DrDuffy@SkyeCanyonHomesForSale.com</span>
+                <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors">
+                  {siteConfig.email}
+                </a>
               </div>
               <div className="flex items-center">
                 <span className="mr-3">📍</span>
-                <span>10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166</span>
+                <span>{siteConfig.address.formatted}</span>
               </div>
               <div className="flex items-center">
                 <span className="mr-3">🆔</span>
-                <span>Nevada License# S.0197614</span>
+                <span>Nevada License# {siteConfig.license}</span>
               </div>
             </div>
 
@@ -129,9 +133,20 @@ export default function Footer() {
               </div>
               
               <div className="mt-4 pt-4 border-t border-gray-600">
+                <h5 className="text-sm font-semibold mb-3 text-white">Hyperlocal Guides</h5>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li><a href="/89166-homes-for-sale" className="hover:text-white transition-colors">89166 Homes for Sale</a></li>
+                  <li><a href="/skye-canyon/eaglepointe" className="hover:text-white transition-colors">Eaglepointe Homes</a></li>
+                  <li><a href="/skye-canyon-parks/skye-canyon-park" className="hover:text-white transition-colors">Skye Canyon Park</a></li>
+                  <li><a href="/builders/century-communities" className="hover:text-white transition-colors">Century Communities</a></li>
+                  <li><a href="/centennial-hills-homes-for-sale" className="hover:text-white transition-colors">Centennial Hills</a></li>
+                </ul>
+              </div>
+
+              <div className="mt-4 pt-4 border-t border-gray-600">
                 <h5 className="text-sm font-semibold mb-3 text-white">Leave a Review</h5>
                 <a 
-                  href="https://g.page/r/CVaZ8MapUtFoEBM/review" 
+                  href={siteConfig.googleReviewUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-sm text-gray-400 hover:text-white transition-colors"
@@ -146,19 +161,19 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>
-            &copy; 2024 Skye Canyon Homes for Sale. All rights reserved. | Dr. Jan Duffy, REALTOR®
+            &copy; 2026 Skye Canyon Homes for Sale. All rights reserved. | Dr. Jan Duffy, REALTOR®
           </p>
           <p className="text-sm mt-2">
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </a>{' '}
             |
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="/terms-of-service" className="hover:text-white transition-colors">
               {' '}
               Terms of Service
             </a>{' '}
             |
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="https://www.hud.gov/program_offices/fair_housing_equal_opp" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               {' '}
               Fair Housing
             </a>

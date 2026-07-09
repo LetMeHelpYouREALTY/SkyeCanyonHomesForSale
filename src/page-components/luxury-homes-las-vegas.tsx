@@ -2,7 +2,6 @@
 
 import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
-import Footer from '@/components/footer';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
 import { Card, CardContent } from '@/components/ui/card';
@@ -109,7 +108,6 @@ export default function LuxuryHomesLasVegas() {
         {/* Related Searches for Luxury Homes */}
         <RelatedSearches searchType="luxury-homes" />
 
-        <Footer />
         <BackToTop />
       </div>
     </>

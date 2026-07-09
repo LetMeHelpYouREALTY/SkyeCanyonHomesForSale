@@ -5,10 +5,10 @@ import { CalendlyPopupButton } from '@/components/calendly-widget';
 import CallToAction from '@/components/call-to-action';
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
 import FAQSection from '@/components/faq-section';
-import Footer from '@/components/footer';
 import HeroSection from '@/components/hero-section';
 import HomebotWidget from '@/components/homebot-widget';
 import RealScoutListings from '@/components/realscout-listings';
+import HyperlocalExploreHub from '@/components/sections/hyperlocal-explore-hub';
 import ReviewHighlights from '@/components/review-highlights';
 import GoogleBusinessReview from '@/components/google-business-review';
 import ServicesOverview from '@/components/services-overview';
@@ -19,14 +19,7 @@ export default function Home() {
       {/* Schema Markup (invisible, SEO only) */}
       <ComprehensiveSchemaMarkup
         pageType="homepage"
-        breadcrumbs={[{ name: 'Home', url: 'https://skyecanyonhomesforsale.com' }]}
-        reviews={[
-          { author: 'Sarah Mitchell', rating: 5, reviewBody: 'Dr. Jan Duffy made our Skye Canyon home purchase seamless. Her knowledge of the community and market expertise helped us find our perfect luxury home.', datePublished: '2024-11-15' },
-          { author: 'Michael Rodriguez', rating: 5, reviewBody: 'Outstanding service from Dr. Duffy! She guided us through our first-time home purchase in Skye Canyon with professionalism and patience.', datePublished: '2024-10-22' },
-          { author: 'Jennifer Chen', rating: 5, reviewBody: "Sold our Skye Canyon home in just 8 days! Dr. Duffy's marketing strategy and local connections delivered exceptional results.", datePublished: '2024-12-03' },
-          { author: 'David Thompson', rating: 5, reviewBody: "Dr. Duffy's expertise in luxury Skye Canyon properties is unmatched. She helped us navigate the competitive market and secure our dream home.", datePublished: '2024-09-18' },
-          { author: 'Lisa Anderson', rating: 5, reviewBody: 'Professional, knowledgeable, and responsive. Dr. Duffy made our new construction purchase stress-free with her builder relationships.', datePublished: '2024-11-28' },
-        ]}
+        breadcrumbs={[{ name: 'Home', url: 'https://www.skyecanyonhomesforsale.com' }]}
       />
       {/* Single consolidated schema - no duplicates */}
 
@@ -133,7 +126,7 @@ export default function Home() {
                   <svg className="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Communities & Builders</h3>
-                <p className="text-gray-600 text-sm mb-3">Toll Brothers, Lennar, DR Horton and sub-community details.</p>
+                <p className="text-gray-600 text-sm mb-3">Eaglepointe, Marvella, Skyecrest and Century Communities new construction.</p>
                 <span className="text-rose-600 font-medium text-sm group-hover:text-rose-800">Explore &rarr;</span>
               </a>
               <a href="/skye-canyon-parks" className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-6">
@@ -156,6 +149,8 @@ export default function Home() {
           </div>
         </section>
 
+        <HyperlocalExploreHub />
+
         {/* 6. Reviews */}
         <ReviewHighlights />
         <GoogleBusinessReview />
@@ -169,7 +164,7 @@ export default function Home() {
             { question: 'Is Skye Canyon a guard-gated community?', answer: "Yes, Skye Canyon is a prestigious 24/7 guard-gated community with controlled access and roving security patrols, ensuring residents' safety and privacy." },
             { question: 'What amenities are available in Skye Canyon?', answer: 'Skye Canyon features the Desert Highlands Golf Course, community recreation center, fitness facilities, swimming pools, tennis courts, walking trails, and exclusive clubhouse amenities.' },
             { question: 'What schools serve the Skye Canyon area?', answer: 'Skye Canyon is served by highly-rated schools in the Clark County School District, including top-performing elementary, middle, and high schools in the northwest Las Vegas area.' },
-            { question: 'Are there new construction homes available?', answer: 'Yes, Skye Canyon offers both resale homes and new construction. Dr. Jan Duffy can help you explore all available options including quick move-in homes and custom builds from Toll Brothers, Lennar, and DR Horton.' },
+            { question: 'Are there new construction homes available?', answer: 'Yes. Skye Canyon offers resale and new construction by Century Communities in Eaglepointe, Marvella, and Skyecrest. Dr. Jan Duffy can help you compare quick move-in and to-be-built options in zip 89166.' },
           ]}
         />
 
@@ -201,7 +196,6 @@ export default function Home() {
         {/* 9. Agent Bio + Footer */}
         <AgentBio />
         <CallToAction />
-        <Footer />
       </div>
     </>
   );

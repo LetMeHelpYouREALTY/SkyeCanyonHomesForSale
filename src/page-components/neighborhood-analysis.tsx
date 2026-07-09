@@ -3,7 +3,6 @@
 import { Home, MapPin, TrendingUp, Users } from 'lucide-react';
 import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
-import Footer from '@/components/footer';
 import NeighborhoodHeatmap from '@/components/neighborhood-heatmap';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
@@ -224,7 +223,6 @@ export default function NeighborhoodAnalysis() {
         </section>
       </main>
 
-      <Footer />
       <BackToTop />
     </>
   );

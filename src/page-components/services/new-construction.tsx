@@ -1,7 +1,6 @@
 'use client';
 
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
-import Footer from '@/components/footer';
 
 export default function NewConstructionServices() {
   return (
@@ -104,7 +103,6 @@ export default function NewConstructionServices() {
           </section>
         </main>
 
-        <Footer />
       </div>
     </>
   );

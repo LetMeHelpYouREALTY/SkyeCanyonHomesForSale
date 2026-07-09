@@ -99,6 +99,20 @@ export default function Navigation() {
                   Luxury Homes
                 </Link>
                 <Link
+                  href="/89166-homes-for-sale"
+                  className="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-realscout-blue transition-colors group/item"
+                >
+                  <MapPin className="w-4 h-4 mr-3 text-gray-400 group-hover/item:text-realscout-blue transition-colors" />
+                  89166 Homes for Sale
+                </Link>
+                <Link
+                  href="/skye-canyon/eaglepointe"
+                  className="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-realscout-blue transition-colors group/item"
+                >
+                  <Building2 className="w-4 h-4 mr-3 text-gray-400 group-hover/item:text-realscout-blue transition-colors" />
+                  Eaglepointe Community
+                </Link>
+                <Link
                   href="/skye-canyon-guide"
                   className="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-realscout-blue transition-colors group/item"
                 >

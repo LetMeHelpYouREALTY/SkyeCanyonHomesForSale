@@ -3,7 +3,6 @@
 import BackToTop from '@/components/back-to-top';
 import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
-import Footer from '@/components/footer';
 import MarketIntelligence from '@/components/market-intelligence';
 import MarketStats from '@/components/market-stats';
 import RealScoutListings from '@/components/realscout-listings';
@@ -140,7 +139,6 @@ export default function MarketAnalysis() {
           ]}
         />
 
-        <Footer />
         <BackToTop />
       </div>
     </>

@@ -3,7 +3,6 @@
 import { Home } from 'lucide-react';
 import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
-import Footer from '@/components/footer';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
 import { Card, CardContent } from '@/components/ui/card';
@@ -153,7 +152,6 @@ export default function SkyeCanyonGuide() {
         {/* Related Searches for Skye Canyon */}
         <RelatedSearches searchType="skye-canyon" />
 
-        <Footer />
         <BackToTop />
       </div>
     </>

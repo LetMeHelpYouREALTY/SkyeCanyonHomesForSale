@@ -1,7 +1,6 @@
 'use client';
 
 import { Home, MapPin, Shield, TrendingUp } from 'lucide-react';
-import Footer from '@/components/footer';
 import RealScoutListings from '@/components/realscout-listings';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -209,7 +208,6 @@ export default function NorthwestLasVegas() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }

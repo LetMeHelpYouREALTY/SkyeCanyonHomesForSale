@@ -1,6 +1,5 @@
 'use client';
 
-import Footer from '@/components/footer';
 import VoiceSearchIntegration from '@/components/voice-search-integration';
 
 export default function VoiceSearchPage() {
@@ -82,7 +81,6 @@ export default function VoiceSearchPage() {
         </div>
       </div>
 
-      <Footer />
     </>
   );
 }

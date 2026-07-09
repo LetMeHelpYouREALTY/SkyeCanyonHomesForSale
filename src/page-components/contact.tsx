@@ -2,7 +2,6 @@
 
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { CalendlyInline } from '@/components/calendly-widget';
-import Footer from '@/components/footer';
 import HomebotWidget from '@/components/homebot-widget';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -140,7 +139,6 @@ export default function Contact() {
         </section>
       </main>
 
-      <Footer />
     </>
   );
 }

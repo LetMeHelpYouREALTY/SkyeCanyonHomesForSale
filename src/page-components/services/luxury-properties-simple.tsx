@@ -1,6 +1,5 @@
 'use client';
 
-import Footer from '@/components/footer';
 
 export default function LuxuryPropertyServicesSimple() {
   return (
@@ -26,7 +25,6 @@ export default function LuxuryPropertyServicesSimple() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
