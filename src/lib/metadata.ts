@@ -44,6 +44,15 @@ export function buildSiteMetadata(): Metadata {
       description: ogDescription,
       images: [defaultOgImage.url],
     },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/icons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+      ],
+      apple: [{ url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' }],
+    },
+    manifest: '/manifest.json',
     robots: { index: true, follow: true },
   };
 }

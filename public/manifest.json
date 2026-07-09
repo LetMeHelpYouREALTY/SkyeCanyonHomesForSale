@@ -4,8 +4,8 @@
   "description": "Dr. Jan Duffy REALTOR - Luxury homes in Skye Canyon, Las Vegas",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#4a90e2",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1e40af",
   "orientation": "portrait-primary",
   "icons": [
     {
