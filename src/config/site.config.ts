@@ -38,6 +38,7 @@ export const siteConfig = {
     youtube: 'https://youtube.com/@skyecanyonhomes',
   },
   realscoutOnboarding: 'https://drjanduffy.realscout.com/onboarding',
+  ogImage: '/images/og/skye-canyon-homes.jpg',
 } as const;
 
 export type SiteConfig = typeof siteConfig;
