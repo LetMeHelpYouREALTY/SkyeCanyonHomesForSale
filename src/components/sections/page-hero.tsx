@@ -33,27 +33,28 @@ export default function PageHero({
 
   return (
     <section
-      className={`relative text-white flex items-center ${heightClasses[minHeight]}`}
+      className={`relative overflow-hidden text-white flex items-center ${heightClasses[minHeight]}`}
       role="banner"
     >
-      <div className="absolute inset-0">
-        <picture>
+      <div className="absolute inset-0 z-0" aria-hidden="true">
+        <picture className="absolute inset-0 block h-full w-full">
           {imageMobile && (
             <source media="(max-width: 768px)" srcSet={imageMobile} type="image/jpeg" />
           )}
           <img
             src={image}
             alt={imageAlt}
-            className="w-full h-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-center"
             loading="eager"
             fetchPriority="high"
+            decoding="async"
           />
         </picture>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/65" />
       </div>
 
       <div
-        className={`relative w-full max-w-5xl px-4 sm:px-6 lg:px-8 ${alignClass}`}
+        className={`relative z-10 w-full max-w-5xl px-4 sm:px-6 lg:px-8 ${alignClass}`}
       >
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight drop-shadow-sm">
           {title}
