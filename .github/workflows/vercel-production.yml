@@ -13,15 +13,20 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: team_EIbjFXaDDtGMTweb5Hvo3CG3
+      VERCEL_PROJECT_ID: prj_KuUJDVnFXb80VcgEKpNj5MRwWdHp
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy to Vercel Production
-        uses: amondnet/vercel-action@v25
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: team_EIbjFXaDDtGMTweb5Hvo3CG3
-          vercel-project-id: prj_KuUJDVnFXb80VcgEKpNj5MRwWdHp
-          vercel-args: '--prod'
-          working-directory: ./
+          node-version: '22'
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: Deploy to production
+        run: vercel deploy --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
