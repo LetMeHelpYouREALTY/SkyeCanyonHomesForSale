@@ -42,3 +42,15 @@ npm run check        # tsc --noEmit (legacy components may have TS warnings)
 2. `curl http://localhost:3000/api/health` → `{"status":"ok",...}`
 3. Open `/` in browser — hero, MLS listings widget area, navigation with phone CTA
 4. POST `/api/leads` with JSON body → `{ "success": true, ... }`
+
+### Vercel production deploy
+
+Project: **sky-canyon-homes** (`prj_KuUJDVnFXb80VcgEKpNj5MRwWdHp`), team `janet-duffys-projects`.
+
+If git push does not auto-deploy (common after GitHub repo rename):
+
+1. Reconnect Git in Vercel: **Settings → Git** → `LetMeHelpYouREALTY/SkyeCanyonHomesForSale`, branch `main`
+2. Set **Framework Preset** to **Next.js** (was Vite)
+3. Or use GitHub Action `.github/workflows/vercel-production.yml` with `VERCEL_TOKEN` secret
+
+Full audit: `docs/VERCEL-DEPLOY-AUDIT.md`

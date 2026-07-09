@@ -1,0 +1,27 @@
+name: Vercel Production Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: vercel-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel Production
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: team_EIbjFXaDDtGMTweb5Hvo3CG3
+          vercel-project-id: prj_KuUJDVnFXb80VcgEKpNj5MRwWdHp
+          vercel-args: '--prod'
+          working-directory: ./
