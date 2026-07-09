@@ -44,12 +44,12 @@ GitHub Actions deploy **built successfully** but failed with:
 Error: The Next.js output directory "dist" was not found at "/vercel/path0/dist"
 ```
 
-Fix in [Project Settings → General](https://vercel.com/janet-duffys-projects/sky-canyon-homes/settings/general):
+Fix in [Project Settings → General](https://vercel.com/janet-duffys-projects/sky-canyon-homes/settings/general) (recommended long-term):
 
 1. **Framework Preset** → **Next.js**
 2. **Output Directory** → clear the field (remove `dist` or `dist/public`)
-3. **Build Command** → `npm run build` (or leave default)
-4. **Install Command** → `npm install`
+
+**Repo workaround (active):** `next.config.ts` sets `distDir: 'dist'` so builds match the legacy Vercel output path until the dashboard is updated.
 
 ### 3. No CI deploy fallback
 

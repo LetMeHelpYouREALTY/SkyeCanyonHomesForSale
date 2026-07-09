@@ -11,6 +11,9 @@ const csp = [
 ].join('; ');
 
 const nextConfig: NextConfig = {
+  // Vercel project still has Output Directory = "dist" from legacy Vite setup.
+  // Next.js defaults to ".next"; align build output until dashboard is cleared.
+  distDir: 'dist',
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
