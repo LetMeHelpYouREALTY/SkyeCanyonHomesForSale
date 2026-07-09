@@ -16,6 +16,7 @@
     "lint:biome": "biome lint .",
     "check:all": "biome check .",
     "db:push": "prisma db push",
+    "optimize:heroes": "node scripts/optimize-heroes.mjs",
     "postinstall": "prisma generate"
   },
   "dependencies": {
@@ -86,6 +87,7 @@
     "eslint": "^9",
     "eslint-config-next": "^15.5.20",
     "postcss": "^8.4.47",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.6.3"
   }

@@ -7,6 +7,8 @@ interface HyperlocalHeroProps {
   image: string;
   imageAlt: string;
   imageMobile?: string;
+  imageWebp?: string;
+  imageMobileWebp?: string;
 }
 
 export default function HyperlocalHero({
@@ -15,7 +17,9 @@ export default function HyperlocalHero({
   badges = [],
   image,
   imageAlt,
-  imageMobile,
+  imageMobile = image.replace(/\.jpg$/, '-mobile.jpg'),
+  imageWebp = image.replace(/\.jpg$/, '.webp'),
+  imageMobileWebp = image.replace(/\.jpg$/, '-mobile.webp'),
 }: HyperlocalHeroProps) {
   return (
     <PageHero
@@ -24,6 +28,8 @@ export default function HyperlocalHero({
       image={image}
       imageAlt={imageAlt}
       imageMobile={imageMobile}
+      imageWebp={imageWebp}
+      imageMobileWebp={imageMobileWebp}
       badges={badges}
       minHeight="md"
     />

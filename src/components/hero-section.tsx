@@ -1,17 +1,15 @@
 import { CalendlyPopupButton } from '@/components/calendly-widget';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
 
 export default function HeroSection() {
-  const hero = getHeroImage('home');
+  const hero = getHeroImageProps('home');
 
   return (
     <PageHero
       title="Skye Canyon Homes for Sale"
       subtitle="Dr. Jan Duffy, REALTOR® — luxury homes, new construction, and resale in Las Vegas NV 89166. Century Communities specialist."
-      image={hero.src}
-      imageAlt={hero.alt}
-      imageMobile={hero.srcMobile}
+      {...hero}
       minHeight="lg"
     >
       <div className="flex flex-wrap justify-center gap-8 mb-10">

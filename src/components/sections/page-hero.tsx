@@ -1,4 +1,7 @@
+'use client';
+
 import type { ReactNode } from 'react';
+import { useState } from 'react';
 
 export interface PageHeroProps {
   title: string;
@@ -6,6 +9,8 @@ export interface PageHeroProps {
   image: string;
   imageAlt: string;
   imageMobile?: string;
+  imageWebp?: string;
+  imageMobileWebp?: string;
   badges?: string[];
   minHeight?: 'sm' | 'md' | 'lg';
   align?: 'center' | 'left';
@@ -18,18 +23,28 @@ const heightClasses = {
   lg: 'min-h-[550px] py-24',
 };
 
+const FALLBACK_IMAGE = '/images/heroes/home.jpg';
+const FALLBACK_MOBILE = '/images/heroes/home-mobile.jpg';
+
 export default function PageHero({
   title,
   subtitle,
   image,
   imageAlt,
   imageMobile,
+  imageWebp,
+  imageMobileWebp,
   badges = [],
   minHeight = 'md',
   align = 'center',
   children,
 }: PageHeroProps) {
   const alignClass = align === 'center' ? 'text-center mx-auto' : 'text-left';
+  const [desktopSrc, setDesktopSrc] = useState(image);
+  const [mobileSrc, setMobileSrc] = useState(imageMobile ?? image);
+
+  const desktopWebp = imageWebp ?? image.replace(/\.jpg$/, '.webp');
+  const mobileWebp = imageMobileWebp ?? (imageMobile ?? image).replace(/\.jpg$/, '.webp');
 
   return (
     <section
@@ -39,15 +54,35 @@ export default function PageHero({
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <picture className="absolute inset-0 block h-full w-full">
           {imageMobile && (
-            <source media="(max-width: 768px)" srcSet={imageMobile} type="image/jpeg" />
+            <>
+              <source
+                media="(max-width: 768px)"
+                srcSet={mobileWebp}
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 768px)"
+                srcSet={mobileSrc}
+                type="image/jpeg"
+              />
+            </>
           )}
+          <source srcSet={desktopWebp} type="image/webp" />
           <img
-            src={image}
+            src={desktopSrc}
             alt={imageAlt}
             className="absolute inset-0 h-full w-full object-cover object-center"
             loading="eager"
             fetchPriority="high"
             decoding="async"
+            onError={() => {
+              if (desktopSrc !== FALLBACK_IMAGE) {
+                setDesktopSrc(FALLBACK_IMAGE);
+              }
+              if (mobileSrc !== FALLBACK_MOBILE) {
+                setMobileSrc(FALLBACK_MOBILE);
+              }
+            }}
           />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/65" />

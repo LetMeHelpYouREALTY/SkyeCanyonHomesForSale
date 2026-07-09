@@ -5,6 +5,8 @@
 export interface HeroImageConfig {
   src: string;
   srcMobile?: string;
+  srcWebp?: string;
+  srcMobileWebp?: string;
   alt: string;
 }
 
@@ -12,6 +14,8 @@ function hero(path: string, alt: string): HeroImageConfig {
   return {
     src: `/images/heroes/${path}.jpg`,
     srcMobile: `/images/heroes/${path}-mobile.jpg`,
+    srcWebp: `/images/heroes/${path}.webp`,
+    srcMobileWebp: `/images/heroes/${path}-mobile.webp`,
     alt,
   };
 }
@@ -48,4 +52,16 @@ export const heroImages: Record<string, HeroImageConfig> = {
 
 export function getHeroImage(key: string): HeroImageConfig {
   return heroImages[key] ?? heroImages.default;
+}
+
+/** Spreadable props for PageHero / HyperlocalHero */
+export function getHeroImageProps(key: string) {
+  const hero = getHeroImage(key);
+  return {
+    image: hero.src,
+    imageMobile: hero.srcMobile,
+    imageWebp: hero.srcWebp,
+    imageMobileWebp: hero.srcMobileWebp,
+    imageAlt: hero.alt,
+  };
 }
