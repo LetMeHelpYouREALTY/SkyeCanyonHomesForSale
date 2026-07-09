@@ -1,6 +1,11 @@
 /**
  * Hero background images — self-hosted in /public/images/heroes/.
  * Keys map to routes and page identifiers.
+ *
+ * Add a new hero:
+ *   1. Save to /opt/cursor/artifacts/assets/<name>.jpg
+ *   2. npm run hero:publish -- <name>
+ *   3. Add entry below (if not reusing an existing file)
  */
 export interface HeroImageConfig {
   src: string;

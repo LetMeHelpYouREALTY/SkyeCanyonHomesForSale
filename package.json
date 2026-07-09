@@ -17,6 +17,8 @@
     "check:all": "biome check .",
     "db:push": "prisma db push",
     "optimize:heroes": "node scripts/optimize-heroes.mjs",
+    "hero:deploy": "node scripts/hero-deploy.mjs",
+    "hero:publish": "node scripts/hero-publish.mjs",
     "postinstall": "prisma generate"
   },
   "dependencies": {
