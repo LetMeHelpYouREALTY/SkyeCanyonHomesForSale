@@ -17,7 +17,7 @@ export default function NorthwestLasVegas() {
     },
     {
       name: 'Centennial Hills',
-      description: 'Family-friendly master-planned community',
+      description: 'Master-planned community with parks and shopping',
       priceRange: '$350K - $650K',
       features: ['Top Schools', 'Parks', 'Shopping'],
     },
@@ -169,10 +169,10 @@ export default function NorthwestLasVegas() {
                 <div className="flex items-start">
                   <Shield className="w-6 h-6 text-realscout-blue mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Top-Rated Schools</h3>
+                    <h3 className="text-xl font-semibold mb-2">Named Campuses Nearby</h3>
                     <p className="text-gray-600">
-                      Access to some of Clark County's highest-rated schools, making it perfect for
-                      families with children.
+                      Clark County School District campuses serve zip 89166. Ask Dr. Duffy for
+                      current zoning and typical drive times from a specific address.
                     </p>
                   </div>
                 </div>

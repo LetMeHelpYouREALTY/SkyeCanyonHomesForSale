@@ -229,11 +229,11 @@ export default function SkyeCanyonParks() {
         <section className="py-16 px-4 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Active Lifestyle & Family Recreation
+              Parks, Trails, and Recreation
             </h2>
             <p className="text-xl text-gray-600 mb-12">
-              Fully equipped with splash pads, basketball courts, soccer fields, play structures and
-              more, there is something for everyone at Skye Canyon's community parks.
+              Splash pads, basketball courts, soccer fields, and play structures are available at
+              Skye Canyon community parks in Las Vegas NV 89166.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -241,9 +241,9 @@ export default function SkyeCanyonParks() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Family Friendly</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Play Areas</h3>
                 <p className="text-gray-600">
-                  Safe play areas and amenities designed for families with children of all ages.
+                  Covered play structures, splash pads, and open lawns at Skye Canyon Park.
                 </p>
               </div>
 

@@ -5,6 +5,7 @@ import { Heart, Bed, Bath, Square, MapPin, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import PropertyMapImage, { PropertyMapConfig } from '@/components/property-map-image';
+import { propertyImages } from '@/data/section-images';
 
 interface Property {
   id: string;
@@ -115,7 +116,7 @@ export default function EnhancedPropertyCard({
       {/* Property Image */}
       <div className="relative h-64">
         <img
-          src={property.imageUrl || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=75'}
+          src={property.imageUrl || propertyImages.luxury}
           alt={property.address}
           className="w-full h-full object-cover"
           loading="lazy"

@@ -2,7 +2,7 @@
 
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-// Using public directory for reliable image loading
+import { siteImage } from '@/lib/cloudflare-images';
 
 export default function AgentBio() {
   const _scrollToContact = () => {
@@ -18,8 +18,8 @@ export default function AgentBio() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="/dr-jan-duffy.jpg"
-              alt="Dr. Jan Duffy REALTOR professional headshot"
+              src={siteImage('sections/office-exterior.jpg')}
+              alt="Skye Canyon office at 10111 W. Skye Canyon Park Drive, Las Vegas NV 89166"
               className="rounded-xl shadow-lg w-full max-w-md mx-auto lg:mx-0"
               style={{ imageRendering: 'auto', maxWidth: '400px', height: 'auto' }}
             />

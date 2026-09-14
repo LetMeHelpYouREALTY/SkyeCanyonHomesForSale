@@ -144,16 +144,31 @@ export default function Footer() {
               </div>
 
               <div className="mt-4 pt-4 border-t border-gray-600">
-                <h5 className="text-sm font-semibold mb-3 text-white">Leave a Review</h5>
-                <a 
-                  href={siteConfig.googleReviewUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  <span className="mr-2">⭐</span>
-                  Google Business Review
-                </a>
+                <h5 className="text-sm font-semibold mb-3 text-white">Google Maps</h5>
+                <div className="flex flex-col gap-2 text-sm">
+                  <a
+                    href={`tel:${siteConfig.phoneTel}`}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Call {siteConfig.phone}
+                  </a>
+                  <a
+                    href={siteConfig.directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Get directions
+                  </a>
+                  <a
+                    href={siteConfig.googleReviewUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    View Google Reviews
+                  </a>
+                </div>
               </div>
             </div>
           </div>

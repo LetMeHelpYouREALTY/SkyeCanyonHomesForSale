@@ -49,7 +49,7 @@ const services = [
     id: 'relocation',
     title: 'Relocation Assistance',
     description:
-      "Comprehensive relocation services for families moving to Las Vegas' premier guard-gated community.",
+      "Comprehensive relocation services for buyers moving to Las Vegas' premier guard-gated community.",
     icon: Truck,
     highlight: 'Full-service relocation support',
     link: '/services/relocation',

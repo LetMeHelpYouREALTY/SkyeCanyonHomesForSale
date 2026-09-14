@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { siteConfig } from '@/config/site.config';
+import { siteImage } from '@/lib/cloudflare-images';
 
 /** Open Graph / Twitter card image — 1200×630 per platform specs */
 export const defaultOgImage = {
-  url: '/images/og/skye-canyon-homes.jpg',
+  url: siteImage('og/skye-canyon-homes.jpg'),
   width: 1200,
   height: 630,
   alt: 'Skye Canyon luxury homes for sale Las Vegas NV 89166 — Dr. Jan Duffy REALTOR®',

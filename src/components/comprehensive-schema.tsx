@@ -26,6 +26,12 @@ export default function ComprehensiveSchemaMarkup({
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
+    image: [
+      `${siteConfig.url}/images/og/skye-canyon-homes.jpg`,
+      `${siteConfig.url}/images/heroes/home.jpg`,
+      `${siteConfig.url}/images/sections/office-exterior.jpg`,
+    ],
+    hasMap: siteConfig.mapsUrl,
     address: {
       '@type': 'PostalAddress',
       streetAddress: siteConfig.address.street,
@@ -86,7 +92,7 @@ export default function ComprehensiveSchemaMarkup({
       '@type': 'Organization',
       name: siteConfig.brokerage,
     },
-    sameAs: Object.values(siteConfig.social),
+    sameAs: [...Object.values(siteConfig.social), siteConfig.googleMapsUrl, siteConfig.googleBusinessUrl],
   };
 
   const organizationSchema = {

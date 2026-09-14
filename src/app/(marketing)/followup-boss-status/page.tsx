@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
+import { marketingMetadata } from '@/lib/page-seo';
 import PageContent from '@/page-components/followup-boss-status';
 
-export const metadata: Metadata = {
-  title: 'Follow Up Boss Status',
-  description: 'Expert Skye Canyon real estate services in Las Vegas NV 89166. Contact Dr. Jan Duffy, REALTOR® at (702) 500-1902.',
-};
+export const metadata: Metadata = marketingMetadata('/followup-boss-status');
 
 export default function FollowupBossStatusPage() {
   return <PageContent />;

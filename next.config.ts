@@ -7,7 +7,7 @@ const csp = [
   "connect-src 'self' https://em.realscout.com https://www.realscout.com https://*.homebotapp.com https://calendly.com https://www.google-analytics.com https://*.supabase.co https://maps.googleapis.com",
   "img-src 'self' data: https: blob:",
   "font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com",
-  "frame-src 'self' https://em.realscout.com https://www.realscout.com https://*.homebotapp.com https://calendly.com",
+  "frame-src 'self' https://em.realscout.com https://www.realscout.com https://*.homebotapp.com https://calendly.com https://www.google.com https://maps.google.com",
 ].join('; ');
 
 const nextConfig: NextConfig = {
@@ -23,7 +23,8 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [
-      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'imagedelivery.net' },
+      { protocol: 'https', hostname: 'images.skyecanyonhomesforsale.com' },
       { protocol: 'https', hostname: '**.realscout.com' },
       { protocol: 'https', hostname: '**.supabase.co' },
     ],

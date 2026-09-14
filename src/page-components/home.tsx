@@ -5,42 +5,97 @@ import { CalendlyPopupButton } from '@/components/calendly-widget';
 import CallToAction from '@/components/call-to-action';
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
 import FAQSection from '@/components/faq-section';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import HeroSection from '@/components/hero-section';
 import HomebotWidget from '@/components/homebot-widget';
 import RealScoutListings from '@/components/realscout-listings';
 import HyperlocalExploreHub from '@/components/sections/hyperlocal-explore-hub';
 import ReviewHighlights from '@/components/review-highlights';
-import GoogleBusinessReview from '@/components/google-business-review';
 import ServicesOverview from '@/components/services-overview';
+import { siteConfig } from '@/config/site.config';
+import { sectionImages } from '@/data/section-images';
+
+const exploreCards = [
+  {
+    href: '/skye-canyon-guide',
+    title: 'Neighborhood Guide',
+    description: 'Restaurants, named campuses, parks, and drive times in Las Vegas NV 89166.',
+    image: sectionImages.guide,
+    cta: 'Explore',
+  },
+  {
+    href: '/market-analysis',
+    title: 'Market Analytics',
+    description: 'Price trends and current inventory for Skye Canyon Las Vegas NV 89166.',
+    image: sectionImages.market,
+    cta: 'View data',
+  },
+  {
+    href: '/skye-canyon-schools',
+    title: 'Schools & Education',
+    description: 'Clark County campuses serving Skye Canyon with commute context.',
+    image: sectionImages.schools,
+    cta: 'View campuses',
+  },
+  {
+    href: '/skye-canyon-communities',
+    title: 'Communities & Builders',
+    description: 'Eaglepointe, Marvella, Skyecrest, and Century Communities new construction.',
+    image: sectionImages.communities,
+    cta: 'Explore',
+  },
+  {
+    href: '/skye-canyon-parks',
+    title: 'Parks & Recreation',
+    description: 'Golf, trails, pools, and Skye Canyon Park amenities in 89166.',
+    image: sectionImages.parks,
+    cta: 'See amenities',
+  },
+  {
+    href: '/northwest-las-vegas',
+    title: 'Northwest Las Vegas',
+    description: 'Centennial Hills, Providence, and surrounding northwest Las Vegas areas.',
+    image: sectionImages.northwest,
+    cta: 'Explore area',
+  },
+];
 
 export default function Home() {
+  const listings = sectionImages.listings;
+  const valuation = sectionImages.valuation;
+  const golf = sectionImages.golf;
+
   return (
     <>
-      {/* Schema Markup (invisible, SEO only) */}
       <ComprehensiveSchemaMarkup
         pageType="homepage"
-        breadcrumbs={[{ name: 'Home', url: 'https://www.skyecanyonhomesforsale.com' }]}
+        breadcrumbs={[{ name: 'Home', url: siteConfig.url }]}
       />
-      {/* Single consolidated schema - no duplicates */}
 
       <div className="min-h-screen bg-white">
-        {/* 1. Hero */}
         <HeroSection />
 
-        {/* 2. Live MLS Listings */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Current Skye Canyon MLS Listings
               </h2>
-              <p className="text-xl text-gray-600">Live inventory of available homes in Las Vegas NV 89166</p>
+              <p className="text-xl text-gray-600">
+                Live inventory of available homes in Las Vegas NV 89166
+              </p>
             </div>
+            <HeadingImage
+              src={listings.src}
+              srcWebp={listings.srcWebp}
+              alt={listings.alt}
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
             <RealScoutListings className="w-full" />
           </div>
         </section>
 
-        {/* 3. Market Stats */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
@@ -60,23 +115,34 @@ export default function Home() {
                 <div className="text-gray-600">Price to List Ratio</div>
               </div>
             </div>
-            <a href="/market-analysis" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+            <p className="text-sm text-gray-500 mb-4">
+              Confirm current figures on live MLS with Dr. Jan Duffy before making an offer.
+            </p>
+            <a
+              href="/market-analysis"
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+            >
               View Complete Market Analysis &rarr;
             </a>
           </div>
         </section>
 
-        {/* 4. Home Valuation Widget */}
         <section className="py-16 bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What's Your Skye Canyon Home Worth?
+                What&apos;s Your Skye Canyon Home Worth?
               </h2>
               <p className="text-lg text-gray-600">
-                Get an instant, AI-powered home valuation for your Skye Canyon property. Updated monthly with real market data.
+                Get an instant home valuation for your Skye Canyon property in Las Vegas NV 89166.
               </p>
             </div>
+            <HeadingImage
+              src={valuation.src}
+              srcWebp={valuation.srcWebp}
+              alt={valuation.alt}
+              className="w-full h-48 object-cover rounded-xl mb-6"
+            />
             <div className="bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-100">
               <HomebotWidget id="homebot_homeowner" className="w-full min-h-[200px]" />
             </div>
@@ -86,114 +152,140 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 5. Services */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 items-center">
+            <HeadingImage
+              src={golf.src}
+              srcWebp={golf.srcWebp}
+              alt={golf.alt}
+              className="w-full h-64 object-cover rounded-xl"
+            />
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Desert Highlands Golf Course Homes
+              </h2>
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                Fairway lots in Skye Canyon, Las Vegas NV 89166
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Compare golf-course, interior, and new-construction floor plans with live MLS data.
+                Dr. Jan Duffy walks the inventory at {siteConfig.address.formatted}.
+              </p>
+              <a
+                href="/luxury-homes-las-vegas"
+                className="inline-flex text-blue-600 font-medium hover:text-blue-800"
+              >
+                View luxury and golf-course homes &rarr;
+              </a>
+            </div>
+          </div>
+        </section>
+
         <ServicesOverview />
 
-        {/* 5. Explore Skye Canyon */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Explore Skye Canyon</h2>
-              <p className="text-lg text-gray-600">Discover what makes Skye Canyon one of the most sought-after communities in Northwest Las Vegas</p>
+              <p className="text-lg text-gray-600">
+                Amenities, builders, and northwest Las Vegas context for zip 89166
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <a href="/skye-canyon-guide" className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Neighborhood Guide</h3>
-                <p className="text-gray-600 text-sm mb-3">Restaurants, schools, parks & amenities with maps and drive times.</p>
-                <span className="text-blue-600 font-medium text-sm group-hover:text-blue-800">Explore &rarr;</span>
-              </a>
-              <a href="/market-analysis" className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-6">
-                <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Market Analytics</h3>
-                <p className="text-gray-600 text-sm mb-3">Price trends, heatmaps & real-time data for Skye Canyon.</p>
-                <span className="text-emerald-600 font-medium text-sm group-hover:text-emerald-800">View Data &rarr;</span>
-              </a>
-              <a href="/skye-canyon-schools" className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-6">
-                <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Schools & Education</h3>
-                <p className="text-gray-600 text-sm mb-3">Top-rated Clark County schools and district information.</p>
-                <span className="text-amber-600 font-medium text-sm group-hover:text-amber-800">View Schools &rarr;</span>
-              </a>
-              <a href="/skye-canyon-communities" className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-6">
-                <div className="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Communities & Builders</h3>
-                <p className="text-gray-600 text-sm mb-3">Eaglepointe, Marvella, Skyecrest and Century Communities new construction.</p>
-                <span className="text-rose-600 font-medium text-sm group-hover:text-rose-800">Explore &rarr;</span>
-              </a>
-              <a href="/skye-canyon-parks" className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-6">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Parks & Recreation</h3>
-                <p className="text-gray-600 text-sm mb-3">Golf, trails, pools, Skye Canyon Park and outdoor amenities.</p>
-                <span className="text-teal-600 font-medium text-sm group-hover:text-teal-800">See Amenities &rarr;</span>
-              </a>
-              <a href="/northwest-las-vegas" className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-6">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Northwest Las Vegas</h3>
-                <p className="text-gray-600 text-sm mb-3">Centennial Hills, Providence & surrounding NW communities.</p>
-                <span className="text-indigo-600 font-medium text-sm group-hover:text-indigo-800">Explore Area &rarr;</span>
-              </a>
+              {exploreCards.map((card) => (
+                <a
+                  key={card.href}
+                  href={card.href}
+                  className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 overflow-hidden"
+                >
+                  <HeadingImage
+                    src={card.image.src}
+                    srcWebp={card.image.srcWebp}
+                    alt={card.image.alt}
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{card.title}</h3>
+                    <p className="text-gray-600 text-sm mb-3">{card.description}</p>
+                    <span className="text-blue-600 font-medium text-sm group-hover:text-blue-800">
+                      {card.cta} &rarr;
+                    </span>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </section>
 
         <HyperlocalExploreHub />
 
-        {/* 6. Reviews */}
         <ReviewHighlights />
-        <GoogleBusinessReview />
+        <GbpLocalSection />
 
-        {/* 7. FAQ */}
         <FAQSection
           title="Frequently Asked Questions About Skye Canyon"
           pageType="skye-canyon"
           faqs={[
-            { question: 'What are the home prices in Skye Canyon?', answer: 'Skye Canyon home prices typically range from $650,000 to $1.2M+, with luxury custom homes reaching higher price points. The guard-gated community offers exceptional value for the premium amenities and location.' },
-            { question: 'Is Skye Canyon a guard-gated community?', answer: "Yes, Skye Canyon is a prestigious 24/7 guard-gated community with controlled access and roving security patrols, ensuring residents' safety and privacy." },
-            { question: 'What amenities are available in Skye Canyon?', answer: 'Skye Canyon features the Desert Highlands Golf Course, community recreation center, fitness facilities, swimming pools, tennis courts, walking trails, and exclusive clubhouse amenities.' },
-            { question: 'What schools serve the Skye Canyon area?', answer: 'Skye Canyon is served by highly-rated schools in the Clark County School District, including top-performing elementary, middle, and high schools in the northwest Las Vegas area.' },
-            { question: 'Are there new construction homes available?', answer: 'Yes. Skye Canyon offers resale and new construction by Century Communities in Eaglepointe, Marvella, and Skyecrest. Dr. Jan Duffy can help you compare quick move-in and to-be-built options in zip 89166.' },
+            {
+              question: 'What are the home prices in Skye Canyon?',
+              answer:
+                'Recent Skye Canyon listings often range from about $650,000 to $1.2M+, with custom golf-course homes higher. Confirm live MLS numbers with Dr. Jan Duffy before you write an offer.',
+            },
+            {
+              question: 'Is Skye Canyon a guard-gated community?',
+              answer:
+                'Yes. Skye Canyon has a 24/7 guarded gate and controlled vehicle access in Las Vegas NV 89166.',
+            },
+            {
+              question: 'What amenities are available in Skye Canyon?',
+              answer:
+                'Skye Canyon includes Desert Highlands Golf Course, a recreation center, fitness rooms, swimming pools, tennis courts, walking trails, and a clubhouse.',
+            },
+            {
+              question: 'What schools serve the Skye Canyon area?',
+              answer:
+                'Homes in zip 89166 are zoned in the Clark County School District. Dr. Jan Duffy can share current campus names and typical drive times from a specific address.',
+            },
+            {
+              question: 'Are there new construction homes available?',
+              answer:
+                'Yes. Skye Canyon offers resale and new construction by Century Communities in Eaglepointe, Marvella, and Skyecrest. Compare quick move-in and to-be-built options in zip 89166.',
+            },
           ]}
         />
 
-        {/* 8. CTA */}
         <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Find Your Skye Canyon Home?</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy for expert guidance on buying or selling in Skye Canyon
+              Contact Dr. Jan Duffy for buying or selling guidance in Skye Canyon, Las Vegas NV 89166
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener noreferrer" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors shadow-lg text-center">
+              <a
+                href={siteConfig.realscoutOnboarding}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors shadow-lg text-center"
+              >
                 Search Available Homes
               </a>
               <CalendlyPopupButton
                 text="Schedule a Consultation"
                 className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-400 transition-colors shadow-lg text-center"
               />
-              <a href="tel:+17025001902" className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 border-2 border-blue-400 transition-colors shadow-lg text-center">
-                Call (702) 500-1902
+              <a
+                href={`tel:${siteConfig.phoneTel}`}
+                className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 border-2 border-blue-400 transition-colors shadow-lg text-center"
+              >
+                Call {siteConfig.phone}
               </a>
             </div>
             <p className="text-sm text-blue-200 mt-4">
-              10111 W Skye Canyon Park Dr, Las Vegas, NV 89166 &bull; Berkshire Hathaway HomeServices
+              {siteConfig.address.formatted} &bull; {siteConfig.brokerage}
             </p>
           </div>
         </section>
 
-        {/* 9. Agent Bio + Footer */}
         <AgentBio />
         <CallToAction />
       </div>

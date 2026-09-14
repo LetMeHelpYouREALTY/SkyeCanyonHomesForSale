@@ -11,18 +11,15 @@ export default function PerformanceCritical() {
       const heroImageLinkWebP = document.createElement('link');
       heroImageLinkWebP.rel = 'preload';
       heroImageLinkWebP.as = 'image';
-      heroImageLinkWebP.href =
-        'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=85&fm=webp';
+      heroImageLinkWebP.href = '/images/heroes/home.webp';
       heroImageLinkWebP.type = 'image/webp';
       document.head.appendChild(heroImageLinkWebP);
 
-      // Preload agent headshot
-      const agentImageLink = document.createElement('link');
-      agentImageLink.rel = 'preload';
-      agentImageLink.as = 'image';
-      agentImageLink.href =
-        'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
-      document.head.appendChild(agentImageLink);
+      const officeImageLink = document.createElement('link');
+      officeImageLink.rel = 'preload';
+      officeImageLink.as = 'image';
+      officeImageLink.href = '/images/sections/office-exterior.jpg';
+      document.head.appendChild(officeImageLink);
 
       // Preload critical fonts
       const fontLink = document.createElement('link');

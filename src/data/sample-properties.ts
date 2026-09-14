@@ -2,6 +2,8 @@
  * Sample Skye Canyon properties with coordinates for Google Maps integration
  */
 
+import { propertyImages } from '@/data/section-images';
+
 export interface Property {
   id: string;
   address: string;
@@ -36,7 +38,7 @@ export const sampleProperties: Property[] = [
     yearBuilt: 2020,
     lotSize: 12000,
     mlsId: 'SC001234',
-    imageUrl: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    imageUrl: propertyImages.golf
   },
   {
     id: 'skye-canyon-002',
@@ -52,7 +54,7 @@ export const sampleProperties: Property[] = [
     yearBuilt: 2022,
     lotSize: 8000,
     mlsId: 'SC002345',
-    imageUrl: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    imageUrl: propertyImages.luxury
   },
   {
     id: 'skye-canyon-003',
@@ -68,7 +70,7 @@ export const sampleProperties: Property[] = [
     yearBuilt: 2024,
     lotSize: 9000,
     mlsId: 'SC003456',
-    imageUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    imageUrl: propertyImages.newConstruction
   },
   {
     id: 'skye-canyon-004',
@@ -80,11 +82,11 @@ export const sampleProperties: Property[] = [
     status: 'Active',
     coordinates: { lat: 36.3168948, lng: -115.3198838 },
     propertyType: 'standard',
-    description: 'Beautiful single-story home perfect for families. Features open floor plan, updated kitchen, and spacious backyard.',
+    description: 'Single-story home with an open floor plan, updated kitchen, and backyard patio.',
     yearBuilt: 2018,
     lotSize: 7000,
     mlsId: 'SC004567',
-    imageUrl: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    imageUrl: propertyImages.single
   },
   {
     id: 'skye-canyon-005',
@@ -101,7 +103,7 @@ export const sampleProperties: Property[] = [
     yearBuilt: 2019,
     lotSize: 15000,
     mlsId: 'SC005678',
-    imageUrl: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    imageUrl: propertyImages.golf
   },
   {
     id: 'skye-canyon-006',
@@ -117,7 +119,7 @@ export const sampleProperties: Property[] = [
     yearBuilt: 2024,
     lotSize: 6000,
     mlsId: 'SC006789',
-    imageUrl: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    imageUrl: propertyImages.newConstruction
   }
 ];
 

@@ -235,8 +235,8 @@ export default function PropertyDetail() {
               <CardContent>
                 <div className="text-center mb-6">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200"
-                    alt="Dr. Jan Duffy"
+                    src="/images/sections/office-exterior.jpg"
+                    alt="Dr. Jan Duffy REALTOR office in Skye Canyon Las Vegas NV 89166"
                     className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
                   />
                   <h3 className="font-semibold text-lg">Dr. Jan Duffy</h3>

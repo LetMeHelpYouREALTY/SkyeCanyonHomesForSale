@@ -1,6 +1,7 @@
 'use client';
 
 import { siteConfig } from '@/config/site.config';
+import { absoluteSiteImage } from '@/lib/cloudflare-images';
 
 export default function LocalBusinessSchema() {
   const businessSchema = {
@@ -13,6 +14,12 @@ export default function LocalBusinessSchema() {
     telephone: siteConfig.phone,
     email: siteConfig.email,
     url: siteConfig.url,
+    image: [
+      absoluteSiteImage('og/skye-canyon-homes.jpg', siteConfig.url),
+      absoluteSiteImage('heroes/home.jpg', siteConfig.url),
+      absoluteSiteImage('sections/office-exterior.jpg', siteConfig.url),
+    ],
+    hasMap: siteConfig.mapsUrl,
     address: {
       '@type': 'PostalAddress',
       streetAddress: siteConfig.address.street,

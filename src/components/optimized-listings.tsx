@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { useLazyLoading } from '@/hooks/use-lazy-loading';
+import { propertyImages } from '@/data/section-images';
 
 interface OptimizedListingsProps {
   className?: string;
@@ -51,8 +52,7 @@ export default function OptimizedListings({ className = '', limit = 6 }: Optimiz
               <div className="relative h-48">
                 <img
                   src={
-                    listing.imageUrl ||
-                    'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=75'
+                    listing.imageUrl || propertyImages.luxury
                   }
                   alt={listing.address || 'Property image'}
                   className="w-full h-full object-cover"

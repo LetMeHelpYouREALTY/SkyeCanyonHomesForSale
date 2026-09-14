@@ -8,17 +8,13 @@ export default function CriticalPerformanceLoader() {
     const preloadCriticalResources = () => {
       // Preload hero image
       const heroImage = new Image();
-      heroImage.src =
-        'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';
+      heroImage.src = '/images/heroes/home.jpg';
 
-      // Preload Dr. Jan Duffy headshot
-      const agentPhoto = new Image();
-      agentPhoto.src =
-        'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+      const officePhoto = new Image();
+      officePhoto.src = '/images/sections/office-exterior.jpg';
 
       // Preconnect to external domains
       const preconnectDomains = [
-        'https://images.unsplash.com',
         'https://em.realscout.com',
         'https://fonts.googleapis.com',
         'https://fonts.gstatic.com',

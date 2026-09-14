@@ -1,11 +1,13 @@
 'use client';
 
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Navigation, Phone, Star } from 'lucide-react';
 import { CalendlyInline } from '@/components/calendly-widget';
+import GbpLocalSection from '@/components/gbp-local-section';
 import HomebotWidget from '@/components/homebot-widget';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
 import { Card, CardContent } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
 
 export default function Contact() {
 
@@ -14,9 +16,8 @@ export default function Contact() {
       <main className="min-h-screen bg-gray-50">
         <PageHero
           title="Contact Dr. Jan Duffy"
-          subtitle="Ready to find your home in Skye Canyon? Get expert guidance from Las Vegas's premier luxury real estate specialist."
-          image={getHeroImage('contact').src}
-          imageAlt={getHeroImage('contact').alt}
+          subtitle="Call, get directions, or book a consult at 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166."
+          {...getHeroImageProps('contact')}
         />
 
         {/* Contact Form and Info */}
@@ -43,7 +44,7 @@ export default function Contact() {
                         <Phone className="w-6 h-6 text-blue-600 mt-1" />
                         <div>
                           <h3 className="font-semibold">Phone</h3>
-                          <p className="text-gray-600">(702) 500-1902</p>
+                          <p className="text-gray-600">{siteConfig.phone}</p>
                           <p className="text-sm text-gray-500">
                             Available 9 AM - 6 PM, Monday - Friday
                           </p>
@@ -54,7 +55,7 @@ export default function Contact() {
                         <Mail className="w-6 h-6 text-blue-600 mt-1" />
                         <div>
                           <h3 className="font-semibold">Email</h3>
-                          <p className="text-gray-600">DrDuffy@SkyeCanyonHomesForSale.com</p>
+                          <p className="text-gray-600">{siteConfig.email}</p>
                           <p className="text-sm text-gray-500">
                             Response within 2 hours during business hours
                           </p>
@@ -65,8 +66,10 @@ export default function Contact() {
                         <MapPin className="w-6 h-6 text-blue-600 mt-1" />
                         <div>
                           <h3 className="font-semibold">Office Location</h3>
-                          <p className="text-gray-600">10111 W. Skye Canyon Park Drive</p>
-                          <p className="text-gray-600">Las Vegas, NV 89166</p>
+                          <p className="text-gray-600">{siteConfig.address.street}</p>
+                          <p className="text-gray-600">
+                            {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
+                          </p>
                           <p className="text-sm text-gray-500">By appointment only</p>
                         </div>
                       </div>
@@ -130,11 +133,40 @@ export default function Contact() {
                 <p className="text-gray-600">11:00 AM - 4:00 PM</p>
               </div>
             </div>
+            <div className="flex flex-wrap justify-center gap-3 mt-8">
+              <a
+                href={`tel:${siteConfig.phoneTel}`}
+                className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-700"
+              >
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                Call
+              </a>
+              <a
+                href={siteConfig.directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-5 py-3 font-semibold text-gray-900 hover:bg-gray-50"
+              >
+                <Navigation className="h-4 w-4" aria-hidden="true" />
+                Directions
+              </a>
+              <a
+                href={siteConfig.googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-5 py-3 font-semibold text-gray-900 hover:bg-gray-50"
+              >
+                <Star className="h-4 w-4" aria-hidden="true" />
+                Google Reviews
+              </a>
+            </div>
             <p className="text-sm text-gray-500 mt-6">
-              Emergency consultations available outside business hours by appointment.
+              Consultations outside posted hours are available by appointment.
             </p>
           </div>
         </section>
+
+        <GbpLocalSection heading="Map, hours, and Google reviews" />
       </main>
 
     </>

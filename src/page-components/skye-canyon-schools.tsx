@@ -158,9 +158,9 @@ export default function SkyeCanyonSchools() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Skye Canyon Homes Near Top-Rated Schools
+                Skye Canyon Homes Near Clark County Campuses
               </h2>
-              <p className="text-xl text-gray-600">Properties in excellent school districts</p>
+              <p className="text-xl text-gray-600">Properties in Las Vegas NV 89166 school zones</p>
             </div>
             <RealScoutListings className="w-full" variant="mid-range" />
           </div>
@@ -174,7 +174,7 @@ export default function SkyeCanyonSchools() {
                 Skye Canyon K-5 Elementary Schools
               </h2>
               <p className="text-xl text-gray-600">
-                Three excellent elementary schools serve Skye Canyon families
+                Three elementary campuses serve Skye Canyon addresses
               </p>
             </div>
 

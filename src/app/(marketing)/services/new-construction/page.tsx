@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
+import { marketingMetadata } from '@/lib/page-seo';
 import PageContent from '@/page-components/services/new-construction';
 
-export const metadata: Metadata = {
-  title: 'New Construction | Skye Canyon',
-  description: 'Expert Skye Canyon real estate services in Las Vegas NV 89166. Contact Dr. Jan Duffy, REALTOR® at (702) 500-1902.',
-};
+export const metadata: Metadata = marketingMetadata('/services/new-construction');
 
 export default function NewConstructionPage() {
   return <PageContent />;

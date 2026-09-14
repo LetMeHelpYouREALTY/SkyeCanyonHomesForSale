@@ -76,10 +76,12 @@ export default function MarketAnalysis() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4 text-realscout-blue">Family-Friendly</h3>
+                <h3 className="text-xl font-semibold mb-4 text-realscout-blue">
+                  Parks and Recreation
+                </h3>
                 <p className="text-gray-700">
-                  Top-rated schools, parks, and family amenities make this ideal for growing
-                  families.
+                  Skye Canyon Park, trails, pools, and Desert Highlands Golf Course are within the
+                  89166 community.
                 </p>
               </div>
 
