@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import Providers from '@/components/providers';
 import { buildSiteMetadata } from '@/lib/metadata';
 import './globals.css';
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <Providers>{children}</Providers>
+        <Analytics />
         <Script
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
           strategy="afterInteractive"
