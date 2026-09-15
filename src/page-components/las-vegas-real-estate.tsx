@@ -57,7 +57,7 @@ export default function LasVegasRealEstate() {
                   />
                   <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Northwest Las Vegas</h3>
-                  <p className="text-realscout-blue font-semibold mb-2">$350K - $900K+</p>
+                  <p className="text-realscout-blue font-semibold mb-2">Confirm live MLS</p>
                   <p className="text-gray-600">
                     Guard-gated communities, golf courses, parks and trails
                   </p>
@@ -73,7 +73,7 @@ export default function LasVegasRealEstate() {
                   />
                   <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Henderson</h3>
-                  <p className="text-realscout-blue font-semibold mb-2">$400K - $1.2M+</p>
+                  <p className="text-realscout-blue font-semibold mb-2">Confirm live MLS</p>
                   <p className="text-gray-600">Planned communities, mountain views, parks</p>
                   </div>
                 </CardContent>
@@ -87,7 +87,7 @@ export default function LasVegasRealEstate() {
                   />
                   <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Summerlin</h3>
-                  <p className="text-realscout-blue font-semibold mb-2">$450K - $1.5M+</p>
+                  <p className="text-realscout-blue font-semibold mb-2">Confirm live MLS</p>
                   <p className="text-gray-600">Master-planned community, parks, shopping</p>
                   </div>
                 </CardContent>
@@ -104,7 +104,7 @@ export default function LasVegasRealEstate() {
           pageType="las-vegas"
           faqs={[
             {
-              question: 'What are the best areas to buy real estate in Las Vegas?',
+              question: 'Which Las Vegas areas should buyers compare?',
               answer:
                 'Compare Skye Canyon (guard-gated, golf), Henderson (master-planned, mountain views), Summerlin (parks and shopping), The Ridges (hillside lots), and northwest Las Vegas zip codes 89166, 89149, and 89144. Confirm commute times and HOA fees for the specific address.',
             },
@@ -121,12 +121,12 @@ export default function LasVegasRealEstate() {
             {
               question: 'What is the average home price in Las Vegas?',
               answer:
-                'Las Vegas home prices vary by area: Northwest Las Vegas ($350K-$900K+), Henderson ($400K-$1.2M+), Summerlin ($450K-$1.5M+), with luxury communities like Skye Canyon ranging $650K-$1.2M+.',
+                'List prices vary by zip and village. Confirm live MLS comps with Dr. Jan Duffy at (702) 500-1902. Skye Canyon is zip 89166 at 10111 W. Skye Canyon Park Drive.',
             },
             {
               question: 'Are there good investment opportunities in Las Vegas real estate?',
               answer:
-                'Yes, Las Vegas offers excellent investment potential with rental properties, vacation homes, and appreciation opportunities. Popular investment areas include established communities and emerging neighborhoods with growth potential.',
+                'Las Vegas rental, vacation, and resale inventory exists across many zips. Compare HOA fees, commute times, and live MLS comps for the specific address with Dr. Jan Duffy.',
             },
             {
               question: 'What makes Las Vegas attractive for relocation?',

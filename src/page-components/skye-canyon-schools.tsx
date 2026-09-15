@@ -326,6 +326,10 @@ export default function SkyeCanyonSchools() {
               <p className="text-xl text-gray-600">
                 Planned educational facilities to serve growing Skye Canyon community
               </p>
+              <HeadingImage
+                {...sectionImages.communityMap}
+                className="w-full h-48 object-cover object-top rounded-xl mt-8 max-w-4xl mx-auto"
+              />
             </div>
 
             <div className="bg-white rounded-lg p-8 shadow-sm max-w-4xl mx-auto">
@@ -382,6 +386,10 @@ export default function SkyeCanyonSchools() {
               <p className="text-xl text-gray-600">
                 Find current school assignments for your Skye Canyon address
               </p>
+              <HeadingImage
+                {...sectionImages.communityMap}
+                className="w-full h-48 object-cover object-top rounded-xl mt-8 max-w-4xl mx-auto"
+              />
             </div>
 
             <div className="bg-gray-50 rounded-lg p-8 max-w-4xl mx-auto">

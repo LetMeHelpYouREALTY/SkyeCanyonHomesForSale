@@ -1,6 +1,5 @@
 'use client';
 
-import { Home, MapPin, TrendingUp, Users } from 'lucide-react';
 import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
 import NeighborhoodHeatmap from '@/components/neighborhood-heatmap';
@@ -12,6 +11,7 @@ import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
 
 export default function NeighborhoodAnalysis() {
   return (
@@ -46,17 +46,24 @@ export default function NeighborhoodAnalysis() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">$1.25M</div>
-                  <div className="text-gray-600">Average Skye Canyon Price</div>
-                  <div className="text-sm text-green-600 mt-1">+8.5% YoY</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">89166</div>
+                  <div className="text-gray-600">Skye Canyon zip</div>
+                  <div className="text-sm text-gray-500 mt-1">Northwest Las Vegas</div>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">15</div>
-                  <div className="text-gray-600">Avg Days on Market</div>
-                  <div className="text-sm text-blue-600 mt-1">Hot Market</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">Live MLS</div>
+                  <div className="text-gray-600">Current inventory</div>
+                  <a
+                    href={siteConfig.realscoutOnboarding}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-600 mt-1 inline-block"
+                  >
+                    Search listings
+                  </a>
                 </CardContent>
               </Card>
 
@@ -70,9 +77,9 @@ export default function NeighborhoodAnalysis() {
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-orange-600 mb-2">24</div>
-                  <div className="text-gray-600">Recent Sales</div>
-                  <div className="text-sm text-gray-500 mt-1">Last 30 Days</div>
+                  <div className="text-3xl font-bold text-orange-600 mb-2">Maps</div>
+                  <div className="text-gray-600">Office pin</div>
+                  <div className="text-sm text-gray-500 mt-1">10111 W. Skye Canyon Park Drive</div>
                 </CardContent>
               </Card>
             </div>
@@ -94,65 +101,66 @@ export default function NeighborhoodAnalysis() {
                 Why Location Matters in Las Vegas Real Estate
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Each neighborhood offers unique advantages. Understanding these differences helps
-                you make the best investment decision for your lifestyle and goals.
+                Compare guard-gated golf, parks, named campuses, and commute times. Confirm live MLS
+                comps for the specific address.
               </p>
+              <HeadingImage
+                {...sectionImages.communityMap}
+                className="w-full h-56 object-cover object-top rounded-xl mt-8"
+              />
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">Premium Communities</h3>
+                <CardContent className="p-0 overflow-hidden">
+                  <HeadingImage
+                    {...sectionImages.monument}
+                    alt="Skye Canyon monument gate Las Vegas NV 89166"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-8">
+                  <h3 className="text-xl font-bold mb-4">Guard-gated golf</h3>
                   <div className="space-y-3 text-gray-600">
-                    <div className="flex justify-between">
-                      <span>Skye Canyon</span>
-                      <span className="font-medium">$1.25M avg</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Summerlin West</span>
-                      <span className="font-medium">$1.10M avg</span>
-                    </div>
-                    <div className="text-sm text-blue-600 mt-4">
-                      Guard-gated, golf, parks and recreation
-                    </div>
+                    <div>Skye Canyon — Desert Highlands Golf Course, rec center</div>
+                    <div>Summerlin West — parks and trailheads toward Red Rock</div>
+                    <div className="text-sm text-blue-600 mt-4">Confirm live MLS list prices</div>
+                  </div>
                   </div>
                 </CardContent>
               </Card>
 
               <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">Growing Markets</h3>
+                <CardContent className="p-0 overflow-hidden">
+                  <HeadingImage
+                    {...sectionImages.northwest}
+                    alt="Centennial Hills and northwest Las Vegas homes NV 89149"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-8">
+                  <h3 className="text-xl font-bold mb-4">Nearby northwest zips</h3>
                   <div className="space-y-3 text-gray-600">
-                    <div className="flex justify-between">
-                      <span>Centennial Hills</span>
-                      <span className="font-medium">$950K avg</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Mountains Edge</span>
-                      <span className="font-medium">$780K avg</span>
-                    </div>
-                    <div className="text-sm text-green-600 mt-4">
-                      Strong appreciation, parks and shopping
-                    </div>
+                    <div>Centennial Hills — shopping and recreation, zip 89149</div>
+                    <div>Mountains Edge — parks and I-215 access</div>
+                    <div className="text-sm text-blue-600 mt-4">Confirm live MLS list prices</div>
+                  </div>
                   </div>
                 </CardContent>
               </Card>
 
               <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">Value Opportunities</h3>
+                <CardContent className="p-0 overflow-hidden">
+                  <HeadingImage
+                    {...sectionImages.listings}
+                    alt="Las Vegas NV resale homes for sale near Skye Canyon"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-8">
+                  <h3 className="text-xl font-bold mb-4">Compare on MLS</h3>
                   <div className="space-y-3 text-gray-600">
-                    <div className="flex justify-between">
-                      <span>Aliante</span>
-                      <span className="font-medium">$650K avg</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Other Areas</span>
-                      <span className="font-medium">Varies</span>
-                    </div>
-                    <div className="text-sm text-purple-600 mt-4">
-                      Entry-level luxury, established communities
-                    </div>
+                    <div>Aliante and other northwest corridors</div>
+                    <div>Match commute times and HOA fees to the listing</div>
+                    <div className="text-sm text-blue-600 mt-4">Confirm live MLS list prices</div>
+                  </div>
                   </div>
                 </CardContent>
               </Card>

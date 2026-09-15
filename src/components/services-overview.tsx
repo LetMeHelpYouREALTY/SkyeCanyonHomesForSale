@@ -14,7 +14,7 @@ const services = [
     description:
       '15+ years exclusive Skye Canyon specialization with direct builder relationships and off-market access.',
     icon: Home,
-    highlight: 'Average client saves $15K+',
+    highlight: 'Off-market and builder access',
     link: '/services/buyer-agent',
     color: 'text-blue-600',
   },
@@ -24,7 +24,7 @@ const services = [
     description:
       'Specialized guidance for new buyers through HOA requirements, builder incentives, and community amenities.',
     icon: Users,
-    highlight: '200+ first-time buyers helped',
+    highlight: 'HOA, financing, and closing help',
     link: '/services/first-time-buyer',
     color: 'text-green-600',
   },
@@ -32,9 +32,9 @@ const services = [
     id: 'luxury-properties',
     title: 'Luxury Property Buying & Sales',
     description:
-      'Certified Luxury Home Marketing Specialist with $50M+ in transactions since 2009.',
+      'Certified Luxury Home Marketing Specialist for Desert Highlands golf and custom 89166 homes.',
     icon: Crown,
-    highlight: '98% of list price results',
+    highlight: 'Google-reviewed representation',
     link: '/services/luxury-properties',
     color: 'text-purple-600',
   },
@@ -42,7 +42,7 @@ const services = [
     id: 'new-construction',
     title: 'New Construction Sales & Leasing',
     description:
-      'Direct partnerships with Toll Brothers, Lennar, DR Horton, and all active Skye Canyon builders.',
+      'Buyer representation for Century Communities, Lennar, Toll Brothers, and other active Skye Canyon builders.',
     icon: Building,
     highlight: 'Only exclusive Skye Canyon focus',
     link: '/services/new-construction',
@@ -52,7 +52,7 @@ const services = [
     id: 'relocation',
     title: 'Relocation Assistance',
     description:
-      "Comprehensive relocation services for buyers moving to Las Vegas' premier guard-gated community.",
+      'Relocation services for buyers moving to guard-gated Skye Canyon, Las Vegas NV 89166.',
     icon: Truck,
     highlight: 'Full-service relocation support',
     link: '/services/relocation',

@@ -62,9 +62,9 @@ export default function LuxuryHomesLasVegas() {
                   />
                   <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Skye Canyon</h3>
-                  <p className="text-realscout-blue font-semibold mb-2">$650K - $1.2M+</p>
+                  <p className="text-realscout-blue font-semibold mb-2">Confirm live MLS</p>
                   <p className="text-gray-600">
-                    Premier guard-gated community with luxury amenities
+                    Guard-gated master plan with golf, parks, and rec center in NV 89166
                   </p>
                   </div>
                 </CardContent>
@@ -78,7 +78,7 @@ export default function LuxuryHomesLasVegas() {
                   />
                   <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">The Ridges</h3>
-                  <p className="text-realscout-blue font-semibold mb-2">$800K - $3M+</p>
+                  <p className="text-realscout-blue font-semibold mb-2">Confirm live MLS</p>
                   <p className="text-gray-600">Hillside lots with Red Rock and valley views</p>
                   </div>
                 </CardContent>
@@ -92,8 +92,8 @@ export default function LuxuryHomesLasVegas() {
                   />
                   <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Spanish Trail</h3>
-                  <p className="text-realscout-blue font-semibold mb-2">$500K - $1.5M</p>
-                  <p className="text-gray-600">Established luxury golf community</p>
+                  <p className="text-realscout-blue font-semibold mb-2">Confirm live MLS</p>
+                  <p className="text-gray-600">Golf course lots in southwest Las Vegas</p>
                   </div>
                 </CardContent>
               </Card>
@@ -111,12 +111,12 @@ export default function LuxuryHomesLasVegas() {
             {
               question: 'What defines a luxury home in Las Vegas?',
               answer:
-                'Luxury homes in Las Vegas typically feature 3,000+ sq ft, premium finishes, custom designs, and are often located in guard-gated communities like Skye Canyon, The Ridges, or Spanish Trail with prices starting around $650K.',
+                'Luxury homes in Las Vegas typically feature 3,000+ sq ft, premium finishes, custom designs, and are often located in guard-gated communities like Skye Canyon, The Ridges, or Spanish Trail. Confirm live MLS list prices.',
             },
             {
-              question: 'Which Las Vegas communities have the best luxury homes?',
+              question: 'Which Las Vegas communities have luxury inventory?',
               answer:
-                'Premier luxury communities include Skye Canyon ($650K-$1.2M+), The Ridges ($800K-$3M+), Spanish Trail ($500K-$1.5M), and MacDonald Ranch in Henderson, each offering unique amenities and lifestyle features.',
+                'Compare Skye Canyon, The Ridges, Spanish Trail, and MacDonald Ranch in Henderson on live MLS. Amenities and lot types differ; list prices change monthly.',
             },
             {
               question: 'What luxury amenities are common in high-end Las Vegas homes?',
@@ -126,7 +126,7 @@ export default function LuxuryHomesLasVegas() {
             {
               question: 'How is the luxury real estate market performing in Las Vegas?',
               answer:
-                'The luxury market remains strong with steady appreciation. Properties above $1M show consistent demand, especially in guard-gated communities. Dr. Jan Duffy provides detailed market analysis for informed luxury home investments.',
+                'Confirm current luxury comps on live MLS. Demand varies by village, golf-course orientation, and new construction incentives. Dr. Jan Duffy will pull the current snapshot.',
             },
             {
               question: 'What should I expect when buying a luxury home?',

@@ -196,6 +196,10 @@ export default function SkyeCanyonCommunities() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Skye Canyon Flexible Floor Plans & Customization
                 </h2>
+                <HeadingImage
+                  {...sectionImages.luxuryInterior}
+                  className="w-full h-48 object-cover rounded-xl mb-6"
+                />
                 <p className="text-gray-600 mb-6">
                   Generous outdoor space gives buyers multiple access points to interact with their
                   natural surroundings and enjoy the desert's favorable climate year-round. Every

@@ -42,14 +42,13 @@ export default function AgentBio() {
               <p>
                 Dr. Jan Duffy is a Nevada REALTOR® specializing in luxury homes, new
                 construction, custom builds, and resales in Skye Canyon and Northwest Las Vegas. She
-                partners with leading home builders like Toll Brothers and Lennar to provide expert
-                guidance for buying or selling high-end homes.
+                represents buyers with Century Communities, Lennar, Toll Brothers, and other active
+                Skye Canyon builders.
               </p>
               <p>
-                With extensive knowledge of Skye Canyon neighborhoods, amenities, and market trends,
-                her listings sell 12% faster and at 98% of the asking price. Whether you're
-                interested in luxury homes in Skye Canyon, Centennial Hills, or Northwest Las Vegas,
-                Dr. Duffy is the trusted real estate expert you need.
+                She works from {siteConfig.address.formatted} and pulls live MLS comps before you
+                tour. Read current client reviews on Google, then call {siteConfig.phone} to
+                schedule.
               </p>
             </div>
 

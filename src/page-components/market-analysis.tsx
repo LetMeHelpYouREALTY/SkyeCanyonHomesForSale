@@ -67,7 +67,7 @@ export default function MarketAnalysis() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4 text-realscout-blue">
-                  Guard-Gated Security
+                  Guarded Gate
                 </h3>
                 <p className="text-gray-700">
                   24/7 guarded gate and controlled vehicle access in Las Vegas NV 89166.
@@ -95,10 +95,10 @@ export default function MarketAnalysis() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4 text-realscout-blue">Investment Value</h3>
+                <h3 className="text-xl font-semibold mb-4 text-realscout-blue">Live MLS comps</h3>
                 <p className="text-gray-700">
-                  Strong appreciation rates and high demand make Skye Canyon an excellent
-                  investment.
+                  Confirm current list prices and sale comps with Dr. Jan Duffy before you decide.
+                  Portal medians go stale.
                 </p>
               </div>
             </div>
@@ -113,32 +113,32 @@ export default function MarketAnalysis() {
             {
               question: 'What is the current median home price in Skye Canyon?',
               answer:
-                'The current median home price in Skye Canyon ranges from $650,000 to $1.2M+, with luxury custom homes reaching higher price points. The guard-gated community maintains strong property values due to premium amenities and location.',
+                'Medians move monthly. Confirm live MLS list prices and recent sale comps with Dr. Jan Duffy at (702) 500-1902 before you write an offer.',
             },
             {
               question: 'How is the Skye Canyon real estate market performing?',
               answer:
-                'Skye Canyon continues to show strong market performance with steady appreciation, low inventory, and high demand. The premium location and exclusive amenities contribute to consistent property value growth.',
+                'Inventory, days on market, and sale-to-list ratios change week to week. Search live MLS or visit 10111 W. Skye Canyon Park Drive for a current snapshot.',
             },
             {
               question: 'What is the average days on market for Skye Canyon homes?',
               answer:
-                'Well-priced Skye Canyon homes typically sell within 30-45 days on market. Properties with unique features or premium locations often receive multiple offers and sell even faster.',
+                'Days on market depends on price, condition, and village. Confirm the live MLS figure for the specific listing with Dr. Jan Duffy.',
             },
             {
               question: 'Is Skye Canyon a good investment for real estate?',
               answer:
-                "Yes. Guard-gated inventory, Desert Highlands Golf Course, and limited new phases have supported appreciation. Confirm current comps on live MLS with Dr. Jan Duffy before you decide.",
+                'Guard-gated inventory, Desert Highlands Golf Course, and limited new phases are the facts to weigh. Confirm current comps on live MLS with Dr. Jan Duffy before you decide.',
             },
             {
               question: 'What factors affect Skye Canyon property values?',
               answer:
-                'Key factors include golf course views, lot size, home condition, custom features, and proximity to amenities. The guard-gated security and Desert Highlands Golf Course significantly enhance property values.',
+                'Golf-course orientation, lot size, home condition, custom features, and proximity to Skye Canyon Park and the rec center. Confirm commute time for your work location.',
             },
             {
               question: 'How do Skye Canyon prices compare to other Las Vegas areas?',
               answer:
-                'Skye Canyon commands premium pricing compared to most Las Vegas areas due to its exclusive guard-gated status, golf course, and luxury amenities. Prices are competitive with other high-end communities like The Ridges and Spanish Trail.',
+                'Compare Skye Canyon with Summerlin West, Centennial Hills, The Ridges, and Spanish Trail on live MLS. Amenities differ; list prices are not a substitute for a comp pull.',
             },
           ]}
         />

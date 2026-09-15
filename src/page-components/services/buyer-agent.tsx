@@ -70,8 +70,7 @@ export default function BuyerAgentServices() {
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">Expert Negotiation</h3>
                   <p className="text-gray-600">
-                    Skilled negotiation that averages $15K+ savings for clients with 15+ years of
-                    experience.
+                    Skilled negotiation using current MLS comps in zip 89166.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">

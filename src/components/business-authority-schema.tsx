@@ -97,7 +97,7 @@ export default function BusinessAuthoritySchema() {
             '@type': 'Service',
             name: 'Seller Representation',
             description:
-              'Professional marketing and sale of luxury properties with 98% of asking price results',
+              'Professional marketing of Skye Canyon listings with live MLS comps and Google Maps office hours',
           },
         },
         {

@@ -13,7 +13,7 @@ const highlights = [
   },
   {
     emoji: '🛡️',
-    title: 'Gated Security',
+    title: 'Guarded Gate',
     description:
       '24/7 guarded gate and controlled vehicle access at Skye Canyon, Las Vegas NV 89166.',
   },
@@ -33,7 +33,7 @@ const highlights = [
     emoji: '👥',
     title: 'Community',
     description:
-      'Vibrant community with clubhouse, fitness center, pools, and organized events for residents.',
+      'Clubhouse, fitness center, pools, and resident events at the Skye Canyon rec center.',
   },
 ];
 
@@ -46,7 +46,7 @@ export default function CommunityHighlights() {
             Why Choose Skye Canyon?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover what makes Skye Canyon Las Vegas's premier luxury community
+            Discover guard-gated golf, parks, and rec amenities in Las Vegas NV 89166
           </p>
         </div>
 

@@ -3,6 +3,7 @@
 import { Award, Crown, MapPin, Shield, TrendingUp, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
 
 export default function SkyeCanyonAuthority() {
   const credentials = [
@@ -16,7 +17,7 @@ export default function SkyeCanyonAuthority() {
       icon: Users,
       title: '150+ Skye Canyon Transactions',
       description:
-        'Successfully closed more Skye Canyon sales than any other individual REALTOR® in Las Vegas',
+        '150+ Skye Canyon closings with a 89166 office at the monument gate',
     },
     {
       icon: TrendingUp,
@@ -26,9 +27,9 @@ export default function SkyeCanyonAuthority() {
     },
     {
       icon: Crown,
-      title: 'Top 1% REALTOR® Las Vegas',
+      title: 'Google-reviewed Skye Canyon specialist',
       description:
-        'Consistently ranked among the highest-performing real estate professionals in Nevada',
+        'Read current client reviews on Google Business Profile, then tour from the 89166 office',
     },
   ];
 
@@ -83,22 +84,18 @@ export default function SkyeCanyonAuthority() {
             </h3>
             <div className="space-y-4 text-gray-600">
               <p>
-                <strong>Dr. Jan Duffy</strong> has established herself as the preeminent Skye Canyon
-                real estate specialist, with exclusive focus on this premier guard-gated community
-                since 2009. Her comprehensive understanding of Skye Canyon's unique market dynamics,
-                builder relationships, and community amenities makes her the go-to expert for
-                discerning buyers and sellers.
+                Dr. Jan Duffy has focused on Skye Canyon since 2009 from the office at 10111 W.
+                Skye Canyon Park Drive. She represents buyers and sellers on live MLS, new
+                construction, and resale in zip 89166.
               </p>
               <p>
-                With a Doctorate in Business Administration and 150+ successful Skye Canyon
-                transactions, Dr. Duffy provides unmatched market analysis, investment insights, and
-                negotiation expertise. Her clients benefit from exclusive access to off-market
-                properties and insider knowledge of upcoming listings.
+                With a Doctorate in Business Administration and 150+ Skye Canyon closings, she pulls
+                current comps instead of stale portal averages. Call {siteConfig.phone} or read
+                Google reviews before you tour.
               </p>
               <p>
-                As the top-producing REALTOR® for Skye Canyon properties, Dr. Duffy maintains the
-                largest database of sold comparable properties, current market trends, and future
-                development plans within the community.
+                She tracks Skye Canyon sold comps, current listings, and builder phases so buyers
+                can confirm live MLS before they write an offer.
               </p>
             </div>
           </div>

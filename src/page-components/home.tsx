@@ -109,20 +109,20 @@ export default function Home() {
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="text-3xl font-bold text-blue-600 mb-2">$1.2M</div>
-                <div className="text-gray-600">Median Home Price</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">89166</div>
+                <div className="text-gray-600">Skye Canyon zip</div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="text-3xl font-bold text-blue-600 mb-2">28</div>
-                <div className="text-gray-600">Days on Market</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">Live MLS</div>
+                <div className="text-gray-600">Current list prices</div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="text-3xl font-bold text-blue-600 mb-2">96%</div>
-                <div className="text-gray-600">Price to List Ratio</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">Maps pin</div>
+                <div className="text-gray-600">10111 W. Skye Canyon Park Drive</div>
               </div>
             </div>
             <p className="text-sm text-gray-500 mb-4">
-              Confirm current figures on live MLS with Dr. Jan Duffy before making an offer.
+              Confirm current list prices and sale comps on live MLS with Dr. Jan Duffy before you write an offer.
             </p>
             <a
               href="/market-analysis"
@@ -235,7 +235,7 @@ export default function Home() {
             {
               question: 'What are the home prices in Skye Canyon?',
               answer:
-                'Recent Skye Canyon listings often range from about $650,000 to $1.2M+, with custom golf-course homes higher. Confirm live MLS numbers with Dr. Jan Duffy before you write an offer.',
+                'List prices vary by village, golf-course lots, and new construction. Confirm live MLS comps with Dr. Jan Duffy at (702) 500-1902 before you write an offer.',
             },
             {
               question: 'Is Skye Canyon a guard-gated community?',

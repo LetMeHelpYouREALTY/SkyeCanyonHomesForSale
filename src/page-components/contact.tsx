@@ -111,6 +111,10 @@ export default function Contact() {
                 <Card>
                   <CardContent className="p-8">
                     <h3 className="text-xl font-bold mb-4">What's Your Home Worth?</h3>
+                    <HeadingImage
+                      {...sectionImages.valuation}
+                      className="w-full h-40 object-cover rounded-lg mb-4"
+                    />
                     <p className="text-gray-600 text-sm mb-4">
                       Get an instant AI-powered valuation for your Skye Canyon property.
                     </p>
@@ -126,6 +130,10 @@ export default function Contact() {
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-8">Business Hours</h2>
+            <HeadingImage
+              {...sectionImages.monument}
+              className="w-full max-w-3xl mx-auto h-52 object-cover rounded-xl mb-8"
+            />
             <div className="grid md:grid-cols-3 gap-6">
               <div>
                 <h3 className="font-semibold mb-2">Monday - Friday</h3>

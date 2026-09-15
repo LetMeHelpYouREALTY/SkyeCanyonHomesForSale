@@ -11,8 +11,8 @@ export const zipAreas: HyperlocalZipArea[] = [
     answerSummary:
       'Zip code 89166 covers Skye Canyon in northwest Las Vegas, NV, with new construction from Century Communities, resale homes, community parks, and recreation near Red Rock Canyon.',
     neighborhoods: ['Skye Canyon', 'Eaglepointe', 'Marvella', 'Skyecrest'],
-    medianPrice: '$650K–$1.2M+',
-    daysOnMarket: '28',
+    medianPrice: 'Confirm live MLS',
+    daysOnMarket: undefined,
     geo: { latitude: 36.2648, longitude: -115.3275 },
     faqs: [
       {
@@ -23,10 +23,10 @@ export const zipAreas: HyperlocalZipArea[] = [
       {
         question: 'What is the average home price in 89166?',
         answer:
-          'Home prices in 89166 vary by subdivision and property type. Skye Canyon resale and new construction typically ranges from the high $500s to $1.2M and above. Contact Dr. Jan Duffy at (702) 500-1902 for a current market snapshot.',
+          'Home prices in 89166 vary by subdivision and property type. Confirm live MLS comps with Dr. Jan Duffy at (702) 500-1902 for a current market snapshot.',
       },
       {
-        question: 'Who is the best realtor for 89166 Skye Canyon homes?',
+        question: 'Who specializes in 89166 Skye Canyon homes?',
         answer:
           'Dr. Jan Duffy, REALTOR® (Nevada License S.0197614), specializes in Skye Canyon and zip code 89166 with Berkshire Hathaway HomeServices Nevada Properties. Office: 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166.',
       },
@@ -40,7 +40,7 @@ export const zipAreas: HyperlocalZipArea[] = [
     description:
       'Explore homes for sale in zip code 89149 covering Centennial Hills and surrounding northwest Las Vegas neighborhoods near Skye Canyon.',
     answerSummary:
-      'Zip code 89149 includes Centennial Hills in northwest Las Vegas, with established neighborhoods, shopping at Centennial Center, and proximity to Skye Canyon in 89166.',
+      'Zip code 89149 includes Centennial Hills in northwest Las Vegas, with resale homes, shopping at Centennial Center, and proximity to Skye Canyon in 89166.',
     neighborhoods: ['Centennial Hills', 'Centennial Gateway', 'Northwest Las Vegas'],
     geo: { latitude: 36.279, longitude: -115.291 },
     faqs: [
@@ -52,7 +52,7 @@ export const zipAreas: HyperlocalZipArea[] = [
       {
         question: 'What home styles are common in 89149?',
         answer:
-          '89149 features established single-family homes, townhomes, and newer infill construction in Centennial Hills, with access to shopping, parks, and northwest Las Vegas freeways.',
+          '89149 features single-family homes, townhomes, and newer infill construction in Centennial Hills, with access to shopping, parks, and northwest Las Vegas freeways.',
       },
     ],
   },
@@ -71,7 +71,7 @@ export const zipAreas: HyperlocalZipArea[] = [
       {
         question: 'How does 89144 compare to Skye Canyon 89166?',
         answer:
-          '89144 offers northwest Las Vegas housing with varied price points and established neighborhoods. Skye Canyon in 89166 is a newer master-planned community with Century Communities new construction and dedicated recreation amenities.',
+          '89144 offers northwest Las Vegas housing with varied list prices. Skye Canyon in 89166 is a newer master-planned community with Century Communities new construction and dedicated recreation amenities.',
       },
     ],
   },

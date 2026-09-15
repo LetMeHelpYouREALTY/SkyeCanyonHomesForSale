@@ -1,6 +1,6 @@
 'use client';
 
-import { DollarSign, Home, MapPin, TrendingDown, TrendingUp } from 'lucide-react';
+import { Home, MapPin, Navigation } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import HeadingImage from '@/components/heading-image';
 import { Badge } from '@/components/ui/badge';
@@ -10,54 +10,27 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
-type MarketActivity = 'hot' | 'warm' | 'cool';
 type HeatmapView = 'price' | 'activity' | 'campuses' | 'amenities';
 
 interface HeatmapData {
   neighborhood: string;
   coordinates: { lat: number; lng: number };
-  priceRange: string;
-  averagePrice: number;
-  marketActivity: MarketActivity;
-  daysOnMarket: number;
-  priceChange: number;
   campuses: string[];
   amenities: string[];
-  recentSales: number;
   zip: string;
 }
 
 interface LocalInsights {
-  marketTrends: {
-    direction: 'up' | 'down' | 'stable';
-    percentage: number;
-    timeframe: string;
-  };
   hotspots: string[];
   inventoryNote: string;
 }
 
-function heatmapColor(neighborhood: HeatmapData, viewType: HeatmapView): string {
+function heatmapColor(viewType: HeatmapView): string {
   switch (viewType) {
     case 'price':
-      if (neighborhood.averagePrice > 1500000) {
-        return 'bg-red-500';
-      }
-      if (neighborhood.averagePrice > 1000000) {
-        return 'bg-orange-500';
-      }
-      if (neighborhood.averagePrice > 800000) {
-        return 'bg-yellow-500';
-      }
-      return 'bg-green-500';
+      return 'bg-blue-600';
     case 'activity':
-      if (neighborhood.marketActivity === 'hot') {
-        return 'bg-red-500';
-      }
-      if (neighborhood.marketActivity === 'warm') {
-        return 'bg-orange-500';
-      }
-      return 'bg-blue-500';
+      return 'bg-indigo-500';
     case 'campuses':
       return 'bg-sky-500';
     case 'amenities':
@@ -69,24 +42,10 @@ function heatmapColor(neighborhood: HeatmapData, viewType: HeatmapView): string 
   }
 }
 
-function formatPrice(price: number): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(price);
-}
-
 const sampleHeatmapData: HeatmapData[] = [
   {
     neighborhood: 'Skye Canyon',
     coordinates: { lat: siteConfig.geo.latitude, lng: siteConfig.geo.longitude },
-    priceRange: '$800K - $1.5M',
-    averagePrice: 1250000,
-    marketActivity: 'hot',
-    daysOnMarket: 15,
-    priceChange: 8.5,
     campuses: [
       'Kenneth Divich Elementary',
       'William & Mary Scherkenbach Elementary',
@@ -96,58 +55,35 @@ const sampleHeatmapData: HeatmapData[] = [
       'Arbor View High School',
     ],
     amenities: ['Desert Highlands Golf Course', 'Skye Canyon Park', 'Recreation Center'],
-    recentSales: 24,
     zip: '89166',
   },
   {
     neighborhood: 'Centennial Hills',
     coordinates: { lat: 36.2633, lng: -115.3086 },
-    priceRange: '$700K - $1.2M',
-    averagePrice: 950000,
-    marketActivity: 'warm',
-    daysOnMarket: 22,
-    priceChange: 5.2,
     campuses: ['Confirm CCSD locator for the listing address'],
     amenities: ['Shopping Centers', 'Recreation'],
-    recentSales: 18,
     zip: '89149',
   },
   {
     neighborhood: 'Summerlin West',
     coordinates: { lat: 36.1716, lng: -115.3447 },
-    priceRange: '$600K - $1.8M',
-    averagePrice: 1100000,
-    marketActivity: 'warm',
-    daysOnMarket: 28,
-    priceChange: 4.1,
     campuses: ['Confirm CCSD locator for the listing address'],
     amenities: ['Parks', 'Shopping', 'Trailheads toward Red Rock Canyon'],
-    recentSales: 21,
     zip: '89135',
   },
   {
     neighborhood: 'Northwest Las Vegas',
     coordinates: { lat: 36.24, lng: -115.3 },
-    priceRange: '$500K - $1.1M',
-    averagePrice: 780000,
-    marketActivity: 'cool',
-    daysOnMarket: 35,
-    priceChange: 2.1,
     campuses: ['Confirm CCSD locator for the listing address'],
     amenities: ['I-215 access', 'Retail corridors'],
-    recentSales: 12,
     zip: '89131',
   },
 ];
 
 const sampleInsights: LocalInsights = {
-  marketTrends: {
-    direction: 'up',
-    percentage: 6.2,
-    timeframe: 'last 6 months',
-  },
   hotspots: ['Skye Canyon', 'Summerlin West', 'Centennial Hills'],
-  inventoryNote: '3+ bedroom inventory is the most common listing mix in 89166. Confirm commute time for the specific address.',
+  inventoryNote:
+    '3+ bedroom inventory is the most common listing mix in 89166. Confirm commute time for the specific address.',
 };
 
 export default function NeighborhoodHeatmap() {
@@ -161,14 +97,32 @@ export default function NeighborhoodHeatmap() {
     async function fetchHeatmapData() {
       try {
         const response = await fetch('/api/neighborhood-heatmap');
+        if (!response.ok) {
+          throw new Error('heatmap unavailable');
+        }
         const data = await response.json();
-        const incoming = data.neighborhoods;
-        if (Array.isArray(incoming) && incoming[0]?.campuses) {
-          setHeatmapData(incoming);
+        const incoming = data.neighborhoods as HeatmapData[] | undefined;
+        if (Array.isArray(incoming) && incoming[0]?.campuses && incoming[0]?.zip) {
+          setHeatmapData(
+            incoming.map((n) => ({
+              neighborhood: n.neighborhood,
+              coordinates: n.coordinates,
+              campuses: n.campuses,
+              amenities: n.amenities,
+              zip: n.zip,
+            })),
+          );
         } else {
           setHeatmapData(sampleHeatmapData);
         }
-        setLocalInsights(data.insights?.inventoryNote ? data.insights : sampleInsights);
+        setLocalInsights(
+          Array.isArray(data.insights?.hotspots) && data.insights?.inventoryNote
+            ? {
+                hotspots: data.insights.hotspots,
+                inventoryNote: data.insights.inventoryNote,
+              }
+            : sampleInsights,
+        );
       } catch (_error) {
         setHeatmapData(sampleHeatmapData);
         setLocalInsights(sampleInsights);
@@ -215,8 +169,8 @@ export default function NeighborhoodHeatmap() {
             onValueChange={(value) => setActiveView(value as HeatmapView)}
           >
             <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="price">Price Levels</TabsTrigger>
-              <TabsTrigger value="activity">Market Activity</TabsTrigger>
+              <TabsTrigger value="price">Live MLS</TabsTrigger>
+              <TabsTrigger value="activity">Compare areas</TabsTrigger>
               <TabsTrigger value="campuses">Campuses</TabsTrigger>
               <TabsTrigger value="amenities">Amenities</TabsTrigger>
             </TabsList>
@@ -235,31 +189,18 @@ export default function NeighborhoodHeatmap() {
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="font-semibold">{neighborhood.neighborhood}</h3>
                         <div
-                          className={`w-4 h-4 rounded-full ${heatmapColor(neighborhood, activeView)}`}
+                          className={`w-4 h-4 rounded-full ${heatmapColor(activeView)}`}
                         ></div>
                       </div>
-                      <p className="text-sm text-gray-600 mb-2">{neighborhood.priceRange}</p>
-                      <div className="space-y-1 text-sm">
-                        <div className="flex justify-between">
-                          <span>Avg Price:</span>
-                          <span className="font-medium">{formatPrice(neighborhood.averagePrice)}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Price Change:</span>
-                          <span
-                            className={`font-medium flex items-center ${
-                              neighborhood.priceChange > 0 ? 'text-green-600' : 'text-red-600'
-                            }`}
-                          >
-                            {neighborhood.priceChange > 0 ? (
-                              <TrendingUp className="w-3 h-3 mr-1" />
-                            ) : (
-                              <TrendingDown className="w-3 h-3 mr-1" />
-                            )}
-                            {Math.abs(neighborhood.priceChange)}%
-                          </span>
-                        </div>
-                      </div>
+                      <p className="text-sm text-gray-600 mb-2">ZIP {neighborhood.zip}</p>
+                      <a
+                        href={siteConfig.realscoutOnboarding}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-blue-700 hover:text-blue-900"
+                      >
+                        Search live MLS
+                      </a>
                     </CardContent>
                   </Card>
                 ))}
@@ -279,28 +220,19 @@ export default function NeighborhoodHeatmap() {
                     <CardContent className="p-4">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="font-semibold">{neighborhood.neighborhood}</h3>
-                        <Badge
-                          variant={
-                            neighborhood.marketActivity === 'hot'
-                              ? 'destructive'
-                              : neighborhood.marketActivity === 'warm'
-                                ? 'default'
-                                : 'secondary'
-                          }
-                        >
-                          {neighborhood.marketActivity}
-                        </Badge>
+                        <Badge variant="secondary">ZIP {neighborhood.zip}</Badge>
                       </div>
-                      <div className="space-y-1 text-sm">
-                        <div className="flex justify-between">
-                          <span>Days on Market:</span>
-                          <span className="font-medium">{neighborhood.daysOnMarket} days</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Recent Sales:</span>
-                          <span className="font-medium">{neighborhood.recentSales}</span>
-                        </div>
-                      </div>
+                      <p className="text-sm text-gray-600 mb-2">
+                        Confirm days on market and sale comps on live MLS for this zip.
+                      </p>
+                      <a
+                        href={siteConfig.realscoutOnboarding}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-blue-700 hover:text-blue-900"
+                      >
+                        Open RealScout
+                      </a>
                     </CardContent>
                   </Card>
                 ))}
@@ -366,7 +298,7 @@ export default function NeighborhoodHeatmap() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <TrendingUp className="w-6 h-6" />
+              <Home className="w-6 h-6" />
               <span>Local Market Insights</span>
             </CardTitle>
           </CardHeader>
@@ -375,17 +307,18 @@ export default function NeighborhoodHeatmap() {
               <Card>
                 <CardContent className="p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium">Market Trend</span>
-                    {localInsights.marketTrends.direction === 'up' ? (
-                      <TrendingUp className="w-4 h-4 text-green-600" />
-                    ) : (
-                      <TrendingDown className="w-4 h-4 text-red-600" />
-                    )}
+                    <span className="text-sm font-medium">Live comps</span>
+                    <Navigation className="w-4 h-4 text-blue-600" />
                   </div>
-                  <div className="text-lg font-bold text-green-600">
-                    +{localInsights.marketTrends.percentage}%
-                  </div>
-                  <div className="text-xs text-gray-500">{localInsights.marketTrends.timeframe}</div>
+                  <a
+                    href={siteConfig.realscoutOnboarding}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-bold text-blue-700 hover:text-blue-900"
+                  >
+                    Search MLS
+                  </a>
+                  <div className="text-xs text-gray-500 mt-1">No stale medians on this map</div>
                 </CardContent>
               </Card>
 
@@ -393,7 +326,7 @@ export default function NeighborhoodHeatmap() {
                 <CardContent className="p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium">Office pin</span>
-                    <DollarSign className="w-4 h-4 text-blue-600" />
+                    <MapPin className="w-4 h-4 text-blue-600" />
                   </div>
                   <div className="text-sm font-medium">{siteConfig.address.formatted}</div>
                   <div className="text-xs text-gray-500 mt-1">Matches Google Business Profile</div>
@@ -442,12 +375,17 @@ export default function NeighborhoodHeatmap() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="space-y-2">
-                      <h4 className="font-semibold">Market Data</h4>
+                      <h4 className="font-semibold">Location</h4>
                       <div className="text-sm space-y-1">
-                        <div>Average Price: {formatPrice(neighborhood.averagePrice)}</div>
-                        <div>Days on Market: {neighborhood.daysOnMarket}</div>
-                        <div>Recent Sales: {neighborhood.recentSales}</div>
                         <div>ZIP: {neighborhood.zip}</div>
+                        <a
+                          href={siteConfig.realscoutOnboarding}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-700 hover:text-blue-900"
+                        >
+                          Search live MLS
+                        </a>
                       </div>
                     </div>
 

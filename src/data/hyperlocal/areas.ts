@@ -7,11 +7,11 @@ export const nearbyAreas: HyperlocalArea[] = [
     zipCodes: ['89149', '89131'],
     headline: 'Centennial Hills Homes for Sale — Las Vegas NV',
     description:
-      'Centennial Hills is an established northwest Las Vegas area near Skye Canyon zip 89166, with resale homes, shopping at Centennial Center, and access to US-95.',
+      'Centennial Hills is a northwest Las Vegas area near Skye Canyon zip 89166, with resale homes, shopping at Centennial Center, and access to US-95.',
     answerSummary:
-      'Centennial Hills in northwest Las Vegas (zip 89149) offers established neighborhoods near Skye Canyon, with varied home styles and proximity to shopping and recreation.',
+      'Centennial Hills in northwest Las Vegas (zip 89149) sits near Skye Canyon, with varied home styles and proximity to shopping and recreation.',
     highlights: [
-      'Established northwest neighborhoods',
+      'Northwest Las Vegas zip 89149',
       'Centennial Center shopping',
       'Near Skye Canyon 89166',
       'Access to US-95 and CC-215',

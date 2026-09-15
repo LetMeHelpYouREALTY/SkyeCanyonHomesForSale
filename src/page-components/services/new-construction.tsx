@@ -59,8 +59,8 @@ export default function NewConstructionServices() {
                     Direct Builder Relationships
                   </h3>
                   <p className="text-gray-600">
-                    Established partnerships with Toll Brothers, Lennar, DR Horton, and all active
-                    Skye Canyon builders.
+                    Buyer representation with Century Communities, Lennar, Toll Brothers, and other
+                    active Skye Canyon builders.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">

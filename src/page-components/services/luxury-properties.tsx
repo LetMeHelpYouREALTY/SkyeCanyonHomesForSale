@@ -59,8 +59,8 @@ export default function LuxuryPropertyServices() {
                     Certified Luxury Marketing
                   </h3>
                   <p className="text-gray-600">
-                    Institute for Luxury Home Marketing certification with proven $50M+ transaction
-                    history.
+                    Institute for Luxury Home Marketing certification for Desert Highlands golf and
+                    custom Skye Canyon homes.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -81,7 +81,7 @@ export default function LuxuryPropertyServices() {
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">Elite Results</h3>
                   <p className="text-gray-600">
-                    Consistent 98% of list price achievement with average 21-day market time.
+                    Confirm live MLS comps and Google reviews — list-price ratios change with each listing.
                   </p>
                 </div>
               </div>
