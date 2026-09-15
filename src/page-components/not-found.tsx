@@ -38,7 +38,7 @@ export default function NotFound() {
                     rel="noopener noreferrer"
                   >
                     <Search className="w-4 h-4 mr-2" />
-                    Search Properties
+                    Search Homes
                   </a>
                 </Button>
                 <Button asChild variant="outline">

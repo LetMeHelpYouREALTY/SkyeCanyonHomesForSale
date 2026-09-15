@@ -11,6 +11,7 @@ import HeroSection from '@/components/hero-section';
 import HomebotWidget from '@/components/homebot-widget';
 import RealScoutListings from '@/components/realscout-listings';
 import HyperlocalExploreHub from '@/components/sections/hyperlocal-explore-hub';
+import GbpPosts from '@/components/gbp-posts';
 import RelatedSearches from '@/components/related-searches';
 import ReviewHighlights from '@/components/review-highlights';
 import ServicesOverview from '@/components/services-overview';
@@ -237,6 +238,7 @@ export default function Home() {
         <HyperlocalExploreHub />
 
         <ReviewHighlights />
+        <GbpPosts />
         <GbpLocalSection />
 
         <FAQSection

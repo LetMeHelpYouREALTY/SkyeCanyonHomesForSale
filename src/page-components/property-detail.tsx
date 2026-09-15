@@ -6,19 +6,16 @@ import {
   Bath,
   Bed,
   Calendar,
-  Camera,
-  Car,
-  Heart,
   Mail,
   MapPin,
   Phone,
+  Search,
   Share2,
   Square,
-  Trees,
-  Wifi,
 } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import RealScoutListings from '@/components/realscout-listings';
+import RelatedSearches from '@/components/related-searches';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import { Badge } from '@/components/ui/badge';
@@ -51,13 +48,6 @@ export default function PropertyDetail() {
 
   const formatSqft = (sqft: number) => {
     return new Intl.NumberFormat('en-US').format(sqft);
-  };
-
-  const formatId = (id: number | undefined) => {
-    if (!id) {
-      return '000000';
-    }
-    return id.toString().padStart(6, '0');
   };
 
   if (isLoading) {
@@ -96,7 +86,7 @@ export default function PropertyDetail() {
               rel="noopener noreferrer"
               className="text-blue-600 font-semibold"
             >
-              Search Skye Canyon listings
+              Search Homes
             </a>
             <GbpLocalSection heading="Call the office about this listing" />
           </div>
@@ -104,6 +94,15 @@ export default function PropertyDetail() {
       </div>
     );
   }
+
+  const shareListing = () => {
+    const url = window.location.href;
+    if (navigator.share) {
+      void navigator.share({ title: `Skye Canyon listing — ${property.address}`, url });
+      return;
+    }
+    void navigator.clipboard.writeText(url);
+  };
 
   return (
     <>
@@ -129,15 +128,24 @@ export default function PropertyDetail() {
             <div className="flex space-x-2">
               <Button
                 variant="outline"
-                size="icon"
                 className="bg-white/20 border-white/30 text-white hover:bg-white/30"
+                asChild
               >
-                <Heart className="w-5 h-5" />
+                <a
+                  href={siteConfig.realscoutOnboarding}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Search className="w-4 h-4 mr-2" />
+                  Search Homes
+                </a>
               </Button>
               <Button
                 variant="outline"
                 size="icon"
                 className="bg-white/20 border-white/30 text-white hover:bg-white/30"
+                onClick={shareListing}
+                aria-label="Share this listing"
               >
                 <Share2 className="w-5 h-5" />
               </Button>
@@ -184,8 +192,8 @@ export default function PropertyDetail() {
                   </div>
                   <div className="text-center">
                     <Calendar className="w-8 h-8 text-realscout-blue mx-auto mb-2" />
-                    <div className="text-2xl font-bold">2024</div>
-                    <div className="text-gray-600">Year Built</div>
+                    <div className="text-2xl font-bold">MLS</div>
+                    <div className="text-gray-600">Confirm year built</div>
                   </div>
                 </div>
 
@@ -196,48 +204,25 @@ export default function PropertyDetail() {
               </CardContent>
             </Card>
 
-            {/* Features & Amenities */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Features & Amenities</CardTitle>
+                <CardTitle>Skye Canyon community context</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold mb-3">Interior Features</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li className="flex items-center">
-                        <Wifi className="w-4 h-4 mr-2 text-realscout-blue" />
-                        Smart Home Technology
-                      </li>
-                      <li className="flex items-center">
-                        <Camera className="w-4 h-4 mr-2 text-realscout-blue" />
-                        Upgraded Kitchen
-                      </li>
-                      <li className="flex items-center">
-                        <Square className="w-4 h-4 mr-2 text-realscout-blue" />
-                        Premium Finishes
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-3">Exterior Features</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li className="flex items-center">
-                        <Car className="w-4 h-4 mr-2 text-realscout-blue" />
-                        3-Car Garage
-                      </li>
-                      <li className="flex items-center">
-                        <Trees className="w-4 h-4 mr-2 text-realscout-blue" />
-                        Landscaped Backyard
-                      </li>
-                      <li className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-2 text-realscout-blue" />
-                        Mountain Views
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <p className="text-gray-700 mb-4">
+                  Confirm beds, baths, garage, and views on the live MLS sheet for this address.
+                  Skye Canyon in Las Vegas NV 89166 includes a 24/7 guarded gate, Desert Highlands
+                  Golf Course, and recreation amenities near {siteConfig.address.street}.
+                </p>
+                <a
+                  href={siteConfig.realscoutOnboarding}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center font-semibold text-realscout-blue hover:text-realscout-navy"
+                >
+                  <Search className="w-4 h-4 mr-2" />
+                  Search Homes
+                </a>
               </CardContent>
             </Card>
           </div>
@@ -321,7 +306,7 @@ export default function PropertyDetail() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">MLS #:</span>
-                    <span className="font-medium">SC{formatId(property.id)}</span>
+                    <span className="font-medium">Confirm on live MLS</span>
                   </div>
                 </div>
               </CardContent>
@@ -348,6 +333,7 @@ export default function PropertyDetail() {
       </section>
 
       <GbpLocalSection heading="Tour this listing with Dr. Jan Duffy" />
+      <RelatedSearches searchType="general" />
 
       </div>
     </>

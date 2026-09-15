@@ -36,9 +36,8 @@ export default function NeighborhoodAnalysis() {
                 Market Overview & Key Insights
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Understanding neighborhood dynamics is crucial for making informed real estate
-                decisions. Our interactive heat map provides comprehensive data to guide your
-                investment choices.
+                Compare northwest Las Vegas zip codes, live MLS inventory, and named campuses
+                before you tour with Dr. Jan Duffy.
               </p>
               <HeadingImage
                 {...sectionImages.northwest}
