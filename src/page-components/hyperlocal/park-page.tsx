@@ -4,9 +4,11 @@ import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
 import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalSchema from '@/components/schema/hyperlocal-schema';
@@ -83,6 +85,10 @@ export default function ParkPage({ park }: ParkPageProps) {
         imageAlt={`${park.name} — ${getHeroImage('park').alt}`}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
+        <HeadingImage
+          {...(park.slug === 'skye-canyon-park' ? sectionImages.recreation : sectionImages.parks)}
+          className="w-full h-52 object-cover rounded-xl mb-6"
+        />
         <p className="text-gray-700 text-lg leading-relaxed">{park.description}</p>
         {park.address && (
           <p className="mt-4 text-gray-600">

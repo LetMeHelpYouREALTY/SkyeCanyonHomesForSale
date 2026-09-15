@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAllBuilderSlugs, getBuilder } from '@/data/hyperlocal/builders';
 import BuilderPage from '@/page-components/hyperlocal/builder-page';
-import { siteConfig } from '@/config/site.config';
+import { pageSocial } from '@/lib/metadata';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -20,13 +20,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const title = `${builder.name} Homes Skye Canyon Las Vegas NV`;
-  const description = builder.answerSummary;
+  const description = `${builder.name} homes in Skye Canyon Las Vegas NV 89166. Live MLS with Dr. Jan Duffy, REALTOR®. Call (702) 500-1902.`;
 
   return {
     title,
     description,
     alternates: { canonical: `/builders/${slug}` },
-    openGraph: { title, description, url: `${siteConfig.url}/builders/${slug}` },
+    ...pageSocial(title, description, `/builders/${slug}`),
   };
 }
 

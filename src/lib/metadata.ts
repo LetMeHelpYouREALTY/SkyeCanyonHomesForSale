@@ -87,3 +87,28 @@ export function pageMetadata(
     },
   };
 }
+
+/** Open Graph + Twitter for App Router pages that set metadata locally. */
+export function pageSocial(
+  title: string,
+  description: string,
+  path: string,
+): Pick<Metadata, 'openGraph' | 'twitter'> {
+  return {
+    openGraph: {
+      title,
+      description,
+      url: `${siteConfig.url}${path === '/' ? '' : path}`,
+      siteName: siteConfig.businessName,
+      locale: 'en_US',
+      type: 'website',
+      images: [defaultOgImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [defaultOgImage.url],
+    },
+  };
+}

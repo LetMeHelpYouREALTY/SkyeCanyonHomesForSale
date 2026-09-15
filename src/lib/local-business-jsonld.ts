@@ -42,6 +42,7 @@ export function buildLocalBusinessJsonLd(): Record<string, unknown> {
       longitude: siteConfig.geo.longitude,
     },
     hasMap: siteConfig.mapsUrl,
+    foundingDate: `${siteConfig.opened.year}-${String(siteConfig.opened.month).padStart(2, '0')}-${String(siteConfig.opened.day).padStart(2, '0')}`,
     openingHours: siteConfig.openingHours,
     openingHoursSpecification: [
       {

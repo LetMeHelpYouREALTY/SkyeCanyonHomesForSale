@@ -153,6 +153,14 @@ export default function Footer() {
                     Call {siteConfig.phone}
                   </a>
                   <a
+                    href={siteConfig.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Open Google Maps
+                  </a>
+                  <a
                     href={siteConfig.directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"

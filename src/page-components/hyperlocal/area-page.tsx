@@ -4,9 +4,11 @@ import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
 import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalSchema from '@/components/schema/hyperlocal-schema';
@@ -76,6 +78,10 @@ export default function AreaPage({ area }: AreaPageProps) {
         imageAlt={`${area.name} — ${getHeroImage('area').alt}`}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
+        <HeadingImage
+          {...sectionImages.northwest}
+          className="w-full h-52 object-cover rounded-xl mb-6"
+        />
         <p className="text-gray-700 text-lg leading-relaxed">{area.description}</p>
       </section>
       <HyperlocalFeatureList title={`${area.name} Highlights`} items={area.highlights} />

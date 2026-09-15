@@ -58,14 +58,16 @@ export default function BuilderPage({ builder }: BuilderPageProps) {
         imageAlt={`${builder.name} — ${getHeroImage('builder').alt}`}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
+        <HeadingImage
+          {...(builder.communitySlugs.length > 0
+            ? sectionImages.newConstruction
+            : sectionImages.luxuryInterior)}
+          className="w-full h-52 object-cover rounded-xl mb-6"
+        />
         <p className="text-gray-700 text-lg leading-relaxed">{builder.description}</p>
         {builder.communitySlugs.length > 0 && (
           <div className="mt-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">{builder.name} Villages</h2>
-            <HeadingImage
-              {...sectionImages.newConstruction}
-              className="w-full h-48 object-cover rounded-xl mb-6"
-            />
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {builder.communitySlugs.map((slug, i) => (
                 <Link

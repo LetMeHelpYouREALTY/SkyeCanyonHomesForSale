@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAllSubdivisionSlugs, getSubdivision } from '@/data/hyperlocal/subdivisions';
 import SubdivisionPage from '@/page-components/hyperlocal/subdivision-page';
-import { siteConfig } from '@/config/site.config';
+import { pageSocial } from '@/lib/metadata';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -20,13 +20,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const title = `${subdivision.name} Homes for Sale Skye Canyon NV ${subdivision.zip}`;
-  const description = subdivision.answerSummary;
+  const description = `${subdivision.name} ${subdivision.builder} homes in Skye Canyon Las Vegas NV ${subdivision.zip}. Live MLS with Dr. Jan Duffy. Call (702) 500-1902.`;
 
   return {
     title,
     description,
     alternates: { canonical: `/skye-canyon/${slug}` },
-    openGraph: { title, description, url: `${siteConfig.url}/skye-canyon/${slug}` },
+    ...pageSocial(title, description, `/skye-canyon/${slug}`),
   };
 }
 
