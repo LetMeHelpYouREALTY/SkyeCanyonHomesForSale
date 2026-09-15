@@ -143,11 +143,23 @@ export default function ServicesOverview() {
 
         <div className="text-center mt-12">
           <p className="text-lg text-gray-600 mb-6">
-            Ready to experience specialized Skye Canyon service?
+            Search live MLS, then call {siteConfig.phone} to tour from {siteConfig.address.street}.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact">
+            <a
+              href={siteConfig.realscoutOnboarding}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="bg-realscout-blue hover:bg-realscout-navy text-white">
+                Search Homes
+              </Button>
+            </a>
+            <a href="/contact">
+              <Button
+                variant="outline"
+                className="border-realscout-blue text-realscout-blue hover:bg-realscout-blue hover:text-white"
+              >
                 Schedule a Consultation
               </Button>
             </a>
@@ -158,9 +170,6 @@ export default function ServicesOverview() {
               >
                 Call {siteConfig.phone}
               </Button>
-            </a>
-            <a href={siteConfig.googleMapsUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline">Open Google Maps</Button>
             </a>
           </div>
         </div>
