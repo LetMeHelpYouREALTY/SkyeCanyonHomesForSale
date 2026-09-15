@@ -74,8 +74,11 @@ export default function PropertyDetail() {
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Property Not Found</h2>
-            <p className="text-gray-600 mb-6">The property you're looking for doesn't exist.</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Search current Skye Canyon listings</h2>
+            <p className="text-gray-600 mb-6">
+              That saved link is not a live MLS sheet. Search Skye Canyon homes or call{' '}
+              {siteConfig.phone}.
+            </p>
             <HeadingImage
               {...sectionImages.listings}
               className="w-full h-56 object-cover rounded-xl mb-6"
@@ -84,13 +87,14 @@ export default function PropertyDetail() {
               href={siteConfig.realscoutOnboarding}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 font-semibold"
+              className="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
             >
               Search Homes
             </a>
-            <GbpLocalSection heading="Call the office about this listing" />
           </div>
         </div>
+        <GbpLocalSection heading="Call the office about this listing" />
+        <RelatedSearches searchType="general" />
       </div>
     );
   }
