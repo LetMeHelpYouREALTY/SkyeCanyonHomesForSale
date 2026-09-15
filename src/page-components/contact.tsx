@@ -42,7 +42,7 @@ export default function Contact() {
                   <CardContent className="p-8">
                     <HeadingImage
                       {...sectionImages.profile}
-                      className="w-full h-56 object-cover object-top rounded-xl mb-6"
+                      className="w-full max-w-sm mx-auto rounded-xl mb-6 object-cover"
                     />
                     <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
 
