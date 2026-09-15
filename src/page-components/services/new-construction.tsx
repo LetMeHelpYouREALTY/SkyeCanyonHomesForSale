@@ -65,11 +65,11 @@ export default function NewConstructionServices() {
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">
-                    Exclusive Community Focus
+                    Skye Canyon builder inventory
                   </h3>
                   <p className="text-gray-600">
-                    Only real estate agent in Las Vegas with exclusive Skye Canyon specialization
-                    since 2009.
+                    Compare Eaglepointe, Marvella, and Skyecrest floor plans with Dr. Jan Duffy in
+                    Las Vegas NV 89166.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">

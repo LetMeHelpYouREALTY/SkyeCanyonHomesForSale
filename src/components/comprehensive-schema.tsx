@@ -1,6 +1,7 @@
 'use client';
 
 import { siteConfig } from '@/config/site.config';
+import { schemaImageList } from '@/lib/schema-images';
 
 interface SchemaMarkupProps {
   pageType?: 'homepage' | 'service' | 'about' | 'properties' | 'generic';
@@ -22,15 +23,11 @@ export default function ComprehensiveSchemaMarkup({
     name: siteConfig.name,
     alternateName: siteConfig.businessName,
     description:
-      'Premier Skye Canyon real estate specialist with exclusive community expertise. Luxury homes, investment properties, and buyer/seller services in Las Vegas, Nevada.',
+      'Skye Canyon real estate specialist for luxury homes, new construction, and resale in Las Vegas NV 89166.',
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    image: [
-      `${siteConfig.url}/images/og/skye-canyon-homes.jpg`,
-      `${siteConfig.url}/images/heroes/home.jpg`,
-      `${siteConfig.url}/images/sections/office-exterior.jpg`,
-    ],
+    image: schemaImageList,
     hasMap: siteConfig.mapsUrl,
     address: {
       '@type': 'PostalAddress',

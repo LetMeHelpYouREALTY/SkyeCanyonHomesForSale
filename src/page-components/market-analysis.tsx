@@ -59,6 +59,10 @@ export default function MarketAnalysis() {
             <h2 className="text-3xl font-bold text-center mb-12">
               Why Invest in Skye Canyon Las Vegas Nevada?
             </h2>
+            <HeadingImage
+              {...sectionImages.golf}
+              className="w-full h-52 object-cover rounded-xl mb-10"
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gray-50 p-6 rounded-lg">
@@ -66,8 +70,7 @@ export default function MarketAnalysis() {
                   Guard-Gated Security
                 </h3>
                 <p className="text-gray-700">
-                  24/7 security and controlled access providing peace of mind and exclusive
-                  community living.
+                  24/7 guarded gate and controlled vehicle access in Las Vegas NV 89166.
                 </p>
               </div>
 

@@ -271,6 +271,10 @@ export default function SkyeCanyonCommunities() {
         <section className="py-16 px-4 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-12">Community Price Ranges</h2>
+            <HeadingImage
+              {...sectionImages.communityMap}
+              className="w-full h-56 object-cover object-top rounded-xl mb-10"
+            />
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-blue-600 transition-colors">

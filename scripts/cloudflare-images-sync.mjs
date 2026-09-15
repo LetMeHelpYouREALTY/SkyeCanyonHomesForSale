@@ -3,8 +3,9 @@
  * Requires CF_ACCOUNT_ID and CF_IMAGES_TOKEN (or CLOUDFLARE_API_TOKEN).
  * GitHub Action: .github/workflows/cloudflare-images-sync.yml
  * Secrets: CF_ACCOUNT_ID, CF_IMAGES_TOKEN (optional CLOUDFLARE_API_TOKEN).
- * Then set NEXT_PUBLIC_CF_IMAGES_BASE_URL or NEXT_PUBLIC_CF_IMAGES_ACCOUNT_HASH
- * in Vercel so siteImage() serves from Cloudflare with git as backup.
+ * Zone skyecanyonhomesforsale.com already uses Cloudflare nameservers
+ * (DNS-only / gray cloud for Vercel). After secrets exist, CNAME
+ * images.skyecanyonhomesforsale.com to the Cloudflare Images custom domain.
  *
  * Usage:
  *   node scripts/cloudflare-images-sync.mjs

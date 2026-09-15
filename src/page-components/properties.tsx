@@ -15,6 +15,7 @@ import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import { sectionImages } from '@/data/section-images';
+import { siteConfig } from '@/config/site.config';
 
 export default function Properties() {
   const searchParams = useSearchParams();
@@ -25,7 +26,7 @@ export default function Properties() {
 
         <PageHero
           title="Skye Canyon Homes Properties MLS Listings Nevada 89166"
-          subtitle="Discover luxury homes in Las Vegas's premier northwest community."
+          subtitle="Live MLS homes for sale in Skye Canyon, Las Vegas NV 89166."
           {...getHeroImageProps('properties')}
           minHeight="sm"
         />
@@ -84,6 +85,10 @@ export default function Properties() {
               </p>
               <h3 className="text-lg font-medium text-gray-700 mb-4">Browse All Properties</h3>
             </div>
+            <HeadingImage
+              {...sectionImages.listings}
+              className="w-full h-52 object-cover rounded-xl mb-8"
+            />
             <RealScoutListings className="w-full" variant="all-properties" />
           </div>
         </section>
@@ -116,20 +121,26 @@ export default function Properties() {
               ))}
             </div>
 
-            {/* Map Test Component */}
             <div className="mb-8">
               <GoogleMapEmbed />
             </div>
 
-            <div className="text-center">
+            <div className="flex flex-wrap justify-center gap-3">
               <a
-                href="/demo/maps"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-realscout-blue hover:bg-realscout-navy transition-colors"
+                href={siteConfig.directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 rounded-md text-white bg-realscout-blue hover:bg-realscout-navy"
               >
-                View Full Interactive Maps Demo
-                <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
+                Get directions
+              </a>
+              <a
+                href={siteConfig.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 rounded-md border border-realscout-blue text-realscout-blue hover:bg-blue-50"
+              >
+                Open Google Maps
               </a>
             </div>
           </div>
@@ -140,13 +151,16 @@ export default function Properties() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Exclusive Skye Canyon Client Portfolio Nevada
+                Skye Canyon Homes Represented by Dr. Jan Duffy
               </h2>
               <p className="text-xl text-gray-600">
-                Properties managed through Dr. Jan Duffy's CRM system
+                Current listings and client inventory in Las Vegas NV 89166
               </p>
-              <h3 className="text-lg font-medium text-gray-700 mb-4">Exclusive Client Listings</h3>
             </div>
+            <HeadingImage
+              {...sectionImages.listings}
+              className="w-full h-52 object-cover rounded-xl mb-8"
+            />
             <FollowUpBossListings />
           </div>
         </section>
@@ -161,7 +175,7 @@ export default function Properties() {
             {
               question: 'How do I search for Skye Canyon properties?',
               answer:
-                'Use our advanced search tools to filter by price, bedrooms, bathrooms, and specific features. Dr. Jan Duffy also provides exclusive access to off-market listings and upcoming properties.',
+                'Filter live MLS by price, bedrooms, bathrooms, and features, or start a saved search at RealScout. Call Dr. Jan Duffy at (702) 500-1902 for upcoming and off-market inventory.',
             },
             {
               question: 'What is the typical timeline for buying a home?',

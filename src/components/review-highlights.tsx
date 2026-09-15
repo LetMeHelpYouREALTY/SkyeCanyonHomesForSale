@@ -5,7 +5,7 @@ import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
 export default function ReviewHighlights() {
-  const office = sectionImages.office;
+  const office = sectionImages.monument;
 
   return (
     <section className="py-16 bg-gray-50">

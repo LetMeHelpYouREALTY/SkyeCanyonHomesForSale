@@ -29,7 +29,7 @@ export default function SkyeCanyonGuide() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Current Skye Canyon Home Listings Nevada 89166
               </h2>
-              <p className="text-xl text-gray-600">Available homes in this exclusive community</p>
+              <p className="text-xl text-gray-600">Available homes in Skye Canyon, Las Vegas NV 89166</p>
             </div>
             <HeadingImage
               src={sectionImages.listings.src}

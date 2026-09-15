@@ -15,7 +15,7 @@ const highlights = [
     emoji: '🛡️',
     title: 'Gated Security',
     description:
-      '24/7 gated community with professional security ensuring privacy and peace of mind for residents.',
+      '24/7 guarded gate and controlled vehicle access at Skye Canyon, Las Vegas NV 89166.',
   },
   {
     emoji: '🏡',
@@ -27,7 +27,7 @@ const highlights = [
     emoji: '📍',
     title: 'Prime Location',
     description:
-      'Convenient access to Las Vegas Strip, shopping, dining, and entertainment while maintaining suburban tranquility.',
+      'About 25–30 minutes from the Las Vegas Strip and Harry Reid International Airport via I-215.',
   },
   {
     emoji: '👥',

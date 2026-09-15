@@ -141,7 +141,7 @@ export default function VoiceAssistant() {
           "As Skye Canyon's #1 specialist, I offer unmatched local expertise, exclusive market insights, and personalized service. My clients benefit from my deep community knowledge, proven negotiation skills, and commitment to finding the perfect Skye Canyon home for their lifestyle.";
       } else if (lowerCommand.includes('experience') || lowerCommand.includes('credentials')) {
         response =
-          "Dr. Jan Duffy brings 15+ years of Skye Canyon expertise, advanced real estate education, and a proven track record of successful transactions. I'm the go-to agent for luxury Skye Canyon properties and have built lasting relationships throughout this exclusive community.";
+          "Dr. Jan Duffy brings 15+ years of Skye Canyon expertise, Nevada license S.0197614, and listings at 10111 W. Skye Canyon Park Drive. Call (702) 500-1902.";
       } else {
         response =
           "I'm Dr. Jan Duffy, the definitive Skye Canyon real estate authority. With exclusive focus on this luxury Las Vegas community, I provide unparalleled expertise in homes, market trends, and lifestyle opportunities. Try saying 'show me homes under 900K' or 'what luxury homes are available'.";

@@ -10,7 +10,7 @@ export default function StructuredData() {
         '@id': 'https://skyecanyonhomesforsale.com/#agent',
         name: 'Dr. Jan Duffy',
         description:
-          'Premier Skye Canyon real estate specialist with 15+ years of exclusive community expertise and 150+ successful transactions.',
+          'Skye Canyon REALTOR® for luxury homes, new construction, and resale in Las Vegas NV 89166.',
         url: 'https://skyecanyonhomesforsale.com',
         telephone: '(702) 500-1902',
         email: 'DrDuffy@SkyeCanyonHomesForSale.com',

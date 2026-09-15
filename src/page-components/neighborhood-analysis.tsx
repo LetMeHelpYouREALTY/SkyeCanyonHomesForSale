@@ -170,6 +170,10 @@ export default function NeighborhoodAnalysis() {
               <p className="text-lg text-gray-600">
                 Explore current listings in each analyzed neighborhood
               </p>
+              <HeadingImage
+                {...sectionImages.listings}
+                className="w-full h-52 object-cover rounded-xl mt-8"
+              />
             </div>
             <RealScoutListings />
           </div>

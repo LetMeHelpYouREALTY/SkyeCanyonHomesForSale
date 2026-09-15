@@ -211,9 +211,13 @@ export default function SkyeCanyonSchools() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Skye Canyon Middle/Junior High Schools
               </h2>
-              <p className="text-xl text-gray-600">
-                Ralph Cadwallader Middle and Edmundo Escobedo Sr Middle serve Skye Canyon addresses
-              </p>
+            <p className="text-xl text-gray-600">
+              Ralph Cadwallader Middle and Edmundo Escobedo Sr Middle serve Skye Canyon addresses
+            </p>
+              <HeadingImage
+                {...sectionImages.schools}
+                className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -242,6 +246,10 @@ export default function SkyeCanyonSchools() {
               <p className="text-xl text-gray-600">
                 Arbor View High School — zoned high school for Skye Canyon addresses
               </p>
+              <HeadingImage
+                {...sectionImages.schools}
+                className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
+              />
             </div>
 
             <div className="max-w-2xl mx-auto">
@@ -256,7 +264,7 @@ export default function SkyeCanyonSchools() {
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div className="text-center">
-                    <div className="font-semibold text-purple-600">Academic Excellence</div>
+                    <div className="font-semibold text-purple-600">Advanced Placement</div>
                     <div className="text-gray-600">Advanced Placement courses</div>
                   </div>
                   <div className="text-center">
@@ -277,6 +285,10 @@ export default function SkyeCanyonSchools() {
               <p className="text-xl text-gray-600">
                 Alternative education with specialized programs and smaller class sizes
               </p>
+              <HeadingImage
+                {...sectionImages.schools}
+                className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
+              />
             </div>
 
             <div className="max-w-2xl mx-auto">
