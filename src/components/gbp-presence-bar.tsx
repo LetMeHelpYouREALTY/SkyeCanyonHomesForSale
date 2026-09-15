@@ -8,7 +8,13 @@ export default function GbpPresenceBar() {
         <div className="text-center lg:text-left min-w-0">
           <p className="font-semibold">{siteConfig.businessName}</p>
           <p className="text-white/90">
-            {siteConfig.address.formatted}
+            <span className="hidden sm:inline">{siteConfig.address.formatted}</span>
+            <span className="sm:hidden">
+              <span className="block">{siteConfig.address.street}</span>
+              <span className="whitespace-nowrap">
+                {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
+              </span>
+            </span>
             <span className="mx-2 text-white/50">·</span>
             <a
               href={`tel:${siteConfig.phoneTel}`}
