@@ -277,9 +277,10 @@ export default function Home() {
 
         <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Find Your Skye Canyon Home?</h2>
+            <h2 className="text-3xl font-bold mb-4">Search Skye Canyon Homes in 89166</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact Dr. Jan Duffy for buying or selling guidance in Skye Canyon, Las Vegas NV 89166
+              Live MLS with {siteConfig.name} at {siteConfig.address.formatted}. Call{' '}
+              {siteConfig.phone}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
