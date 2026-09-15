@@ -28,10 +28,11 @@ export const sectionImages = {
     'golf',
     'Desert Highlands Golf Course homes in Skye Canyon Las Vegas NV 89166',
   ),
-  recreation: section(
-    'recreation',
-    'Skye Canyon community recreation pool Las Vegas NV 89166',
-  ),
+  recreation: {
+    src: siteImage('gbp/recreation.jpg'),
+    srcWebp: siteImageWebp('gbp/recreation.jpg'),
+    alt: 'Skye Canyon recreation center lap pool Las Vegas NV 89166 matching the Google Business Profile',
+  },
   office: section(
     'office-exterior',
     'Dr. Jan Duffy REALTOR office at 10111 W. Skye Canyon Park Drive Las Vegas NV 89166',

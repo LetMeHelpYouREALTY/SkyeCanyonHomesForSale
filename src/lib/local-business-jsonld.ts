@@ -20,6 +20,7 @@ export function buildLocalBusinessJsonLd(): Record<string, unknown> {
       absoluteSiteImage('gbp/cover.jpg', imageBase),
       absoluteSiteImage('gbp/profile.jpg', imageBase),
       absoluteSiteImage('gbp/park.jpg', imageBase),
+      absoluteSiteImage('gbp/recreation.jpg', imageBase),
       absoluteSiteImage('gbp/clubhouse.jpg', imageBase),
       absoluteSiteImage('heroes/home.jpg', imageBase),
     ],

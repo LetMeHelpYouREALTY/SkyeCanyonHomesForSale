@@ -4,14 +4,22 @@
  *
  * Set one of:
  *   NEXT_PUBLIC_CF_IMAGES_BASE_URL  e.g. https://images.skyecanyonhomesforsale.com
- *   NEXT_PUBLIC_CF_IMAGES_ACCOUNT_HASH + IDs in IMAGE_IDS (Cloudflare Images)
+ *   NEXT_PUBLIC_CF_IMAGES_ACCOUNT_HASH (or src/lib/cloudflare-account-hash.ts)
+ *
+ * Custom IDs match scripts/cloudflare-images-sync.mjs (skye-canyon/{path without ext}).
+ * Cloudflare Images transcodes JPEG/PNG to WebP/AVIF from the public variant.
  */
+import { CF_IMAGES_ACCOUNT_HASH as COMMITTED_HASH } from '@/lib/cloudflare-account-hash';
+
 export const GIT_IMAGE_PREFIX = '/images';
 
 const CF_BASE = process.env.NEXT_PUBLIC_CF_IMAGES_BASE_URL?.replace(/\/$/, '');
-const CF_HASH = process.env.NEXT_PUBLIC_CF_IMAGES_ACCOUNT_HASH;
+const CF_HASH =
+  process.env.NEXT_PUBLIC_CF_IMAGES_ACCOUNT_HASH || COMMITTED_HASH || undefined;
 
-/** Cloudflare Images custom IDs — populated by scripts/cloudflare-images-sync.mjs */
+export type ImageCdnStatus = 'cloudflare-base' | 'cloudflare-images' | 'git-backup';
+
+/** Cloudflare Images custom IDs — documented map; delivery uses cloudflareImageId(). */
 export const IMAGE_IDS: Record<string, string> = {
   'heroes/home.jpg': 'skye-canyon/heroes/home',
   'heroes/contact.jpg': 'skye-canyon/heroes/contact',
@@ -52,6 +60,23 @@ function normalizeKey(src: string): string {
   return src.replace(/^\//, '').replace(/^images\//, '');
 }
 
+/** Custom ID uploaded by scripts/cloudflare-images-sync.mjs. */
+export function cloudflareImageId(src: string): string {
+  const key = normalizeKey(src).replace(/-mobile/g, '');
+  const withoutExt = key.replace(/\.(webp|jpe?g|png)$/i, '');
+  return `skye-canyon/${withoutExt}`;
+}
+
+export function getImageCdnStatus(): ImageCdnStatus {
+  if (CF_BASE) {
+    return 'cloudflare-base';
+  }
+  if (CF_HASH) {
+    return 'cloudflare-images';
+  }
+  return 'git-backup';
+}
+
 /**
  * Resolve a site image path to Cloudflare (if configured) or the git backup.
  * Accepts keys like "heroes/home.jpg" or "/images/heroes/home.jpg".
@@ -64,17 +89,16 @@ export function siteImage(src: string): string {
   }
 
   if (CF_HASH) {
-    const idKey = key.replace(/-mobile/, '').replace(/\.(webp|jpe?g|png)$/i, '.jpg');
-    const id = IMAGE_IDS[idKey];
-    if (id) {
-      return `https://imagedelivery.net/${CF_HASH}/${id}/public`;
-    }
+    return `https://imagedelivery.net/${CF_HASH}/${cloudflareImageId(key)}/public`;
   }
 
   return `${GIT_IMAGE_PREFIX}/${key}`;
 }
 
 export function siteImageWebp(src: string): string {
+  if (CF_BASE || CF_HASH) {
+    return siteImage(src);
+  }
   return siteImage(src.replace(/\.jpe?g$/i, '.webp'));
 }
 

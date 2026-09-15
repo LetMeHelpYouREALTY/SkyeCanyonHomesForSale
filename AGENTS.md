@@ -35,11 +35,12 @@ npm run check        # tsc --noEmit (legacy components may have TS warnings)
 4. **Build flags**: `next.config.ts` currently sets `eslint.ignoreDuringBuilds` and `typescript.ignoreBuildErrors` while legacy migrated components are cleaned up — compile still succeeds.
 5. **Prisma**: `postinstall` runs `prisma generate`. A placeholder `DATABASE_URL` in `.env` is enough for generate; real DB only needed for persistence features.
 6. **Legacy folder**: `legacy/client`, `legacy/server`, `legacy/vite.config.ts` — reference only; do not run `vite` from root.
+7. **Cloudflare Images**: `siteImage()` falls back to git `/images/` until GitHub secrets `CF_ACCOUNT_ID` + `CF_IMAGES_TOKEN` exist. `.github/workflows/cloudflare-images-sync.yml` uploads `public/images` and commits `src/lib/cloudflare-account-hash.ts` so production can serve `imagedelivery.net`. Optional: Vercel `NEXT_PUBLIC_CF_IMAGES_BASE_URL` and a DNS-only CNAME for `images.skyecanyonhomesforsale.com`. Do not orange-cloud the Vercel `www` record. Cloudflare MCP auth is desktop-only; this environment cannot create those secrets.
 
 ### Hello-world verification
 
 1. `curl http://localhost:3000/` → 200
-2. `curl http://localhost:3000/api/health` → `{"status":"ok",...}`
+2. `curl http://localhost:3000/api/health` → `{"status":"ok","imageCdn":"git-backup"| "cloudflare-images" | "cloudflare-base",...}`
 3. Open `/` in browser — hero, MLS listings widget area, navigation with phone CTA
 4. POST `/api/leads` with JSON body → `{ "success": true, ... }`
 

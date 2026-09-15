@@ -56,6 +56,12 @@ const pages: Record<string, PageSeoEntry> = {
       'Las Vegas real estate focused on Skye Canyon NV 89166. New construction, resale, and luxury with Dr. Jan Duffy, REALTOR®.',
     path: '/las-vegas-real-estate',
   },
+  '/las-vegas': {
+    title: 'Las Vegas Real Estate | Skye Canyon NV 89166 Specialist',
+    description:
+      'Las Vegas real estate focused on Skye Canyon NV 89166. New construction, resale, and luxury with Dr. Jan Duffy, REALTOR®.',
+    path: '/las-vegas-real-estate',
+  },
   '/luxury-homes-las-vegas': {
     title: 'Luxury Homes Las Vegas | Skye Canyon NV 89166',
     description:

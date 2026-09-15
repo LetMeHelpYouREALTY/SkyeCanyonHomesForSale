@@ -9,6 +9,7 @@ export const schemaImages = {
   listings: absoluteSiteImage('sections/listings.jpg', siteConfig.url),
   profile: absoluteSiteImage('gbp/profile.jpg', siteConfig.url),
   park: absoluteSiteImage('gbp/park.jpg', siteConfig.url),
+  recreation: absoluteSiteImage('gbp/recreation.jpg', siteConfig.url),
   clubhouse: absoluteSiteImage('gbp/clubhouse.jpg', siteConfig.url),
 };
 
@@ -16,6 +17,7 @@ export const schemaImageList = [
   schemaImages.office,
   schemaImages.profile,
   schemaImages.park,
+  schemaImages.recreation,
   schemaImages.clubhouse,
   schemaImages.home,
 ];

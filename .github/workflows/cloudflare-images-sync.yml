@@ -7,8 +7,13 @@ on:
     paths:
       - 'public/images/**'
       - 'scripts/cloudflare-images-sync.mjs'
+      - 'scripts/cloudflare-image-id.mjs'
       - '.github/workflows/cloudflare-images-sync.yml'
+      - 'src/lib/cloudflare-images.ts'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   sync:
@@ -32,3 +37,15 @@ jobs:
             echo "::warning::Cloudflare Images secrets CF_ACCOUNT_ID and CF_IMAGES_TOKEN are empty. Git /images backup stays live on Vercel until those GitHub secrets exist."
           fi
           node scripts/cloudflare-images-sync.mjs
+
+      - name: Commit Cloudflare Images account hash
+        run: |
+          if git diff --quiet -- src/lib/cloudflare-account-hash.ts; then
+            echo "Account hash file unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/cloudflare-account-hash.ts
+          git commit -m "Commit Cloudflare Images account hash for imagedelivery.net URLs"
+          git push
