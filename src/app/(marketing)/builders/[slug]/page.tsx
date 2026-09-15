@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getAllBuilderSlugs, getBuilder } from '@/data/hyperlocal/builders';
 import BuilderPage from '@/page-components/hyperlocal/builder-page';
 import { pageSocial } from '@/lib/metadata';
+import { hostedImage } from '@/lib/page-images';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -26,7 +27,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: { canonical: `/builders/${slug}` },
-    ...pageSocial(title, description, `/builders/${slug}`),
+    ...pageSocial(
+      title,
+      description,
+      `/builders/${slug}`,
+      hostedImage('sections/new-construction.jpg'),
+    ),
   };
 }
 

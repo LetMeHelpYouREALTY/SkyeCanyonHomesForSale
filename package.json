@@ -21,7 +21,7 @@
     "optimize:favicon": "node scripts/optimize-favicon.mjs",
     "optimize:images": "node scripts/optimize-heroes.mjs && node scripts/optimize-og.mjs && node scripts/optimize-site-images.mjs",
     "images:cf-sync": "node scripts/cloudflare-images-sync.mjs",
-    "test:images": "node --test scripts/cloudflare-image-id.test.mjs",
+    "test:images": "node --test scripts/cloudflare-image-id.test.mjs scripts/topic-images.test.mjs",
     "hero:deploy": "node scripts/hero-deploy.mjs",
     "hero:publish": "node scripts/hero-publish.mjs",
     "og:deploy": "node scripts/og-deploy.mjs",

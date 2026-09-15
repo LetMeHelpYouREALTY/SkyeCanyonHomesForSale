@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { getAllSubdivisionSlugs, getSubdivision } from '@/data/hyperlocal/subdivisions';
 import SubdivisionPage from '@/page-components/hyperlocal/subdivision-page';
 import { pageSocial } from '@/lib/metadata';
+import { hostedImage } from '@/lib/page-images';
+import { subdivisionImageKey } from '@/data/topic-images';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -26,7 +28,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: { canonical: `/skye-canyon/${slug}` },
-    ...pageSocial(title, description, `/skye-canyon/${slug}`),
+    ...pageSocial(
+      title,
+      description,
+      `/skye-canyon/${slug}`,
+      hostedImage(subdivisionImageKey(slug)),
+    ),
   };
 }
 

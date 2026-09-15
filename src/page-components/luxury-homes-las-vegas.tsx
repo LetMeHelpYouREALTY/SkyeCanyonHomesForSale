@@ -159,7 +159,7 @@ export default function LuxuryHomesLasVegas() {
             {
               question: 'What should I expect when buying a luxury home?',
               answer:
-                "Luxury home purchases involve detailed inspections, custom financing options, longer due diligence periods, and specialized marketing. Dr. Jan Duffy's expertise ensures smooth transactions and exclusive access to off-market properties.",
+                'Luxury home purchases involve detailed inspections, custom financing, and longer due diligence. Dr. Jan Duffy walks the process using live MLS comps — call (702) 500-1902 for current inventory.',
             },
           ]}
         />

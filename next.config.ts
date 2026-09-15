@@ -36,6 +36,11 @@ const nextConfig: NextConfig = {
         destination: '/las-vegas-real-estate',
         permanent: true,
       },
+      {
+        source: '/home-simple',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
   async headers() {

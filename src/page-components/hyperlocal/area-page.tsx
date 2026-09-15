@@ -8,7 +8,8 @@ import HeadingImage from '@/components/heading-image';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
-import { sectionImages } from '@/data/section-images';
+import { hostedImage } from '@/lib/page-images';
+import { areaImageKey, areaSectionImage } from '@/data/topic-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalSchema from '@/components/schema/hyperlocal-schema';
@@ -42,6 +43,7 @@ export default function AreaPage({ area }: AreaPageProps) {
       url: pageUrl,
       geo: area.geo,
       zip: area.zipCodes[0],
+      image: hostedImage(areaImageKey()),
     }),
     buildBreadcrumbSchema(breadcrumbs),
     buildFaqPageSchema(area.faqs),
@@ -79,7 +81,7 @@ export default function AreaPage({ area }: AreaPageProps) {
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
         <HeadingImage
-          {...sectionImages.northwest}
+          {...areaSectionImage(area.name)}
           className="w-full h-52 object-cover rounded-xl mb-6"
         />
         <p className="text-gray-700 text-lg leading-relaxed">{area.description}</p>

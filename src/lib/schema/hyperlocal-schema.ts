@@ -9,6 +9,7 @@ interface PlaceSchemaInput {
   geo: { latitude: number; longitude: number };
   containedIn?: string;
   zip?: string;
+  image?: string | string[];
 }
 
 interface BreadcrumbItem {
@@ -37,7 +38,11 @@ export function buildPlaceSchema(input: PlaceSchemaInput) {
         addressCountry: siteConfig.address.country,
       },
     }),
-    image: schemaImageList,
+    image: input.image
+      ? Array.isArray(input.image)
+        ? input.image
+        : [input.image, ...schemaImageList]
+      : schemaImageList,
     hasMap: siteConfig.googleMapsUrl,
     ...(input.containedIn && {
       containedInPlace: {

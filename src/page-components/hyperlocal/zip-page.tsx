@@ -7,7 +7,8 @@ import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
-import { sectionImages } from '@/data/section-images';
+import { hostedImage } from '@/lib/page-images';
+import { zipHeroKey, zipImageKey, zipSectionImage } from '@/data/topic-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalRealtorServices from '@/components/sections/hyperlocal-realtor-services';
@@ -43,6 +44,7 @@ export default function ZipPage({ zipArea }: ZipPageProps) {
       url: pageUrl,
       geo: zipArea.geo,
       zip: zipArea.zip,
+      image: hostedImage(zipImageKey(zipArea.zip)),
     }),
     buildBreadcrumbSchema(breadcrumbs),
     buildFaqPageSchema(zipArea.faqs),
@@ -82,12 +84,12 @@ export default function ZipPage({ zipArea }: ZipPageProps) {
           zipArea.medianPrice,
           zipArea.daysOnMarket ? `${zipArea.daysOnMarket} days on market` : undefined,
         ].filter(Boolean) as string[]}
-        {...getHeroImageProps('zip')}
-        imageAlt={`${zipArea.zip} homes for sale — ${getHeroImage('zip').alt}`}
+        {...getHeroImageProps(zipHeroKey(zipArea.zip))}
+        imageAlt={`${zipArea.zip} homes for sale — ${getHeroImage(zipHeroKey(zipArea.zip)).alt}`}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
         <HeadingImage
-          {...sectionImages.communityMap}
+          {...zipSectionImage(zipArea.zip)}
           className="w-full h-52 object-cover rounded-xl mb-6"
         />
         <p className="text-gray-700 text-lg leading-relaxed">{zipArea.description}</p>

@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { getAllParkSlugs, getPark } from '@/data/hyperlocal/parks';
 import ParkPage from '@/page-components/hyperlocal/park-page';
 import { pageSocial } from '@/lib/metadata';
+import { hostedImage } from '@/lib/page-images';
+import { parkImageKey } from '@/data/topic-images';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -26,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: { canonical: `/skye-canyon-parks/${slug}` },
-    ...pageSocial(title, description, `/skye-canyon-parks/${slug}`),
+    ...pageSocial(title, description, `/skye-canyon-parks/${slug}`, hostedImage(parkImageKey(slug))),
   };
 }
 

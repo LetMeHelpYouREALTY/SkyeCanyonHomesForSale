@@ -8,7 +8,12 @@ import HeadingImage from '@/components/heading-image';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImageProps } from '@/data/hero-images';
-import { sectionImages } from '@/data/section-images';
+import { hostedImage } from '@/lib/page-images';
+import {
+  subdivisionHeroKey,
+  subdivisionImageKey,
+  subdivisionSectionImage,
+} from '@/data/topic-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalRealtorServices from '@/components/sections/hyperlocal-realtor-services';
@@ -52,6 +57,7 @@ export default function SubdivisionPage({ subdivision }: SubdivisionPageProps) {
       geo: subdivision.geo,
       containedIn: 'Skye Canyon, Las Vegas, NV',
       zip: subdivision.zip,
+      image: hostedImage(subdivisionImageKey(subdivision.slug)),
     }),
     buildBreadcrumbSchema(breadcrumbs),
     buildFaqPageSchema(subdivision.faqs),
@@ -96,11 +102,11 @@ export default function SubdivisionPage({ subdivision }: SubdivisionPageProps) {
         headline={`${subdivision.name} Homes for Sale — Skye Canyon NV ${subdivision.zip}`}
         answerSummary={subdivision.answerSummary}
         badges={[subdivision.builder, subdivision.priceRange, `${subdivision.bedrooms} bedrooms`]}
-        {...getHeroImageProps('subdivision')}
+        {...getHeroImageProps(subdivisionHeroKey(subdivision.slug))}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
         <HeadingImage
-          {...sectionImages.newConstruction}
+          {...subdivisionSectionImage(subdivision.slug, subdivision.name)}
           className="w-full h-52 object-cover rounded-xl mb-6"
         />
         <p className="text-gray-700 text-lg leading-relaxed">{subdivision.description}</p>

@@ -72,8 +72,8 @@ export default function BuyerAgentServices() {
                     Market Analysis & Property Search
                   </h3>
                   <p className="text-gray-600">
-                    Exclusive access to off-market properties and comprehensive market analysis for
-                    informed decisions.
+                    Live MLS search plus current comps so you can compare Skye Canyon homes before
+                    you tour.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">

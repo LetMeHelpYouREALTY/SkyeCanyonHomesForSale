@@ -3,6 +3,12 @@ import { siteConfig } from '@/config/site.config';
 import { getAllSubdivisionSlugs } from '@/data/hyperlocal/subdivisions';
 import { getAllParkSlugs } from '@/data/hyperlocal/parks';
 import { getAllBuilderSlugs } from '@/data/hyperlocal/builders';
+import {
+  builderSitemapImages,
+  parkSitemapImages,
+  sitemapImagesForPath,
+  subdivisionSitemapImages,
+} from '@/lib/page-images';
 
 const baseUrl = siteConfig.url;
 
@@ -36,6 +42,21 @@ const staticRoutes = [
   { path: '/terms-of-service', priority: 0.3, changeFrequency: 'yearly' as const },
 ];
 
+function imagesForRoute(path: string): string[] {
+  const parkMatch = path.match(/^\/skye-canyon-parks\/(.+)$/);
+  if (parkMatch?.[1]) {
+    return parkSitemapImages(parkMatch[1]);
+  }
+  const subdivisionMatch = path.match(/^\/skye-canyon\/(.+)$/);
+  if (subdivisionMatch?.[1]) {
+    return subdivisionSitemapImages(subdivisionMatch[1]);
+  }
+  if (path.startsWith('/builders/')) {
+    return builderSitemapImages();
+  }
+  return sitemapImagesForPath(path);
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
@@ -62,5 +83,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
+    images: imagesForRoute(route.path),
   }));
 }

@@ -8,7 +8,8 @@ import HeadingImage from '@/components/heading-image';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
-import { sectionImages } from '@/data/section-images';
+import { hostedImage } from '@/lib/page-images';
+import { parkHeroKey, parkImageKey, parkSectionImage } from '@/data/topic-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalSchema from '@/components/schema/hyperlocal-schema';
@@ -45,6 +46,7 @@ export default function ParkPage({ park }: ParkPageProps) {
       geo: park.geo,
       containedIn: 'Skye Canyon, Las Vegas, NV',
       zip: '89166',
+      image: hostedImage(parkImageKey(park.slug)),
     }),
     buildBreadcrumbSchema(breadcrumbs),
     buildFaqPageSchema(park.faqs),
@@ -81,12 +83,12 @@ export default function ParkPage({ park }: ParkPageProps) {
         headline={`${park.name} — Skye Canyon Las Vegas NV 89166`}
         answerSummary={park.answerSummary}
         badges={[park.size, park.hours, park.address].filter(Boolean) as string[]}
-        {...getHeroImageProps('park')}
-        imageAlt={`${park.name} — ${getHeroImage('park').alt}`}
+        {...getHeroImageProps(parkHeroKey(park.slug))}
+        imageAlt={`${park.name} — ${getHeroImage(parkHeroKey(park.slug)).alt}`}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">
         <HeadingImage
-          {...(park.slug === 'skye-canyon-park' ? sectionImages.recreation : sectionImages.parks)}
+          {...parkSectionImage(park.slug, park.name)}
           className="w-full h-52 object-cover rounded-xl mb-6"
         />
         <p className="text-gray-700 text-lg leading-relaxed">{park.description}</p>
@@ -104,7 +106,7 @@ export default function ParkPage({ park }: ParkPageProps) {
       <HyperlocalListings title="Homes Near This Park" subtitle="Skye Canyon NV 89166 MLS listings" />
       <FAQSection title={`${park.name} FAQ`} faqs={park.faqs} pageType="skye-canyon" />
       <HyperlocalInternalLinks title="More Skye Canyon Places" links={relatedLinks} />
-      <GbpLocalSection heading="Get directions to Skye Canyon Park" />
+      <GbpLocalSection heading={`Get directions from the office to ${park.name}`} />
       <HyperlocalCta title="Find a Home Near Skye Canyon Parks" />
     </>
   );

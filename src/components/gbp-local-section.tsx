@@ -1,4 +1,4 @@
-import { Clock, MapPin, Navigation, Phone, Star } from 'lucide-react';
+import { Clock, MapPin, Navigation, Phone, Search, Star } from 'lucide-react';
 import GoogleMapEmbed from '@/components/google-map-embed';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
@@ -60,10 +60,19 @@ export default function GbpLocalSection({
               </ul>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <a
+                href={siteConfig.realscoutOnboarding}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white hover:bg-blue-700"
+              >
+                <Search className="h-4 w-4" aria-hidden="true" />
+                Search Homes
+              </a>
               <a
                 href={`tel:${siteConfig.phoneTel}`}
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white hover:bg-blue-700"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 px-4 py-3 font-semibold text-gray-900 hover:bg-gray-50"
               >
                 <Phone className="h-4 w-4" aria-hidden="true" />
                 Call

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { siteConfig } from '@/config/site.config';
 import { siteImage } from '@/lib/cloudflare-images';
+import { ogImageUrlForPath } from '@/lib/page-images';
 
 /** Open Graph / Twitter card image — 1200×630 per platform specs */
 export const defaultOgImage = {
@@ -58,13 +59,26 @@ export function buildSiteMetadata(): Metadata {
   };
 }
 
-/** Merge page-specific metadata with default OG/Twitter images */
+function socialImage(path: string, imageUrl?: string) {
+  const url = imageUrl ?? ogImageUrlForPath(path);
+  return {
+    url,
+    width: 1200,
+    height: 630,
+    alt: defaultOgImage.alt,
+    type: 'image/jpeg' as const,
+  };
+}
+
+/** Merge page-specific metadata with heading-appropriate OG/Twitter images */
 export function pageMetadata(
   title: string,
   description: string,
   path = '/',
   index = true,
+  imageUrl?: string,
 ): Metadata {
+  const image = socialImage(path, imageUrl);
   return {
     title,
     description,
@@ -77,13 +91,13 @@ export function pageMetadata(
       siteName: siteConfig.businessName,
       locale: 'en_US',
       type: 'website',
-      images: [defaultOgImage],
+      images: [image],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [defaultOgImage.url],
+      images: [image.url],
     },
   };
 }
@@ -93,7 +107,9 @@ export function pageSocial(
   title: string,
   description: string,
   path: string,
+  imageUrl?: string,
 ): Pick<Metadata, 'openGraph' | 'twitter'> {
+  const image = socialImage(path, imageUrl);
   return {
     openGraph: {
       title,
@@ -102,13 +118,13 @@ export function pageSocial(
       siteName: siteConfig.businessName,
       locale: 'en_US',
       type: 'website',
-      images: [defaultOgImage],
+      images: [image],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [defaultOgImage.url],
+      images: [image.url],
     },
   };
 }
