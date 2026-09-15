@@ -59,7 +59,7 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center gap-x-4 xl:gap-x-6 whitespace-nowrap">
             {/* Home */}
             <Link
               href="/"
@@ -238,7 +238,7 @@ export default function Navigation() {
               className="flex items-center text-gray-700 hover:text-realscout-blue transition-colors font-medium group"
             >
               <User className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-200" />
-              About Dr. Duffy
+              About
             </Link>
 
             {/* Contact */}
