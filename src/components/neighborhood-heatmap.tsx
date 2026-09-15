@@ -199,7 +199,7 @@ export default function NeighborhoodHeatmap() {
                         rel="noopener noreferrer"
                         className="text-sm font-medium text-blue-700 hover:text-blue-900"
                       >
-                        Search live MLS
+                        Search Homes
                       </a>
                     </CardContent>
                   </Card>
@@ -231,7 +231,7 @@ export default function NeighborhoodHeatmap() {
                         rel="noopener noreferrer"
                         className="text-sm font-medium text-blue-700 hover:text-blue-900"
                       >
-                        Open RealScout
+                        Search Homes
                       </a>
                     </CardContent>
                   </Card>
@@ -316,7 +316,7 @@ export default function NeighborhoodHeatmap() {
                     rel="noopener noreferrer"
                     className="text-lg font-bold text-blue-700 hover:text-blue-900"
                   >
-                    Search MLS
+                    Search Homes
                   </a>
                   <div className="text-xs text-gray-500 mt-1">No stale medians on this map</div>
                 </CardContent>
@@ -384,7 +384,7 @@ export default function NeighborhoodHeatmap() {
                           rel="noopener noreferrer"
                           className="text-blue-700 hover:text-blue-900"
                         >
-                          Search live MLS
+                          Search Homes
                         </a>
                       </div>
                     </div>
@@ -420,7 +420,7 @@ export default function NeighborhoodHeatmap() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        View listings in {selectedNeighborhood}
+                        Search Homes
                       </a>
                     </Button>
                   </div>

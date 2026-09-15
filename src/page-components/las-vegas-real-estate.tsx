@@ -91,7 +91,7 @@ export default function LasVegasRealEstate() {
                     rel="noopener noreferrer"
                     className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
                   >
-                    Search Henderson-area homes
+                    Search Homes
                   </a>
                   </div>
                 </CardContent>
@@ -113,7 +113,7 @@ export default function LasVegasRealEstate() {
                     rel="noopener noreferrer"
                     className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
                   >
-                    Search Summerlin-area homes
+                    Search Homes
                   </a>
                   </div>
                 </CardContent>

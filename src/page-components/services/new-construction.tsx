@@ -40,7 +40,7 @@ export default function NewConstructionServices() {
                 rel="noopener noreferrer"
                 className="bg-white text-orange-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-50 transition-colors text-center"
               >
-                Search New Construction
+                Search Homes
               </a>
               <a
                 href={`tel:${siteConfig.phoneTel}`}

@@ -95,7 +95,7 @@ export default function NorthwestLasVegas() {
               <Card className="text-center h-full hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
                   <Search className="w-8 h-8 text-realscout-blue mx-auto mb-2" aria-hidden="true" />
-                  <div className="text-gray-900 font-semibold mb-2">Search live MLS</div>
+                  <div className="text-gray-900 font-semibold mb-2">Search Homes</div>
                   <div className="text-sm text-gray-500">Current 89166 / 89149 / 89144 inventory</div>
                 </CardContent>
               </Card>
@@ -177,7 +177,7 @@ export default function NorthwestLasVegas() {
                     rel="noopener noreferrer"
                     className="block w-full bg-realscout-blue text-white hover:bg-realscout-navy text-center rounded-md px-4 py-2 font-medium"
                   >
-                    Search {neighborhood.name} Homes
+                    Search Homes
                   </a>
                 </CardContent>
               </Card>
@@ -246,7 +246,7 @@ export default function NorthwestLasVegas() {
                   className="block"
                 >
                   <Button className="w-full bg-realscout-blue text-white hover:bg-realscout-navy">
-                    Search Northwest Las Vegas Homes
+                    Search Homes
                   </Button>
                 </a>
                 <a href="/contact" className="block">

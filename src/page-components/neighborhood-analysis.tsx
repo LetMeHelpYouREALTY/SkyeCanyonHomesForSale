@@ -64,7 +64,7 @@ export default function NeighborhoodAnalysis() {
                     rel="noopener noreferrer"
                     className="text-sm text-blue-600 mt-1 inline-block"
                   >
-                    Search listings
+                    Search Homes
                   </a>
                 </CardContent>
               </Card>

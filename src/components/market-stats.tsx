@@ -34,7 +34,7 @@ export default function MarketStats() {
             className="text-center bg-green-50 rounded-xl p-6 hover:shadow-md transition-shadow"
           >
             <Search className="w-8 h-8 text-realscout-blue mx-auto mb-2" aria-hidden="true" />
-            <div className="text-gray-900 font-semibold mb-1">Search live MLS</div>
+            <div className="text-gray-900 font-semibold mb-1">Search Homes</div>
             <div className="text-gray-500 text-xs">Current list prices and inventory</div>
           </a>
 

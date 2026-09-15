@@ -73,6 +73,8 @@ export default function PageHero({
             src={desktopSrc}
             alt={imageAlt}
             className="absolute inset-0 h-full w-full object-cover object-center"
+            width={1920}
+            height={1080}
             loading="eager"
             fetchPriority="high"
             decoding="async"

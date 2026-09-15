@@ -76,7 +76,7 @@ export default function LuxuryHomesLasVegas() {
                     rel="noopener noreferrer"
                     className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
                   >
-                    Search Skye Canyon luxury homes
+                    Search Homes
                   </a>
                   </div>
                 </CardContent>
@@ -98,7 +98,7 @@ export default function LuxuryHomesLasVegas() {
                     rel="noopener noreferrer"
                     className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
                   >
-                    Search Ridges-area luxury homes
+                    Search Homes
                   </a>
                   </div>
                 </CardContent>
@@ -120,7 +120,7 @@ export default function LuxuryHomesLasVegas() {
                     rel="noopener noreferrer"
                     className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
                   >
-                    Search golf-course luxury homes
+                    Search Homes
                   </a>
                   </div>
                 </CardContent>

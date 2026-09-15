@@ -138,7 +138,7 @@ export default function RealScoutListings({
             rel="noopener noreferrer"
             className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
           >
-            Search All Homes
+            Search Homes
           </a>
           {showValuation ? (
             <a
@@ -180,7 +180,7 @@ export default function RealScoutListings({
             rel="noopener noreferrer"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
           >
-            View All Available Homes
+            Search Homes
           </a>
           <a
             href={`tel:${siteConfig.phoneTel}`}

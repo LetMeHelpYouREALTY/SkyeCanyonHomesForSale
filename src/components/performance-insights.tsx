@@ -74,7 +74,7 @@ export default function PerformanceInsights() {
             <Button variant="outline">Open Google Maps</Button>
           </a>
           <a href={siteConfig.realscoutOnboarding} target="_blank" rel="noopener noreferrer">
-            <Button variant="outline">Search live MLS</Button>
+            <Button variant="outline">Search Homes</Button>
           </a>
         </div>
       </div>

@@ -30,6 +30,9 @@ export default function GbpLocalSection({
               alt={office.alt}
               className="w-full h-80 object-cover object-bottom rounded-xl"
               loading="lazy"
+              decoding="async"
+              width={1600}
+              height={900}
             />
           </picture>
 

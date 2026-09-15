@@ -25,7 +25,7 @@ export default function RelocationServices() {
               rel="noopener noreferrer"
               className="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors text-center"
             >
-              Search Skye Canyon Homes
+              Search Homes
             </a>
             <a
               href={`tel:${siteConfig.phoneTel}`}

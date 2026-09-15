@@ -73,7 +73,7 @@ export default function MarketIntelligence() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Search live MLS
+                    Search Homes
                   </a>
                 </Button>
               </div>

@@ -14,7 +14,15 @@ export default function HeadingImage({
   return (
     <picture>
       {srcWebp && <source srcSet={srcWebp} type="image/webp" />}
-      <img src={src} alt={alt} className={className} loading="lazy" />
+      <img
+        src={src}
+        alt={alt}
+        className={className}
+        loading="lazy"
+        decoding="async"
+        width={1600}
+        height={900}
+      />
     </picture>
   );
 }

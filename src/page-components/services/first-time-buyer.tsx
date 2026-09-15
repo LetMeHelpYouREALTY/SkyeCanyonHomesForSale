@@ -40,7 +40,7 @@ export default function FirstTimeBuyerServices() {
                 rel="noopener noreferrer"
                 className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors text-center"
               >
-                Search Skye Canyon Homes
+                Search Homes
               </a>
               <a
                 href={`tel:${siteConfig.phoneTel}`}

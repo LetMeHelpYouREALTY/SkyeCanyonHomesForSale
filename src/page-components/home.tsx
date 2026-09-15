@@ -186,7 +186,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex text-white bg-blue-600 hover:bg-blue-700 font-medium px-5 py-3 rounded-lg text-center"
                 >
-                  Search golf-course listings
+                  Search Homes
                 </a>
                 <a
                   href="/luxury-homes-las-vegas"

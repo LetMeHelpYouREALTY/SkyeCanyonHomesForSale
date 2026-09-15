@@ -27,7 +27,7 @@ export default function SellerAgentServices() {
             rel="noopener noreferrer"
             className="bg-white text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors text-center"
           >
-            See Live MLS Comps
+            Search Homes
           </a>
           <CalendlyPopupButton
             text="Schedule a Listing Consultation"
