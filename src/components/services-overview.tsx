@@ -10,7 +10,7 @@ import { sectionImages } from '@/data/section-images';
 const services = [
   {
     id: 'buyer-agent',
-    title: 'Expert Buyer Agent Services',
+    title: 'Buyer Agent Services',
     description:
       'Buyer representation for Skye Canyon luxury, new construction, and resale in Las Vegas NV 89166.',
     icon: Home,
@@ -64,7 +64,7 @@ const services = [
     description:
       'Listing and marketing for Skye Canyon resale homes using live MLS comps in zip 89166.',
     icon: TrendingUp,
-    highlight: 'Premium marketing package',
+    highlight: 'Live MLS listing comps',
     link: '/services/seller-agent',
     color: 'text-red-600',
   },
