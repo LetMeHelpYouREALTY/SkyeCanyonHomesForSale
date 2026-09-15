@@ -93,7 +93,7 @@ export default function Contact() {
                             {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
                           </p>
                           <p className="text-sm text-gray-500">
-                            Walk-in and appointment hours match Google Business Profile
+                            Hours match the Google Business Profile listing
                           </p>
                         </div>
                       </div>
