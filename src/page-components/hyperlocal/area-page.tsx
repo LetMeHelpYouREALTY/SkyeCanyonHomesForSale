@@ -3,6 +3,7 @@
 import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
+import GbpLocalSection from '@/components/gbp-local-section';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
@@ -81,6 +82,7 @@ export default function AreaPage({ area }: AreaPageProps) {
       <HyperlocalListings title={`${area.name} MLS Listings`} />
       <FAQSection title={`${area.name} FAQ`} faqs={area.faqs} pageType="skye-canyon" />
       <HyperlocalInternalLinks title="Compare Nearby Areas" links={relatedLinks} />
+      <GbpLocalSection heading={`Tour ${area.name} from the Skye Canyon office`} />
       <HyperlocalCta title={`Buy in ${area.name} with Dr. Jan Duffy`} />
     </>
   );

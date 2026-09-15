@@ -3,6 +3,7 @@
 import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
+import GbpLocalSection from '@/components/gbp-local-section';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImageProps } from '@/data/hero-images';
@@ -114,6 +115,7 @@ export default function SubdivisionPage({ subdivision }: SubdivisionPageProps) {
         pageType="skye-canyon"
       />
       <HyperlocalInternalLinks title="Explore Skye Canyon" links={relatedLinks} />
+      <GbpLocalSection heading={`Tour ${subdivision.name} from the Skye Canyon office`} />
       <HyperlocalCta
         title={`Tour ${subdivision.name} with Dr. Jan Duffy`}
         subtitle={`Expert guidance on ${subdivision.builder} homes in Skye Canyon ${subdivision.zip}.`}

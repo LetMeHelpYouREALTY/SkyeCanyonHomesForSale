@@ -2,16 +2,18 @@
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import EnhancedPropertyCard from '@/components/enhanced-property-card';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import PropertyMapImage from '@/components/property-map-image';
 import { sampleProperties, getLuxuryProperties, getGolfCourseProperties, getNewConstructionProperties } from '@/data/sample-properties';
+import { sectionImages } from '@/data/section-images';
 import { mapsStaticAPI } from '@/lib/maps-static-api';
+import { siteConfig } from '@/config/site.config';
 
 export default function StaticMapsDemo() {
   const [selectedProperty, setSelectedProperty] = useState(sampleProperties[0]);
-  const [mapType, setMapType] = useState<'property' | 'neighborhood' | 'directions'>('property');
 
   const luxuryProperties = getLuxuryProperties();
   const golfCourseProperties = getGolfCourseProperties();
@@ -19,7 +21,7 @@ export default function StaticMapsDemo() {
 
   const generateNeighborhoodMap = () => {
     return mapsStaticAPI.generateNeighborhoodMap(
-      { lat: 36.3128948, lng: -115.3158838 },
+      { lat: siteConfig.geo.latitude, lng: siteConfig.geo.longitude },
       { size: '800x600', zoom: 14 }
     );
   };
@@ -28,7 +30,7 @@ export default function StaticMapsDemo() {
     // From Las Vegas Strip to Skye Canyon
     return mapsStaticAPI.generateDirectionsMap(
       { lat: 36.1147, lng: -115.1728 }, // Las Vegas Strip
-      { lat: 36.3128948, lng: -115.3158838 }, // Skye Canyon
+      { lat: siteConfig.geo.latitude, lng: siteConfig.geo.longitude }, // Skye Canyon office
       { size: '800x600' }
     );
   };
@@ -37,11 +39,15 @@ export default function StaticMapsDemo() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Google Maps Static API Integration Demo
+          Google Maps for Skye Canyon Homes
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Experience enhanced property listings with interactive static maps, custom markers, and location context for Skye Canyon real estate.
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+          Pin the office at {siteConfig.address.formatted} and preview listing locations in Las Vegas NV 89166.
         </p>
+        <HeadingImage
+          {...sectionImages.office}
+          className="w-full h-56 md:h-72 object-cover rounded-xl"
+        />
       </div>
 
       <Tabs defaultValue="property-maps" className="w-full">
@@ -267,6 +273,8 @@ export default function StaticMapsDemo() {
           </div>
         </CardContent>
       </Card>
+
+      <GbpLocalSection heading="Get directions to the Skye Canyon office" />
     </div>
   );
 }

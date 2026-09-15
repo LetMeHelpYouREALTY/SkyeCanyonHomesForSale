@@ -1,6 +1,8 @@
 import type { MarketStats } from '@shared/schema';
 import { useQuery } from '@tanstack/react-query';
 import { Minus, TrendingDown, TrendingUp } from 'lucide-react';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 
 export default function MarketStats() {
   const {
@@ -62,6 +64,10 @@ export default function MarketStats() {
             Stay informed with the latest market trends and statistics
           </p>
         </div>
+        <HeadingImage
+          {...sectionImages.market}
+          className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center bg-blue-50 rounded-xl p-6">

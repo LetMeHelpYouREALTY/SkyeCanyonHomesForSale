@@ -3,6 +3,7 @@
 import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
+import GbpLocalSection from '@/components/gbp-local-section';
 import HyperlocalFeatureList from '@/components/sections/hyperlocal-feature-list';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
@@ -97,6 +98,7 @@ export default function ParkPage({ park }: ParkPageProps) {
       <HyperlocalListings title="Homes Near This Park" subtitle="Skye Canyon NV 89166 MLS listings" />
       <FAQSection title={`${park.name} FAQ`} faqs={park.faqs} pageType="skye-canyon" />
       <HyperlocalInternalLinks title="More Skye Canyon Places" links={relatedLinks} />
+      <GbpLocalSection heading="Get directions to Skye Canyon Park" />
       <HyperlocalCta title="Find a Home Near Skye Canyon Parks" />
     </>
   );

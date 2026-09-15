@@ -2,8 +2,10 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
+import HeadingImage from '@/components/heading-image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { sectionImages } from '@/data/section-images';
 
 export default function MarketIntelligence() {
   const [selectedMetric, setSelectedMetric] = useState<'price' | 'inventory' | 'days'>('price');
@@ -37,6 +39,10 @@ export default function MarketIntelligence() {
           <h2 className="text-4xl font-bold mb-4">Skye Canyon Market Intelligence</h2>
           <p className="text-xl text-gray-600">Real-time data and AI-powered predictions</p>
         </div>
+        <HeadingImage
+          {...sectionImages.market}
+          className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+        />
 
         <div className="bg-white rounded-2xl shadow-xl p-8">
           {/* Metric Selector */}

@@ -3,6 +3,8 @@
  * Generates static map images for property listings
  */
 
+import { siteConfig } from '@/config/site.config';
+
 export interface StaticMapOptions {
   center: string; // "lat,lng" format
   zoom?: number;
@@ -96,52 +98,66 @@ class MapsStaticAPI {
   /**
    * Get color based on property type
    */
-  private getPropertyTypeColor(propertyType: string): string {
-    const colors = {
-      'luxury': '0x8B0000', // Dark red for luxury
-      'golf-course': '0x228B22', // Forest green for golf course
-      'new-construction': '0x4169E1', // Royal blue for new construction
-      'standard': '0xDC143C' // Crimson for standard
-    };
-    return colors[propertyType as keyof typeof colors] || colors.standard;
+  private getPropertyTypeColor(propertyType: PropertyMapConfig['propertyType']): string {
+    switch (propertyType) {
+      case 'luxury':
+        return '0x8B0000';
+      case 'golf-course':
+        return '0x228B22';
+      case 'new-construction':
+        return '0x4169E1';
+      case 'standard':
+        return '0xDC143C';
+      default: {
+        const _exhaustive: never = propertyType;
+        return _exhaustive;
+      }
+    }
   }
 
   /**
    * Get label based on property type
    */
-  private getPropertyTypeLabel(propertyType: string): string {
-    const labels = {
-      'luxury': 'L',
-      'golf-course': 'G',
-      'new-construction': 'N',
-      'standard': 'H'
-    };
-    return labels[propertyType as keyof typeof labels] || 'H';
+  private getPropertyTypeLabel(propertyType: PropertyMapConfig['propertyType']): string {
+    switch (propertyType) {
+      case 'luxury':
+        return 'L';
+      case 'golf-course':
+        return 'G';
+      case 'new-construction':
+        return 'N';
+      case 'standard':
+        return 'H';
+      default: {
+        const _exhaustive: never = propertyType;
+        return _exhaustive;
+      }
+    }
   }
 
   /**
    * Get nearby amenities for context markers
    */
   private getNearbyAmenities(coordinates: { lat: number; lng: number }): StaticMapMarker[] {
-    // Skye Canyon specific amenities
+    const office = `${siteConfig.geo.latitude},${siteConfig.geo.longitude}`;
     const amenities = [
       {
-        name: 'Desert Highlands Golf Course',
-        location: '36.3128948,-115.3158838',
-        color: '0x32CD32', // Lime green
-        label: 'G'
+        name: 'Dr. Jan Duffy office',
+        location: office,
+        color: '0x1D4ED8',
+        label: 'O'
       },
       {
         name: 'Skye Canyon Park',
-        location: '36.3128948,-115.3158838',
-        color: '0x87CEEB', // Sky blue
+        location: `${coordinates.lat},${coordinates.lng}`,
+        color: '0x87CEEB',
         label: 'P'
       },
       {
-        name: 'Centennial Hills Hospital',
-        location: '36.3128948,-115.3158838',
-        color: '0xFF0000', // Red
-        label: 'H'
+        name: 'Desert Highlands Golf Course',
+        location: `${coordinates.lat + 0.003},${coordinates.lng - 0.004}`,
+        color: '0x32CD32',
+        label: 'G'
       }
     ];
 

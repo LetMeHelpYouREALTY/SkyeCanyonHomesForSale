@@ -3,6 +3,7 @@
 import { CheckCircle, Globe, Search, TrendingUp } from 'lucide-react';
 import SEOManagementDashboard from '@/components/seo-management-dashboard';
 import PageHero from '@/components/sections/page-hero';
+import GbpLocalSection from '@/components/gbp-local-section';
 import { getHeroImageProps } from '@/data/hero-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -235,6 +236,7 @@ export default function SEOManagement() {
             </div>
           </div>
         </section>
+        <GbpLocalSection heading="Confirm NAP and Maps details for search" />
       </main>
 
     </>

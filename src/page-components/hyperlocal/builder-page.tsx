@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
+import GbpLocalSection from '@/components/gbp-local-section';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
@@ -73,6 +74,7 @@ export default function BuilderPage({ builder }: BuilderPageProps) {
       </section>
       <HyperlocalListings title={`${builder.name} Area Listings`} />
       <FAQSection title={`${builder.name} FAQ`} faqs={builder.faqs} pageType="skye-canyon" />
+      <GbpLocalSection heading={`Compare ${builder.name} plans in person`} />
       <HyperlocalCta title={`Buy a ${builder.name} Home with Expert Representation`} />
     </>
   );

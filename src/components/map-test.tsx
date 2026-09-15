@@ -20,7 +20,7 @@ export default function MapTest() {
       // Generate a simple test map for Skye Canyon
       const testMapUrl = mapsStaticAPI.generatePropertyMap({
         address: '1234 Desert Highlands Dr, Las Vegas, NV 89166',
-        coordinates: { lat: 36.3128948, lng: -115.3158838 },
+        coordinates: { lat: 36.2648, lng: -115.3275 },
         propertyType: 'golf-course',
         price: 1250000,
         bedrooms: 5,

@@ -1,7 +1,9 @@
 'use client';
 
 import { Calendar, Phone } from 'lucide-react';
+import HeadingImage from '@/components/heading-image';
 import { Button } from '@/components/ui/button';
+import { sectionImages } from '@/data/section-images';
 
 export default function CallToAction() {
   const _scrollToContact = () => {
@@ -18,6 +20,10 @@ export default function CallToAction() {
         <p className="text-xl mb-8 opacity-90">
           Let Dr. Jan Duffy guide you to your perfect Skye Canyon property
         </p>
+        <HeadingImage
+          {...sectionImages.office}
+          className="w-full h-48 object-cover rounded-xl mb-8 opacity-95"
+        />
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

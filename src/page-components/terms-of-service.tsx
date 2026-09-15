@@ -1,12 +1,27 @@
 'use client';
 
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import PageHero from '@/components/sections/page-hero';
+import { siteConfig } from '@/config/site.config';
+import { getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 
 export default function TermsOfService() {
   return (
     <>
       <main className="min-h-screen bg-gray-50">
+        <PageHero
+          title="Terms of Service"
+          subtitle={`${siteConfig.businessName} · Nevada License ${siteConfig.license}`}
+          {...getHeroImageProps('about')}
+          minHeight="sm"
+        />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
+          <HeadingImage
+            {...sectionImages.office}
+            className="w-full h-48 object-cover rounded-xl mb-10"
+          />
           <p className="text-gray-600 mb-8">Last updated: June 3, 2025</p>
 
           <div className="prose prose-lg max-w-none">
@@ -21,7 +36,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Real Estate Services</h2>
               <p className="mb-4">
-                Dr. Jan Duffy is a licensed real estate professional in Nevada (License #S.0197614).
+                Dr. Jan Duffy is a licensed real estate professional in Nevada (License #{siteConfig.license}).
                 All real estate services are provided in accordance with Nevada state regulations
                 and the National Association of Realtors Code of Ethics.
               </p>
@@ -71,18 +86,18 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
               <div className="bg-white p-6 rounded-lg">
                 <p>
-                  <strong>Dr. Jan Duffy, REALTOR</strong>
+                  <strong>{siteConfig.name}</strong>
                 </p>
-                <p>Nevada License #S.0197614</p>
-                <p>Phone: (702) 500-1902</p>
-                <p>Email: DrDuffy@SkyeCanyonHomesForSale.com</p>
-                <p>Office: 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166</p>
+                <p>Nevada License #{siteConfig.license}</p>
+                <p>Phone: {siteConfig.phone}</p>
+                <p>Email: {siteConfig.email}</p>
+                <p>Office: {siteConfig.address.formatted}</p>
               </div>
             </section>
           </div>
         </div>
+        <GbpLocalSection heading="Visit the Skye Canyon office" />
       </main>
-
     </>
   );
 }

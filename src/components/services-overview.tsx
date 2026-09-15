@@ -1,8 +1,11 @@
 import { ArrowRight, Building, Crown, Home, MapPin, TrendingUp, Truck, Users } from 'lucide-react';
 import Link from 'next/link';
+import HeadingImage from '@/components/heading-image';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
+import { sectionImages } from '@/data/section-images';
 
 const services = [
   {
@@ -67,6 +70,15 @@ const services = [
   },
 ];
 
+const servicePhotos: Record<string, (typeof sectionImages)[keyof typeof sectionImages]> = {
+  'buyer-agent': sectionImages.listings,
+  'first-time-buyer': sectionImages.guide,
+  'luxury-properties': sectionImages.luxuryInterior,
+  'new-construction': sectionImages.newConstruction,
+  relocation: sectionImages.northwest,
+  'seller-agent': sectionImages.valuation,
+};
+
 export default function ServicesOverview() {
   return (
     <section className="py-16 bg-white">
@@ -89,7 +101,12 @@ export default function ServicesOverview() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.id} className="h-full hover:shadow-lg transition-shadow group">
+            <Card key={service.id} className="h-full hover:shadow-lg transition-shadow group overflow-hidden">
+              <HeadingImage
+                {...(servicePhotos[service.id] ?? sectionImages.office)}
+                alt={`${service.title} in Skye Canyon Las Vegas NV 89166`}
+                className="w-full h-36 object-cover"
+              />
               <CardHeader>
                 <div className="flex items-center justify-between mb-4">
                   <div
@@ -108,17 +125,12 @@ export default function ServicesOverview() {
                 <div className="bg-realscout-blue/5 p-3 rounded-lg">
                   <p className="text-sm font-medium text-realscout-blue">✓ {service.highlight}</p>
                 </div>
-                <Link href={service.link}>
-                  <Button
-                    asChild
-                    className="w-full bg-realscout-blue hover:bg-realscout-navy text-white group"
-                  >
-                    <span>
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </Button>
-                </Link>
+                <Button asChild className="w-full bg-realscout-blue hover:bg-realscout-navy text-white group">
+                  <Link href={service.link}>
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
               </CardContent>
             </Card>
           ))}
@@ -129,17 +141,17 @@ export default function ServicesOverview() {
             Ready to experience specialized Skye Canyon service?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://g.co/kgs/nbUf6Pj" target="_blank" rel="noopener noreferrer">
+            <a href={siteConfig.googleBusinessUrl} target="_blank" rel="noopener noreferrer">
               <Button className="bg-realscout-blue hover:bg-realscout-navy text-white">
                 Schedule Free Consultation
               </Button>
             </a>
-            <a href="tel:+17025001902">
+            <a href={`tel:${siteConfig.phoneTel}`}>
               <Button
                 variant="outline"
                 className="border-realscout-blue text-realscout-blue hover:bg-realscout-blue hover:text-white"
               >
-                Call (702) 500-1902
+                Call {siteConfig.phone}
               </Button>
             </a>
           </div>

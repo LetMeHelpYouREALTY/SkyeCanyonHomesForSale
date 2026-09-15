@@ -3,6 +3,7 @@
 import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
+import GbpLocalSection from '@/components/gbp-local-section';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
 import HyperlocalInternalLinks from '@/components/sections/hyperlocal-internal-links';
@@ -99,6 +100,7 @@ export default function ZipPage({ zipArea }: ZipPageProps) {
       <HyperlocalRealtorServices title={`Realtor Services — Zip ${zipArea.zip}`} />
       <FAQSection title={`${zipArea.zip} Real Estate FAQ`} faqs={zipArea.faqs} pageType="skye-canyon" />
       <HyperlocalInternalLinks title="Nearby Skye Canyon Areas" links={relatedLinks} />
+      <GbpLocalSection heading={`Visit the office for ${zipArea.zip} listings`} />
       <HyperlocalCta title={`Buy in ${zipArea.zip} with a Local Expert`} />
     </>
   );

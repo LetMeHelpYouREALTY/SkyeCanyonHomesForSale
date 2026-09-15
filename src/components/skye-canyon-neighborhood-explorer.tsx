@@ -45,7 +45,7 @@ export default function SkyeCanyonNeighborhoodExplorer({ className = '' }: Neigh
 
   // Skye Canyon specific configuration
   const CONFIGURATION = {
-    center: { lat: 36.3128948, lng: -115.3158838 }, // Skye Canyon area
+    center: { lat: 36.2648, lng: -115.3275 }, // GBP office pin
     mapRadius: 5000, // 5km radius
     pois: [
       { placeId: "ChIJX-jseeTsyIAR6QrEO_B-sqw" },

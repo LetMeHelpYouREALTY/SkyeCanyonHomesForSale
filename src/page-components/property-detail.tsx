@@ -19,9 +19,12 @@ import {
 } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import RealScoutListings from '@/components/realscout-listings';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { sectionImages } from '@/data/section-images';
 
 export default function PropertyDetail() {
   const params = useParams<{ id: string }>();
@@ -81,7 +84,15 @@ export default function PropertyDetail() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Property Not Found</h2>
-            <p className="text-gray-600">The property you're looking for doesn't exist.</p>
+            <p className="text-gray-600 mb-6">The property you're looking for doesn't exist.</p>
+            <HeadingImage
+              {...sectionImages.listings}
+              className="w-full h-56 object-cover rounded-xl mb-6"
+            />
+            <a href="/search" className="text-blue-600 font-semibold">
+              Search Skye Canyon listings
+            </a>
+            <GbpLocalSection heading="Call the office about this listing" />
           </div>
         </div>
       </div>
@@ -95,7 +106,7 @@ export default function PropertyDetail() {
       {/* Hero Image */}
       <div className="relative h-96 lg:h-[500px]">
         <img
-          src={property.imageUrl}
+          src={property.imageUrl || sectionImages.listings.src}
           alt={`Property at ${property.address}`}
           className="w-full h-full object-cover"
         />
@@ -323,9 +334,15 @@ export default function PropertyDetail() {
             </h2>
             <p className="text-xl text-gray-600">Other listings you might be interested in</p>
           </div>
+          <HeadingImage
+            {...sectionImages.listings}
+            className="w-full h-56 object-cover rounded-xl mb-10"
+          />
           <RealScoutListings className="w-full" variant="mid-range" />
         </div>
       </section>
+
+      <GbpLocalSection heading="Tour this listing with Dr. Jan Duffy" />
 
       </div>
     </>

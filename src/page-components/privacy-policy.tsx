@@ -1,12 +1,27 @@
 'use client';
 
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import PageHero from '@/components/sections/page-hero';
+import { siteConfig } from '@/config/site.config';
+import { getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 
 export default function PrivacyPolicy() {
   return (
     <>
       <main className="min-h-screen bg-gray-50">
+        <PageHero
+          title="Privacy Policy"
+          subtitle={`${siteConfig.businessName} · ${siteConfig.address.formatted}`}
+          {...getHeroImageProps('about')}
+          minHeight="sm"
+        />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
+          <HeadingImage
+            {...sectionImages.office}
+            className="w-full h-48 object-cover rounded-xl mb-10"
+          />
           <p className="text-gray-600 mb-8">Last updated: June 3, 2025</p>
 
           <div className="prose prose-lg max-w-none">
@@ -76,17 +91,17 @@ export default function PrivacyPolicy() {
               </p>
               <div className="bg-white p-6 rounded-lg">
                 <p>
-                  <strong>Dr. Jan Duffy</strong>
+                  <strong>{siteConfig.name}</strong>
                 </p>
-                <p>Phone: (702) 500-1902</p>
-                <p>Email: DrDuffy@SkyeCanyonHomesForSale.com</p>
-                <p>Address: 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166</p>
+                <p>Phone: {siteConfig.phone}</p>
+                <p>Email: {siteConfig.email}</p>
+                <p>Address: {siteConfig.address.formatted}</p>
               </div>
             </section>
           </div>
         </div>
+        <GbpLocalSection heading="Contact the Skye Canyon office" />
       </main>
-
     </>
   );
 }
