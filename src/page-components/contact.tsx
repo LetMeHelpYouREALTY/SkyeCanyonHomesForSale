@@ -8,6 +8,7 @@ import HeadingImage from '@/components/heading-image';
 import HeroSearchCtas from '@/components/hero-search-ctas';
 import HomebotWidget from '@/components/homebot-widget';
 import PageHero from '@/components/sections/page-hero';
+import RelatedSearches from '@/components/related-searches';
 import { getHeroImageProps } from '@/data/hero-images';
 import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
@@ -197,6 +198,7 @@ export default function Contact() {
 
         <GoogleReviewCta heading="Scan or click to review Dr. Jan Duffy on Google" />
         <GbpLocalSection heading="Map, hours, and Google reviews" />
+        <RelatedSearches searchType="general" />
       </main>
 
     </>

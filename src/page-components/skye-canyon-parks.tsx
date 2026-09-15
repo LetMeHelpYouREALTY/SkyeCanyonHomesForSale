@@ -3,6 +3,7 @@
 import { MapPin, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
 import GbpLocalSection from '@/components/gbp-local-section';
+import RelatedSearches from '@/components/related-searches';
 import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
@@ -299,6 +300,8 @@ export default function SkyeCanyonParks() {
           pageType="skye-canyon"
         />
 
+        <RelatedSearches searchType="skye-canyon" />
+
         {/* Contact CTA */}
         <section className="py-16 px-4 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -315,7 +318,7 @@ export default function SkyeCanyonParks() {
                 rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
-                View Available Homes
+                Search Homes
               </a>
               <a
                 href={siteConfig.directionsUrl}

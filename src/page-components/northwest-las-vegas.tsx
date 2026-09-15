@@ -7,6 +7,7 @@ import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import HeroSearchCtas from '@/components/hero-search-ctas';
+import RelatedSearches from '@/components/related-searches';
 import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -273,6 +274,7 @@ export default function NorthwestLasVegas() {
       </section>
 
       <GbpLocalSection heading="Visit the northwest Las Vegas office in Skye Canyon" />
+      <RelatedSearches searchType="las-vegas" />
 
     </>
   );

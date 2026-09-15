@@ -5,6 +5,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import RelatedSearches from '@/components/related-searches';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
@@ -110,6 +111,7 @@ export default function FirstTimeBuyerServices() {
             </div>
           </section>
           <GbpLocalSection heading="Get first-time buyer guidance in Skye Canyon" />
+          <RelatedSearches searchType="general" />
         </main>
 
       </div>

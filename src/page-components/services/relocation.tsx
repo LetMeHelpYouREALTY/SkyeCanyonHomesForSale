@@ -2,6 +2,7 @@
 
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import RelatedSearches from '@/components/related-searches';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
 import { siteConfig } from '@/config/site.config';
@@ -66,6 +67,7 @@ export default function RelocationServices() {
         </section>
 
         <GbpLocalSection heading="Plan your Skye Canyon move from the local office" />
+        <RelatedSearches searchType="las-vegas" />
       </div>
     </>
   );

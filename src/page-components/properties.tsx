@@ -13,6 +13,7 @@ import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import HeroSearchCtas from '@/components/hero-search-ctas';
+import RelatedSearches from '@/components/related-searches';
 import { sectionImages } from '@/data/section-images';
 import { siteConfig } from '@/config/site.config';
 
@@ -165,7 +166,7 @@ export default function Properties() {
             {
               question: 'How do I search for Skye Canyon properties?',
               answer:
-                'Filter live MLS by price, bedrooms, bathrooms, and features, or start a saved search at RealScout. Call Dr. Jan Duffy at (702) 500-1902 for upcoming and off-market inventory.',
+                'Filter live MLS by price, bedrooms, bathrooms, and features, or start a saved search at RealScout. Call Dr. Jan Duffy at (702) 500-1902 to schedule showings.',
             },
             {
               question: 'What is the typical timeline for buying a home?',
@@ -189,6 +190,8 @@ export default function Properties() {
             },
           ]}
         />
+
+        <RelatedSearches searchType="general" />
 
         <BackToTop />
       </div>

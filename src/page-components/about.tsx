@@ -22,6 +22,7 @@ import GbpLocalSection from '@/components/gbp-local-section';
 import GoogleReviewCta from '@/components/google-review-cta';
 import HeadingImage from '@/components/heading-image';
 import HeroSearchCtas from '@/components/hero-search-ctas';
+import RelatedSearches from '@/components/related-searches';
 import { sectionImages } from '@/data/section-images';
 import { siteConfig } from '@/config/site.config';
 import { Button } from '@/components/ui/button';
@@ -350,7 +351,7 @@ export default function About() {
                   className="border-white text-white hover:bg-white hover:text-realscout-blue"
                 >
                   <Home className="w-4 h-4 mr-2" />
-                  View Properties
+                  Search Homes
                 </Button>
               </a>
             </div>
@@ -382,15 +383,17 @@ export default function About() {
             {
               question: 'How can I contact Dr. Jan Duffy?',
               answer:
-                'Call (702) 500-1902 or visit the office at 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166. Office hours are Monday-Friday 9AM-6PM, Saturday 9AM-5PM, Sunday 11AM-4PM.',
+                `Call ${siteConfig.phone} or visit the office at 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166. ${siteConfig.hours.weekdays.label}. ${siteConfig.hours.saturday.label}. ${siteConfig.hours.sunday.label}.`,
             },
             {
               question: 'Does Dr. Jan Duffy work with first-time buyers?',
               answer:
-                "Yes, Dr. Jan Duffy works with all types of buyers including first-time homebuyers, luxury home purchasers, investors, and those relocating to Las Vegas. She provides personalized service for every client's needs.",
+                'Yes. Dr. Jan Duffy works with first-time buyers, luxury purchasers, and buyers relocating to Las Vegas NV 89166. Call (702) 500-1902 to start a live MLS search.',
             },
           ]}
         />
+
+        <RelatedSearches searchType="general" />
 
         <BackToTop />
       </div>

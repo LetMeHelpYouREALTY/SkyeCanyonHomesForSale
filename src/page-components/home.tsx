@@ -11,6 +11,7 @@ import HeroSection from '@/components/hero-section';
 import HomebotWidget from '@/components/homebot-widget';
 import RealScoutListings from '@/components/realscout-listings';
 import HyperlocalExploreHub from '@/components/sections/hyperlocal-explore-hub';
+import RelatedSearches from '@/components/related-searches';
 import ReviewHighlights from '@/components/review-highlights';
 import ServicesOverview from '@/components/services-overview';
 import { siteConfig } from '@/config/site.config';
@@ -270,6 +271,8 @@ export default function Home() {
           ]}
         />
 
+        <RelatedSearches searchType="skye-canyon" />
+
         <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Find Your Skye Canyon Home?</h2>
@@ -283,7 +286,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors shadow-lg text-center"
               >
-                Search Available Homes
+                Search Homes
               </a>
               <CalendlyPopupButton
                 text="Schedule a Consultation"

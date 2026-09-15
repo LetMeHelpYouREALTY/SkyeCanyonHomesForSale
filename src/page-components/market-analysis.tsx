@@ -11,6 +11,7 @@ import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import HeroSearchCtas from '@/components/hero-search-ctas';
+import RelatedSearches from '@/components/related-searches';
 import { sectionImages } from '@/data/section-images';
 
 export default function MarketAnalysis() {
@@ -60,7 +61,7 @@ export default function MarketAnalysis() {
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-12">
-              Why Invest in Skye Canyon Las Vegas Nevada?
+              Why Buyers Compare Skye Canyon Las Vegas Nevada
             </h2>
             <HeadingImage
               {...sectionImages.monument}
@@ -82,8 +83,7 @@ export default function MarketAnalysis() {
                   Golf Course Living
                 </h3>
                 <p className="text-gray-700">
-                  Beautiful homes surrounding championship golf courses with stunning mountain
-                  views.
+                  Fairway homes along Desert Highlands Golf Course with mountain views in zip 89166.
                 </p>
               </div>
 
@@ -145,6 +145,8 @@ export default function MarketAnalysis() {
             },
           ]}
         />
+
+        <RelatedSearches searchType="skye-canyon" />
 
         <GbpLocalSection heading="Get current Skye Canyon comps in person" />
 

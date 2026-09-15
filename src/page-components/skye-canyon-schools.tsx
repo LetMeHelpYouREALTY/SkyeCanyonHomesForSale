@@ -3,6 +3,7 @@
 import { BookOpen, Clock, GraduationCap, MapPin, School, Star, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
 import GbpLocalSection from '@/components/gbp-local-section';
+import RelatedSearches from '@/components/related-searches';
 import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
@@ -465,6 +466,8 @@ export default function SkyeCanyonSchools() {
           faqs={schoolsFAQs}
           pageType="skye-canyon"
         />
+
+        <RelatedSearches searchType="skye-canyon" />
 
       </div>
     </>

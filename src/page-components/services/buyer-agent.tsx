@@ -6,6 +6,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import RelatedSearches from '@/components/related-searches';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
@@ -87,8 +88,8 @@ export default function BuyerAgentServices() {
                     Builder Relationships
                   </h3>
                   <p className="text-gray-600">
-                    Direct partnerships with Skye Canyon builders for priority access to new
-                    construction.
+                    Buyer representation with Century Communities and other active Skye Canyon
+                    builders in zip 89166.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -114,6 +115,7 @@ export default function BuyerAgentServices() {
             </div>
           </section>
           <GbpLocalSection heading="Meet your Skye Canyon buyer agent" />
+          <RelatedSearches searchType="general" />
         </main>
 
       </div>

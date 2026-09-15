@@ -125,6 +125,7 @@ export default function SubdivisionPage({ subdivision }: SubdivisionPageProps) {
         title={`${subdivision.name} Skye Canyon FAQ`}
         faqs={subdivision.faqs}
         pageType="skye-canyon"
+        includeSchema={false}
       />
       <HyperlocalInternalLinks title="Explore Skye Canyon" links={relatedLinks} />
       <GbpLocalSection heading={`Tour ${subdivision.name} from the Skye Canyon office`} />

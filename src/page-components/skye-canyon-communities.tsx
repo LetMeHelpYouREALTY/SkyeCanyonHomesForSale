@@ -3,6 +3,7 @@
 import { Building2, Car, DollarSign, Home, MapPin, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
 import GbpLocalSection from '@/components/gbp-local-section';
+import RelatedSearches from '@/components/related-searches';
 import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
@@ -320,6 +321,8 @@ export default function SkyeCanyonCommunities() {
           faqs={communitiesFAQs}
           pageType="skye-canyon"
         />
+
+        <RelatedSearches searchType="skye-canyon" />
 
         {/* Contact CTA */}
         <section className="py-16 px-4 bg-blue-600">

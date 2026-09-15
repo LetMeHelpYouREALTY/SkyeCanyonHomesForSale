@@ -88,7 +88,7 @@ export default function AreaPage({ area }: AreaPageProps) {
       </section>
       <HyperlocalFeatureList title={`${area.name} Highlights`} items={area.highlights} />
       <HyperlocalListings title={`${area.name} MLS Listings`} />
-      <FAQSection title={`${area.name} FAQ`} faqs={area.faqs} pageType="skye-canyon" />
+      <FAQSection title={`${area.name} FAQ`} faqs={area.faqs} pageType="skye-canyon" includeSchema={false} />
       <HyperlocalInternalLinks title="Compare Nearby Areas" links={relatedLinks} />
       <GbpLocalSection heading={`Tour ${area.name} from the Skye Canyon office`} />
       <HyperlocalCta title={`Buy in ${area.name} with Dr. Jan Duffy`} />

@@ -5,6 +5,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import RelatedSearches from '@/components/related-searches';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
@@ -57,7 +58,7 @@ export default function NewConstructionServices() {
                 id="services-heading"
                 className="text-3xl font-bold text-center mb-12 text-gray-900"
               >
-                Exclusive Skye Canyon Builder Partnerships
+                Skye Canyon New Construction Buyer Representation
               </h2>
               <HeadingImage
                 {...sectionImages.newConstruction}
@@ -84,10 +85,12 @@ export default function NewConstructionServices() {
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Priority Access</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                    New phase inventory
+                  </h3>
                   <p className="text-gray-600">
-                    First access to new phases, floor plans, and builder incentives before public
-                    release.
+                    Compare new phases, floor plans, and builder incentives on current Century
+                    Communities inventory in zip 89166.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -113,6 +116,7 @@ export default function NewConstructionServices() {
             </div>
           </section>
           <GbpLocalSection heading="Walk new construction from the Skye Canyon office" />
+          <RelatedSearches searchType="skye-canyon" />
         </main>
 
       </div>

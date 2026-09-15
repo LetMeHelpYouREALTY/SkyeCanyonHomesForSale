@@ -6,6 +6,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import RelatedSearches from '@/components/related-searches';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
@@ -66,6 +67,7 @@ export default function SellerAgentServices() {
           </div>
         </section>
         <GbpLocalSection heading="List your Skye Canyon home with Dr. Jan Duffy" />
+        <RelatedSearches searchType="general" />
 
       </div>
     </>

@@ -5,6 +5,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import RelatedSearches from '@/components/related-searches';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
@@ -29,7 +30,7 @@ export default function LuxuryPropertyServices() {
         <main>
           <PageHero
             title="Skye Canyon Luxury Property Expert"
-            subtitle="Certified luxury home marketing specialist — premium Skye Canyon and northwest Las Vegas properties."
+            subtitle="Luxury, golf-course, and custom homes in Skye Canyon and northwest Las Vegas NV 89166."
             {...getHeroImageProps('luxury-properties')}
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -57,7 +58,7 @@ export default function LuxuryPropertyServices() {
                 id="services-heading"
                 className="text-3xl font-bold text-center mb-12 text-gray-900"
               >
-                Elite Skye Canyon Luxury Services
+                Luxury Skye Canyon Buyer and Seller Services
               </h2>
               <HeadingImage
                 {...sectionImages.luxuryInterior}
@@ -77,8 +78,7 @@ export default function LuxuryPropertyServices() {
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">Golf Course Estates</h3>
                   <p className="text-gray-600">
-                    Specialized expertise in Desert Highlands Golf Course properties and premium
-                    locations.
+                    Golf-course lots and custom homes in zip 89166. Confirm current list prices on live MLS.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -86,11 +86,12 @@ export default function LuxuryPropertyServices() {
                     Custom Home Expertise
                   </h3>
                   <p className="text-gray-600">
-                    Deep knowledge of luxury builders, architectural styles, and high-end finishes.
+                    Custom and new-construction finishes on current Skye Canyon luxury listings.
+                    Confirm specs on the specific MLS sheet.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Elite Results</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Live MLS comps</h3>
                   <p className="text-gray-600">
                     Confirm live MLS comps and Google reviews — list-price ratios change with each listing.
                   </p>
@@ -109,6 +110,7 @@ export default function LuxuryPropertyServices() {
             </div>
           </section>
           <GbpLocalSection heading="Preview luxury Skye Canyon homes in person" />
+          <RelatedSearches searchType="luxury-homes" />
         </main>
 
       </div>

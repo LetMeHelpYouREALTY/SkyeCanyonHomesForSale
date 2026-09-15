@@ -6,6 +6,7 @@ import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import HeroSearchCtas from '@/components/hero-search-ctas';
+import RelatedSearches from '@/components/related-searches';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
@@ -106,6 +107,7 @@ export default function VoiceSearchPage() {
       </div>
 
       <GbpLocalSection heading="Voice-search Skye Canyon homes with a local agent" />
+      <RelatedSearches searchType="general" />
 
     </>
   );

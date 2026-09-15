@@ -106,7 +106,7 @@ export default function ZipPage({ zipArea }: ZipPageProps) {
         subtitle={`Homes for sale in ${zipArea.name}, Las Vegas NV`}
       />
       <HyperlocalRealtorServices title={`Realtor Services — Zip ${zipArea.zip}`} />
-      <FAQSection title={`${zipArea.zip} Real Estate FAQ`} faqs={zipArea.faqs} pageType="skye-canyon" />
+      <FAQSection title={`${zipArea.zip} Real Estate FAQ`} faqs={zipArea.faqs} pageType="skye-canyon" includeSchema={false} />
       <HyperlocalInternalLinks title="Nearby Skye Canyon Areas" links={relatedLinks} />
       <GbpLocalSection heading={`Visit the office for ${zipArea.zip} listings`} />
       <HyperlocalCta title={`Buy in ${zipArea.zip} with a Local Expert`} />

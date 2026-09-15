@@ -2,6 +2,7 @@
 
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import RelatedSearches from '@/components/related-searches';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
 import { siteConfig } from '@/config/site.config';
@@ -37,7 +38,7 @@ export default function Search({ query }: SearchProps) {
             rel="noopener noreferrer"
             className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
           >
-            Open RealScout Search
+            Search Homes
           </a>
         </PageHero>
 
@@ -60,6 +61,7 @@ export default function Search({ query }: SearchProps) {
         </section>
 
         <GbpLocalSection heading="Search with a local Skye Canyon agent" />
+        <RelatedSearches searchType="general" />
       </div>
     </>
   );
