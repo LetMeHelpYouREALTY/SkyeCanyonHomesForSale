@@ -94,7 +94,7 @@ export default function Contact() {
                     <ul className="space-y-3 text-gray-600">
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
-                        15+ years Skye Canyon market expertise
+                        {siteConfig.opened.label} at this 89166 Google Business Profile
                       </li>
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>

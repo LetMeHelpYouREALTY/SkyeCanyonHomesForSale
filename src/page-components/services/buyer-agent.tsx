@@ -6,6 +6,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
 export default function BuyerAgentServices() {
@@ -15,9 +16,9 @@ export default function BuyerAgentServices() {
         pageType="service"
         serviceName="buyer-agent"
         breadcrumbs={[
-          { name: 'Home', url: 'https://skyecanyonhomesforsale.com' },
-          { name: 'Services', url: 'https://skyecanyonhomesforsale.com/services' },
-          { name: 'Buyer Agent', url: 'https://skyecanyonhomesforsale.com/services/buyer-agent' },
+          { name: 'Home', url: siteConfig.url },
+          { name: 'Services', url: `${siteConfig.url}/services/buyer-agent` },
+          { name: 'Buyer Agent', url: `${siteConfig.url}/services/buyer-agent` },
         ]}
       />
 
@@ -26,7 +27,7 @@ export default function BuyerAgentServices() {
         <main>
           <PageHero
             title="Skye Canyon Expert Buyer Agent"
-            subtitle="15+ years exclusive Skye Canyon specialization with direct builder relationships and off-market access."
+            subtitle="Buyer representation for Skye Canyon luxury, new construction, and resale in Las Vegas NV 89166."
             {...getHeroImageProps('buyer-agent')}
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

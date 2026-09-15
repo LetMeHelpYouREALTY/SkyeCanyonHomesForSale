@@ -12,7 +12,7 @@ const services = [
     id: 'buyer-agent',
     title: 'Expert Buyer Agent Services',
     description:
-      '15+ years exclusive Skye Canyon specialization with direct builder relationships and off-market access.',
+      'Buyer representation for Skye Canyon luxury, new construction, and resale in Las Vegas NV 89166.',
     icon: Home,
     highlight: 'Off-market and builder access',
     link: '/services/buyer-agent',
@@ -95,7 +95,7 @@ export default function ServicesOverview() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Buyer, seller, new construction, and relocation help for Skye Canyon and northwest Las
-            Vegas NV 89166 — 15+ years on this zip code.
+            Vegas NV 89166 — Google Business Profile {siteConfig.opened.label.toLowerCase()}.
           </p>
           <HeadingImage
             {...sectionImages.clubhouse}

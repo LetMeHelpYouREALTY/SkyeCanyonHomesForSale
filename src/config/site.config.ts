@@ -31,6 +31,13 @@ export const siteConfig = {
     saturday: { opens: '09:00', closes: '17:00', label: 'Saturday: 9:00 AM - 5:00 PM' },
     sunday: { opens: '11:00', closes: '16:00', label: 'Sunday: 11:00 AM - 4:00 PM' },
   },
+  /** Google Business Profile openInfo.openingDate — verified 2026-09-15 */
+  opened: {
+    year: 2009,
+    month: 9,
+    day: 20,
+    label: 'Since 2009',
+  },
   openingHours: ['Mo-Fr 09:00-18:00', 'Sa 09:00-17:00', 'Su 11:00-16:00'],
   googleReviewUrl: 'https://g.page/r/CVaZ8MapUtFoEBM/review',
   googleBusinessUrl: 'https://g.page/r/CVaZ8MapUtFoEBM',

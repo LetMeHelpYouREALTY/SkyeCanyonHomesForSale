@@ -8,14 +8,14 @@ import { sectionImages } from '@/data/section-images';
 const performanceStats = [
   {
     icon: Home,
-    metric: '150+',
-    label: 'Skye Canyon closings',
-    detail: 'Luxury, new construction, and resale',
+    metric: 'Live MLS',
+    label: 'Current 89166 inventory',
+    detail: 'Confirm comps before you tour',
   },
   {
     icon: Award,
-    metric: '15+',
-    label: 'Years in 89166',
+    metric: siteConfig.opened.label,
+    label: 'Google Business Profile',
     detail: `Nevada license ${siteConfig.license}`,
   },
   {

@@ -15,16 +15,16 @@ export default function HeroSection() {
     >
       <div className="flex flex-wrap justify-center gap-8 mb-10">
         <div className="text-center">
-          <div className="text-3xl font-bold">150+</div>
-          <div className="text-sm text-white/80">Homes Sold</div>
+          <div className="text-3xl font-bold">{siteConfig.opened.year}</div>
+          <div className="text-sm text-white/80">Google Business Profile</div>
         </div>
         <div className="text-center">
-          <div className="text-3xl font-bold">15+</div>
-          <div className="text-sm text-white/80">Years Experience</div>
-        </div>
-        <div className="text-center">
-          <div className="text-3xl font-bold">89166</div>
+          <div className="text-3xl font-bold">{siteConfig.address.zip}</div>
           <div className="text-sm text-white/80">Skye Canyon office</div>
+        </div>
+        <div className="text-center">
+          <div className="text-3xl font-bold">{siteConfig.license}</div>
+          <div className="text-sm text-white/80">Nevada license</div>
         </div>
       </div>
 

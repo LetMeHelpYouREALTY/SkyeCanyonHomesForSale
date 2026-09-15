@@ -29,8 +29,8 @@ import { Card, CardContent } from '@/components/ui/card';
 const achievements = [
   {
     icon: Home,
-    title: '150+ Homes Sold',
-    description: 'Successfully closed over 150 transactions in Skye Canyon',
+    title: 'Live MLS comps',
+    description: 'Search current Skye Canyon inventory before you tour',
   },
   {
     icon: Users,
@@ -44,8 +44,8 @@ const achievements = [
   },
   {
     icon: Award,
-    title: '15+ Years Experience',
-    description: 'Deep expertise in luxury real estate',
+    title: siteConfig.opened.label,
+    description: 'Google Business Profile opening date for this 89166 office',
   },
 ];
 
@@ -63,7 +63,7 @@ export default function About() {
 
         <PageHero
           title="Meet Dr. Jan Duffy, REALTOR®"
-          subtitle="Your trusted Skye Canyon real estate expert — 15+ years specializing in northwest Las Vegas luxury homes."
+          subtitle="Skye Canyon REALTOR® for luxury, new construction, and resale in Las Vegas NV 89166. Google Business Profile since 2009."
           {...getHeroImageProps('about')}
           minHeight="sm"
         />
@@ -89,10 +89,10 @@ export default function About() {
                   Your Trusted Skye Canyon Real Estate Expert
                 </p>
                 <p className="text-lg mb-8 text-gray-600 leading-relaxed">
-                  With over 15 years of exclusive focus on Skye Canyon and Northwest Las Vegas real estate, 
-                  Dr. Jan Duffy has built an unparalleled reputation for delivering exceptional results. 
-                  Licensed in Nevada (S.0197614), she combines deep local market knowledge with 
-                  cutting-edge technology to provide unmatched service to luxury home buyers and sellers.
+                  Dr. Jan Duffy is a Nevada REALTOR® (S.0197614) at {siteConfig.address.formatted}.
+                  The Google Business Profile for this office opened in {siteConfig.opened.year}.
+                  She represents buyers and sellers on luxury, new construction, and resale homes
+                  in Skye Canyon and northwest Las Vegas NV 89166.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a href="/contact">
@@ -128,8 +128,8 @@ export default function About() {
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-xl border-2 border-realscout-blue">
-                  <div className="text-realscout-blue text-2xl font-bold">15+</div>
-                  <div className="text-gray-600 text-sm font-medium">Years Experience</div>
+                  <div className="text-realscout-blue text-2xl font-bold">{siteConfig.opened.year}</div>
+                  <div className="text-gray-600 text-sm font-medium">Google Business Profile</div>
                 </div>
               </div>
             </div>
@@ -209,11 +209,10 @@ export default function About() {
               <CardContent className="p-8">
                 <div className="prose max-w-none">
                   <p className="text-lg leading-relaxed mb-6">
-                    Dr. Jan Duffy brings over 15 years of exclusive expertise to Skye Canyon real estate, 
-                    having personally facilitated the sale of over 150 luxury properties in Skye
-                    Canyon, Las Vegas NV 89166. Her deep understanding of the local market dynamics, combined with 
-                    advanced technology tools and personalized service as a Skye Canyon REALTOR®
-                    with Berkshire Hathaway HomeServices Nevada Properties.
+                    Dr. Jan Duffy is a Skye Canyon REALTOR® with {siteConfig.brokerage}, licensed
+                    in Nevada ({siteConfig.license}). The Google Business Profile at this 89166
+                    office lists an opening date of {siteConfig.opened.month}/{siteConfig.opened.day}/{siteConfig.opened.year}.
+                    Confirm current inventory on live MLS and read reviews on Google Maps.
                   </p>
                   <p className="text-lg leading-relaxed mb-6">
                     Specializing in luxury homes, golf course properties, and new construction within 
@@ -361,7 +360,7 @@ export default function About() {
             {
               question: "What are Dr. Jan Duffy's qualifications as a REALTOR®?",
               answer:
-                'Dr. Jan Duffy holds Nevada Real Estate License S.0197614 and has over 15 years of experience specializing in Skye Canyon and Las Vegas luxury real estate. She is affiliated with Berkshire Hathaway HomeServices Nevada Properties.',
+                'Dr. Jan Duffy holds Nevada Real Estate License S.0197614 with Berkshire Hathaway HomeServices Nevada Properties. The Google Business Profile for the Skye Canyon office at 10111 W. Skye Canyon Park Drive lists an opening date of September 20, 2009.',
             },
             {
               question: 'Why choose Dr. Jan Duffy for Skye Canyon homes?',
