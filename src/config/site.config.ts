@@ -2,6 +2,8 @@
  * Single source of truth for NAP, hours, and business metadata.
  * Must match Google Business Profile exactly.
  */
+import { siteImage } from '@/lib/cloudflare-images';
+
 export const siteConfig = {
   name: 'Dr. Jan Duffy REALTOR®',
   businessName: 'Skye Canyon Homes for Sale',
@@ -47,7 +49,7 @@ export const siteConfig = {
     youtube: 'https://youtube.com/@skyecanyonhomes',
   },
   realscoutOnboarding: 'https://drjanduffy.realscout.com/onboarding',
-  ogImage: '/images/og/skye-canyon-homes.jpg',
+  ogImage: siteImage('og/skye-canyon-homes.jpg'),
 } as const;
 
 export type SiteConfig = typeof siteConfig;

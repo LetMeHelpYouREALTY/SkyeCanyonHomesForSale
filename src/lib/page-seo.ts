@@ -35,7 +35,7 @@ const pages: Record<string, PageSeoEntry> = {
   '/market-analysis': {
     title: 'Skye Canyon Market Analysis | Las Vegas NV 89166 Prices',
     description:
-      'Skye Canyon real estate market trends, prices, and days on market in Las Vegas NV 89166. Updated analysis from Dr. Jan Duffy.',
+      'Confirm current Skye Canyon list prices and days on market on live MLS. Las Vegas NV 89166 analysis from Dr. Jan Duffy.',
     path: '/market-analysis',
   },
   '/neighborhood-analysis': {

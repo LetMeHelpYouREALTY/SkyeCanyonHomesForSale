@@ -28,7 +28,7 @@ export default function GbpLocalSection({
             <img
               src={office.src}
               alt={office.alt}
-              className="w-full h-64 object-cover rounded-xl"
+              className="w-full h-80 object-cover object-bottom rounded-xl"
               loading="lazy"
             />
           </picture>

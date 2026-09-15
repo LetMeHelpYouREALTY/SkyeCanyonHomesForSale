@@ -30,6 +30,8 @@ const staticRoutes = [
   { path: '/services/luxury-properties', priority: 0.7, changeFrequency: 'monthly' as const },
   { path: '/services/new-construction', priority: 0.7, changeFrequency: 'monthly' as const },
   { path: '/services/relocation', priority: 0.7, changeFrequency: 'monthly' as const },
+  { path: '/search', priority: 0.8, changeFrequency: 'daily' as const },
+  { path: '/voice-search', priority: 0.6, changeFrequency: 'monthly' as const },
   { path: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly' as const },
   { path: '/terms-of-service', priority: 0.3, changeFrequency: 'yearly' as const },
 ];

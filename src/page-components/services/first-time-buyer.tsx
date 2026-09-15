@@ -5,6 +5,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
 export default function FirstTimeBuyerServices() {
@@ -14,11 +15,11 @@ export default function FirstTimeBuyerServices() {
         pageType="service"
         serviceName="first-time-buyer"
         breadcrumbs={[
-          { name: 'Home', url: 'https://skyecanyonhomesforsale.com' },
-          { name: 'Services', url: 'https://skyecanyonhomesforsale.com/services' },
+          { name: 'Home', url: siteConfig.url },
+          { name: 'Services', url: `${siteConfig.url}/services/buyer-agent` },
           {
             name: 'First-Time Buyer',
-            url: 'https://skyecanyonhomesforsale.com/services/first-time-buyer',
+            url: `${siteConfig.url}/services/first-time-buyer`,
           },
         ]}
       />
@@ -81,8 +82,8 @@ export default function FirstTimeBuyerServices() {
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">Market Insights</h3>
                   <p className="text-gray-600">
-                    In-depth Skye Canyon market knowledge to help you make informed decisions and
-                    secure value.
+                    Confirm live MLS comps, HOA dues, and builder incentives with Dr. Jan Duffy
+                    before you write an offer in zip 89166.
                   </p>
                 </div>
               </div>
