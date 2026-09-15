@@ -6,7 +6,7 @@ export default function GbpPresenceBar() {
     <div className="bg-realscout-navy text-white text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
         <p className="text-center lg:text-left leading-snug">
-          <span className="font-semibold">{siteConfig.name}</span>
+          <span className="font-semibold">{siteConfig.businessName}</span>
           <span className="mx-2 text-white/50">·</span>
           <span>{siteConfig.address.formatted}</span>
           <span className="mx-2 text-white/50">·</span>

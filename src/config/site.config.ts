@@ -6,7 +6,8 @@ import { siteImage } from '@/lib/cloudflare-images';
 
 export const siteConfig = {
   name: 'Dr. Jan Duffy REALTOR®',
-  businessName: 'Skye Canyon Homes for Sale',
+  /** Google Business Profile title — verified 2026-09-15 */
+  businessName: 'Skye Canyon Real Estate | Homes by Dr. Jan Duffy',
   legalName: 'Dr. Jan Duffy Real Estate Services',
   url: 'https://www.skyecanyonhomesforsale.com',
   phone: '(702) 500-1902',
@@ -41,10 +42,8 @@ export const siteConfig = {
   openingHours: ['Mo-Fr 09:00-18:00', 'Sa 09:00-17:00', 'Su 11:00-16:00'],
   googleReviewUrl: 'https://g.page/r/CVaZ8MapUtFoEBM/review',
   googleBusinessUrl: 'https://g.page/r/CVaZ8MapUtFoEBM',
-  googleMapsUrl:
-    'https://www.google.com/maps/search/?api=1&query=10111+W.+Skye+Canyon+Park+Drive,+Las+Vegas,+NV+89166',
-  mapsUrl:
-    'https://www.google.com/maps?q=10111+W.+Skye+Canyon+Park+Drive,+Las+Vegas,+NV+89166',
+  googleMapsUrl: 'https://maps.google.com/maps?cid=7552908939217639766',
+  mapsUrl: 'https://maps.google.com/maps?cid=7552908939217639766',
   mapsEmbedUrl:
     'https://www.google.com/maps?q=10111+W.+Skye+Canyon+Park+Drive,+Las+Vegas,+NV+89166&hl=en&z=16&output=embed',
   directionsUrl:

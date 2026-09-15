@@ -8,8 +8,8 @@ export function buildLocalBusinessJsonLd(): Record<string, unknown> {
     '@context': 'https://schema.org',
     '@type': ['RealEstateAgent', 'LocalBusiness'],
     '@id': `${siteConfig.url}/#localbusiness`,
-    name: siteConfig.name,
-    alternateName: siteConfig.businessName,
+    name: siteConfig.businessName,
+    alternateName: siteConfig.name,
     legalName: siteConfig.legalName,
     description:
       'Skye Canyon real estate specialist for luxury homes, new construction, and resale in Las Vegas NV 89166.',

@@ -5,6 +5,8 @@ import GbpPresenceBar from '@/components/gbp-presence-bar';
 import JsonLd from '@/components/json-ld';
 import { buildLocalBusinessJsonLd } from '@/lib/local-business-jsonld';
 
+export const dynamic = 'force-dynamic';
+
 export default function MarketingLayout({
   children,
 }: {
