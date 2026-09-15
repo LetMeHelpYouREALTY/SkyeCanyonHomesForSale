@@ -142,7 +142,8 @@ export default function Home() {
                 What&apos;s Your Skye Canyon Home Worth?
               </h2>
               <p className="text-lg text-gray-600">
-                Get an instant home valuation for your Skye Canyon property in Las Vegas NV 89166.
+                Enter your Skye Canyon address for a Homebot estimate in Las Vegas NV 89166. Confirm
+                it against live MLS comps.
               </p>
             </div>
             <HeadingImage

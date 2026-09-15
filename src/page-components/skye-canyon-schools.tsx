@@ -1,6 +1,6 @@
 'use client';
 
-import { BookOpen, Clock, GraduationCap, MapPin, School, Star, Users } from 'lucide-react';
+import { BookOpen, GraduationCap, MapPin, School, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
 import GbpLocalSection from '@/components/gbp-local-section';
 import RelatedSearches from '@/components/related-searches';
@@ -10,6 +10,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import { sectionImages } from '@/data/section-images';
 import HeroSearchCtas from '@/components/hero-search-ctas';
+import { siteConfig } from '@/config/site.config';
 
 const elementarySchools = [
   {
@@ -82,12 +83,12 @@ const schoolsFAQs = [
   {
     question: 'Will Skye Canyon get its own schools?',
     answer:
-      'Future development plans include a K-5 elementary, middle school, and high school within Skye Canyon, subject to Clark County School District funding and approval.',
+      'Confirm current and planned campuses with Clark County School District Demographics, Zoning, and GIS at dzg.ccsd.net. Do not rely on a listing description for zoning.',
   },
   {
     question: 'How do I find current school zoning for my Skye Canyon address?',
     answer:
-      "Visit Clark County School District's website for elementary, middle, and high school zoning maps, or contact Dr. Jan Duffy for assistance with school information for specific properties.",
+      'Search the street address at dzg.ccsd.net, or call Dr. Jan Duffy at (702) 500-1902 for campus drive times from a specific listing.',
   },
 ];
 
@@ -187,7 +188,7 @@ export default function SkyeCanyonSchools() {
                 Three elementary campuses serve Skye Canyon addresses
               </p>
               <HeadingImage
-                {...sectionImages.parks}
+                {...sectionImages.schools}
                 className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
               />
             </div>
@@ -251,7 +252,7 @@ export default function SkyeCanyonSchools() {
                 Arbor View High School — zoned high school for Skye Canyon addresses
               </p>
               <HeadingImage
-                {...sectionImages.northwest}
+                {...sectionImages.schools}
                 className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
               />
             </div>
@@ -287,10 +288,11 @@ export default function SkyeCanyonSchools() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Charter School Options</h2>
               <p className="text-xl text-gray-600">
-                Alternative education with specialized programs and smaller class sizes
+                Somerset Academy – Skye Canyon Campus is a K-12 charter. Confirm enrollment with the
+                campus.
               </p>
               <HeadingImage
-                {...sectionImages.guide}
+                {...sectionImages.schools}
                 className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
               />
             </div>
@@ -298,23 +300,22 @@ export default function SkyeCanyonSchools() {
             <div className="max-w-2xl mx-auto">
               <div className="bg-white rounded-lg p-8 shadow-sm">
                 <div className="flex items-center mb-4">
-                  <Star className="w-6 h-6 text-orange-600 mr-3" />
+                  <School className="w-6 h-6 text-orange-600 mr-3" />
                   <span className="text-sm font-medium text-orange-600">Charter School</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Somerset Academy – Skye Canyon Campus
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Comprehensive K-12 charter school offering personalized education with smaller
-                  class sizes and named programs at the Skye Canyon campus.
+                  K-12 charter campus serving Skye Canyon addresses. Confirm programs, enrollment,
+                  and transportation directly with Somerset Academy.
                 </p>
                 <div className="bg-orange-50 rounded-lg p-4">
-                  <h4 className="font-medium text-gray-900 mb-2">Charter Advantages:</h4>
+                  <h4 className="font-medium text-gray-900 mb-2">Confirm before you enroll</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Smaller class sizes for personalized attention</li>
-                    <li>• Innovative curriculum and teaching methods</li>
-                    <li>• K-12 continuity in one campus location</li>
-                    <li>• Specialized programs and extracurricular activities</li>
+                    <li>• K-12 continuity on one Skye Canyon campus</li>
+                    <li>• Ask the campus about current programs and hours</li>
+                    <li>• Confirm CCSD zoning separately for nearby public campuses</li>
                   </ul>
                 </div>
               </div>
@@ -322,13 +323,12 @@ export default function SkyeCanyonSchools() {
           </div>
         </section>
 
-        {/* Future Schools Section */}
         <section className="py-16 bg-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Future School Development</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Confirm Campus Assignment</h2>
               <p className="text-xl text-gray-600">
-                Planned educational facilities to serve growing Skye Canyon community
+                CCSD zoning is by street address. Use the locator, then search homes near that campus.
               </p>
               <HeadingImage
                 {...sectionImages.communityMap}
@@ -336,47 +336,28 @@ export default function SkyeCanyonSchools() {
               />
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-sm max-w-4xl mx-auto">
-              <div className="flex items-center mb-6">
-                <Clock className="w-6 h-6 text-blue-600 mr-3" />
-                <span className="text-sm font-medium text-blue-600">Future Development</span>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <BookOpen className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">K-5 Elementary</h3>
-                  <p className="text-sm text-gray-600">
-                    New elementary school planned within Skye Canyon
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Middle School</h3>
-                  <p className="text-sm text-gray-600">Junior high school for community students</p>
-                </div>
-
-                <div className="text-center">
-                  <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <GraduationCap className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">High School</h3>
-                  <p className="text-sm text-gray-600">
-                    Comprehensive high school within community
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-8 p-4 bg-yellow-50 rounded-lg">
-                <p className="text-sm text-gray-600 text-center">
-                  <strong>Note:</strong> School openings are subject to change and dependent on
-                  Clark County School District funding and enrollment projections.
-                </p>
+            <div className="bg-white rounded-lg p-8 shadow-sm max-w-4xl mx-auto text-center">
+              <p className="text-gray-600 mb-6">
+                Clark County School District publishes current attendance zones at dzg.ccsd.net.
+                Call {siteConfig.phone} if you want campus drive times from a specific listing.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                  href="https://dzg.ccsd.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
+                >
+                  Open CCSD campus locator
+                </a>
+                <a
+                  href={siteConfig.realscoutOnboarding}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-lg border border-blue-600 px-6 py-3 font-semibold text-blue-700 hover:bg-blue-50"
+                >
+                  Search Homes
+                </a>
               </div>
             </div>
           </div>
@@ -405,7 +386,7 @@ export default function SkyeCanyonSchools() {
                     Find your zoned K-5 elementary school
                   </p>
                   <a
-                    href="https://ccsd.net/schools/zoning"
+                    href="https://dzg.ccsd.net/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700 font-medium"
@@ -419,7 +400,7 @@ export default function SkyeCanyonSchools() {
                   <h3 className="font-semibold text-gray-900 mb-2">Middle School Zoning</h3>
                   <p className="text-sm text-gray-600 mb-4">Find your zoned middle school</p>
                   <a
-                    href="https://ccsd.net/schools/zoning"
+                    href="https://dzg.ccsd.net/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-green-600 hover:text-green-700 font-medium"
@@ -433,7 +414,7 @@ export default function SkyeCanyonSchools() {
                   <h3 className="font-semibold text-gray-900 mb-2">High School Zoning</h3>
                   <p className="text-sm text-gray-600 mb-4">Confirm your high school assignment</p>
                   <a
-                    href="https://ccsd.net/schools/zoning"
+                    href="https://dzg.ccsd.net/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-600 hover:text-purple-700 font-medium"

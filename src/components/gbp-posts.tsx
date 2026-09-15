@@ -1,26 +1,69 @@
-import HeadingImage from '@/components/heading-image';
+'use client';
+
+import { useState } from 'react';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
 interface GbpPostCard {
   dateLabel: string;
   title: string;
-  image: (typeof sectionImages)[keyof typeof sectionImages];
+  href: string;
+  imageSrc: string;
+  imageAlt: string;
+  fallbackSrc: string;
 }
 
-/** Headlines only — GBP post bodies go stale (prices, rates, incentives). */
+/**
+ * Headlines and Google-hosted photos from live GBP localPosts (fetched 2026-09-15).
+ * Bodies stay off the page — they go stale (prices, rates, incentives).
+ */
 const gbpPostCards: GbpPostCard[] = [
   {
     dateLabel: 'July 21, 2026',
     title: 'New-construction incentives — confirm current builder offers on live MLS',
-    image: sectionImages.newConstruction,
+    href: 'https://local.google.com/place?id=7552908939217639766&use=posts&lpsid=CIHM0ogKENvNkJGPnbLGUw',
+    imageSrc: 'https://lh3.googleusercontent.com/p/AF1QipN49tz6-gZPMmhQEN_Fv162w5wj_8eEcDPzjQsX',
+    imageAlt:
+      'Google Business Profile photo for a Skye Canyon new-construction post Las Vegas NV 89166',
+    fallbackSrc: sectionImages.newConstruction.src,
   },
   {
-    dateLabel: 'May 14, 2026',
+    dateLabel: 'April 28, 2026',
     title: 'Skye Canyon community update on the Google Business Profile',
-    image: sectionImages.guide,
+    href: 'https://local.google.com/place?id=7552908939217639766&use=posts&lpsid=CIHM0ogKELTmgrjH9u3eiQE',
+    imageSrc: 'https://lh3.googleusercontent.com/p/AF1QipP_n2WTNM3Vex-g--vZsH9xGFPj_LksjfDPmgtO',
+    imageAlt: 'Google Business Profile photo for a Skye Canyon community post Las Vegas NV 89166',
+    fallbackSrc: sectionImages.guide.src,
   },
 ];
+
+function GbpPostPhoto({
+  src,
+  alt,
+  fallbackSrc,
+}: {
+  src: string;
+  alt: string;
+  fallbackSrc: string;
+}) {
+  const [current, setCurrent] = useState(src);
+  return (
+    <img
+      src={current}
+      alt={alt}
+      className="w-full h-48 object-cover"
+      width={1600}
+      height={900}
+      loading="lazy"
+      decoding="async"
+      onError={() => {
+        if (current !== fallbackSrc) {
+          setCurrent(fallbackSrc);
+        }
+      }}
+    />
+  );
+}
 
 export default function GbpPosts() {
   return (
@@ -38,14 +81,15 @@ export default function GbpPosts() {
           {gbpPostCards.map((post) => (
             <a
               key={post.title}
-              href={siteConfig.googleBusinessUrl}
+              href={post.href}
               target="_blank"
               rel="noopener noreferrer"
               className="group rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
             >
-              <HeadingImage
-                {...post.image}
-                className="w-full h-48 object-cover"
+              <GbpPostPhoto
+                src={post.imageSrc}
+                alt={post.imageAlt}
+                fallbackSrc={post.fallbackSrc}
               />
               <div className="p-6">
                 <p className="text-sm text-gray-500 mb-2">{post.dateLabel}</p>

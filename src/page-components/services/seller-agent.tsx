@@ -51,7 +51,8 @@ export default function SellerAgentServices() {
                 Know Your Home's Value Before You List
               </h2>
               <p className="text-lg text-gray-600">
-                Get an instant, data-driven valuation for your Skye Canyon property. Understanding your home's market value is the first step to a successful sale.
+                Enter your Skye Canyon address for a Homebot estimate. Confirm the number against
+                live MLS comps with Dr. Jan Duffy before you list.
               </p>
               <HeadingImage
                 {...sectionImages.valuation}
@@ -62,7 +63,7 @@ export default function SellerAgentServices() {
               <HomebotWidget id="homebot_seller" className="w-full min-h-[200px]" />
             </div>
             <p className="text-center text-sm text-gray-500 mt-4">
-              Powered by Homebot &bull; Updated with real Skye Canyon market data
+              Powered by Homebot. Confirm the estimate against live MLS comps.
             </p>
           </div>
         </section>
