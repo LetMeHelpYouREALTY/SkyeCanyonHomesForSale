@@ -2,9 +2,12 @@
 
 import { Building2, Car, DollarSign, Home, MapPin, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 
 export default function SkyeCanyonCommunities() {
   const communitiesData = [
@@ -86,9 +89,9 @@ export default function SkyeCanyonCommunities() {
         'Yes, Century Communities offers quick move-in homes in Skye Canyon for buyers who need to move in sooner. Contact Dr. Jan Duffy at (702) 500-1902 for current availability and inventory.',
     },
     {
-      question: 'What makes Skye Canyon communities special for families?',
+      question: 'What amenities come with Skye Canyon new construction?',
       answer:
-        'Skye Canyon communities offer homes designed for every life stage with flexible floor plans, generous outdoor spaces, access to community parks and schools, all within a secure guard-gated environment.',
+        'Skye Canyon new construction includes flexible floor plans, outdoor living space, access to community parks and Desert Highlands Golf Course, and a guard-gated entry. Confirm HOA fees and builder incentives with Dr. Jan Duffy at (702) 500-1902.',
     },
   ];
 
@@ -99,8 +102,7 @@ export default function SkyeCanyonCommunities() {
         <PageHero
           title="Skye Canyon New Construction Communities"
           subtitle="Luxury new construction homes by Century Communities — spacious floor plans with up to six bedrooms in Las Vegas NV 89166."
-          image={getHeroImage('skye-canyon-communities').src}
-          imageAlt={getHeroImage('skye-canyon-communities').alt}
+          {...getHeroImageProps('skye-canyon-communities')}
           badges={['Century Communities', '3 Communities', 'From High $500s']}
         />
 
@@ -115,6 +117,10 @@ export default function SkyeCanyonCommunities() {
                 Available properties in Skye Canyon communities
               </p>
             </div>
+            <HeadingImage
+              {...sectionImages.newConstruction}
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
             <RealScoutListings className="w-full" variant="new-construction" />
           </div>
         </section>
@@ -132,6 +138,10 @@ export default function SkyeCanyonCommunities() {
                 every life stage. Flexible floor plans allow ample customization with the addition
                 of lofts, bedrooms, dens and luxurious primary suites.
               </p>
+              <HeadingImage
+                {...sectionImages.communities}
+                className="w-full h-56 md:h-72 object-cover rounded-xl mt-8"
+              />
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -289,6 +299,8 @@ export default function SkyeCanyonCommunities() {
             </div>
           </div>
         </section>
+
+        <GbpLocalSection heading="Tour new construction from the Skye Canyon office" />
 
         {/* FAQ Section */}
         <FAQSection

@@ -7,7 +7,10 @@ import NeighborhoodHeatmap from '@/components/neighborhood-heatmap';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function NeighborhoodAnalysis() {
@@ -18,8 +21,7 @@ export default function NeighborhoodAnalysis() {
         <PageHero
           title="Las Vegas Neighborhood Analysis"
           subtitle="Interactive market heat map with pricing trends, activity, and local insights across northwest Las Vegas neighborhoods."
-          image={getHeroImage('neighborhood-analysis').src}
-          imageAlt={getHeroImage('neighborhood-analysis').alt}
+          {...getHeroImageProps('neighborhood-analysis')}
           badges={['5 Key Neighborhoods', 'Live Market Data', 'Price Comparisons', 'Community Insights']}
         />
 
@@ -35,6 +37,10 @@ export default function NeighborhoodAnalysis() {
                 decisions. Our interactive heat map provides comprehensive data to guide your
                 investment choices.
               </p>
+              <HeadingImage
+                {...sectionImages.northwest}
+                className="w-full h-56 md:h-72 object-cover rounded-xl mt-8"
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -56,9 +62,9 @@ export default function NeighborhoodAnalysis() {
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">9/10</div>
-                  <div className="text-gray-600">School Rating</div>
-                  <div className="text-sm text-gray-500 mt-1">Top-Rated Schools</div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">3</div>
+                  <div className="text-gray-600">Elementary Campuses</div>
+                  <div className="text-sm text-gray-500 mt-1">Scherkenbach, Bilbray, Divich</div>
                 </CardContent>
               </Card>
 
@@ -107,7 +113,7 @@ export default function NeighborhoodAnalysis() {
                       <span className="font-medium">$1.10M avg</span>
                     </div>
                     <div className="text-sm text-blue-600 mt-4">
-                      Guard-gated, luxury amenities, top schools
+                      Guard-gated, golf, parks and recreation
                     </div>
                   </div>
                 </CardContent>
@@ -126,7 +132,7 @@ export default function NeighborhoodAnalysis() {
                       <span className="font-medium">$780K avg</span>
                     </div>
                     <div className="text-sm text-green-600 mt-4">
-                      Strong appreciation, family-friendly
+                      Strong appreciation, parks and shopping
                     </div>
                   </div>
                 </CardContent>
@@ -177,17 +183,17 @@ export default function NeighborhoodAnalysis() {
             {
               question: 'Which Las Vegas neighborhood has the best investment potential?',
               answer:
-                'Skye Canyon and Summerlin West show the strongest investment potential with consistent appreciation, low crime rates, top-rated schools, and premium amenities. These guard-gated communities maintain their value well.',
+                'Skye Canyon and Summerlin West have shown consistent appreciation with guard-gated access, golf amenities, and limited inventory. Confirm live MLS comps before you decide.',
             },
             {
-              question: 'How do school ratings affect property values?',
+              question: 'How do I confirm which campus serves a Skye Canyon address?',
               answer:
-                'School ratings significantly impact property values. Neighborhoods with 8+ rated schools typically command 15-25% higher prices and experience better resale value and faster appreciation.',
+                'Use the Clark County School District locator for the specific address. Skye Canyon is served by William & Mary Scherkenbach Elementary, James Bilbray Elementary, Kenneth Divich Elementary, Ralph Cadwallader Middle, Edmundo Escobedo Sr Middle, and Arbor View High School. Confirm boundaries before you write an offer.',
             },
             {
               question: 'What makes Skye Canyon stand out from other neighborhoods?',
               answer:
-                'Skye Canyon offers 24/7 guard-gated security, Desert Highlands Golf Course, top-rated schools (9/10), low crime rates, and proximity to Red Rock Canyon - all while maintaining strong market performance.',
+                'Skye Canyon has 24/7 guard-gated entry, Desert Highlands Golf Course, a 15-acre community park, and a short drive to Red Rock Canyon. Confirm commute times for your work location.',
             },
             {
               question: 'How often is the market data updated?',
@@ -196,6 +202,8 @@ export default function NeighborhoodAnalysis() {
             },
           ]}
         />
+
+        <GbpLocalSection heading="Walk northwest Las Vegas neighborhoods with a local agent" />
 
         {/* Related Searches */}
         <section className="py-16 bg-gray-50">

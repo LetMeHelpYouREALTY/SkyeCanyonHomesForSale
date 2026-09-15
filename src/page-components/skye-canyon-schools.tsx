@@ -2,9 +2,12 @@
 
 import { BookOpen, Clock, GraduationCap, MapPin, School, Star, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 
 const elementarySchools = [
   {
@@ -49,7 +52,7 @@ const _charterSchools = [
   {
     name: 'Somerset Academy – Skye Canyon Campus',
     type: 'Charter Elementary and Middle/High School',
-    description: 'Comprehensive K-12 charter school serving Skye Canyon families',
+    description: 'K-12 charter campus serving Skye Canyon addresses',
   },
 ];
 
@@ -57,22 +60,22 @@ const schoolsFAQs = [
   {
     question: 'What elementary schools serve Skye Canyon?',
     answer:
-      'Skye Canyon is served by three excellent K-5 elementary schools: William & Mary Scherkenbach Elementary, James Bilbray Elementary, and Kenneth Divich Elementary, all part of Clark County School District.',
+      'Skye Canyon is served by three K-5 campuses: William & Mary Scherkenbach Elementary, James Bilbray Elementary, and Kenneth Divich Elementary, all in Clark County School District. Confirm the locator for a specific address.',
   },
   {
     question: 'Which middle schools do Skye Canyon students attend?',
     answer:
-      'Skye Canyon students attend Ralph Cadwallader Middle School or Edmundo Escobedo Sr Middle School, both highly-rated Clark County School District middle schools.',
+      'Skye Canyon addresses are zoned to Ralph Cadwallader Middle School or Edmundo Escobedo Sr Middle School in Clark County School District. Confirm the current locator before you write an offer.',
   },
   {
     question: 'What is the zoned high school for Skye Canyon?',
     answer:
-      'Arbor View High School is the zoned high school for Skye Canyon residents, known for excellent academics and athletics programs.',
+      'Arbor View High School is the zoned high school for Skye Canyon addresses. Confirm CCSD high school zoning for the specific property.',
   },
   {
     question: 'Are there charter school options in Skye Canyon?',
     answer:
-      'Yes, Somerset Academy – Skye Canyon Campus offers K-12 charter education with smaller class sizes and specialized programs for Skye Canyon families.',
+      'Yes, Somerset Academy – Skye Canyon Campus offers K-12 charter education. Confirm enrollment and transportation directly with the campus.',
   },
   {
     question: 'Will Skye Canyon get its own schools?',
@@ -94,9 +97,9 @@ export default function SkyeCanyonSchools() {
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: 'Skye Canyon Schools Guide - Top-Rated Education Options',
+          headline: 'Skye Canyon Schools Guide — CCSD and Charter Campuses',
           description:
-            'Comprehensive guide to public and charter schools serving Skye Canyon, Las Vegas families',
+            'Guide to Clark County School District and charter campuses serving Skye Canyon, Las Vegas NV 89166',
           author: {
             '@type': 'Person',
             name: 'Dr. Jan Duffy',
@@ -148,8 +151,7 @@ export default function SkyeCanyonSchools() {
         <PageHero
           title="Skye Canyon Schools Guide"
           subtitle="Education options for Skye Canyon — Clark County School District public schools and charter programs in northwest Las Vegas NV 89166."
-          image={getHeroImage('skye-canyon-schools').src}
-          imageAlt={getHeroImage('skye-canyon-schools').alt}
+          {...getHeroImageProps('skye-canyon-schools')}
           badges={['9 Public Schools', 'Charter Options', 'CCSD District']}
         />
 
@@ -162,6 +164,10 @@ export default function SkyeCanyonSchools() {
               </h2>
               <p className="text-xl text-gray-600">Properties in Las Vegas NV 89166 school zones</p>
             </div>
+            <HeadingImage
+              {...sectionImages.schools}
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
             <RealScoutListings className="w-full" variant="mid-range" />
           </div>
         </section>
@@ -176,6 +182,10 @@ export default function SkyeCanyonSchools() {
               <p className="text-xl text-gray-600">
                 Three elementary campuses serve Skye Canyon addresses
               </p>
+              <HeadingImage
+                {...sectionImages.schools}
+                className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -202,7 +212,7 @@ export default function SkyeCanyonSchools() {
                 Skye Canyon Middle/Junior High Schools
               </h2>
               <p className="text-xl text-gray-600">
-                Quality middle school education preparing students for high school success
+                Ralph Cadwallader Middle and Edmundo Escobedo Sr Middle serve Skye Canyon addresses
               </p>
             </div>
 
@@ -230,7 +240,7 @@ export default function SkyeCanyonSchools() {
                 Skye Canyon Senior High School
               </h2>
               <p className="text-xl text-gray-600">
-                Arbor View High School - Skye Canyon's premier high school destination
+                Arbor View High School — zoned high school for Skye Canyon addresses
               </p>
             </div>
 
@@ -241,8 +251,8 @@ export default function SkyeCanyonSchools() {
                   Arbor View High School
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Clark County School District's flagship high school serving Skye Canyon, known for
-                  excellent academics, athletics, and college preparation programs.
+                  Clark County School District high school serving Skye Canyon. Confirm programs,
+                  athletics, and transportation on the CCSD campus page.
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div className="text-center">
@@ -423,6 +433,8 @@ export default function SkyeCanyonSchools() {
             </div>
           </div>
         </section>
+
+        <GbpLocalSection heading="Confirm campus zones with Dr. Jan Duffy" />
 
         {/* FAQ Section */}
         <FAQSection

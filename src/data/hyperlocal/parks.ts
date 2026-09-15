@@ -9,7 +9,7 @@ export const parks: HyperlocalPark[] = [
       'The 15-acre Skye Canyon Park is the main recreation hub at 10111 W Skye Canyon Park Drive, adjacent to Skye Center and Skye Fitness in Las Vegas NV 89166.',
     answerSummary:
       'Skye Canyon Park is a 15-acre community park in Skye Canyon NV 89166 open 6:00am–9:00pm daily, with splash pad, sports fields, walking paths, and a resident Junior Olympic pool.',
-    address: '10111 W Skye Canyon Park Dr, Las Vegas, NV 89166',
+    address: '10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166',
     hours: '6:00am – 9:00pm daily',
     features: [
       '15-acre park',

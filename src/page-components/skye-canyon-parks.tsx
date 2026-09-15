@@ -2,9 +2,12 @@
 
 import { MapPin, Users } from 'lucide-react';
 import FAQSection from '@/components/faq-section';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 
 export default function SkyeCanyonParks() {
   const parksData = [
@@ -13,7 +16,7 @@ export default function SkyeCanyonParks() {
       size: '15-acre',
       description:
         'The sprawling 15-acre Skye Canyon Park, adjacent to Skye Center and Skye Fitness, is the heartbeat of the neighborhood and home to many community events.',
-      address: '10111 W Skye Canyon Park Dr, Las Vegas, NV 89166',
+      address: '10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166',
       hours: '6:00am – 9:00pm',
       features: [
         '15-acre park',
@@ -31,9 +34,9 @@ export default function SkyeCanyonParks() {
     {
       name: 'Eagle Canyon Park',
       description:
-        'Family-friendly park featuring play structures and open spaces for recreational activities.',
+        'Park with covered play structures and open lawns for recreation.',
       features: ['Play structures', 'Open green spaces', 'Walking paths'],
-      highlights: ['Family-oriented design', 'Safe play environment'],
+      highlights: ['Play structures', 'Open lawn recreation'],
     },
     {
       name: 'Skye View Park',
@@ -54,7 +57,7 @@ export default function SkyeCanyonParks() {
       description:
         'Evening-friendly park with lighting for extended outdoor enjoyment and recreational activities.',
       features: ['Evening lighting', 'Play areas', 'Open spaces'],
-      highlights: ['Extended hours usage', 'Safe evening recreation'],
+      highlights: ['Extended hours usage', 'Lighted evening recreation'],
     },
   ];
 
@@ -62,7 +65,7 @@ export default function SkyeCanyonParks() {
     {
       question: 'What parks are available in Skye Canyon Las Vegas?',
       answer:
-        'Skye Canyon features five community parks: the 15-acre Skye Canyon Park (main hub), Eagle Canyon Park, Skye View Park, Big Skye Park, and Starlight Park, each offering unique recreational amenities and family-friendly features.',
+        'Skye Canyon features five community parks: the 15-acre Skye Canyon Park (main hub), Eagle Canyon Park, Skye View Park, Big Skye Park, and Starlight Park. Amenities include splash pads, sports courts, walking paths, and a Junior Olympic pool.',
     },
     {
       question: 'What are the hours for Skye Canyon Park?',
@@ -72,7 +75,7 @@ export default function SkyeCanyonParks() {
     {
       question: 'Does Skye Canyon Park have a swimming pool?',
       answer:
-        'Yes, Skye Canyon Park features a Junior Olympic swimming pool with resident-only access, along with a splash pad for children and families to enjoy water activities.',
+        'Yes, Skye Canyon Park features a Junior Olympic swimming pool with resident-only access, along with a splash pad.',
     },
     {
       question: 'What sports facilities are at Skye Canyon parks?',
@@ -80,9 +83,9 @@ export default function SkyeCanyonParks() {
         'Skye Canyon parks offer basketball courts with 6 hoops, grass fields with football and soccer goal posts, walking paths, and various play structures for active outdoor recreation.',
     },
     {
-      question: 'Are Skye Canyon parks good for families with children?',
+      question: 'What play and sports amenities are at Skye Canyon parks?',
       answer:
-        'Absolutely! Skye Canyon parks feature covered play areas, splash pads, safe play structures, basketball courts, and family-friendly amenities designed for children of all ages.',
+        'Skye Canyon parks have covered play areas, splash pads, basketball courts, soccer and football fields, and walking paths. Confirm resident-only pool access with the HOA.',
     },
     {
       question: 'Can I host events at Skye Canyon parks?',
@@ -98,8 +101,7 @@ export default function SkyeCanyonParks() {
         <PageHero
           title="Skye Canyon Parks & Recreation"
           subtitle="Play, run, or splash in one of Skye Canyon's community parks — fitness-inspired outdoor recreation in Las Vegas NV 89166."
-          image={getHeroImage('skye-canyon-parks').src}
-          imageAlt={getHeroImage('skye-canyon-parks').alt}
+          {...getHeroImageProps('skye-canyon-parks')}
           badges={['5 Community Parks', 'Splash Pads & Pool', 'Sports Courts & Fields']}
         />
 
@@ -112,6 +114,10 @@ export default function SkyeCanyonParks() {
               </h2>
               <p className="text-xl text-gray-600">Properties close to community amenities</p>
             </div>
+            <HeadingImage
+              {...sectionImages.parks}
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
             <RealScoutListings className="w-full" />
           </div>
         </section>
@@ -142,7 +148,7 @@ export default function SkyeCanyonParks() {
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-blue-600 mt-1" />
                     <div>
-                      <span className="text-gray-700">10111 W Skye Canyon Park Dr</span>
+                      <span className="text-gray-700">10111 W. Skye Canyon Park Drive</span>
                       <br />
                       <span className="text-gray-700">Las Vegas, NV 89166</span>
                     </div>
@@ -159,25 +165,10 @@ export default function SkyeCanyonParks() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-100 to-green-100 p-8 rounded-2xl">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Main Park Highlights</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <Users className="w-5 h-5 text-blue-600 mt-1" />
-                    <span className="text-gray-700">Community event hosting venue</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-blue-600">🌊</span>
-                    <span className="text-gray-700">
-                      Junior Olympic pool with resident-only access
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-blue-600">🌲</span>
-                    <span className="text-gray-700">½ mile walking path through scenic areas</span>
-                  </li>
-                </ul>
-              </div>
+              <HeadingImage
+                {...sectionImages.recreation}
+                className="w-full h-72 object-cover rounded-2xl"
+              />
             </div>
           </div>
         </section>
@@ -269,6 +260,8 @@ export default function SkyeCanyonParks() {
             </div>
           </div>
         </section>
+
+        <GbpLocalSection heading="Directions to Skye Canyon Park" />
 
         {/* FAQ Section */}
         <FAQSection

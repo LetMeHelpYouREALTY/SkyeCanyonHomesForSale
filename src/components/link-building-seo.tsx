@@ -27,7 +27,7 @@ const localBusinessDirectories = [
     name: 'Zillow Agent Profile',
     url: 'https://www.zillow.com/profile/DrJanDuffy/',
     category: 'Real Estate',
-    description: 'Top-Rated Las Vegas Agent',
+    description: 'Skye Canyon Las Vegas REALTOR®',
   },
   {
     name: 'Realtor.com Agent',

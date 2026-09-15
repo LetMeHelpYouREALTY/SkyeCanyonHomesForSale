@@ -3,7 +3,7 @@
 import { CheckCircle, Globe, Search, TrendingUp } from 'lucide-react';
 import SEOManagementDashboard from '@/components/seo-management-dashboard';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -14,8 +14,7 @@ export default function SEOManagement() {
         <PageHero
           title="SEO Management Dashboard"
           subtitle="Google Search Console setup, page indexing, and analytics configuration for search visibility."
-          image={getHeroImage('seo-management').src}
-          imageAlt={getHeroImage('seo-management').alt}
+          {...getHeroImageProps('seo-management')}
           badges={['Search Console', 'Indexing', 'Analytics']}
         />
 

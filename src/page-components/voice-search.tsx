@@ -2,7 +2,10 @@
 
 import VoiceSearchIntegration from '@/components/voice-search-integration';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 
 export default function VoiceSearchPage() {
   return (
@@ -10,8 +13,7 @@ export default function VoiceSearchPage() {
       <PageHero
         title="Voice-Activated Property Search"
         subtitle="AI-powered voice search for Skye Canyon and northwest Las Vegas MLS listings."
-        image={getHeroImage('voice-search').src}
-        imageAlt={getHeroImage('voice-search').alt}
+        {...getHeroImageProps('voice-search')}
         minHeight="sm"
       />
       <div className="min-h-screen bg-gray-50">
@@ -22,6 +24,10 @@ export default function VoiceSearchPage() {
               <h2 className="text-lg font-semibold text-blue-900 mb-3">
                 Try These Voice Commands:
               </h2>
+              <HeadingImage
+                {...sectionImages.listings}
+                className="w-full h-48 object-cover rounded-xl mb-6"
+              />
               <div className="grid md:grid-cols-2 gap-4 text-blue-800">
                 <div>
                   <ul className="space-y-2">
@@ -80,6 +86,8 @@ export default function VoiceSearchPage() {
           </div>
         </div>
       </div>
+
+      <GbpLocalSection heading="Voice-search Skye Canyon homes with a local agent" />
 
     </>
   );

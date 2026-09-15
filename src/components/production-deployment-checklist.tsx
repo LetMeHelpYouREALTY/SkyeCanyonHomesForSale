@@ -350,7 +350,7 @@ export default function ProductionDeploymentChecklist() {
               <ul className="text-sm text-blue-700 space-y-1">
                 <li>• Verify your Google Business Profile with phone number (702) 500-1902</li>
                 <li>
-                  • Ensure business address matches: 10111 W Skye Canyon Park Dr, Las Vegas, NV
+                  • Ensure business address matches: 10111 W. Skye Canyon Park Drive, Las Vegas, NV
                   89166
                 </li>
                 <li>

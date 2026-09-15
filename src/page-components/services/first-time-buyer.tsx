@@ -2,7 +2,10 @@
 
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 
 export default function FirstTimeBuyerServices() {
   return (
@@ -26,8 +29,7 @@ export default function FirstTimeBuyerServices() {
           <PageHero
             title="Skye Canyon First-Time Buyer Expert"
             subtitle="Step-by-step guidance through financing, HOA requirements, builder incentives, and closing in 89166."
-            image={getHeroImage('first-time-buyer').src}
-            imageAlt={getHeroImage('first-time-buyer').alt}
+            {...getHeroImageProps('first-time-buyer')}
           >
             <a
               href="tel:+17025001902"
@@ -46,6 +48,10 @@ export default function FirstTimeBuyerServices() {
               >
                 Complete First-Time Buyer Support in Skye Canyon
               </h2>
+              <HeadingImage
+                {...sectionImages.guide}
+                className="w-full h-56 object-cover rounded-xl mb-10"
+              />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -95,6 +101,7 @@ export default function FirstTimeBuyerServices() {
               </div>
             </div>
           </section>
+          <GbpLocalSection heading="Get first-time buyer guidance in Skye Canyon" />
         </main>
 
       </div>

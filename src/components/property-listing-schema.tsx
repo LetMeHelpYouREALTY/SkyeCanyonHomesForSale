@@ -13,10 +13,10 @@ export default function PropertyListingSchema() {
       '@type': 'RealEstateAgent',
       name: 'Dr. Jan Duffy',
       telephone: '(702) 500-1902',
-      email: 'jan@skyecanyonhomesforsale.com',
+      email: 'DrDuffy@SkyeCanyonHomesForSale.com',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '10111 W Skye Canyon Park Dr',
+        streetAddress: '10111 W. Skye Canyon Park Drive',
         addressLocality: 'Las Vegas',
         addressRegion: 'NV',
         postalCode: '89166',

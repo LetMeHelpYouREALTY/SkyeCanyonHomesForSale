@@ -19,7 +19,11 @@ import FAQSection from '@/components/faq-section';
 import PerformanceInsights from '@/components/performance-insights';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
+import { siteConfig } from '@/config/site.config';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -82,8 +86,7 @@ export default function About() {
         <PageHero
           title="Meet Dr. Jan Duffy, REALTOR®"
           subtitle="Your trusted Skye Canyon real estate expert — 15+ years specializing in northwest Las Vegas luxury homes."
-          image={getHeroImage('about').src}
-          imageAlt={getHeroImage('about').alt}
+          {...getHeroImageProps('about')}
           minHeight="sm"
         />
 
@@ -120,21 +123,23 @@ export default function About() {
                       Schedule Consultation
                     </Button>
                   </a>
-                  <Button
-                    variant="outline"
-                    className="border-realscout-blue text-realscout-blue hover:bg-realscout-blue hover:text-white"
-                  >
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call (702) 500-1902
-                  </Button>
+                  <a href={`tel:${siteConfig.phoneTel}`}>
+                    <Button
+                      variant="outline"
+                      className="border-realscout-blue text-realscout-blue hover:bg-realscout-blue hover:text-white"
+                    >
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call {siteConfig.phone}
+                    </Button>
+                  </a>
                 </div>
               </div>
               <div className="relative">
                 <div className="bg-gradient-to-br from-realscout-blue to-realscout-navy rounded-2xl p-1 shadow-2xl">
                   <div className="bg-white rounded-xl p-4">
                     <img
-                      src="/attached_assets/design 05_new 2.jpg"
-                      alt="Dr. Jan Duffy REALTOR professional portrait"
+                      src={sectionImages.office.src}
+                      alt={sectionImages.office.alt}
                       className="rounded-lg w-full max-w-md mx-auto object-cover"
                       style={{ imageRendering: 'auto', maxWidth: '400px', height: 'auto' }}
                     />
@@ -160,6 +165,12 @@ export default function About() {
                 Properties currently represented by Dr. Jan Duffy
               </p>
             </div>
+            <HeadingImage
+              src={sectionImages.listings.src}
+              srcWebp={sectionImages.listings.srcWebp}
+              alt={sectionImages.listings.alt}
+              className="w-full h-52 object-cover rounded-xl mb-8"
+            />
             <RealScoutListings className="w-full" />
           </div>
         </section>
@@ -376,6 +387,8 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        <GbpLocalSection heading="Visit the Skye Canyon office" />
 
         {/* FAQ Section for About Dr. Jan Duffy */}
         <FAQSection

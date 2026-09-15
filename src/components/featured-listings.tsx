@@ -1,4 +1,6 @@
+import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
+import { sectionImages } from '@/data/section-images';
 
 export default function FeaturedListings() {
   return (
@@ -9,7 +11,7 @@ export default function FeaturedListings() {
             Featured Skye Canyon Properties
           </h2>
           <p className="text-xl text-gray-600 mb-4">
-            Discover exclusive luxury homes in this prestigious Las Vegas community
+            Current MLS listings in Skye Canyon, Las Vegas NV 89166
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
             <span className="bg-gray-100 px-3 py-1 rounded-full">Toll Brothers Homes</span>
@@ -30,6 +32,10 @@ export default function FeaturedListings() {
           </div>
         </div>
 
+        <HeadingImage
+          {...sectionImages.listings}
+          className="w-full h-56 md:h-72 object-cover rounded-xl mb-8"
+        />
         <RealScoutListings className="w-full shadow-lg rounded-xl overflow-hidden" />
 
         <div className="text-center mt-8">

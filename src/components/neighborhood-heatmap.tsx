@@ -473,8 +473,8 @@ export default function NeighborhoodHeatmap() {
                   </div>
                   <div className="text-xs text-gray-500">
                     {localInsights.demographicInsights.familyFriendly
-                      ? 'Family-friendly'
-                      : 'Mixed demographics'}
+                      ? '3+ bedroom inventory'
+                      : 'Mixed housing mix'}
                   </div>
                 </CardContent>
               </Card>

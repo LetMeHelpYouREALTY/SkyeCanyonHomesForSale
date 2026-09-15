@@ -14,9 +14,8 @@ export default function HomeSimple() {
           <section className="mb-8">
             <h2 className="text-3xl font-bold mb-4">Welcome to Skye Canyon Homes</h2>
             <p className="text-lg text-gray-600 mb-6">
-              Find your dream home in one of Las Vegas's most desirable communities. With expert
-              local knowledge and personalized service, I'll help you navigate the Skye Canyon real
-              estate market.
+              Browse Skye Canyon homes in Las Vegas NV 89166. Dr. Jan Duffy helps buyers and sellers
+              with live MLS search, valuations, and local market comps.
             </p>
           </section>
 
@@ -49,7 +48,7 @@ export default function HomeSimple() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <span className="text-blue-600 font-semibold">(702) 500-1902</span>
-              <span className="text-blue-600">jan@skyecanyonhomes.com</span>
+              <span className="text-blue-600">DrDuffy@SkyeCanyonHomesForSale.com</span>
             </div>
           </section>
         </main>

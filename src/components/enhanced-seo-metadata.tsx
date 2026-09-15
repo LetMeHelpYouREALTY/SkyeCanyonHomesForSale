@@ -18,7 +18,7 @@ export default function EnhancedSEOMetadata({
   keywords,
   canonicalUrl,
   ogType = 'website',
-  ogImage = 'https://skyecanyonhomesforsale.com/images/skye-canyon-og-image.jpg',
+  ogImage = 'https://www.skyecanyonhomesforsale.com/images/og/skye-canyon-homes.jpg',
   structuredData,
   pageType = 'website',
 }: SEOMetadataProps) {
@@ -27,8 +27,8 @@ export default function EnhancedSEOMetadata({
     '@type': 'RealEstateAgent',
     name: 'Dr. Jan Duffy',
     url: 'https://skyecanyonhomesforsale.com',
-    logo: 'https://skyecanyonhomesforsale.com/images/dr-jan-duffy-logo.png',
-    image: 'https://skyecanyonhomesforsale.com/images/dr-jan-duffy-realtor.jpg',
+    logo: 'https://www.skyecanyonhomesforsale.com/images/og/skye-canyon-homes.jpg',
+    image: 'https://www.skyecanyonhomesforsale.com/images/sections/office-exterior.jpg',
     description:
       'Expert real estate services in Skye Canyon and Las Vegas, Nevada specializing in luxury homes and investment properties.',
     address: {
@@ -41,8 +41,8 @@ export default function EnhancedSEOMetadata({
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 36.2469,
-      longitude: -115.3242,
+      latitude: 36.2648,
+      longitude: -115.3275,
     },
     telephone: '(702) 500-1902',
     email: 'DrDuffy@SkyeCanyonHomesForSale.com',
@@ -51,8 +51,8 @@ export default function EnhancedSEOMetadata({
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
-        latitude: 36.2469,
-        longitude: -115.3242,
+        latitude: 36.2648,
+        longitude: -115.3275,
       },
       geoRadius: '25000',
     },

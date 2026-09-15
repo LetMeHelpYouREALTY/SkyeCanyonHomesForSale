@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalSchema from '@/components/schema/hyperlocal-schema';
 import { siteConfig } from '@/config/site.config';
@@ -51,7 +51,7 @@ export default function BuilderPage({ builder }: BuilderPageProps) {
         headline={`${builder.name} Homes in Skye Canyon Las Vegas`}
         answerSummary={builder.answerSummary}
         badges={[builder.priceRange, ...builder.communities.slice(0, 2)]}
-        image={getHeroImage('builder').src}
+        {...getHeroImageProps('builder')}
         imageAlt={`${builder.name} — ${getHeroImage('builder').alt}`}
       />
       <section className="py-8 px-4 max-w-4xl mx-auto">

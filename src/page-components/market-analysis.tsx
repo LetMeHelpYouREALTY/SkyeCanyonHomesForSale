@@ -7,7 +7,10 @@ import MarketIntelligence from '@/components/market-intelligence';
 import MarketStats from '@/components/market-stats';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 
 export default function MarketAnalysis() {
   return (
@@ -17,8 +20,7 @@ export default function MarketAnalysis() {
         <PageHero
           title="Skye Canyon Real Estate Market Trends Nevada 89166"
           subtitle="Comprehensive market insights and pricing trends for Skye Canyon, Las Vegas — stay informed on investment opportunities in northwest Las Vegas."
-          image={getHeroImage('market-analysis').src}
-          imageAlt={getHeroImage('market-analysis').alt}
+          {...getHeroImageProps('market-analysis')}
         />
 
         {/* Breadcrumb Navigation */}
@@ -37,6 +39,10 @@ export default function MarketAnalysis() {
                 Live inventory showing current market conditions
               </p>
             </div>
+            <HeadingImage
+              {...sectionImages.market}
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
             <RealScoutListings className="w-full" />
           </div>
         </section>
@@ -119,7 +125,7 @@ export default function MarketAnalysis() {
             {
               question: 'Is Skye Canyon a good investment for real estate?',
               answer:
-                "Yes, Skye Canyon offers excellent investment potential due to its guard-gated exclusivity, golf course amenities, limited inventory, and strong appreciation history. The community's desirability ensures long-term value stability.",
+                "Yes. Guard-gated inventory, Desert Highlands Golf Course, and limited new phases have supported appreciation. Confirm current comps on live MLS with Dr. Jan Duffy before you decide.",
             },
             {
               question: 'What factors affect Skye Canyon property values?',
@@ -133,6 +139,8 @@ export default function MarketAnalysis() {
             },
           ]}
         />
+
+        <GbpLocalSection heading="Get current Skye Canyon comps in person" />
 
         <BackToTop />
       </div>

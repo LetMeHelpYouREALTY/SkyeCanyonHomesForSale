@@ -3,7 +3,10 @@
 import { CalendlyPopupButton } from '@/components/calendly-widget';
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 
 export default function BuyerAgentServices() {
   return (
@@ -24,8 +27,7 @@ export default function BuyerAgentServices() {
           <PageHero
             title="Skye Canyon Expert Buyer Agent"
             subtitle="15+ years exclusive Skye Canyon specialization with direct builder relationships and off-market access."
-            image={getHeroImage('buyer-agent').src}
-            imageAlt={getHeroImage('buyer-agent').alt}
+            {...getHeroImageProps('buyer-agent')}
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <CalendlyPopupButton
@@ -50,6 +52,10 @@ export default function BuyerAgentServices() {
               >
                 Comprehensive Skye Canyon Buyer Services
               </h2>
+              <HeadingImage
+                {...sectionImages.listings}
+                className="w-full h-56 object-cover rounded-xl mb-10"
+              />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -101,6 +107,7 @@ export default function BuyerAgentServices() {
               </div>
             </div>
           </section>
+          <GbpLocalSection heading="Meet your Skye Canyon buyer agent" />
         </main>
 
       </div>

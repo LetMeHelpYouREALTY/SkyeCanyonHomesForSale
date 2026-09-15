@@ -37,6 +37,32 @@ export default function HyperlocalCta({
           </a>
         </div>
         <p className="text-sm text-blue-200 mt-4">{siteConfig.address.formatted}</p>
+        <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm">
+          <a
+            href={siteConfig.directionsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-white"
+          >
+            Directions
+          </a>
+          <a
+            href={siteConfig.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-white"
+          >
+            Google Maps
+          </a>
+          <a
+            href={siteConfig.googleReviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-white"
+          >
+            Google Reviews
+          </a>
+        </div>
       </div>
     </section>
   );

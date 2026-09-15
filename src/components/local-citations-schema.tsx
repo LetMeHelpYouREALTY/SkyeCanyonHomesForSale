@@ -1,35 +1,27 @@
 'use client';
 
+import { siteConfig } from '@/config/site.config';
+import { schemaImages } from '@/lib/schema-images';
+import { schemaGeo, schemaPostalAddress } from '@/lib/schema-nap';
 
 interface LocalCitationSchemaProps {
   pageType?: string;
 }
 
-export default function LocalCitationsSchema({ pageType = 'homepage' }: LocalCitationSchemaProps) {
+export default function LocalCitationsSchema({ pageType: _pageType = 'homepage' }: LocalCitationSchemaProps) {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
-    name: 'Dr. Jan Duffy REALTOR®',
+    name: siteConfig.name,
     description:
       'Premier Skye Canyon real estate specialist in Las Vegas NV 89166. Expert in luxury homes, new construction, and Desert Highlands Golf Course properties.',
-    url: 'https://skyecanyonhomesforsale.com',
-    image: 'https://skyecanyonhomesforsale.com/dr-jan-duffy-headshot.jpg',
-    logo: 'https://skyecanyonhomesforsale.com/logo.png',
-    telephone: '(702) 500-1902',
-    email: 'jan@skyecanyonhomesforsale.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '10111 W Skye Canyon Park Dr',
-      addressLocality: 'Las Vegas',
-      addressRegion: 'NV',
-      postalCode: '89166',
-      addressCountry: 'US',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '36.2719',
-      longitude: '-115.2328',
-    },
+    url: siteConfig.url,
+    image: schemaImages.office,
+    logo: schemaImages.og,
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
+    address: schemaPostalAddress,
+    geo: schemaGeo,
     areaServed: [
       {
         '@type': 'City',
@@ -48,11 +40,7 @@ export default function LocalCitationsSchema({ pageType = 'homepage' }: LocalCit
     ],
     serviceArea: {
       '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: '36.2719',
-        longitude: '-115.2328',
-      },
+      geoMidpoint: schemaGeo,
       geoRadius: '25000',
     },
     priceRange: '$300,000 - $2,000,000+',
@@ -95,30 +83,6 @@ export default function LocalCitationsSchema({ pageType = 'homepage' }: LocalCit
           '@type': 'Organization',
           name: 'Nevada Real Estate Division',
         },
-      },
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        author: {
-          '@type': 'Person',
-          name: 'Sarah Mitchell',
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        reviewBody:
-          'Dr. Jan Duffy made our Skye Canyon home purchase seamless. Her knowledge of the community and market expertise helped us find our perfect luxury home.',
-        datePublished: '2024-11-15',
       },
     ],
     sameAs: [

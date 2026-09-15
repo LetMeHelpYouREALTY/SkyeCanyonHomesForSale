@@ -1,68 +1,52 @@
 'use client';
 
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import RealScoutListings from '@/components/realscout-listings';
+import PageHero from '@/components/sections/page-hero';
+import { siteConfig } from '@/config/site.config';
+import { getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 
 export default function Search() {
   return (
     <>
-      <main className="min-h-screen bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Search Skye Canyon Properties
-            </h1>
-            <p className="text-xl text-gray-600 mb-12">
-              Find your perfect home in Skye Canyon, Las Vegas
-            </p>
-            
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Property Search Coming Soon
-                </h2>
-                <p className="text-gray-600 mb-6">
-                  We're working on integrating our advanced property search system. 
-                  In the meantime, please contact us directly for personalized assistance.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    Search with RealScout
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Access our comprehensive MLS database
-                  </p>
-                  <a
-                    href="https://drjanduffy.realscout.com/onboarding"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                  >
-                    Start Property Search
-                  </a>
-                </div>
-                
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                    Get Home Valuation
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Find out what your home is worth
-                  </p>
-                  <a
-                    href="tel:+17025001902"
-                    className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-                  >
-                    Call (702) 500-1902
-                  </a>
-                </div>
-              </div>
+      <div className="min-h-screen bg-gray-50">
+        <PageHero
+          title="Search Skye Canyon Homes for Sale"
+          subtitle="Live MLS search for Skye Canyon, Las Vegas NV 89166 — filter by price, beds, and new construction."
+          {...getHeroImageProps('properties')}
+        >
+          <a
+            href={siteConfig.realscoutOnboarding}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
+          >
+            Open RealScout Search
+          </a>
+        </PageHero>
+
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Current Skye Canyon MLS Listings
+              </h2>
+              <p className="text-lg text-gray-600">
+                Search live inventory, then call {siteConfig.phone} to tour.
+              </p>
             </div>
+            <HeadingImage
+              {...sectionImages.listings}
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
+            <RealScoutListings className="w-full" variant="all-properties" />
           </div>
-        </div>
-      </main>
-      
+        </section>
+
+        <GbpLocalSection heading="Search with a local Skye Canyon agent" />
+      </div>
     </>
   );
 }

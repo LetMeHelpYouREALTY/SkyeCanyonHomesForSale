@@ -108,7 +108,7 @@ export default function SEOOptimizer({
       jobTitle: 'REALTOR®',
       url: 'https://skyecanyonhomesforsale.com',
       telephone: '+1-702-500-1902',
-      email: 'jan@skyecanyonhomesforsale.com',
+      email: 'DrDuffy@SkyeCanyonHomesForSale.com',
       areaServed: {
         '@type': 'Place',
         name: 'Skye Canyon, Las Vegas, Nevada',

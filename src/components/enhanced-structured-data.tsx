@@ -73,32 +73,25 @@ export default function EnhancedStructuredData() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Skye Canyon Real Estate - Dr. Jan Duffy',
-    image: 'https://skyecanyonhomesforsale.com/images/dr-jan-duffy.jpg',
+    image: 'https://www.skyecanyonhomesforsale.com/images/sections/office-exterior.jpg',
     telephone: '(702) 500-1902',
     email: 'DrDuffy@SkyeCanyonHomesForSale.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '10111 W. Skye Canyon Park Drive',
       addressLocality: 'Las Vegas',
-      addressRegion: 'Nevada',
+      addressRegion: 'NV',
       postalCode: '89166',
-      addressCountry: 'United States',
+      addressCountry: 'US',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 36.2719,
-      longitude: -115.2369,
+      latitude: 36.2648,
+      longitude: -115.3275,
     },
     openingHours: 'Mo-Fr 09:00-18:00, Sa 09:00-17:00, Su 11:00-16:00',
     priceRange: '$$$$',
     paymentAccepted: 'Cash, Check, Financing',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 
   const expertiseSchema = {

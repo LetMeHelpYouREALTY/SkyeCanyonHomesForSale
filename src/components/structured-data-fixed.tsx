@@ -24,8 +24,8 @@ export default function StructuredData() {
         },
         geo: {
           '@type': 'GeoCoordinates',
-          latitude: 36.2469,
-          longitude: -115.3242,
+          latitude: 36.2648,
+          longitude: -115.3275,
         },
         knowsAbout: [
           'Luxury Real Estate',
@@ -71,40 +71,7 @@ export default function StructuredData() {
             },
           },
         ],
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.9',
-          reviewCount: '47',
-          bestRating: '5',
-        },
-        review: [
-          {
-            '@type': 'Review',
-            author: {
-              '@type': 'Person',
-              name: 'Michael Thompson',
-            },
-            reviewRating: {
-              '@type': 'Rating',
-              ratingValue: '5',
-            },
-            reviewBody:
-              'Dr. Duffy made our Skye Canyon home purchase seamless. Her expertise and professionalism are unmatched.',
-          },
-          {
-            '@type': 'Review',
-            author: {
-              '@type': 'Person',
-              name: 'Sarah Chen',
-            },
-            reviewRating: {
-              '@type': 'Rating',
-              ratingValue: '5',
-            },
-            reviewBody:
-              "Dr. Duffy's knowledge of Skye Canyon is unmatched. She helped us find the perfect home.",
-          },
-        ],
+        hasMap: 'https://www.google.com/maps?q=10111+W.+Skye+Canyon+Park+Drive,+Las+Vegas,+NV+89166',
       },
       {
         '@type': 'WebSite',

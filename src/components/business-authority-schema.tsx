@@ -8,12 +8,12 @@ export default function BusinessAuthoritySchema() {
     name: 'Dr. Jan Duffy Real Estate',
     alternateName: 'Skye Canyon Las Vegas Luxury Homes',
     description:
-      'Top-rated Nevada REALTOR® specializing in luxury homes, new construction partnerships with Toll Brothers and Lennar, serving Skye Canyon, Centennial Hills, and Northwest Las Vegas since 2009.',
+      'Nevada REALTOR® specializing in luxury homes, new construction partnerships with Toll Brothers and Lennar, serving Skye Canyon, Centennial Hills, and Northwest Las Vegas since 2009.',
     foundingDate: '2009-09-20',
     url: 'https://skyecanyonhomesforsale.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://skyecanyonhomesforsale.com/dr-jan-duffy-headshot.jpg',
+      url: 'https://www.skyecanyonhomesforsale.com/images/sections/office-exterior.jpg',
       width: 400,
       height: 400,
     },
@@ -26,7 +26,7 @@ export default function BusinessAuthoritySchema() {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '10111 W Skye Canyon Park Dr',
+      streetAddress: '10111 W. Skye Canyon Park Drive',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89166',
@@ -66,13 +66,6 @@ export default function BusinessAuthoritySchema() {
       'New Construction Partner - Toll Brothers',
       'New Construction Partner - Lennar',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '47',
-      bestRating: '5',
-      worstRating: '1',
-    },
     knowsAbout: [
       'Luxury Real Estate Sales',
       'New Construction Homes',

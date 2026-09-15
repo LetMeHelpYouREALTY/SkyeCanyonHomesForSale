@@ -3,7 +3,10 @@
 import { CalendlyPopupButton } from '@/components/calendly-widget';
 import HomebotWidget from '@/components/homebot-widget';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 
 export default function SellerAgentServices() {
   return (
@@ -13,8 +16,7 @@ export default function SellerAgentServices() {
       <PageHero
         title="Skye Canyon Seller's Agent Expert"
         subtitle="Professional listing and marketing services with proven results in the Skye Canyon market."
-        image={getHeroImage('seller-agent').src}
-        imageAlt={getHeroImage('seller-agent').alt}
+        {...getHeroImageProps('seller-agent')}
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <CalendlyPopupButton
@@ -40,6 +42,10 @@ export default function SellerAgentServices() {
               <p className="text-lg text-gray-600">
                 Get an instant, data-driven valuation for your Skye Canyon property. Understanding your home's market value is the first step to a successful sale.
               </p>
+              <HeadingImage
+                {...sectionImages.valuation}
+                className="w-full h-48 object-cover rounded-xl mb-8"
+              />
             </div>
             <div className="bg-gray-50 rounded-2xl p-6 shadow-sm border border-gray-100">
               <HomebotWidget id="homebot_seller" className="w-full min-h-[200px]" />
@@ -49,6 +55,7 @@ export default function SellerAgentServices() {
             </p>
           </div>
         </section>
+        <GbpLocalSection heading="List your Skye Canyon home with Dr. Jan Duffy" />
 
       </div>
     </>

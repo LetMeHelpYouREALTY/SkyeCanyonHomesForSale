@@ -2,10 +2,13 @@
 
 import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function LuxuryHomesLasVegas() {
@@ -15,9 +18,8 @@ export default function LuxuryHomesLasVegas() {
 
         <PageHero
           title="Luxury Homes Las Vegas & Skye Canyon"
-          subtitle="Exclusive properties in Las Vegas's most prestigious northwest communities."
-          image={getHeroImage('luxury-homes-las-vegas').src}
-          imageAlt={getHeroImage('luxury-homes-las-vegas').alt}
+          subtitle="Guard-gated and golf-course homes in Skye Canyon and northwest Las Vegas NV 89166."
+          {...getHeroImageProps('luxury-homes-las-vegas')}
         />
 
         {/* Current Luxury Listings */}
@@ -31,6 +33,10 @@ export default function LuxuryHomesLasVegas() {
                 Premium properties available in Las Vegas's finest communities
               </p>
             </div>
+            <HeadingImage
+              {...sectionImages.luxuryInterior}
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
             <RealScoutListings className="w-full" />
           </div>
         </section>
@@ -43,31 +49,54 @@ export default function LuxuryHomesLasVegas() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card>
-                <CardContent className="p-6">
+                <CardContent className="p-0 overflow-hidden">
+                  <HeadingImage
+                    {...sectionImages.luxuryInterior}
+                    alt="Luxury Skye Canyon home interior Las Vegas NV 89166"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Skye Canyon</h3>
                   <p className="text-realscout-blue font-semibold mb-2">$650K - $1.2M+</p>
                   <p className="text-gray-600">
                     Premier guard-gated community with luxury amenities
                   </p>
+                  </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="p-6">
+                <CardContent className="p-0 overflow-hidden">
+                  <HeadingImage
+                    {...sectionImages.golf}
+                    alt="Golf course luxury homes Las Vegas Nevada"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">The Ridges</h3>
                   <p className="text-realscout-blue font-semibold mb-2">$800K - $3M+</p>
-                  <p className="text-gray-600">Exclusive hillside community with stunning views</p>
+                  <p className="text-gray-600">Hillside lots with Red Rock and valley views</p>
+                  </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="p-6">
+                <CardContent className="p-0 overflow-hidden">
+                  <HeadingImage
+                    {...sectionImages.golf}
+                    alt="Spanish Trail golf community homes Las Vegas Nevada"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Spanish Trail</h3>
                   <p className="text-realscout-blue font-semibold mb-2">$500K - $1.5M</p>
                   <p className="text-gray-600">Established luxury golf community</p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
+
+        <GbpLocalSection heading="Preview luxury listings from the Skye Canyon office" />
 
         {/* FAQ Section for Luxury Homes */}
         <FAQSection

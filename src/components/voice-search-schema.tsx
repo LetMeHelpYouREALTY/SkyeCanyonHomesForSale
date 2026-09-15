@@ -18,8 +18,8 @@ export default function VoiceSearchSchema() {
         '@type': 'GeoCircle',
         geoMidpoint: {
           '@type': 'GeoCoordinates',
-          latitude: 36.2719,
-          longitude: -115.2369,
+          latitude: 36.2648,
+          longitude: -115.3275,
         },
         geoRadius: '5000',
       },

@@ -2,7 +2,10 @@
 
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 
 export default function NewConstructionServices() {
   return (
@@ -26,8 +29,7 @@ export default function NewConstructionServices() {
           <PageHero
             title="Skye Canyon New Construction Expert"
             subtitle="Century Communities specialist in Eaglepointe, Marvella, and Skyecrest — buyer representation for new builds in 89166."
-            image={getHeroImage('new-construction').src}
-            imageAlt={getHeroImage('new-construction').alt}
+            {...getHeroImageProps('new-construction')}
           >
             <a
               href="tel:+17025001902"
@@ -46,6 +48,10 @@ export default function NewConstructionServices() {
               >
                 Exclusive Skye Canyon Builder Partnerships
               </h2>
+              <HeadingImage
+                {...sectionImages.newConstruction}
+                className="w-full h-56 object-cover rounded-xl mb-10"
+              />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -97,6 +103,7 @@ export default function NewConstructionServices() {
               </div>
             </div>
           </section>
+          <GbpLocalSection heading="Walk new construction from the Skye Canyon office" />
         </main>
 
       </div>

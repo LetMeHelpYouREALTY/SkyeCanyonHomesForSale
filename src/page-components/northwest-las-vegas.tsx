@@ -3,7 +3,10 @@
 import { Home, MapPin, Shield, TrendingUp } from 'lucide-react';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -19,7 +22,7 @@ export default function NorthwestLasVegas() {
       name: 'Centennial Hills',
       description: 'Master-planned community with parks and shopping',
       priceRange: '$350K - $650K',
-      features: ['Top Schools', 'Parks', 'Shopping'],
+      features: ['Parks', 'Shopping', 'Master-planned'],
     },
     {
       name: 'Summerlin',
@@ -41,8 +44,7 @@ export default function NorthwestLasVegas() {
       <PageHero
         title="Northwest Las Vegas Real Estate"
         subtitle="Luxury homes in Skye Canyon, Centennial Hills, and surrounding northwest Las Vegas zip codes 89149, 89166, and 89144."
-        image={getHeroImage('northwest-las-vegas').src}
-        imageAlt={getHeroImage('northwest-las-vegas').alt}
+        {...getHeroImageProps('northwest-las-vegas')}
         badges={['89166', '89149', '89144']}
       />
 
@@ -55,6 +57,10 @@ export default function NorthwestLasVegas() {
             </h2>
             <p className="text-xl text-gray-600">Available properties in northwest communities</p>
           </div>
+          <HeadingImage
+            {...sectionImages.northwest}
+            className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+          />
           <RealScoutListings className="w-full" variant="all-properties" />
         </div>
       </section>
@@ -104,9 +110,21 @@ export default function NorthwestLasVegas() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {neighborhoods.map((neighborhood, index) => (
+            {neighborhoods.map((neighborhood, index) => {
+              const photo =
+                neighborhood.name === 'Skye Canyon'
+                  ? sectionImages.guide
+                  : neighborhood.name === 'Centennial Hills'
+                    ? sectionImages.northwest
+                    : sectionImages.golf;
+              return (
               <Card key={index} className="overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-realscout-light to-realscout-blue"></div>
+                <HeadingImage
+                  src={photo.src}
+                  srcWebp={photo.srcWebp}
+                  alt={`${neighborhood.name} homes Las Vegas Nevada`}
+                  className="h-48 w-full object-cover"
+                />
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-bold mb-2">{neighborhood.name}</h3>
                   <p className="text-gray-600 mb-4">{neighborhood.description}</p>
@@ -132,7 +150,8 @@ export default function NorthwestLasVegas() {
                   </Button>
                 </CardContent>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -198,6 +217,8 @@ export default function NorthwestLasVegas() {
           </div>
         </div>
       </section>
+
+      <GbpLocalSection heading="Visit the northwest Las Vegas office in Skye Canyon" />
 
     </>
   );

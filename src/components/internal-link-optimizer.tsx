@@ -57,7 +57,7 @@ export const ContentLinks = {
 
   Schools: () => (
     <InternalLink href="/skye-canyon-schools" keyword="Skye Canyon schools information">
-      top-rated schools
+      Clark County campuses near Skye Canyon
     </InternalLink>
   ),
 

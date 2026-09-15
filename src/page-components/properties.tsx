@@ -12,7 +12,10 @@ import EnhancedPropertyCard from '@/components/enhanced-property-card';
 import { sampleProperties, getLuxuryProperties, getGolfCourseProperties } from '@/data/sample-properties';
 import MapTest from '@/components/map-test';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 
 export default function Properties() {
   const searchParams = useSearchParams();
@@ -24,8 +27,7 @@ export default function Properties() {
         <PageHero
           title="Skye Canyon Homes Properties MLS Listings Nevada 89166"
           subtitle="Discover luxury homes in Las Vegas's premier northwest community."
-          image={getHeroImage('properties').src}
-          imageAlt={getHeroImage('properties').alt}
+          {...getHeroImageProps('properties')}
           minHeight="sm"
         />
 
@@ -63,6 +65,10 @@ export default function Properties() {
               </p>
               <h3 className="text-lg font-medium text-gray-700 mb-4">Featured Listings</h3>
             </div>
+            <HeadingImage
+              {...sectionImages.listings}
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
             <RealScoutListings className="w-full" variant="mid-range" />
           </div>
         </section>
@@ -142,6 +148,8 @@ export default function Properties() {
             <FollowUpBossListings />
           </div>
         </section>
+
+        <GbpLocalSection heading="Tour Skye Canyon listings from the office" />
 
         {/* FAQ Section for Properties */}
         <FAQSection

@@ -2,10 +2,13 @@
 
 import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function LasVegasRealEstate() {
@@ -16,8 +19,7 @@ export default function LasVegasRealEstate() {
         <PageHero
           title="Las Vegas Real Estate Homes for Sale"
           subtitle="Comprehensive real estate services across Las Vegas communities — Skye Canyon specialist."
-          image={getHeroImage('las-vegas-real-estate').src}
-          imageAlt={getHeroImage('las-vegas-real-estate').alt}
+          {...getHeroImageProps('las-vegas-real-estate')}
         />
 
         {/* Current Las Vegas Listings */}
@@ -31,6 +33,10 @@ export default function LasVegasRealEstate() {
                 Available properties across all Las Vegas communities
               </p>
             </div>
+            <HeadingImage
+              {...sectionImages.listings}
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
             <RealScoutListings className="w-full" />
           </div>
         </section>
@@ -43,31 +49,54 @@ export default function LasVegasRealEstate() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card>
-                <CardContent className="p-6">
+                <CardContent className="p-0 overflow-hidden">
+                  <HeadingImage
+                    {...sectionImages.northwest}
+                    alt="Northwest Las Vegas homes near Skye Canyon NV 89166"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Northwest Las Vegas</h3>
                   <p className="text-realscout-blue font-semibold mb-2">$350K - $900K+</p>
                   <p className="text-gray-600">
-                    Guard-gated communities, golf courses, family-friendly
+                    Guard-gated communities, golf courses, parks and trails
                   </p>
+                  </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="p-6">
+                <CardContent className="p-0 overflow-hidden">
+                  <HeadingImage
+                    {...sectionImages.guide}
+                    alt="Henderson Nevada master-planned community homes"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Henderson</h3>
                   <p className="text-realscout-blue font-semibold mb-2">$400K - $1.2M+</p>
-                  <p className="text-gray-600">Planned communities, top schools, mountain views</p>
+                  <p className="text-gray-600">Planned communities, mountain views, parks</p>
+                  </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="p-6">
+                <CardContent className="p-0 overflow-hidden">
+                  <HeadingImage
+                    {...sectionImages.golf}
+                    alt="Summerlin Las Vegas master-planned community parks"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Summerlin</h3>
                   <p className="text-realscout-blue font-semibold mb-2">$450K - $1.5M+</p>
                   <p className="text-gray-600">Master-planned community, parks, shopping</p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
+
+        <GbpLocalSection heading="Start your Las Vegas search in Skye Canyon" />
 
         {/* FAQ Section for Las Vegas Real Estate */}
         <FAQSection
@@ -77,7 +106,7 @@ export default function LasVegasRealEstate() {
             {
               question: 'What are the best areas to buy real estate in Las Vegas?',
               answer:
-                'Top Las Vegas areas include Skye Canyon (guard-gated luxury), Henderson (family-friendly), Summerlin (master-planned), The Ridges (high-end), and Northwest Las Vegas communities. Each area offers unique amenities and lifestyle benefits.',
+                'Compare Skye Canyon (guard-gated, golf), Henderson (master-planned, mountain views), Summerlin (parks and shopping), The Ridges (hillside lots), and northwest Las Vegas zip codes 89166, 89149, and 89144. Confirm commute times and HOA fees for the specific address.',
             },
             {
               question: 'How is the Las Vegas real estate market currently performing?',

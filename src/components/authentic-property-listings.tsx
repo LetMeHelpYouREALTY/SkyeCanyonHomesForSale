@@ -105,7 +105,7 @@ export default function AuthenticPropertyListings() {
                 <li>• TPC Las Vegas golf course access</li>
                 <li>• Desert Highlands amenities</li>
                 <li>• Walking trails and parks</li>
-                <li>• Top-rated schools nearby</li>
+                <li>• CCSD campuses: Scherkenbach, Bilbray, Divich, Arbor View</li>
               </ul>
             </div>
             <div>

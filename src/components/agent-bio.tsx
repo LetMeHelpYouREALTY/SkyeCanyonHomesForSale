@@ -38,7 +38,7 @@ export default function AgentBio() {
 
             <div className="space-y-4 text-gray-700 mb-8">
               <p>
-                Dr. Jan Duffy is a top-rated Nevada REALTOR® specializing in luxury homes, new
+                Dr. Jan Duffy is a Nevada REALTOR® specializing in luxury homes, new
                 construction, custom builds, and resales in Skye Canyon and Northwest Las Vegas. She
                 partners with leading home builders like Toll Brothers and Lennar to provide expert
                 guidance for buying or selling high-end homes.

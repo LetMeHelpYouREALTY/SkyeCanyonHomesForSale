@@ -81,7 +81,7 @@ export function calculatePreferenceScore(property: any, preferences: UserPrefere
   preferences.lifestyle.forEach((lifestyle) => {
     switch (lifestyle) {
       case 'family':
-        if (property.bedrooms >= 3 && property.neighborhood === 'family-friendly') {
+        if (property.bedrooms >= 3) {
           score += 10;
         }
         break;

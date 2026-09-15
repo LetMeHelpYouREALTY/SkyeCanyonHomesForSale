@@ -2,7 +2,10 @@
 
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
 import PageHero from '@/components/sections/page-hero';
-import { getHeroImage } from '@/data/hero-images';
+import { getHeroImageProps } from '@/data/hero-images';
+import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
+import { sectionImages } from '@/data/section-images';
 
 export default function LuxuryPropertyServices() {
   return (
@@ -26,8 +29,7 @@ export default function LuxuryPropertyServices() {
           <PageHero
             title="Skye Canyon Luxury Property Expert"
             subtitle="Certified luxury home marketing specialist — premium Skye Canyon and northwest Las Vegas properties."
-            image={getHeroImage('luxury-properties').src}
-            imageAlt={getHeroImage('luxury-properties').alt}
+            {...getHeroImageProps('luxury-properties')}
           >
             <a
               href="tel:+17025001902"
@@ -46,6 +48,10 @@ export default function LuxuryPropertyServices() {
               >
                 Elite Skye Canyon Luxury Services
               </h2>
+              <HeadingImage
+                {...sectionImages.luxuryInterior}
+                className="w-full h-56 object-cover rounded-xl mb-10"
+              />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -93,6 +99,7 @@ export default function LuxuryPropertyServices() {
               </div>
             </div>
           </section>
+          <GbpLocalSection heading="Preview luxury Skye Canyon homes in person" />
         </main>
 
       </div>

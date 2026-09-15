@@ -122,10 +122,10 @@ export default function VoiceAssistant() {
           "I can provide a comprehensive home valuation using the latest Skye Canyon market data and recent comparable sales. What's your property address?";
       } else if (lowerCommand.includes('schools') || lowerCommand.includes('education')) {
         response =
-          'Skye Canyon is served by excellent schools including Skye Canyon Elementary and Northwest Career & Technical Academy. The area is known for its family-friendly environment and top-rated educational options.';
+          'Skye Canyon addresses are served by William & Mary Scherkenbach Elementary, James Bilbray Elementary, Kenneth Divich Elementary, Ralph Cadwallader Middle, Edmundo Escobedo Sr Middle, Arbor View High, and Somerset Academy Skye Canyon Campus. Confirm the CCSD locator for a specific address.';
       } else if (lowerCommand.includes('amenities') || lowerCommand.includes('community')) {
         response =
-          "Skye Canyon features hiking trails, parks, shopping at Downtown Summerlin, and stunning Red Rock Canyon access. It's one of Las Vegas's most desirable communities with resort-style amenities.";
+          'Skye Canyon includes hiking trails, five community parks, a Junior Olympic pool, Desert Highlands Golf Course, shopping at Downtown Summerlin, and a short drive to Red Rock Canyon.';
       } else if (
         lowerCommand.includes('agent') ||
         lowerCommand.includes('realtor') ||
