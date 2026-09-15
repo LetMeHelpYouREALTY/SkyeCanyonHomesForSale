@@ -5,6 +5,7 @@ import { CalendlyInline } from '@/components/calendly-widget';
 import GbpLocalSection from '@/components/gbp-local-section';
 import GoogleReviewCta from '@/components/google-review-cta';
 import HeadingImage from '@/components/heading-image';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import HomebotWidget from '@/components/homebot-widget';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
@@ -21,7 +22,9 @@ export default function Contact() {
           title="Contact Dr. Jan Duffy"
           subtitle="Call, get directions, or book a consult at 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166."
           {...getHeroImageProps('contact')}
-        />
+        >
+          <HeroSearchCtas />
+        </PageHero>
 
         {/* Contact Form and Info */}
         <section className="py-16">
@@ -55,9 +58,17 @@ export default function Contact() {
                         <Phone className="w-6 h-6 text-blue-600 mt-1" />
                         <div>
                           <h3 className="font-semibold">Phone</h3>
-                          <p className="text-gray-600">{siteConfig.phone}</p>
+                          <p className="text-gray-600">
+                            <a href={`tel:${siteConfig.phoneTel}`} className="hover:text-blue-700">
+                              {siteConfig.phone}
+                            </a>
+                          </p>
                           <p className="text-sm text-gray-500">
-                            Available 9 AM - 6 PM, Monday - Friday
+                            {siteConfig.hours.weekdays.label}
+                            <br />
+                            {siteConfig.hours.saturday.label}
+                            <br />
+                            {siteConfig.hours.sunday.label}
                           </p>
                         </div>
                       </div>
@@ -81,7 +92,9 @@ export default function Contact() {
                           <p className="text-gray-600">
                             {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
                           </p>
-                          <p className="text-sm text-gray-500">By appointment only</p>
+                          <p className="text-sm text-gray-500">
+                            Walk-in and appointment hours match Google Business Profile
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -140,16 +153,13 @@ export default function Contact() {
             />
             <div className="grid md:grid-cols-3 gap-6">
               <div>
-                <h3 className="font-semibold mb-2">Monday - Friday</h3>
-                <p className="text-gray-600">9:00 AM - 6:00 PM</p>
+                <p className="text-gray-700 font-medium">{siteConfig.hours.weekdays.label}</p>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Saturday</h3>
-                <p className="text-gray-600">9:00 AM - 5:00 PM</p>
+                <p className="text-gray-700 font-medium">{siteConfig.hours.saturday.label}</p>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Sunday</h3>
-                <p className="text-gray-600">11:00 AM - 4:00 PM</p>
+                <p className="text-gray-700 font-medium">{siteConfig.hours.sunday.label}</p>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-3 mt-8">

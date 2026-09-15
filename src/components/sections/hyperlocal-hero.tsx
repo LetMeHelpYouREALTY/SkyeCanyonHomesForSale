@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import PageHero from '@/components/sections/page-hero';
 
 interface HyperlocalHeroProps {
@@ -9,6 +11,7 @@ interface HyperlocalHeroProps {
   imageMobile?: string;
   imageWebp?: string;
   imageMobileWebp?: string;
+  children?: ReactNode;
 }
 
 export default function HyperlocalHero({
@@ -20,6 +23,7 @@ export default function HyperlocalHero({
   imageMobile = image.replace(/\.jpg$/, '-mobile.jpg'),
   imageWebp = image.replace(/\.jpg$/, '.webp'),
   imageMobileWebp = image.replace(/\.jpg$/, '-mobile.webp'),
+  children,
 }: HyperlocalHeroProps) {
   return (
     <PageHero
@@ -32,6 +36,8 @@ export default function HyperlocalHero({
       imageMobileWebp={imageMobileWebp}
       badges={badges}
       minHeight="md"
-    />
+    >
+      {children ?? <HeroSearchCtas />}
+    </PageHero>
   );
 }

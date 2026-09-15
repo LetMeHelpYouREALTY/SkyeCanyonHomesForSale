@@ -21,6 +21,7 @@ import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import GoogleReviewCta from '@/components/google-review-cta';
 import HeadingImage from '@/components/heading-image';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import { sectionImages } from '@/data/section-images';
 import { siteConfig } from '@/config/site.config';
 import { Button } from '@/components/ui/button';
@@ -65,8 +66,10 @@ export default function About() {
           title="Meet Dr. Jan Duffy, REALTOR®"
           subtitle="Skye Canyon REALTOR® for luxury, new construction, and resale in Las Vegas NV 89166. Google Business Profile since 2009."
           {...getHeroImageProps('about')}
-          minHeight="sm"
-        />
+          minHeight="md"
+        >
+          <HeroSearchCtas />
+        </PageHero>
 
         {/* Breadcrumb Navigation */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">

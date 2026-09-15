@@ -5,6 +5,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
@@ -15,8 +16,10 @@ export default function VoiceSearchPage() {
         title="Voice-Activated Property Search"
         subtitle="AI-powered voice search for Skye Canyon and northwest Las Vegas MLS listings."
         {...getHeroImageProps('voice-search')}
-        minHeight="sm"
-      />
+        minHeight="md"
+      >
+        <HeroSearchCtas />
+      </PageHero>
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
 

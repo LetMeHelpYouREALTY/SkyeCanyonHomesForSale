@@ -8,6 +8,7 @@ import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import { sectionImages } from '@/data/section-images';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 
 const elementarySchools = [
   {
@@ -152,8 +153,10 @@ export default function SkyeCanyonSchools() {
           title="Skye Canyon Schools Guide"
           subtitle="Education options for Skye Canyon — Clark County School District public schools and charter programs in northwest Las Vegas NV 89166."
           {...getHeroImageProps('skye-canyon-schools')}
-          badges={['9 Public Schools', 'Charter Options', 'CCSD District']}
-        />
+          badges={['Named CCSD campuses', 'Somerset Academy', 'Confirm CCSD locator']}
+        >
+          <HeroSearchCtas searchLabel="Search Homes Near Campuses" />
+        </PageHero>
 
         {/* Current Listings */}
         <section className="py-16 bg-white">

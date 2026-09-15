@@ -9,6 +9,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { siteConfig } from '@/config/site.config';
@@ -22,8 +23,10 @@ export default function NeighborhoodAnalysis() {
           title="Las Vegas Neighborhood Analysis"
           subtitle="Interactive market heat map with pricing trends, activity, and local insights across northwest Las Vegas neighborhoods."
           {...getHeroImageProps('neighborhood-analysis')}
-          badges={['5 Key Neighborhoods', 'Live Market Data', 'Price Comparisons', 'Community Insights']}
-        />
+          badges={['89166', '89149', '89144', 'Live MLS']}
+        >
+          <HeroSearchCtas searchLabel="Search Northwest Las Vegas Homes" />
+        </PageHero>
 
         {/* Key Insights Overview */}
         <section className="py-16 bg-gray-50">

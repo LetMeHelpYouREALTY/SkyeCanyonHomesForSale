@@ -12,6 +12,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import { sectionImages } from '@/data/section-images';
 import { siteConfig } from '@/config/site.config';
 
@@ -26,8 +27,10 @@ export default function Properties() {
           title="Skye Canyon Homes Properties MLS Listings Nevada 89166"
           subtitle="Live MLS homes for sale in Skye Canyon, Las Vegas NV 89166."
           {...getHeroImageProps('properties')}
-          minHeight="sm"
-        />
+          minHeight="md"
+        >
+          <HeroSearchCtas />
+        </PageHero>
 
         {/* Breadcrumb Navigation */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">

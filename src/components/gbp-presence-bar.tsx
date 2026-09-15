@@ -1,4 +1,4 @@
-import { MapPin, Navigation, Phone, Star } from 'lucide-react';
+import { MapPin, Navigation, Phone, Search, Star } from 'lucide-react';
 import { siteConfig } from '@/config/site.config';
 
 export default function GbpPresenceBar() {
@@ -15,6 +15,15 @@ export default function GbpPresenceBar() {
           </a>
         </p>
         <div className="flex flex-wrap justify-center gap-2">
+          <a
+            href={siteConfig.realscoutOnboarding}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full bg-white text-realscout-navy px-3 py-1 font-medium hover:bg-blue-50"
+          >
+            <Search className="h-3.5 w-3.5" aria-hidden="true" />
+            Search Homes
+          </a>
           <a
             href={`tel:${siteConfig.phoneTel}`}
             className="inline-flex items-center gap-1.5 rounded-full bg-white text-realscout-navy px-3 py-1 font-medium hover:bg-blue-50"

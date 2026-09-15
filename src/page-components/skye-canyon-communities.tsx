@@ -9,6 +9,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import { sectionImages } from '@/data/section-images';
 import { siteConfig } from '@/config/site.config';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 
 export default function SkyeCanyonCommunities() {
   const communitiesData = [
@@ -105,7 +106,9 @@ export default function SkyeCanyonCommunities() {
           subtitle="Luxury new construction homes by Century Communities — spacious floor plans with up to six bedrooms in Las Vegas NV 89166."
           {...getHeroImageProps('skye-canyon-communities')}
           badges={['Century Communities', 'Eaglepointe', 'Marvella', 'Skyecrest']}
-        />
+        >
+          <HeroSearchCtas searchLabel="Search New Construction Homes" />
+        </PageHero>
 
         {/* Current Listings */}
         <section className="py-16 bg-white">
