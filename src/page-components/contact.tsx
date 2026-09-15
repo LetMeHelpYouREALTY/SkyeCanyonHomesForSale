@@ -111,11 +111,11 @@ export default function Contact() {
                       </li>
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
-                        Luxury home specialist with proven results
+                        Luxury, new construction, and resale in zip 89166
                       </li>
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
-                        Personalized service and market insights
+                        Live MLS comps before you tour or list
                       </li>
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>

@@ -271,7 +271,7 @@ export default function Navigation() {
               rel="noopener noreferrer"
             >
               <Button className="bg-realscout-blue text-white hover:bg-realscout-navy px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                Get Started
+                Search Homes
               </Button>
             </a>
           </div>
@@ -468,7 +468,7 @@ export default function Navigation() {
                 className="block px-4 py-3 bg-realscout-blue text-white text-center rounded-lg font-medium hover:bg-realscout-navy transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Get Started
+                Search Homes
               </a>
             </div>
           </div>

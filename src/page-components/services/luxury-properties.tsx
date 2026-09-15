@@ -67,11 +67,11 @@ export default function LuxuryPropertyServices() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">
-                    Certified Luxury Marketing
+                    Desert Highlands Golf and Custom Homes
                   </h3>
                   <p className="text-gray-600">
-                    Institute for Luxury Home Marketing certification for Desert Highlands golf and
-                    custom Skye Canyon homes.
+                    Marketing for Desert Highlands golf-course lots and custom Skye Canyon homes in
+                    zip 89166. Confirm current list prices on live MLS.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">

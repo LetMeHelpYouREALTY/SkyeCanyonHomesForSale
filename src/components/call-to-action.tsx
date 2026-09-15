@@ -3,6 +3,7 @@
 import { Calendar, Phone } from 'lucide-react';
 import HeadingImage from '@/components/heading-image';
 import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
 export default function CallToAction() {
@@ -33,7 +34,7 @@ export default function CallToAction() {
           >
             <Button className="bg-white text-realscout-blue px-8 py-4 hover:bg-gray-100">
               <Calendar className="w-5 h-5 mr-2" />
-              Get Started
+              Search Homes
             </Button>
           </a>
           <a href="tel:+17025001902">
@@ -48,7 +49,10 @@ export default function CallToAction() {
         </div>
 
         <div className="mt-8 text-sm opacity-80">
-          <p>Available 7 days a week for your convenience</p>
+          <p>
+            {siteConfig.hours.weekdays.label} · {siteConfig.hours.saturday.label} ·{' '}
+            {siteConfig.hours.sunday.label}
+          </p>
         </div>
       </div>
     </section>

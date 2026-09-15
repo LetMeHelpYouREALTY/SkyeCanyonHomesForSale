@@ -289,7 +289,8 @@ export default function PropertyDetail() {
 
                 <div className="mt-6 pt-6 border-t">
                   <p className="text-sm text-gray-600 text-center">
-                    Available 7 days a week for showings and consultations
+                    {siteConfig.hours.weekdays.label}. {siteConfig.hours.saturday.label}.{' '}
+                    {siteConfig.hours.sunday.label}. Consultations outside posted hours by appointment.
                   </p>
                 </div>
               </CardContent>

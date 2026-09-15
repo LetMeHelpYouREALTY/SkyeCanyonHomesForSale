@@ -14,7 +14,7 @@ const services = [
     description:
       'Buyer representation for Skye Canyon luxury, new construction, and resale in Las Vegas NV 89166.',
     icon: Home,
-    highlight: 'Off-market and builder access',
+    highlight: 'Live MLS and builder inventory',
     link: '/services/buyer-agent',
     color: 'text-blue-600',
   },
@@ -32,7 +32,7 @@ const services = [
     id: 'luxury-properties',
     title: 'Luxury Property Buying & Sales',
     description:
-      'Certified Luxury Home Marketing Specialist for Desert Highlands golf and custom 89166 homes.',
+      'Luxury representation for Desert Highlands golf-course and custom 89166 homes.',
     icon: Crown,
     highlight: 'Google-reviewed representation',
     link: '/services/luxury-properties',
@@ -44,7 +44,7 @@ const services = [
     description:
       'Buyer representation for Century Communities, Lennar, Toll Brothers, and other active Skye Canyon builders.',
     icon: Building,
-    highlight: 'Only exclusive Skye Canyon focus',
+    highlight: 'Century Communities representation',
     link: '/services/new-construction',
     color: 'text-orange-600',
   },
@@ -62,7 +62,7 @@ const services = [
     id: 'seller-agent',
     title: "Seller's Agent Services",
     description:
-      'Expert listing and marketing services with proven results in the competitive Skye Canyon market.',
+      'Listing and marketing for Skye Canyon resale homes using live MLS comps in zip 89166.',
     icon: TrendingUp,
     highlight: 'Premium marketing package',
     link: '/services/seller-agent',

@@ -153,7 +153,7 @@ export default function Home() {
               <HomebotWidget id="homebot_homeowner" className="w-full min-h-[200px]" />
             </div>
             <p className="text-center text-sm text-gray-500 mt-4">
-              Powered by Homebot &bull; Trusted by top agents nationwide
+              Powered by Homebot &bull; Confirm the estimate against live MLS comps
             </p>
           </div>
         </section>
@@ -177,12 +177,22 @@ export default function Home() {
                 Compare golf-course, interior, and new-construction floor plans with live MLS data.
                 Dr. Jan Duffy walks the inventory at {siteConfig.address.formatted}.
               </p>
-              <a
-                href="/luxury-homes-las-vegas"
-                className="inline-flex text-blue-600 font-medium hover:text-blue-800"
-              >
-                View luxury and golf-course homes &rarr;
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href={siteConfig.realscoutOnboarding}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex text-white bg-blue-600 hover:bg-blue-700 font-medium px-5 py-3 rounded-lg text-center"
+                >
+                  Search golf-course listings
+                </a>
+                <a
+                  href="/luxury-homes-las-vegas"
+                  className="inline-flex text-blue-600 font-medium hover:text-blue-800 items-center"
+                >
+                  Luxury and golf-course guide &rarr;
+                </a>
+              </div>
             </div>
           </div>
         </section>
