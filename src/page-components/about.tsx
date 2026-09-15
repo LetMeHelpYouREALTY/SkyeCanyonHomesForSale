@@ -362,7 +362,7 @@ export default function About() {
 
         {/* FAQ Section for About Dr. Jan Duffy */}
         <FAQSection
-          title="About Dr. Jan Duffy - Your Skye Canyon Real Estate Expert"
+          title="About Dr. Jan Duffy — Skye Canyon REALTOR®"
           pageType="general"
           faqs={[
             {

@@ -131,7 +131,7 @@ export default function SubdivisionPage({ subdivision }: SubdivisionPageProps) {
       <GbpLocalSection heading={`Tour ${subdivision.name} from the Skye Canyon office`} />
       <HyperlocalCta
         title={`Tour ${subdivision.name} with Dr. Jan Duffy`}
-        subtitle={`Expert guidance on ${subdivision.builder} homes in Skye Canyon ${subdivision.zip}.`}
+        subtitle={`Compare ${subdivision.builder} inventory in Skye Canyon ${subdivision.zip}. Call ${siteConfig.phone}.`}
       />
     </>
   );

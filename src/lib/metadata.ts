@@ -13,13 +13,13 @@ export const defaultOgImage = {
 } as const;
 
 const defaultTitle =
-  'Dr. Jan Duffy REALTOR® | Skye Canyon Real Estate Expert Las Vegas NV 89166';
+  'Skye Canyon Real Estate | Homes by Dr. Jan Duffy | Las Vegas NV 89166';
 
 const defaultDescription =
-  'Expert Skye Canyon real estate agent Dr. Jan Duffy specializes in luxury homes, new construction & golf course properties in Las Vegas NV 89166. Call (702) 500-1902!';
+  'Skye Canyon homes for sale in Las Vegas NV 89166 with Dr. Jan Duffy, REALTOR®. Live MLS, new construction, and resale. Call (702) 500-1902.';
 
 const ogDescription =
-  'Expert Skye Canyon real estate agent specializing in luxury homes in Las Vegas NV 89166.';
+  'Skye Canyon homes in Las Vegas NV 89166 — live MLS with Dr. Jan Duffy, REALTOR®. Call (702) 500-1902.';
 
 /** Shared Open Graph + Twitter metadata for root layout */
 export function buildSiteMetadata(): Metadata {

@@ -86,7 +86,7 @@ export default function BuilderPage({ builder }: BuilderPageProps) {
       <HyperlocalListings title={`${builder.name} Area Listings`} />
       <FAQSection title={`${builder.name} FAQ`} faqs={builder.faqs} pageType="skye-canyon" includeSchema={false} />
       <GbpLocalSection heading={`Compare ${builder.name} plans in person`} />
-      <HyperlocalCta title={`Buy a ${builder.name} Home with Expert Representation`} />
+      <HyperlocalCta title={`Search ${builder.name} homes in Skye Canyon`} />
     </>
   );
 }

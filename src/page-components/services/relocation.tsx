@@ -14,7 +14,7 @@ export default function RelocationServices() {
     <>
       <div className="min-h-screen bg-gray-50">
         <PageHero
-          title="Skye Canyon Relocation Expert"
+          title="Relocate to Skye Canyon Las Vegas NV 89166"
           subtitle="Relocation services for buyers moving to northwest Las Vegas and Skye Canyon NV 89166."
           {...getHeroImageProps('relocation')}
         >

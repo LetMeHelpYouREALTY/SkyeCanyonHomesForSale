@@ -27,7 +27,7 @@ export default function BuyerAgentServices() {
 
         <main>
           <PageHero
-            title="Skye Canyon Expert Buyer Agent"
+            title="Skye Canyon Buyer Agent"
             subtitle="Buyer representation for Skye Canyon luxury, new construction, and resale in Las Vegas NV 89166."
             {...getHeroImageProps('buyer-agent')}
           >

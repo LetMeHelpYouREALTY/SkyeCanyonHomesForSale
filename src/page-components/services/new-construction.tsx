@@ -29,7 +29,7 @@ export default function NewConstructionServices() {
 
         <main>
           <PageHero
-            title="Skye Canyon New Construction Expert"
+            title="Skye Canyon New Construction"
             subtitle="Century Communities specialist in Eaglepointe, Marvella, and Skyecrest — buyer representation for new builds in 89166."
             {...getHeroImageProps('new-construction')}
           >

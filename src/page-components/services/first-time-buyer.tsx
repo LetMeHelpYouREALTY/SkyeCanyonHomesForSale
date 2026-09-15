@@ -29,7 +29,7 @@ export default function FirstTimeBuyerServices() {
 
         <main>
           <PageHero
-            title="Skye Canyon First-Time Buyer Expert"
+            title="Skye Canyon First-Time Buyer Help"
             subtitle="Step-by-step guidance through financing, HOA requirements, builder incentives, and closing in 89166."
             {...getHeroImageProps('first-time-buyer')}
           >
@@ -71,8 +71,7 @@ export default function FirstTimeBuyerServices() {
                     HOA & Community Navigation
                   </h3>
                   <p className="text-gray-600">
-                    Expert guidance through Skye Canyon HOA requirements, amenities access, and
-                    community regulations.
+                    HOA dues, amenity access, and CC&Rs for the listing address in zip 89166.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -80,7 +79,8 @@ export default function FirstTimeBuyerServices() {
                     Builder Incentive Programs
                   </h3>
                   <p className="text-gray-600">
-                    Access to builder incentives and first-time buyer loan programs.
+                    Compare current Century Communities, Lennar, and Toll Brothers incentives in
+                    zip 89166.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -99,10 +99,18 @@ export default function FirstTimeBuyerServices() {
                 </div>
               </div>
 
-              <div className="text-center">
+              <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href={siteConfig.realscoutOnboarding}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-300"
+                >
+                  Search Homes
+                </a>
                 <a
                   href="/contact"
-                  className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-300"
+                  className="bg-white text-green-700 border-2 border-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors focus:outline-none focus:ring-2 focus:ring-green-300"
                   aria-label="Schedule consultation with Dr. Jan Duffy"
                 >
                   Schedule Consultation

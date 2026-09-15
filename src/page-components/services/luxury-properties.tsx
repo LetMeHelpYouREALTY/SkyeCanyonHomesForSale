@@ -29,7 +29,7 @@ export default function LuxuryPropertyServices() {
 
         <main>
           <PageHero
-            title="Skye Canyon Luxury Property Expert"
+            title="Skye Canyon Luxury Homes"
             subtitle="Luxury, golf-course, and custom homes in Skye Canyon and northwest Las Vegas NV 89166."
             {...getHeroImageProps('luxury-properties')}
           >

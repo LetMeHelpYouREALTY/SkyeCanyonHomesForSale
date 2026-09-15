@@ -78,9 +78,10 @@ export default function Contact() {
                         <Mail className="w-6 h-6 text-blue-600 mt-1" />
                         <div>
                           <h3 className="font-semibold">Email</h3>
-                          <p className="text-gray-600">{siteConfig.email}</p>
-                          <p className="text-sm text-gray-500">
-                            Response within 2 hours during business hours
+                          <p className="text-gray-600">
+                            <a href={`mailto:${siteConfig.email}`} className="hover:text-blue-700">
+                              {siteConfig.email}
+                            </a>
                           </p>
                         </div>
                       </div>
@@ -104,7 +105,7 @@ export default function Contact() {
 
                 <Card>
                   <CardContent className="p-8">
-                    <h3 className="text-xl font-bold mb-4">Why Choose Dr. Jan Duffy?</h3>
+                    <h3 className="text-xl font-bold mb-4">Skye Canyon office facts</h3>
                     <ul className="space-y-3 text-gray-600">
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
@@ -164,6 +165,14 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-3 mt-8">
+              <a
+                href={siteConfig.realscoutOnboarding}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 font-semibold text-blue-700 border border-blue-600 hover:bg-blue-50"
+              >
+                Search Homes
+              </a>
               <a
                 href={`tel:${siteConfig.phoneTel}`}
                 className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-700"

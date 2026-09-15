@@ -93,7 +93,7 @@ export default function SkyeCanyonParks() {
     {
       question: 'Can I host events at Skye Canyon parks?',
       answer:
-        "Yes, the 15-acre Skye Canyon Park serves as the community's main event venue and hosts many neighborhood gatherings, with large green spaces perfect for community activities.",
+        "The 15-acre Skye Canyon Park hosts HOA events, with lawns, splash pads, and courts. Confirm reservation rules with the HOA.",
     },
   ];
 
@@ -284,7 +284,7 @@ export default function SkyeCanyonParks() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Community Events</h3>
                 <p className="text-gray-600">
-                  Central gathering spaces perfect for neighborhood events and celebrations.
+                  HOA event lawns, splash pads, and courts at Skye Canyon Park in zip 89166.
                 </p>
               </div>
             </div>

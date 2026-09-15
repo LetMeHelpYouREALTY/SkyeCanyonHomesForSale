@@ -16,7 +16,7 @@ export default function SellerAgentServices() {
       <div className="min-h-screen bg-gray-50">
 
       <PageHero
-        title="Skye Canyon Seller's Agent Expert"
+        title="Skye Canyon Listing Agent"
         subtitle="Listing and marketing for Skye Canyon resale and luxury homes in Las Vegas NV 89166. Confirm comps on live MLS."
         {...getHeroImageProps('seller-agent')}
       >

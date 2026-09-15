@@ -8,8 +8,8 @@ interface HyperlocalCtaProps {
 }
 
 export default function HyperlocalCta({
-  title = 'Work with a Skye Canyon Hyperlocal Expert',
-  subtitle = 'Dr. Jan Duffy specializes in Skye Canyon, zip 89166, and northwest Las Vegas real estate.',
+  title = 'Search Skye Canyon Homes in Las Vegas NV 89166',
+  subtitle = 'Live MLS with Dr. Jan Duffy at 10111 W Skye Canyon Park Dr. Call (702) 500-1902.',
 }: HyperlocalCtaProps) {
   return (
     <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-700 text-white">

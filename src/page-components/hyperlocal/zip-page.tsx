@@ -109,7 +109,7 @@ export default function ZipPage({ zipArea }: ZipPageProps) {
       <FAQSection title={`${zipArea.zip} Real Estate FAQ`} faqs={zipArea.faqs} pageType="skye-canyon" includeSchema={false} />
       <HyperlocalInternalLinks title="Nearby Skye Canyon Areas" links={relatedLinks} />
       <GbpLocalSection heading={`Visit the office for ${zipArea.zip} listings`} />
-      <HyperlocalCta title={`Buy in ${zipArea.zip} with a Local Expert`} />
+      <HyperlocalCta title={`Search ${zipArea.zip} homes with Dr. Jan Duffy`} />
     </>
   );
 }
