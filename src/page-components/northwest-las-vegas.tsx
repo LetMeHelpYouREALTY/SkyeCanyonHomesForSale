@@ -235,8 +235,8 @@ export default function NorthwestLasVegas() {
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold mb-6">Ready to Explore?</h3>
               <p className="text-gray-600 mb-6">
-                Get expert guidance from Dr. Jan Duffy, your Northwest Las Vegas real estate
-                specialist with deep local market knowledge.
+                Search live MLS for Northwest Las Vegas and Skye Canyon 89166. Call {siteConfig.phone}{' '}
+                to tour from {siteConfig.address.street}.
               </p>
               <div className="space-y-3">
                 <a

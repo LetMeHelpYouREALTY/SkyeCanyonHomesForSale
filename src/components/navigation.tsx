@@ -90,7 +90,7 @@ export default function Navigation() {
                   className="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-realscout-blue transition-colors group/item"
                 >
                   <Building2 className="w-4 h-4 mr-3 text-gray-400 group-hover/item:text-realscout-blue transition-colors" />
-                  All Properties
+                  Skye Canyon Homes
                 </Link>
                 <Link
                   href="/luxury-homes-las-vegas"
@@ -324,7 +324,7 @@ export default function Navigation() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <Building2 className="w-4 h-4 mr-3 text-gray-400" />
-                  All Properties
+                  Skye Canyon Homes
                 </Link>
                 <Link
                   href="/luxury-homes-las-vegas"

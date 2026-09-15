@@ -97,8 +97,8 @@ export default function BuyerAgentServices() {
                     Transaction Management
                   </h3>
                   <p className="text-gray-600">
-                    Complete transaction oversight from offer to closing with expert guidance
-                    throughout.
+                    Transaction support from offer to closing, including inspections, title, and
+                    lender timelines.
                   </p>
                 </div>
               </div>

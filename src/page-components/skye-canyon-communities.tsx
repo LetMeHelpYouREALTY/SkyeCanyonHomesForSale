@@ -328,11 +328,11 @@ export default function SkyeCanyonCommunities() {
         <section className="py-16 px-4 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Find Your Perfect New Construction Home
+              Search Skye Canyon New Construction
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Get expert guidance on Century Communities homes, builder incentives, and
-              customization options in Skye Canyon.
+              Compare Century Communities, Lennar, and Toll Brothers inventory in Las Vegas NV 89166.
+              Call {siteConfig.phone} for current builder incentives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -341,13 +341,13 @@ export default function SkyeCanyonCommunities() {
                 rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
-                View All Properties
+                Search Homes
               </a>
               <a
-                href="tel:+17025001902"
+                href={`tel:${siteConfig.phoneTel}`}
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Call (702) 500-1902
+                Call {siteConfig.phone}
               </a>
             </div>
           </div>
