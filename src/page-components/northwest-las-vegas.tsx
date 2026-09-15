@@ -1,6 +1,6 @@
 'use client';
 
-import { Home, MapPin, Shield, TrendingUp } from 'lucide-react';
+import { Home, MapPin, Navigation, Phone, Search, Shield } from 'lucide-react';
 import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
@@ -9,34 +9,28 @@ import HeadingImage from '@/components/heading-image';
 import { sectionImages } from '@/data/section-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
 
 export default function NorthwestLasVegas() {
   const neighborhoods = [
     {
       name: 'Skye Canyon',
       description: 'Guard-gated community with golf-course and rec-center homes',
-      priceRange: '$450K - $900K+',
+      zip: '89166',
       features: ['Guarded gate', 'Golf Course', 'Recreation center'],
     },
     {
       name: 'Centennial Hills',
       description: 'Master-planned community with parks and shopping',
-      priceRange: '$350K - $650K',
+      zip: '89149',
       features: ['Parks', 'Shopping', 'Master-planned'],
     },
     {
       name: 'Summerlin',
-      description: 'Established luxury community with amenities',
-      priceRange: '$400K - $800K+',
+      description: 'Master-planned west-valley communities near Red Rock Canyon',
+      zip: '89144 / 89138',
       features: ['Golf Courses', 'Red Rock Views', 'Downtown Summerlin'],
     },
-  ];
-
-  const marketStats = [
-    { label: 'Median Home Price', value: '$565,000', change: '+8.2%' },
-    { label: 'Average Days on Market', value: '32 days', change: '-15%' },
-    { label: 'Homes Sold (YTD)', value: '2,847', change: '+12%' },
-    { label: 'Price per Sq Ft', value: '$210', change: '+6.5%' },
   ];
 
   return (
@@ -73,7 +67,7 @@ export default function NorthwestLasVegas() {
               Northwest Las Vegas Skye Canyon Market Overview
             </h2>
             <p className="text-xl text-gray-600">
-              Current market trends and statistics for Northwest Las Vegas communities
+              Portal medians go stale. Confirm list prices and days on market on live MLS.
             </p>
             <HeadingImage
               {...sectionImages.market}
@@ -82,21 +76,51 @@ export default function NorthwestLasVegas() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {marketStats.map((stat, index) => (
-              <Card key={index} className="text-center">
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-realscout-blue mb-2">{siteConfig.address.zip}</div>
+                <div className="text-gray-600 mb-2">Skye Canyon zip</div>
+                <div className="text-sm text-gray-500">Northwest Las Vegas master plan</div>
+              </CardContent>
+            </Card>
+            <a
+              href={siteConfig.realscoutOnboarding}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Card className="text-center h-full hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
-                  <div className="text-3xl font-bold text-realscout-blue mb-2">{stat.value}</div>
-                  <div className="text-gray-600 mb-2">{stat.label}</div>
-                  <div
-                    className={`text-sm font-semibold ${
-                      stat.change.startsWith('+') ? 'text-green-600' : 'text-red-600'
-                    }`}
-                  >
-                    {stat.change} vs last year
+                  <Search className="w-8 h-8 text-realscout-blue mx-auto mb-2" aria-hidden="true" />
+                  <div className="text-gray-900 font-semibold mb-2">Search live MLS</div>
+                  <div className="text-sm text-gray-500">Current 89166 / 89149 / 89144 inventory</div>
+                </CardContent>
+              </Card>
+            </a>
+            <a href={`tel:${siteConfig.phoneTel}`}>
+              <Card className="text-center h-full hover:shadow-md transition-shadow">
+                <CardContent className="p-6">
+                  <Phone className="w-8 h-8 text-realscout-blue mx-auto mb-2" aria-hidden="true" />
+                  <div className="text-gray-900 font-semibold mb-2">Call for comps</div>
+                  <div className="text-sm text-gray-500">{siteConfig.phone}</div>
+                </CardContent>
+              </Card>
+            </a>
+            <a
+              href={siteConfig.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Card className="text-center h-full hover:shadow-md transition-shadow">
+                <CardContent className="p-6">
+                  <Navigation className="w-8 h-8 text-realscout-blue mx-auto mb-2" aria-hidden="true" />
+                  <div className="text-gray-900 font-semibold mb-2">Google Maps</div>
+                  <div className="text-sm text-gray-500 flex items-center justify-center gap-1">
+                    <MapPin className="w-3 h-3" aria-hidden="true" />
+                    {siteConfig.address.street}
                   </div>
                 </CardContent>
               </Card>
-            ))}
+            </a>
           </div>
         </div>
       </section>
@@ -109,7 +133,7 @@ export default function NorthwestLasVegas() {
               Featured Northwest Las Vegas Skye Canyon Communities
             </h2>
             <p className="text-xl text-gray-600">
-              Explore the premier neighborhoods of Northwest Las Vegas
+              Compare Skye Canyon, Centennial Hills, and nearby west-valley communities
             </p>
           </div>
 
@@ -133,7 +157,7 @@ export default function NorthwestLasVegas() {
                   <h3 className="text-2xl font-bold mb-2">{neighborhood.name}</h3>
                   <p className="text-gray-600 mb-4">{neighborhood.description}</p>
                   <div className="text-lg font-semibold text-realscout-blue mb-4">
-                    {neighborhood.priceRange}
+                    Zip {neighborhood.zip} · Confirm live MLS
                   </div>
                   <div className="space-y-2 mb-6">
                     {neighborhood.features.map((feature, idx) => (
@@ -184,12 +208,12 @@ export default function NorthwestLasVegas() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <TrendingUp className="w-6 h-6 text-realscout-blue mr-4 mt-1 flex-shrink-0" />
+                  <Search className="w-6 h-6 text-realscout-blue mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Strong Investment</h3>
+                    <h3 className="text-xl font-semibold mb-2">Live MLS Comps</h3>
                     <p className="text-gray-600">
-                      Consistent property value appreciation and high desirability make Northwest
-                      Las Vegas an excellent investment choice.
+                      List prices and days on market change weekly. Search current northwest Las
+                      Vegas inventory or call Dr. Jan Duffy for a zip-by-zip snapshot.
                     </p>
                   </div>
                 </div>
@@ -211,14 +235,26 @@ export default function NorthwestLasVegas() {
                 Get expert guidance from Dr. Jan Duffy, your Northwest Las Vegas real estate
                 specialist with deep local market knowledge.
               </p>
-              <a
-                href="/contact"
-                className="w-full"
-              >
-                <Button className="w-full bg-realscout-blue text-white hover:bg-realscout-navy">
-                  Schedule Your Consultation
-                </Button>
-              </a>
+              <div className="space-y-3">
+                <a href="/contact" className="block">
+                  <Button className="w-full bg-realscout-blue text-white hover:bg-realscout-navy">
+                    Schedule Your Consultation
+                  </Button>
+                </a>
+                <a
+                  href={siteConfig.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button
+                    variant="outline"
+                    className="w-full border-realscout-blue text-realscout-blue"
+                  >
+                    Open Google Maps
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>

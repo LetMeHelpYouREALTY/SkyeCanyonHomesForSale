@@ -39,7 +39,7 @@ export default function RealScoutListings({
           propertyTypes: propertyTypes || 'SFR,MF,TC',
           sortOrder: sortOrder || 'PRICE_HIGH_TO_LOW',
           title: 'Luxury Skye Canyon Homes',
-          description: 'Premium properties starting at $800K+',
+          description: 'Search higher-priced Skye Canyon MLS listings',
         };
       case 'entry-level':
         return {
@@ -48,7 +48,7 @@ export default function RealScoutListings({
           propertyTypes: propertyTypes || 'SFR,TC,MOBILE',
           sortOrder: sortOrder || 'PRICE_LOW_TO_HIGH',
           title: 'Starter Homes in Skye Canyon',
-          description: 'Affordable options from $500K-$650K',
+          description: 'Search this Skye Canyon price band on live MLS',
         };
       case 'mid-range':
         return {
@@ -57,7 +57,7 @@ export default function RealScoutListings({
           propertyTypes: propertyTypes || 'SFR,MF,TC',
           sortOrder: sortOrder || 'STATUS_AND_SIGNIFICANT_CHANGE',
           title: 'Mid-Range Skye Canyon Properties',
-          description: 'Quality homes from $650K-$800K',
+          description: 'Search this Skye Canyon price band on live MLS',
         };
       case 'new-construction':
         return {
@@ -66,7 +66,7 @@ export default function RealScoutListings({
           propertyTypes: propertyTypes || 'SFR,MF',
           sortOrder: sortOrder || 'NEWEST',
           title: 'New Construction Homes',
-          description: 'Brand new properties from $600K+',
+          description: 'Search new Skye Canyon builder and resale inventory',
         };
       case 'all-properties':
         return {
@@ -75,7 +75,7 @@ export default function RealScoutListings({
           propertyTypes: propertyTypes || 'SFR,MF,TC,MOBILE',
           sortOrder: sortOrder || 'STATUS_AND_SIGNIFICANT_CHANGE',
           title: 'All Available Properties',
-          description: 'Complete inventory starting at $400K+',
+          description: 'Complete live MLS inventory for Skye Canyon 89166',
         };
       default: // homepage
         return {
@@ -84,7 +84,7 @@ export default function RealScoutListings({
           propertyTypes: propertyTypes || 'SFR,MF,TC,MOBILE',
           sortOrder: sortOrder || 'STATUS_AND_SIGNIFICANT_CHANGE',
           title: 'Featured Skye Canyon Homes',
-          description: 'Current listings starting at $550K+',
+          description: 'Current live MLS listings in Las Vegas NV 89166',
         };
     }
   };

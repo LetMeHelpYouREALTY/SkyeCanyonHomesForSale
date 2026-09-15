@@ -13,7 +13,7 @@ export default function SkyeCanyonCommunities() {
   const communitiesData = [
     {
       name: 'Eaglepointe',
-      priceRange: 'High $500s',
+      priceRange: 'Live MLS',
       builder: 'Century Communities',
       description:
         'Spacious homes with flexible floor plans and generous outdoor space in a prime Skye Canyon location.',
@@ -32,7 +32,7 @@ export default function SkyeCanyonCommunities() {
     },
     {
       name: 'Marvella',
-      priceRange: 'High $500s',
+      priceRange: 'Live MLS',
       builder: 'Century Communities',
       description:
         'One and two-story homes designed for every life stage with customizable layouts and luxury amenities.',
@@ -47,7 +47,7 @@ export default function SkyeCanyonCommunities() {
     },
     {
       name: 'Skyecrest',
-      priceRange: 'Low $700s',
+      priceRange: 'Live MLS',
       builder: 'Century Communities',
       description:
         'Premium homes offering the highest level of customization with luxurious primary suites and expanded living spaces.',
@@ -66,12 +66,12 @@ export default function SkyeCanyonCommunities() {
     {
       question: 'What home builders are in Skye Canyon Las Vegas?',
       answer:
-        'Century Communities is a major builder in Skye Canyon, offering three distinct communities: Eaglepointe and Marvella starting in the high $500s, and Skyecrest starting in the low $700s, all featuring flexible floor plans and luxury amenities.',
+        'Century Communities builds Eaglepointe, Marvella, and Skyecrest in Skye Canyon. Lennar and Toll Brothers also have inventory in the master plan. Confirm current builder pricing with Dr. Jan Duffy at (702) 500-1902.',
     },
     {
       question: 'What is the price range for new construction in Skye Canyon?',
       answer:
-        'New construction homes in Skye Canyon range from the high $500s to the low $700s and up, with Century Communities offering Eaglepointe and Marvella from the high $500s, and Skyecrest from the low $700s.',
+        'New construction pricing changes with lot premiums, elevations, and incentives. Search live MLS or call Dr. Jan Duffy at (702) 500-1902 for current Eaglepointe, Marvella, and Skyecrest inventory.',
     },
     {
       question: 'How many bedrooms do Skye Canyon new homes have?',
@@ -103,7 +103,7 @@ export default function SkyeCanyonCommunities() {
           title="Skye Canyon New Construction Communities"
           subtitle="Luxury new construction homes by Century Communities — spacious floor plans with up to six bedrooms in Las Vegas NV 89166."
           {...getHeroImageProps('skye-canyon-communities')}
-          badges={['Century Communities', '3 Communities', 'From High $500s']}
+          badges={['Century Communities', 'Eaglepointe', 'Marvella', 'Skyecrest']}
         />
 
         {/* Current Listings */}
@@ -283,25 +283,25 @@ export default function SkyeCanyonCommunities() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-blue-600 transition-colors">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Eaglepointe</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">High $500s</div>
+                <div className="text-xl font-bold text-blue-600 mb-4">Confirm live MLS</div>
                 <p className="text-gray-600 text-sm">
-                  Entry-level luxury with premium features and flexible customization options
+                  Century Communities floor plans with outdoor living and garage options
                 </p>
               </div>
 
               <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-blue-600 transition-colors">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Marvella</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">High $500s</div>
+                <div className="text-xl font-bold text-blue-600 mb-4">Confirm live MLS</div>
                 <p className="text-gray-600 text-sm">
-                  Contemporary designs with enhanced amenities and modern features
+                  Contemporary designs with customizable layouts and modern features
                 </p>
               </div>
 
               <div className="border-2 border-blue-600 rounded-xl p-6 bg-blue-50">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Skyecrest</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">Low $700s</div>
+                <div className="text-xl font-bold text-blue-600 mb-4">Confirm live MLS</div>
                 <p className="text-gray-600 text-sm">
-                  Premium luxury homes with highest level of customization and finishes
+                  Expanded floor plans with upgraded finish packages — confirm current pricing
                 </p>
               </div>
             </div>

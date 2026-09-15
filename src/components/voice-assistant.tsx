@@ -68,10 +68,10 @@ export default function VoiceAssistant() {
               );
               response = `I found ${count} Skye Canyon homes under $${priceMatch[1]}K. Average price is $${Math.round(avgPrice / 1000)}K. The best value property is priced at $${Math.round(properties[0].price / 1000)}K. Would you like me to show you the listings?`;
             } else {
-              response = `No homes currently available under $${priceMatch[1]}K in Skye Canyon. The lowest priced home is around $650K. Shall I show you options in that range?`;
+              response = `I do not have a live count under $${priceMatch[1]}K. Search current Skye Canyon MLS or call (702) 500-1902.`;
             }
           } else {
-            response = `I found several Skye Canyon homes under $${priceMatch[1]}K. Let me pull up the current listings for you.`;
+            response = `Search live MLS for Skye Canyon homes under $${priceMatch[1]}K, or call Dr. Jan Duffy at (702) 500-1902.`;
           }
         }
       } else if (
@@ -84,28 +84,20 @@ export default function VoiceAssistant() {
         const marketResponse = await fetch('/api/market-stats');
         if (marketResponse.ok) {
           const marketData = await marketResponse.json();
-          response = `The Skye Canyon market is ${marketData.trend || 'strong'}! Average home price is $${Math.round(marketData.averagePrice / 1000)}K, with ${marketData.daysOnMarket || 23} average days on market. Luxury properties are seeing multiple offers.`;
+          response =
+            marketData.disclaimer ||
+            'Confirm current list prices, days on market, and sale comps on live MLS. Call Dr. Jan Duffy at (702) 500-1902.';
         } else {
           response =
-            'The Skye Canyon market is very strong! Homes are selling 25% faster than the Las Vegas average, with luxury properties seeing multiple offers.';
+            'Confirm current Skye Canyon list prices on live MLS. Call Dr. Jan Duffy at (702) 500-1902.';
         }
       } else if (
         lowerCommand.includes('luxury') ||
         lowerCommand.includes('million') ||
         lowerCommand.includes('premium')
       ) {
-        // Search luxury properties
-        const luxuryResponse = await fetch(
-          '/api/properties/search?priceMin=800000&type=skye_canyon'
-        );
-        if (luxuryResponse.ok) {
-          const luxuryHomes = await luxuryResponse.json();
-          const count = luxuryHomes.length;
-          response = `We have ${count} luxury Skye Canyon homes currently available, starting at $800K. Many feature Red Rock views, pools, and custom upgrades. The most expensive is $${Math.round(Math.max(...luxuryHomes.map((h: any) => h.price)) / 1000)}K.`;
-        } else {
-          response =
-            'Skye Canyon has exceptional luxury homes starting at $800K, with many featuring Red Rock views, pools, and custom upgrades. Shall I show you our current luxury inventory?';
-        }
+        response =
+          'Search live MLS for current luxury Skye Canyon homes, or call Dr. Jan Duffy at (702) 500-1902.';
       } else if (
         lowerCommand.includes('schedule') ||
         lowerCommand.includes('showing') ||

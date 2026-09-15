@@ -18,7 +18,7 @@ export default function SkyeCanyonGuide() {
 
         <PageHero
           title="Skye Canyon Homes Community Guide Las Vegas 89166"
-          subtitle="Discover what makes Skye Canyon one of Las Vegas's most desirable master-planned communities."
+          subtitle="Guard-gated parks, golf, recreation, and named CCSD campuses in Las Vegas NV 89166."
           {...getHeroImageProps('skye-canyon-guide')}
         />
 
@@ -56,26 +56,26 @@ export default function SkyeCanyonGuide() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <Card>
                 <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-realscout-blue mb-2">1,847</h3>
-                  <p className="text-sm text-gray-600">Total Homes</p>
+                  <h3 className="text-2xl font-bold text-realscout-blue mb-2">89166</h3>
+                  <p className="text-sm text-gray-600">Skye Canyon zip</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-realscout-blue mb-2">2,850 sq ft</h3>
-                  <p className="text-sm text-gray-600">Average Home Size</p>
+                  <h3 className="text-2xl font-bold text-realscout-blue mb-2">Guard-gated</h3>
+                  <p className="text-sm text-gray-600">Staffed entry on Skye Canyon Park Drive</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-realscout-blue mb-2">0.23 acres</h3>
-                  <p className="text-sm text-gray-600">Average Lot Size</p>
+                  <h3 className="text-2xl font-bold text-realscout-blue mb-2">Golf + rec</h3>
+                  <p className="text-sm text-gray-600">Desert Highlands and clubhouse amenities</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-realscout-blue mb-2">$180-$320</h3>
-                  <p className="text-sm text-gray-600">HOA Fee Range</p>
+                  <h3 className="text-2xl font-bold text-realscout-blue mb-2">Confirm MLS</h3>
+                  <p className="text-sm text-gray-600">Live list prices, lots, and HOA on each listing</p>
                 </CardContent>
               </Card>
             </div>
@@ -152,7 +152,7 @@ export default function SkyeCanyonGuide() {
             {
               question: 'What makes Skye Canyon different from other Las Vegas communities?',
               answer:
-                'Skye Canyon is a 24/7 guard-gated community with Desert Highlands Golf Course, recreation amenities, and lots averaging about 0.23 acres in Las Vegas NV 89166.',
+                'Skye Canyon is a 24/7 guard-gated community with Desert Highlands Golf Course and recreation amenities at 10111 W. Skye Canyon Park Drive, Las Vegas NV 89166. Confirm lot size on the specific listing.',
             },
             {
               question: 'What amenities are included with Skye Canyon living?',
@@ -162,7 +162,7 @@ export default function SkyeCanyonGuide() {
             {
               question: 'What are the HOA fees in Skye Canyon?',
               answer:
-                'Skye Canyon HOA fees typically range from $180-$320 per month, which includes the staffed gate, golf-course common-area upkeep, recreation amenities, and landscaping of shared spaces.',
+                'HOA dues vary by village and amenity access. Confirm current fees on the listing or with Dr. Jan Duffy at (702) 500-1902. Dues typically cover the staffed gate, common-area upkeep, and recreation amenities.',
             },
             {
               question: 'What schools serve Skye Canyon residents?',

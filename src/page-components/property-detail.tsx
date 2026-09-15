@@ -302,15 +302,15 @@ export default function PropertyDetail() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Lot Size:</span>
-                    <span className="font-medium">0.25 acres</span>
+                    <span className="font-medium">Confirm on listing</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">HOA Fees:</span>
-                    <span className="font-medium">$250/month</span>
+                    <span className="font-medium">Confirm on listing</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Property Tax:</span>
-                    <span className="font-medium">$12,850/year</span>
+                    <span className="font-medium">Confirm on listing</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">MLS #:</span>

@@ -111,7 +111,7 @@ export default function LasVegasRealEstate() {
             {
               question: 'How is the Las Vegas real estate market currently performing?',
               answer:
-                'Las Vegas real estate continues to show strong performance with steady appreciation, growing population, and diverse economic drivers. The market benefits from no state income tax, business-friendly environment, and tourism industry.',
+                'Inventory, days on market, and sale-to-list ratios change week to week. Confirm live MLS comps with Dr. Jan Duffy at (702) 500-1902. Skye Canyon is zip 89166 at 10111 W. Skye Canyon Park Drive.',
             },
             {
               question: 'What should out-of-state buyers know about Las Vegas real estate?',

@@ -7,8 +7,6 @@ import FAQSection from '@/components/faq-section';
 
 import FollowUpBossListings from '@/components/followup-boss-listings';
 import RealScoutListings from '@/components/realscout-listings';
-import EnhancedPropertyCard from '@/components/enhanced-property-card';
-import { sampleProperties } from '@/data/sample-properties';
 import GoogleMapEmbed from '@/components/google-map-embed';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
@@ -101,25 +99,14 @@ export default function Properties() {
                 Skye Canyon Listings Near the Office Pin
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Sample homes mapped around 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166.
+                The office pin is 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166. Search live
+                MLS for current homes — we do not publish placeholder addresses or prices.
               </p>
             </div>
             <HeadingImage
               {...sectionImages.office}
               className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
             />
-            
-            {/* Sample Properties Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              {sampleProperties.slice(0, 3).map((property) => (
-                <EnhancedPropertyCard
-                  key={property.id}
-                  property={property}
-                  showMap={true}
-                  mapSize="medium"
-                />
-              ))}
-            </div>
 
             <div className="mb-8">
               <GoogleMapEmbed />
@@ -185,7 +172,7 @@ export default function Properties() {
             {
               question: 'Do you have access to new construction homes?',
               answer:
-                'Yes, Dr. Jan Duffy works with premier builders in Skye Canyon and can help you secure new construction homes, including quick move-in properties and custom builds.',
+                'Yes, Dr. Jan Duffy works with Century Communities, Lennar, and Toll Brothers in Skye Canyon and can help you secure new construction, including quick move-in homes.',
             },
             {
               question: 'What are closing costs in Las Vegas?',

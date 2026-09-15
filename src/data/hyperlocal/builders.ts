@@ -5,17 +5,17 @@ export const builders: HyperlocalBuilder[] = [
     slug: 'century-communities',
     name: 'Century Communities',
     description:
-      'Century Communities is the primary new home builder in Skye Canyon, Las Vegas NV 89166, with Eaglepointe, Marvella, and Skyecrest offering homes from the high $500s to the low $700s.',
+      'Century Communities is the primary new home builder in Skye Canyon, Las Vegas NV 89166, with Eaglepointe, Marvella, and Skyecrest. Confirm current builder pricing on live MLS.',
     answerSummary:
-      'Century Communities builds Eaglepointe, Marvella, and Skyecrest in Skye Canyon NV 89166, with floor plans up to six bedrooms and prices from the high $500s to low $700s.',
+      'Century Communities builds Eaglepointe, Marvella, and Skyecrest in Skye Canyon NV 89166, with floor plans up to six bedrooms. Confirm current pricing on live MLS.',
     communities: ['Eaglepointe', 'Marvella', 'Skyecrest'],
     communitySlugs: ['eaglepointe', 'marvella', 'skyecrest'],
-    priceRange: 'High $500s – Low $700s',
+    priceRange: 'Confirm live MLS',
     faqs: [
       {
         question: 'What Skye Canyon communities does Century Communities build?',
         answer:
-          'Century Communities builds Eaglepointe and Marvella starting in the high $500s, and Skyecrest starting in the low $700s, all within Skye Canyon Las Vegas NV 89166.',
+          'Century Communities builds Eaglepointe, Marvella, and Skyecrest in Skye Canyon Las Vegas NV 89166. Confirm current list prices and incentives with Dr. Jan Duffy at (702) 500-1902.',
       },
       {
         question: 'Does Century Communities offer quick move-in homes in Skye Canyon?',

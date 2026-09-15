@@ -30,6 +30,10 @@ export default function Contact() {
               {/* Schedule a Consultation - Calendly Inline */}
               <div>
                 <h2 className="text-2xl font-bold mb-6">Schedule a Consultation</h2>
+                <HeadingImage
+                  {...sectionImages.office}
+                  className="w-full h-40 object-cover rounded-xl mb-6"
+                />
                 <p className="text-gray-600 mb-6">
                   Pick a time that works for you. Dr. Jan Duffy will personally review your real estate needs.
                 </p>
@@ -132,7 +136,7 @@ export default function Contact() {
             <h2 className="text-3xl font-bold mb-8">Business Hours</h2>
             <HeadingImage
               {...sectionImages.monument}
-              className="w-full max-w-3xl mx-auto h-52 object-cover object-bottom rounded-xl mb-8"
+              className="w-full max-w-3xl mx-auto h-80 object-cover object-bottom rounded-xl mb-8"
             />
             <div className="grid md:grid-cols-3 gap-6">
               <div>
