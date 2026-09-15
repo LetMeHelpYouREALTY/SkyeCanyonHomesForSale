@@ -42,6 +42,11 @@ export function buildLocalBusinessJsonLd(): Record<string, unknown> {
       longitude: siteConfig.geo.longitude,
     },
     hasMap: siteConfig.mapsUrl,
+    identifier: {
+      '@type': 'PropertyValue',
+      name: 'Google Place ID',
+      value: siteConfig.placeId,
+    },
     foundingDate: `${siteConfig.opened.year}-${String(siteConfig.opened.month).padStart(2, '0')}-${String(siteConfig.opened.day).padStart(2, '0')}`,
     openingHours: siteConfig.openingHours,
     openingHoursSpecification: [
@@ -93,6 +98,12 @@ export function buildLocalBusinessJsonLd(): Record<string, unknown> {
       '@type': 'Organization',
       name: siteConfig.brokerage,
     },
-    sameAs: [...Object.values(siteConfig.social), siteConfig.googleMapsUrl, siteConfig.googleBusinessUrl],
+    sameAs: [
+      ...Object.values(siteConfig.social),
+      siteConfig.googleMapsUrl,
+      siteConfig.googleBusinessUrl,
+      siteConfig.googleReviewUrl,
+      `https://www.google.com/maps/place/?q=place_id:${siteConfig.placeId}`,
+    ],
   };
 }

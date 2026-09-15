@@ -17,12 +17,23 @@ export default function RelocationServices() {
           subtitle="Relocation services for buyers moving to northwest Las Vegas and Skye Canyon NV 89166."
           {...getHeroImageProps('relocation')}
         >
-          <a
-            href={`tel:${siteConfig.phoneTel}`}
-            className="inline-block bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
-          >
-            Call {siteConfig.phone}
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={siteConfig.realscoutOnboarding}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors text-center"
+            >
+              Search Skye Canyon Homes
+            </a>
+            <a
+              href={`tel:${siteConfig.phoneTel}`}
+              className="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/30 border-2 border-white/40 transition-colors"
+              aria-label={`Call Dr. Jan Duffy at ${siteConfig.phone}`}
+            >
+              Call {siteConfig.phone}
+            </a>
+          </div>
         </PageHero>
 
         <section className="py-16 bg-white">

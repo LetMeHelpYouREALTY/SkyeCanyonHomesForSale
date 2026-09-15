@@ -111,7 +111,7 @@ export default function LasVegasRealEstate() {
             {
               question: 'How is the Las Vegas real estate market currently performing?',
               answer:
-                'Inventory, days on market, and sale-to-list ratios change week to week. Confirm live MLS comps with Dr. Jan Duffy at (702) 500-1902. Skye Canyon is zip 89166 at 10111 W. Skye Canyon Park Drive.',
+                'Inventory, days on market, and sale-to-list ratios change week to week. Confirm live MLS comps with Dr. Jan Duffy at (702) 500-1902. Skye Canyon is zip 89166 at 10111 W Skye Canyon Park Dr.',
             },
             {
               question: 'What should out-of-state buyers know about Las Vegas real estate?',
@@ -121,7 +121,7 @@ export default function LasVegasRealEstate() {
             {
               question: 'What is the average home price in Las Vegas?',
               answer:
-                'List prices vary by zip and village. Confirm live MLS comps with Dr. Jan Duffy at (702) 500-1902. Skye Canyon is zip 89166 at 10111 W. Skye Canyon Park Drive.',
+                'List prices vary by zip and village. Confirm live MLS comps with Dr. Jan Duffy at (702) 500-1902. Skye Canyon is zip 89166 at 10111 W Skye Canyon Park Dr.',
             },
             {
               question: 'Are there good investment opportunities in Las Vegas real estate?',

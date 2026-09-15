@@ -29,6 +29,15 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '**.supabase.co' },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/las-vegas',
+        destination: '/las-vegas-real-estate',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

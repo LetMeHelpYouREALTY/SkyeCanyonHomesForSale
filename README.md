@@ -63,4 +63,4 @@ Push to `main` — Vercel auto-deploys using the Next.js framework preset (`verc
 **Dr. Jan Duffy, REALTOR®**
 - Phone: (702) 500-1902
 - Email: DrDuffy@SkyeCanyonHomesForSale.com
-- Office: 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166
+- Office: 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166

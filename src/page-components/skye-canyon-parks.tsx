@@ -17,7 +17,7 @@ export default function SkyeCanyonParks() {
       size: '15-acre',
       description:
         'The sprawling 15-acre Skye Canyon Park, adjacent to Skye Center and Skye Fitness, is the heartbeat of the neighborhood and home to many community events.',
-      address: '10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166',
+      address: '10111 W Skye Canyon Park Dr, Las Vegas, NV 89166',
       hours: '6:00am – 9:00pm',
       features: [
         '15-acre park',
@@ -71,7 +71,7 @@ export default function SkyeCanyonParks() {
     {
       question: 'What are the hours for Skye Canyon Park?',
       answer:
-        'Skye Canyon Park is open daily from 6:00am to 9:00pm, located at 10111 W Skye Canyon Park Drive, Las Vegas, NV 89166, adjacent to Skye Center and Skye Fitness.',
+        'Skye Canyon Park is open daily from 6:00am to 9:00pm, located at 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166, adjacent to Skye Center and Skye Fitness.',
     },
     {
       question: 'Does Skye Canyon Park have a swimming pool?',
@@ -149,7 +149,7 @@ export default function SkyeCanyonParks() {
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-blue-600 mt-1" />
                     <div>
-                      <span className="text-gray-700">10111 W. Skye Canyon Park Drive</span>
+                      <span className="text-gray-700">10111 W Skye Canyon Park Dr</span>
                       <br />
                       <span className="text-gray-700">Las Vegas, NV 89166</span>
                     </div>
@@ -307,7 +307,9 @@ export default function SkyeCanyonParks() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/properties"
+                href={siteConfig.realscoutOnboarding}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 View Available Homes

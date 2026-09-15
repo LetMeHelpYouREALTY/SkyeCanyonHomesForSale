@@ -6,10 +6,10 @@ export const parks: HyperlocalPark[] = [
     name: 'Skye Canyon Park',
     size: '15-acre',
     description:
-      'The 15-acre Skye Canyon Park is the main recreation hub at 10111 W Skye Canyon Park Drive, adjacent to Skye Center and Skye Fitness in Las Vegas NV 89166.',
+      'The 15-acre Skye Canyon Park is the main recreation hub at 10111 W Skye Canyon Park Dr, adjacent to Skye Center and Skye Fitness in Las Vegas NV 89166.',
     answerSummary:
       'Skye Canyon Park is a 15-acre community park in Skye Canyon NV 89166 open 6:00am–9:00pm daily, with splash pad, sports fields, walking paths, and a resident Junior Olympic pool.',
-    address: '10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166',
+    address: '10111 W Skye Canyon Park Dr, Las Vegas, NV 89166',
     hours: '6:00am – 9:00pm daily',
     features: [
       '15-acre park',
@@ -28,7 +28,7 @@ export const parks: HyperlocalPark[] = [
       {
         question: 'What are the hours for Skye Canyon Park?',
         answer:
-          'Skye Canyon Park is open daily from 6:00am to 9:00pm at 10111 W Skye Canyon Park Drive, Las Vegas, NV 89166, adjacent to Skye Center and Skye Fitness.',
+          'Skye Canyon Park is open daily from 6:00am to 9:00pm at 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166, adjacent to Skye Center and Skye Fitness.',
       },
       {
         question: 'Does Skye Canyon Park have a swimming pool?',

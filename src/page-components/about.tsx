@@ -337,7 +337,11 @@ export default function About() {
                   Schedule Consultation
                 </Button>
               </a>
-              <a href="/properties">
+              <a
+                href={siteConfig.realscoutOnboarding}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-realscout-blue"
@@ -360,12 +364,12 @@ export default function About() {
             {
               question: "What are Dr. Jan Duffy's qualifications as a REALTOR®?",
               answer:
-                'Dr. Jan Duffy holds Nevada Real Estate License S.0197614 with Berkshire Hathaway HomeServices Nevada Properties. The Google Business Profile for the Skye Canyon office at 10111 W. Skye Canyon Park Drive lists an opening date of September 20, 2009.',
+                'Dr. Jan Duffy holds Nevada Real Estate License S.0197614 with Berkshire Hathaway HomeServices Nevada Properties. The Google Business Profile for the Skye Canyon office at 10111 W Skye Canyon Park Dr lists an opening date of September 20, 2009.',
             },
             {
               question: 'Why choose Dr. Jan Duffy for Skye Canyon homes?',
               answer:
-                'Dr. Jan Duffy specializes exclusively in Skye Canyon properties and has extensive knowledge of the guard-gated community, Desert Highlands Golf Course, and local amenities. Her expertise ensures clients get the best value and service.',
+                'Dr. Jan Duffy specializes in Skye Canyon properties and works live MLS for luxury, new construction, and resale in zip 89166. Confirm current comps at (702) 500-1902.',
             },
             {
               question: 'What areas does Dr. Jan Duffy serve?',
@@ -375,7 +379,7 @@ export default function About() {
             {
               question: 'How can I contact Dr. Jan Duffy?',
               answer:
-                'Call (702) 500-1902 or visit the office at 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166. Office hours are Monday-Friday 9AM-6PM, Saturday 9AM-5PM, Sunday 11AM-4PM.',
+                'Call (702) 500-1902 or visit the office at 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166. Office hours are Monday-Friday 9AM-6PM, Saturday 9AM-5PM, Sunday 11AM-4PM.',
             },
             {
               question: 'Does Dr. Jan Duffy work with first-time buyers?',

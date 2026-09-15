@@ -31,7 +31,7 @@ interface OptimizationScore {
 export default function GoogleBusinessProfileDashboard() {
   const [profileData, _setProfileData] = useState<BusinessProfileData>({
     name: 'Skye Canyon Las Vegas Luxury Homes | Dr. Jan Duffy, REALTOR®',
-    address: '10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166',
+    address: '10111 W Skye Canyon Park Dr, Las Vegas, NV 89166',
     phone: '(702) 500-1902',
     website: 'https://skyecanyonhomesforsale.com',
     hours: [

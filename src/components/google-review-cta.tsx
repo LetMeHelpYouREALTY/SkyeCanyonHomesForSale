@@ -63,7 +63,7 @@ export default function GoogleReviewCta({
                 loading="lazy"
               />
               <p className="text-sm text-gray-600">
-                Scan at 10111 W. Skye Canyon Park Drive to open the Google review form.
+                Scan at 10111 W Skye Canyon Park Dr to open the Google review form.
               </p>
             </div>
           </div>

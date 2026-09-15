@@ -85,7 +85,7 @@ export default function AgentBio() {
               </div>
               <div className="flex items-center text-gray-700">
                 <MapPin className="w-5 h-5 text-realscout-blue mr-3" />
-                <span>10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166</span>
+                <span>{siteConfig.address.formatted}</span>
               </div>
             </div>
 

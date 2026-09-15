@@ -6,6 +6,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
 export default function SellerAgentServices() {
@@ -19,15 +20,24 @@ export default function SellerAgentServices() {
         {...getHeroImageProps('seller-agent')}
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={siteConfig.realscoutOnboarding}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors text-center"
+          >
+            See Live MLS Comps
+          </a>
           <CalendlyPopupButton
             text="Schedule a Listing Consultation"
-            className="bg-white text-green-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors"
+            className="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/30 border-2 border-white/40 transition-colors"
           />
           <a
-            href="tel:+17025001902"
+            href={`tel:${siteConfig.phoneTel}`}
             className="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/30 border-2 border-white/40 transition-colors"
+            aria-label={`Call Dr. Jan Duffy at ${siteConfig.phone}`}
           >
-            Call (702) 500-1902
+            Call {siteConfig.phone}
           </a>
         </div>
       </PageHero>

@@ -63,7 +63,7 @@ export default function SkyeCanyonGuide() {
               <Card>
                 <CardContent className="p-6 text-center">
                   <h3 className="text-2xl font-bold text-realscout-blue mb-2">Guard-gated</h3>
-                  <p className="text-sm text-gray-600">Staffed entry on Skye Canyon Park Drive</p>
+                  <p className="text-sm text-gray-600">Staffed entry on Skye Canyon Park Dr</p>
                 </CardContent>
               </Card>
               <Card>
@@ -152,7 +152,7 @@ export default function SkyeCanyonGuide() {
             {
               question: 'What makes Skye Canyon different from other Las Vegas communities?',
               answer:
-                'Skye Canyon is a 24/7 guard-gated community with Desert Highlands Golf Course and recreation amenities at 10111 W. Skye Canyon Park Drive, Las Vegas NV 89166. Confirm lot size on the specific listing.',
+                'Skye Canyon is a 24/7 guard-gated community with Desert Highlands Golf Course and recreation amenities at 10111 W Skye Canyon Park Dr, Las Vegas NV 89166. Confirm lot size on the specific listing.',
             },
             {
               question: 'What amenities are included with Skye Canyon living?',

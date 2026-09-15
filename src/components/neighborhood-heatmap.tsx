@@ -415,7 +415,13 @@ export default function NeighborhoodHeatmap() {
                       Close Details
                     </Button>
                     <Button asChild>
-                      <a href="/search">View listings in {selectedNeighborhood}</a>
+                      <a
+                        href={siteConfig.realscoutOnboarding}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View listings in {selectedNeighborhood}
+                      </a>
                     </Button>
                   </div>
                 </div>

@@ -60,7 +60,7 @@ export default function MarketAnalysis() {
               Why Invest in Skye Canyon Las Vegas Nevada?
             </h2>
             <HeadingImage
-              {...sectionImages.golf}
+              {...sectionImages.monument}
               className="w-full h-52 object-cover rounded-xl mb-10"
             />
 
@@ -118,7 +118,7 @@ export default function MarketAnalysis() {
             {
               question: 'How is the Skye Canyon real estate market performing?',
               answer:
-                'Inventory, days on market, and sale-to-list ratios change week to week. Search live MLS or visit 10111 W. Skye Canyon Park Drive for a current snapshot.',
+                'Inventory, days on market, and sale-to-list ratios change week to week. Search live MLS or visit 10111 W Skye Canyon Park Dr for a current snapshot.',
             },
             {
               question: 'What is the average days on market for Skye Canyon homes?',

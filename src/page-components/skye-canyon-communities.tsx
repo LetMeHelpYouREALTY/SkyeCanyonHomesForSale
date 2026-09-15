@@ -8,6 +8,7 @@ import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import { sectionImages } from '@/data/section-images';
+import { siteConfig } from '@/config/site.config';
 
 export default function SkyeCanyonCommunities() {
   const communitiesData = [
@@ -329,7 +330,9 @@ export default function SkyeCanyonCommunities() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/properties"
+                href={siteConfig.realscoutOnboarding}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 View All Properties

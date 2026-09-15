@@ -33,7 +33,7 @@ export default function EnhancedSEOMetadata({
       'Expert real estate services in Skye Canyon and Las Vegas, Nevada specializing in luxury homes and investment properties.',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '10111 W. Skye Canyon Park Drive',
+      streetAddress: '10111 W Skye Canyon Park Dr',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89166',

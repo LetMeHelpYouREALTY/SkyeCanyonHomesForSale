@@ -118,7 +118,7 @@ export default function Home() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="text-3xl font-bold text-blue-600 mb-2">Maps pin</div>
-                <div className="text-gray-600">10111 W. Skye Canyon Park Drive</div>
+                <div className="text-gray-600">{siteConfig.address.street}</div>
               </div>
             </div>
             <p className="text-sm text-gray-500 mb-4">

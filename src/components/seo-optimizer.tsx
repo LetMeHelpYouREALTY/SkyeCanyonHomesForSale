@@ -129,7 +129,7 @@ export default function SEOOptimizer({
         name: propertyData.address,
         address: {
           '@type': 'PostalAddress',
-          streetAddress: propertyData.address || '10111 W. Skye Canyon Park Drive',
+          streetAddress: propertyData.address || '10111 W Skye Canyon Park Dr',
           addressLocality: 'Las Vegas',
           addressRegion: 'Nevada',
           postalCode: '89166',

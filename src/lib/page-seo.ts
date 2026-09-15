@@ -23,7 +23,7 @@ const pages: Record<string, PageSeoEntry> = {
   '/contact': {
     title: 'Contact Dr. Jan Duffy | Skye Canyon Las Vegas NV 89166',
     description:
-      'Call, get directions, or book a consult with Dr. Jan Duffy. 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166. (702) 500-1902.',
+      'Call, get directions, or book a consult with Dr. Jan Duffy. 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166. (702) 500-1902.',
     path: '/contact',
   },
   '/properties': {

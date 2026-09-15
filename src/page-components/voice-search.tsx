@@ -5,6 +5,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
 export default function VoiceSearchPage() {
@@ -52,6 +53,10 @@ export default function VoiceSearchPage() {
           <div className="mt-12 max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-sm border p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">How It Works</h2>
+              <HeadingImage
+                {...sectionImages.voiceSearch}
+                className="w-full h-48 object-cover rounded-xl mb-8"
+              />
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -81,6 +86,16 @@ export default function VoiceSearchPage() {
                     Receive personalized property recommendations with detailed information.
                   </p>
                 </div>
+              </div>
+              <div className="mt-8 text-center">
+                <a
+                  href={siteConfig.realscoutOnboarding}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Search Skye Canyon Homes
+                </a>
               </div>
             </div>
           </div>

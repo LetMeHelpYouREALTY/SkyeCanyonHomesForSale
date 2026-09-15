@@ -35,7 +35,7 @@ export const sectionImages = {
   },
   office: section(
     'office-exterior',
-    'Dr. Jan Duffy REALTOR office at 10111 W. Skye Canyon Park Drive Las Vegas NV 89166',
+    'Dr. Jan Duffy REALTOR office at 10111 W Skye Canyon Park Dr Las Vegas NV 89166',
   ),
   luxuryInterior: section(
     'luxury-interior',
@@ -78,7 +78,7 @@ export const sectionImages = {
   monument: {
     src: siteImage('gbp/cover.jpg'),
     srcWebp: siteImageWebp('gbp/cover.jpg'),
-    alt: 'Skye Canyon monument gate at 10111 W. Skye Canyon Park Drive Las Vegas NV 89166',
+    alt: 'Skye Canyon monument gate at 10111 W Skye Canyon Park Dr Las Vegas NV 89166',
   },
   profile: {
     src: siteImage('gbp/profile.jpg'),
@@ -94,6 +94,11 @@ export const sectionImages = {
     src: siteImage('gbp/clubhouse.jpg'),
     srcWebp: siteImageWebp('gbp/clubhouse.jpg'),
     alt: 'Skye Canyon recreation clubhouse terrace and firepit Las Vegas NV 89166',
+  },
+  voiceSearch: {
+    src: siteImage('heroes/voice-search.jpg'),
+    srcWebp: siteImageWebp('heroes/voice-search.jpg'),
+    alt: 'Voice search for Skye Canyon homes for sale Las Vegas NV 89166',
   },
 } as const;
 

@@ -79,7 +79,7 @@ export default function NeighborhoodAnalysis() {
                 <CardContent className="p-6 text-center">
                   <div className="text-3xl font-bold text-orange-600 mb-2">Maps</div>
                   <div className="text-gray-600">Office pin</div>
-                  <div className="text-sm text-gray-500 mt-1">10111 W. Skye Canyon Park Drive</div>
+                  <div className="text-sm text-gray-500 mt-1">{siteConfig.address.street}</div>
                 </CardContent>
               </Card>
             </div>
@@ -193,9 +193,9 @@ export default function NeighborhoodAnalysis() {
           pageType="market-analysis"
           faqs={[
             {
-              question: 'Which Las Vegas neighborhood has the best investment potential?',
+              question: 'How do I compare housing across Las Vegas neighborhoods?',
               answer:
-                'Skye Canyon and Summerlin West have shown consistent appreciation with guard-gated access, golf amenities, and limited inventory. Confirm live MLS comps before you decide.',
+                'Pull live MLS comps, days on market, and current inventory for Skye Canyon, Summerlin West, and Centennial Hills. Confirm numbers with Dr. Jan Duffy at (702) 500-1902. Guard-gated entry and Desert Highlands Golf Course are facts to weigh — they are not a substitute for sale comps.',
             },
             {
               question: 'How do I confirm which campus serves a Skye Canyon address?',
@@ -210,7 +210,7 @@ export default function NeighborhoodAnalysis() {
             {
               question: 'How often is the market data updated?',
               answer:
-                'Our neighborhood analysis data is updated weekly with the latest sales, price trends, and market activity to ensure you have the most current information for decision-making.',
+                'Confirm the latest sales, list prices, and days on market on live MLS with Dr. Jan Duffy. Portal snapshots go stale; call (702) 500-1902 for a current pull.',
             },
           ]}
         />

@@ -183,7 +183,7 @@ export default function SkyeCanyonSchools() {
                 Three elementary campuses serve Skye Canyon addresses
               </p>
               <HeadingImage
-                {...sectionImages.schools}
+                {...sectionImages.parks}
                 className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
               />
             </div>
@@ -215,7 +215,7 @@ export default function SkyeCanyonSchools() {
               Ralph Cadwallader Middle and Edmundo Escobedo Sr Middle serve Skye Canyon addresses
             </p>
               <HeadingImage
-                {...sectionImages.schools}
+                {...sectionImages.communityMap}
                 className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
               />
             </div>
@@ -247,7 +247,7 @@ export default function SkyeCanyonSchools() {
                 Arbor View High School — zoned high school for Skye Canyon addresses
               </p>
               <HeadingImage
-                {...sectionImages.schools}
+                {...sectionImages.northwest}
                 className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
               />
             </div>
@@ -269,7 +269,7 @@ export default function SkyeCanyonSchools() {
                   </div>
                   <div className="text-center">
                     <div className="font-semibold text-purple-600">Athletics</div>
-                    <div className="text-gray-600">Championship programs</div>
+                    <div className="text-gray-600">Confirm programs on the CCSD campus page</div>
                   </div>
                 </div>
               </div>
@@ -286,7 +286,7 @@ export default function SkyeCanyonSchools() {
                 Alternative education with specialized programs and smaller class sizes
               </p>
               <HeadingImage
-                {...sectionImages.schools}
+                {...sectionImages.guide}
                 className="w-full h-48 object-cover rounded-xl mt-8 max-w-4xl mx-auto"
               />
             </div>

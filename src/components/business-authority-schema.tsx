@@ -26,7 +26,7 @@ export default function BusinessAuthoritySchema() {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '10111 W. Skye Canyon Park Drive',
+      streetAddress: '10111 W Skye Canyon Park Dr',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89166',

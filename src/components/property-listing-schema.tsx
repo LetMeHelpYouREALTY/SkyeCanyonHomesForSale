@@ -16,7 +16,7 @@ export default function PropertyListingSchema() {
       email: 'DrDuffy@SkyeCanyonHomesForSale.com',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '10111 W. Skye Canyon Park Drive',
+        streetAddress: '10111 W Skye Canyon Park Dr',
         addressLocality: 'Las Vegas',
         addressRegion: 'NV',
         postalCode: '89166',

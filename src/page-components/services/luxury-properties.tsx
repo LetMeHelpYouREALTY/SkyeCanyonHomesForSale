@@ -5,6 +5,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
 export default function LuxuryPropertyServices() {
@@ -14,11 +15,11 @@ export default function LuxuryPropertyServices() {
         pageType="service"
         serviceName="luxury-properties"
         breadcrumbs={[
-          { name: 'Home', url: 'https://skyecanyonhomesforsale.com' },
-          { name: 'Services', url: 'https://skyecanyonhomesforsale.com/services' },
+          { name: 'Home', url: siteConfig.url },
+          { name: 'Services', url: `${siteConfig.url}/services/luxury-properties` },
           {
             name: 'Luxury Properties',
-            url: 'https://skyecanyonhomesforsale.com/services/luxury-properties',
+            url: `${siteConfig.url}/services/luxury-properties`,
           },
         ]}
       />
@@ -31,13 +32,23 @@ export default function LuxuryPropertyServices() {
             subtitle="Certified luxury home marketing specialist — premium Skye Canyon and northwest Las Vegas properties."
             {...getHeroImageProps('luxury-properties')}
           >
-            <a
-              href="tel:+17025001902"
-              className="inline-block bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors"
-              aria-label="Call Dr. Jan Duffy at (702) 500-1902"
-            >
-              Call (702) 500-1902
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={siteConfig.realscoutOnboarding}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors text-center"
+              >
+                Search Luxury Homes
+              </a>
+              <a
+                href={`tel:${siteConfig.phoneTel}`}
+                className="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/30 border-2 border-white/40 transition-colors"
+                aria-label={`Call Dr. Jan Duffy at ${siteConfig.phone}`}
+              >
+                Call {siteConfig.phone}
+              </a>
+            </div>
           </PageHero>
 
           <section className="py-16 bg-white" aria-labelledby="services-heading">

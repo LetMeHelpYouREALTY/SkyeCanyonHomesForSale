@@ -28,7 +28,7 @@ export const zipAreas: HyperlocalZipArea[] = [
       {
         question: 'Who specializes in 89166 Skye Canyon homes?',
         answer:
-          'Dr. Jan Duffy, REALTOR® (Nevada License S.0197614), specializes in Skye Canyon and zip code 89166 with Berkshire Hathaway HomeServices Nevada Properties. Office: 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166.',
+          'Dr. Jan Duffy, REALTOR® (Nevada License S.0197614), specializes in Skye Canyon and zip code 89166 with Berkshire Hathaway HomeServices Nevada Properties. Office: 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166.',
       },
     ],
   },

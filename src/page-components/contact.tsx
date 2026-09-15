@@ -19,7 +19,7 @@ export default function Contact() {
       <main className="min-h-screen bg-gray-50">
         <PageHero
           title="Contact Dr. Jan Duffy"
-          subtitle="Call, get directions, or book a consult at 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166."
+          subtitle="Call, get directions, or book a consult at 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166."
           {...getHeroImageProps('contact')}
         />
 

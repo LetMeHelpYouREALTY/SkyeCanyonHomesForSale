@@ -15,13 +15,16 @@ export const siteConfig = {
   email: 'DrDuffy@SkyeCanyonHomesForSale.com',
   license: 'S.0197614',
   brokerage: 'Berkshire Hathaway HomeServices Nevada Properties',
+  placeId: 'ChIJ_yrcejWTyIARVpnwxqlS0Wg',
+  mapsCid: '7552908939217639766',
   address: {
-    street: '10111 W. Skye Canyon Park Drive',
+    /** Matches live GBP storefrontAddress.addressLines (verified 2026-09-15). */
+    street: '10111 W Skye Canyon Park Dr',
     city: 'Las Vegas',
     state: 'NV',
     zip: '89166',
     country: 'US',
-    formatted: '10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166',
+    formatted: '10111 W Skye Canyon Park Dr, Las Vegas, NV 89166',
   },
   geo: {
     latitude: 36.2648,
@@ -45,9 +48,9 @@ export const siteConfig = {
   googleMapsUrl: 'https://maps.google.com/maps?cid=7552908939217639766',
   mapsUrl: 'https://maps.google.com/maps?cid=7552908939217639766',
   mapsEmbedUrl:
-    'https://www.google.com/maps?q=10111+W.+Skye+Canyon+Park+Drive,+Las+Vegas,+NV+89166&hl=en&z=16&output=embed',
+    'https://www.google.com/maps?q=10111+W+Skye+Canyon+Park+Dr,+Las+Vegas,+NV+89166&hl=en&z=16&output=embed',
   directionsUrl:
-    'https://www.google.com/maps/dir/?api=1&destination=10111+W.+Skye+Canyon+Park+Drive,+Las+Vegas,+NV+89166',
+    'https://www.google.com/maps/dir/?api=1&destination=10111+W+Skye+Canyon+Park+Dr,+Las+Vegas,+NV+89166&destination_place_id=ChIJ_yrcejWTyIARVpnwxqlS0Wg',
   social: {
     facebook: 'https://facebook.com/skyecanyonhomes',
     instagram: 'https://instagram.com/skyecanyonhomes',

@@ -31,16 +31,24 @@ export default function BuyerAgentServices() {
             {...getHeroImageProps('buyer-agent')}
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={siteConfig.realscoutOnboarding}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors text-center"
+              >
+                Search Skye Canyon Homes
+              </a>
               <CalendlyPopupButton
                 text="Schedule a Buyer Consultation"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors cursor-pointer"
+                className="bg-blue-600/80 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 border-2 border-white/40 transition-colors cursor-pointer"
               />
               <a
-                href="tel:+17025001902"
+                href={`tel:${siteConfig.phoneTel}`}
                 className="bg-blue-600/80 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 border-2 border-white/40 transition-colors"
-                aria-label="Call Dr. Jan Duffy at (702) 500-1902"
+                aria-label={`Call Dr. Jan Duffy at ${siteConfig.phone}`}
               >
-                Call (702) 500-1902
+                Call {siteConfig.phone}
               </a>
             </div>
           </PageHero>

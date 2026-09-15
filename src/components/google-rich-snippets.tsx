@@ -53,7 +53,7 @@ export default function GoogleRichSnippets() {
       telephone: '(702) 500-1902',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '10111 W. Skye Canyon Park Drive',
+        streetAddress: '10111 W Skye Canyon Park Dr',
         addressLocality: 'Las Vegas',
         addressRegion: 'NV',
         addressCountry: 'US',

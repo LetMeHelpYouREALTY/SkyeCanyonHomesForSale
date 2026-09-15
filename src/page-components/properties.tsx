@@ -99,7 +99,7 @@ export default function Properties() {
                 Skye Canyon Listings Near the Office Pin
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                The office pin is 10111 W. Skye Canyon Park Drive, Las Vegas, NV 89166. Search live
+                The office pin is 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166. Search live
                 MLS for current homes — we do not publish placeholder addresses or prices.
               </p>
             </div>
