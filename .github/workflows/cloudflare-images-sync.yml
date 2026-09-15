@@ -8,9 +8,22 @@ on:
       - 'public/images/**'
       - 'scripts/cloudflare-images-sync.mjs'
       - 'scripts/cloudflare-image-id.mjs'
+      - 'scripts/cloudflare-image-id.test.mjs'
+      - 'scripts/topic-images.test.mjs'
       - '.github/workflows/cloudflare-images-sync.yml'
       - 'src/lib/cloudflare-images.ts'
+      - 'src/lib/cloudflare-account-hash.ts'
+      - 'docs/CLOUDFLARE-IMAGES.md'
   workflow_dispatch:
+    inputs:
+      require_secrets:
+        description: Fail if CF_ACCOUNT_ID and CF_IMAGES_TOKEN are missing
+        type: boolean
+        default: false
+
+concurrency:
+  group: cloudflare-images-sync
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -27,21 +40,64 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Upload git-backed images to Cloudflare Images
+      - name: Test image IDs and git backup files
+        run: npm run test:images
+
+      - name: Dry-run Cloudflare Images upload plan
+        env:
+          CF_IMAGES_DRY_RUN: '1'
+        run: node scripts/cloudflare-images-sync.mjs
+
+      - name: Detect Cloudflare Images secrets
+        id: creds
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_IMAGES_TOKEN: ${{ secrets.CF_IMAGES_TOKEN }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          REQUIRE_SECRETS: ${{ github.event.inputs.require_secrets || 'false' }}
         run: |
-          if [ -z "$CF_ACCOUNT_ID" ] || [ -z "${CF_IMAGES_TOKEN}${CLOUDFLARE_API_TOKEN}" ]; then
-            echo "::warning::Cloudflare Images secrets CF_ACCOUNT_ID and CF_IMAGES_TOKEN are empty. Git /images backup stays live on Vercel until those GitHub secrets exist."
+          set -euo pipefail
+          if [ -z "${CF_ACCOUNT_ID:-}" ] || [ -z "${CF_IMAGES_TOKEN:-}${CLOUDFLARE_API_TOKEN:-}" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "## Cloudflare Images — blocked"
+              echo ""
+              echo "GitHub secrets \`CF_ACCOUNT_ID\` and \`CF_IMAGES_TOKEN\` (or \`CLOUDFLARE_API_TOKEN\`) are empty."
+              echo "This job did **not** upload to Cloudflare. Production stays on the git \`/images\` backup."
+              echo ""
+              echo "### Next"
+              echo "1. Create a Cloudflare API token with **Account / Cloudflare Images / Edit**."
+              echo "2. Add repo secrets \`CF_ACCOUNT_ID\` and \`CF_IMAGES_TOKEN\`."
+              echo "3. Actions → Cloudflare Images Sync → Run workflow (check **Fail if secrets are missing** after secrets exist)."
+              echo "4. Confirm \`curl https://www.skyecanyonhomesforsale.com/api/health\` shows \`imageCdn: cloudflare-images\`."
+              echo ""
+              echo "Runbook: \`docs/CLOUDFLARE-IMAGES.md\`."
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::warning::Cloudflare Images secrets missing. Git /images backup stays live. See docs/CLOUDFLARE-IMAGES.md."
+            if [ "$REQUIRE_SECRETS" = "true" ]; then
+              echo "::error::require_secrets is set and Cloudflare Images secrets are missing."
+              exit 1
+            fi
+            exit 0
           fi
-          node scripts/cloudflare-images-sync.mjs
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+          echo "Cloudflare Images secrets are present." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload git-backed images to Cloudflare Images
+        if: steps.creds.outputs.ready == 'true'
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_IMAGES_TOKEN: ${{ secrets.CF_IMAGES_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: node scripts/cloudflare-images-sync.mjs
 
       - name: Commit Cloudflare Images account hash
+        if: steps.creds.outputs.ready == 'true'
         run: |
+          set -euo pipefail
           if git diff --quiet -- src/lib/cloudflare-account-hash.ts; then
             echo "Account hash file unchanged."
+            echo "Account hash file unchanged." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -49,3 +105,4 @@ jobs:
           git add src/lib/cloudflare-account-hash.ts
           git commit -m "Commit Cloudflare Images account hash for imagedelivery.net URLs"
           git push
+          echo "Committed Cloudflare Images account hash." >> "$GITHUB_STEP_SUMMARY"

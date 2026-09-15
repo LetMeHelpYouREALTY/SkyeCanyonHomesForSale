@@ -53,6 +53,19 @@ npm run dev           # http://localhost:3000
 | `npm run lint` | ESLint (Next.js) |
 | `npm run check` | TypeScript check |
 | `npm run lint:biome` | Biome linter |
+| `npm run test:images` | Cloudflare image ID mapping + git backup files |
+| `npm run images:cf-sync` | Upload `public/images` to Cloudflare Images (needs secrets) |
+
+## Images
+
+Heading, hero, OG, and GBP photos live in `public/images/` (git backup). `siteImage()` in `src/lib/cloudflare-images.ts` serves Cloudflare `imagedelivery.net` once `src/lib/cloudflare-account-hash.ts` is non-null.
+
+Production is still on the git backup until GitHub secrets `CF_ACCOUNT_ID` and `CF_IMAGES_TOKEN` exist. Check `GET /api/health` (`imageCdn`). Full flip steps, DNS (gray cloud only), and the GitHub Action skip-vs-upload behavior: **[docs/CLOUDFLARE-IMAGES.md](docs/CLOUDFLARE-IMAGES.md)**.
+
+```bash
+npm run test:images
+CF_IMAGES_DRY_RUN=1 npm run images:cf-sync
+```
 
 ## Deployment
 

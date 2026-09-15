@@ -14,6 +14,8 @@ const expectedFiles = [
   'gbp/recreation.jpg',
   'gbp/clubhouse.jpg',
   'gbp/profile.jpg',
+  'gbp/google-review-qr.png',
+  'heroes/schools.jpg',
   'heroes/northwest.jpg',
   'heroes/market.jpg',
   'heroes/community.jpg',

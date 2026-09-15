@@ -8,11 +8,13 @@
  * images.skyecanyonhomesforsale.com to the Cloudflare Images custom domain.
  *
  * Usage:
+ *   CF_IMAGES_DRY_RUN=1 node scripts/cloudflare-images-sync.mjs
  *   node scripts/cloudflare-images-sync.mjs
  *
  * Custom IDs match src/lib/cloudflare-images.ts cloudflareImageId().
+ * Runbook: docs/CLOUDFLARE-IMAGES.md
  */
-import { readdir, readFile, stat, writeFile } from 'fs/promises';
+import { appendFile, readdir, readFile, stat, writeFile } from 'fs/promises';
 import path from 'path';
 import {
   cloudflareImageId,
@@ -22,6 +24,7 @@ import {
 
 const ACCOUNT_ID = process.env.CF_ACCOUNT_ID;
 const TOKEN = process.env.CF_IMAGES_TOKEN || process.env.CLOUDFLARE_API_TOKEN;
+const DRY_RUN = process.env.CF_IMAGES_DRY_RUN === '1';
 const ROOT = 'public/images';
 const HASH_FILE = 'src/lib/cloudflare-account-hash.ts';
 
@@ -38,6 +41,34 @@ async function walk(dir, prefix = '') {
     }
   }
   return files;
+}
+
+async function plannedUploads() {
+  const files = await walk(ROOT);
+  const relSet = new Set(files.map((file) => file.rel));
+  const planned = [];
+  const skippedWebp = [];
+  const skippedSmall = [];
+
+  for (const file of files) {
+    if (!shouldUploadToCloudflare(file.rel, relSet)) {
+      skippedWebp.push(file.rel);
+      continue;
+    }
+    const info = await stat(file.full);
+    if (info.size < 500) {
+      skippedSmall.push(file.rel);
+      continue;
+    }
+    planned.push({
+      rel: file.rel,
+      full: file.full,
+      id: cloudflareImageId(file.rel),
+      bytes: info.size,
+    });
+  }
+
+  return { planned, skippedWebp, skippedSmall };
 }
 
 function hashFileContents(hash) {
@@ -66,34 +97,65 @@ async function persistHash(hash) {
   return true;
 }
 
-if (!ACCOUNT_ID || !TOKEN) {
-  console.log('::warning::Cloudflare Images credentials not set. Git backup remains in public/images/.');
-  console.log('Set GitHub secrets CF_ACCOUNT_ID and CF_IMAGES_TOKEN.');
-  console.log('The Action commits src/lib/cloudflare-account-hash.ts after the first successful upload so Vercel can serve imagedelivery.net URLs without a dashboard env var.');
-  console.log('Optional: Vercel NEXT_PUBLIC_CF_IMAGES_BASE_URL and a DNS-only CNAME for images.skyecanyonhomesforsale.com. Do not orange-cloud Vercel.');
+async function writeStepSummary(markdown) {
+  const file = process.env.GITHUB_STEP_SUMMARY;
+  if (!file) {
+    return;
+  }
+  await appendFile(file, `${markdown.trim()}\n`);
+}
+
+function missingCredsMessage() {
+  return [
+    '::warning::Cloudflare Images credentials not set. Git backup remains in public/images/.',
+    'Set GitHub secrets CF_ACCOUNT_ID and CF_IMAGES_TOKEN.',
+    'The Action commits src/lib/cloudflare-account-hash.ts after the first successful upload so Vercel can serve imagedelivery.net URLs without a dashboard env var.',
+    'Optional: Vercel NEXT_PUBLIC_CF_IMAGES_BASE_URL and a DNS-only CNAME for images.skyecanyonhomesforsale.com. Do not orange-cloud Vercel.',
+    'Runbook: docs/CLOUDFLARE-IMAGES.md',
+    'CLOUDFLARE_IMAGES_SYNC_SKIPPED=1',
+  ].join('\n');
+}
+
+const { planned, skippedWebp, skippedSmall } = await plannedUploads();
+
+if (DRY_RUN) {
+  console.log(`Cloudflare Images dry-run: ${planned.length} files`);
+  for (const item of planned) {
+    console.log(`${item.id}\t${item.rel}\t${item.bytes}`);
+  }
+  if (skippedWebp.length > 0) {
+    console.log(`skip webp with jpeg: ${skippedWebp.length}`);
+  }
+  if (skippedSmall.length > 0) {
+    console.log(`skip <500 bytes: ${skippedSmall.length}`);
+  }
+  await writeStepSummary(`## Cloudflare Images — dry-run
+
+- planned uploads: **${planned.length}**
+- skipped WebP (JPEG original exists): ${skippedWebp.length}
+- skipped under 500 bytes: ${skippedSmall.length}
+
+Custom IDs use \`skye-canyon/{path without extension}\`. No Cloudflare API call was made.
+`);
   process.exit(0);
 }
 
-const files = await walk(ROOT);
-const relSet = new Set(files.map((file) => file.rel));
+if (!ACCOUNT_ID || !TOKEN) {
+  console.log(missingCredsMessage());
+  await writeStepSummary(`## Cloudflare Images — blocked
+
+Credentials are empty. Git \`/images\` backup stays live. See \`docs/CLOUDFLARE-IMAGES.md\`.
+`);
+  process.exit(0);
+}
+
 let uploaded = 0;
 let failed = 0;
 let deliveryHash = null;
 
-for (const file of files) {
-  if (!shouldUploadToCloudflare(file.rel, relSet)) {
-    console.log(`skip   ${file.rel} (jpeg original uploaded)`);
-    continue;
-  }
-
-  const id = cloudflareImageId(file.rel);
-  const info = await stat(file.full);
-  if (info.size < 500) {
-    continue;
-  }
-
+for (const file of planned) {
   const body = new FormData();
-  body.set('id', id);
+  body.set('id', file.id);
   body.set('file', new Blob([await readFile(file.full)]), path.basename(file.full));
 
   const res = await fetch(
@@ -114,16 +176,16 @@ for (const file of files) {
   if (!res.ok || json.success === false) {
     const already = JSON.stringify(json.errors ?? json).includes('Duplicate');
     if (already) {
-      console.log(`exists ${id}`);
+      console.log(`exists ${file.id}`);
       uploaded += 1;
       continue;
     }
-    console.error(`fail   ${id}`, json.errors ?? json);
+    console.error(`fail   ${file.id}`, json.errors ?? json);
     failed += 1;
     continue;
   }
 
-  console.log(`upload ${id}`);
+  console.log(`upload ${file.id}`);
   uploaded += 1;
 }
 
@@ -133,13 +195,22 @@ if (!deliveryHash) {
     { headers: { Authorization: `Bearer ${TOKEN}` } },
   );
   const listJson = await listRes.json();
-  const variant = listJson?.result?.images?.[0]?.variants?.[0] ?? listJson?.result?.[0]?.variants?.[0];
+  const variant =
+    listJson?.result?.images?.[0]?.variants?.[0] ?? listJson?.result?.[0]?.variants?.[0];
   deliveryHash = hashFromVariantUrl(variant);
 }
 
-await persistHash(deliveryHash);
+const wroteHash = await persistHash(deliveryHash);
 
 console.log(`\nCloudflare Images sync: ${uploaded} ok, ${failed} failed`);
+await writeStepSummary(`## Cloudflare Images — uploaded
+
+- uploaded or already present: **${uploaded}**
+- failed: **${failed}**
+- account hash: \`${deliveryHash ?? 'none'}\`
+- hash file written: ${wroteHash ? 'yes' : 'no'}
+`);
+
 if (failed > 0) {
   process.exit(1);
 }
