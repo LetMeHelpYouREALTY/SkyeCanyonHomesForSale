@@ -53,7 +53,7 @@ export default function ComprehensiveSchemaMarkup({
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Skye Canyon Buyer Agent Services',
-        description: 'Expert buyer representation for Skye Canyon homes and investment properties.',
+        description: 'Buyer representation for Skye Canyon homes and investment properties in Las Vegas NV 89166.',
         provider: { '@type': 'RealEstateAgent', name: siteConfig.name },
         areaServed: 'Las Vegas, NV',
         serviceType: 'Real Estate Buyer Agent',

@@ -306,7 +306,7 @@ export default function SkyeCanyonParks() {
         <section className="py-16 px-4 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Find Your Home Near Skye Canyon Parks
+              Search Homes Near Skye Canyon Parks
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Compare current MLS homes near Skye Canyon Park, the rec center, and Desert Highlands.

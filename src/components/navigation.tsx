@@ -41,21 +41,18 @@ export default function Navigation() {
     <nav className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Left Side - Flashing Phone Number */}
-          <div className="flex items-center">
+          {/* Left Side - Phone CTA (nowrap so the GBP tracking number stays intact) */}
+          <div className="flex items-center shrink-0 pr-3">
             <div className="flex flex-col items-start">
               <a
                 href={`tel:${siteConfig.phoneTel}`}
-                className="group flex items-center text-2xl font-bold text-realscout-blue hover:text-realscout-navy transition-all duration-300"
+                aria-label={`Call ${siteConfig.businessName} at ${siteConfig.phone}`}
+                className="group inline-flex items-center whitespace-nowrap text-base sm:text-lg font-bold text-realscout-blue hover:text-realscout-navy transition-colors"
               >
-                <Phone className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform duration-300" />
-                <span className="relative">
-                  {siteConfig.phone}
-                  {/* Flashing effect */}
-                  <span className="absolute inset-0 bg-realscout-blue opacity-20 animate-pulse rounded"></span>
-                </span>
+                <Phone className="w-5 h-5 mr-2 shrink-0" aria-hidden="true" />
+                <span className="whitespace-nowrap tabular-nums">{siteConfig.phone}</span>
               </a>
-              <div className="text-sm text-gray-600 font-medium mt-1">
+              <div className="text-xs sm:text-sm text-gray-600 font-medium mt-0.5 whitespace-nowrap">
                 Skye Canyon Real Estate · 89166
               </div>
             </div>
@@ -129,12 +126,12 @@ export default function Navigation() {
                 </Link>
                 <div className="px-4 py-2 border-t border-gray-100 mt-2">
                   <a
-                    href="https://drjanduffy.realscout.com/onboarding"
+                    href={siteConfig.realscoutOnboarding}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-full px-4 py-2 bg-realscout-blue text-white text-sm font-medium rounded-lg hover:bg-realscout-navy transition-colors"
                   >
-                    Start Property Search
+                    Search Homes
                   </a>
                 </div>
               </div>
@@ -266,7 +263,7 @@ export default function Navigation() {
 
             {/* CTA Button */}
             <a
-              href="https://drjanduffy.realscout.com/onboarding"
+              href={siteConfig.realscoutOnboarding}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -462,7 +459,7 @@ export default function Navigation() {
             {/* CTA Button - Mobile */}
             <div className="px-3 pt-2">
               <a
-                href="https://drjanduffy.realscout.com/onboarding"
+                href={siteConfig.realscoutOnboarding}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block px-4 py-3 bg-realscout-blue text-white text-center rounded-lg font-medium hover:bg-realscout-navy transition-colors"

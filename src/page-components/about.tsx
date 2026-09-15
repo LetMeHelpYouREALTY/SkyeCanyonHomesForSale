@@ -90,7 +90,7 @@ export default function About() {
                   Skye Canyon Real Estate Specialist
                 </h2>
                 <p className="text-xl mb-4 text-gray-700 font-medium">
-                  Your Trusted Skye Canyon Real Estate Expert
+                  Skye Canyon homes for sale in Las Vegas NV 89166
                 </p>
                 <p className="text-lg mb-8 text-gray-600 leading-relaxed">
                   Dr. Jan Duffy is a Nevada REALTOR® (S.0197614) at {siteConfig.address.formatted}.

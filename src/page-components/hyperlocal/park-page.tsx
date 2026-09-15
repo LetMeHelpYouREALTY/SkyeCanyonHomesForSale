@@ -107,7 +107,7 @@ export default function ParkPage({ park }: ParkPageProps) {
       <FAQSection title={`${park.name} FAQ`} faqs={park.faqs} pageType="skye-canyon" includeSchema={false} />
       <HyperlocalInternalLinks title="More Skye Canyon Places" links={relatedLinks} />
       <GbpLocalSection heading={`Get directions from the office to ${park.name}`} />
-      <HyperlocalCta title="Find a Home Near Skye Canyon Parks" />
+      <HyperlocalCta title="Search Homes Near Skye Canyon Parks" />
     </>
   );
 }

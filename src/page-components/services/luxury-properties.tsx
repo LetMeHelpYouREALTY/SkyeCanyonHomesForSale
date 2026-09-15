@@ -83,7 +83,7 @@ export default function LuxuryPropertyServices() {
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">
-                    Custom Home Expertise
+                    Custom Home Finishes
                   </h3>
                   <p className="text-gray-600">
                     Custom and new-construction finishes on current Skye Canyon luxury listings.

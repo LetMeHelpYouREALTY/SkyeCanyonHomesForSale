@@ -21,10 +21,10 @@ export default function MarketAnalysis() {
 
         <PageHero
           title="Skye Canyon Real Estate Market Trends Nevada 89166"
-          subtitle="Comprehensive market insights and pricing trends for Skye Canyon, Las Vegas — stay informed on investment opportunities in northwest Las Vegas."
+          subtitle="Confirm current Skye Canyon list prices and days on market on live MLS in Las Vegas NV 89166."
           {...getHeroImageProps('market-analysis')}
         >
-          <HeroSearchCtas searchLabel="Search Current MLS Listings" />
+          <HeroSearchCtas searchLabel="Search Homes" />
         </PageHero>
 
         {/* Breadcrumb Navigation */}

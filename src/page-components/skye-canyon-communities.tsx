@@ -265,7 +265,7 @@ export default function SkyeCanyonCommunities() {
                 </div>
 
                 <div className="mt-6 p-4 bg-blue-700 rounded-lg">
-                  <p className="text-sm text-blue-100 mb-2">Need Expert Guidance?</p>
+                  <p className="text-sm text-blue-100 mb-2">Need help with Century Communities?</p>
                   <p className="font-semibold">
                     Contact Dr. Jan Duffy for personalized assistance with Century Communities homes
                     and incentives.
