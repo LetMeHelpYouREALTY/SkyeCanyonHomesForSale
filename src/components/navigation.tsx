@@ -56,7 +56,7 @@ export default function Navigation() {
                 </span>
               </a>
               <div className="text-sm text-gray-600 font-medium mt-1">
-                Skye Canyon Real Estate | Las Vegas NV 89166
+                Skye Canyon Real Estate · 89166
               </div>
             </div>
           </div>
