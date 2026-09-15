@@ -108,7 +108,7 @@ export default function SkyeCanyonCommunities() {
           {...getHeroImageProps('skye-canyon-communities')}
           badges={['Century Communities', 'Eaglepointe', 'Marvella', 'Skyecrest']}
         >
-          <HeroSearchCtas searchLabel="Search New Construction Homes" />
+          <HeroSearchCtas />
         </PageHero>
 
         {/* Current Listings */}

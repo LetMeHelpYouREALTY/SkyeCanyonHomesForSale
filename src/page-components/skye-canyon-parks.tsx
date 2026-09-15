@@ -107,7 +107,7 @@ export default function SkyeCanyonParks() {
           {...getHeroImageProps('skye-canyon-parks')}
           badges={['5 Community Parks', 'Splash Pads & Pool', 'Sports Courts & Fields']}
         >
-          <HeroSearchCtas searchLabel="Search Homes Near Parks" />
+          <HeroSearchCtas />
         </PageHero>
 
         {/* Current Listings */}

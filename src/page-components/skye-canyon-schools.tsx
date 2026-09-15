@@ -156,7 +156,7 @@ export default function SkyeCanyonSchools() {
           {...getHeroImageProps('skye-canyon-schools')}
           badges={['Named CCSD campuses', 'Somerset Academy', 'Confirm CCSD locator']}
         >
-          <HeroSearchCtas searchLabel="Search Homes Near Campuses" />
+          <HeroSearchCtas />
         </PageHero>
 
         {/* Current Listings */}

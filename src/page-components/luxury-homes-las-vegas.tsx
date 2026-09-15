@@ -23,7 +23,7 @@ export default function LuxuryHomesLasVegas() {
           subtitle="Guard-gated and golf-course homes in Skye Canyon and northwest Las Vegas NV 89166."
           {...getHeroImageProps('luxury-homes-las-vegas')}
         >
-          <HeroSearchCtas searchLabel="Search Luxury Skye Canyon Homes" />
+          <HeroSearchCtas />
         </PageHero>
 
         {/* Current Luxury Listings */}

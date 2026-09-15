@@ -25,7 +25,7 @@ export default function NeighborhoodAnalysis() {
           {...getHeroImageProps('neighborhood-analysis')}
           badges={['89166', '89149', '89144', 'Live MLS']}
         >
-          <HeroSearchCtas searchLabel="Search Northwest Las Vegas Homes" />
+          <HeroSearchCtas />
         </PageHero>
 
         {/* Key Insights Overview */}

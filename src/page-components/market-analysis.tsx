@@ -24,7 +24,7 @@ export default function MarketAnalysis() {
           subtitle="Confirm current Skye Canyon list prices and days on market on live MLS in Las Vegas NV 89166."
           {...getHeroImageProps('market-analysis')}
         >
-          <HeroSearchCtas searchLabel="Search Homes" />
+          <HeroSearchCtas />
         </PageHero>
 
         {/* Breadcrumb Navigation */}

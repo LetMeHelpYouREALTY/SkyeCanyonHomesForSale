@@ -23,7 +23,7 @@ export default function LasVegasRealEstate() {
           subtitle="Comprehensive real estate services across Las Vegas communities — Skye Canyon specialist."
           {...getHeroImageProps('las-vegas-real-estate')}
         >
-          <HeroSearchCtas searchLabel="Search Las Vegas MLS Homes" />
+          <HeroSearchCtas />
         </PageHero>
 
         {/* Current Las Vegas Listings */}

@@ -5,7 +5,7 @@ interface HeroSearchCtasProps {
 }
 
 export default function HeroSearchCtas({
-  searchLabel = 'Search Skye Canyon Homes',
+  searchLabel = 'Search Homes',
 }: HeroSearchCtasProps) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center">

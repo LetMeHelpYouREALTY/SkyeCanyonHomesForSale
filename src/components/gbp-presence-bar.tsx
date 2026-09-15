@@ -5,15 +5,19 @@ export default function GbpPresenceBar() {
   return (
     <div className="bg-realscout-navy text-white text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-        <p className="text-center lg:text-left leading-snug">
-          <span className="font-semibold">{siteConfig.businessName}</span>
-          <span className="mx-2 text-white/50">·</span>
-          <span>{siteConfig.address.formatted}</span>
-          <span className="mx-2 text-white/50">·</span>
-          <a href={`tel:${siteConfig.phoneTel}`} className="underline-offset-2 hover:underline">
-            {siteConfig.phone}
-          </a>
-        </p>
+        <div className="text-center lg:text-left min-w-0">
+          <p className="font-semibold">{siteConfig.businessName}</p>
+          <p className="text-white/90">
+            {siteConfig.address.formatted}
+            <span className="mx-2 text-white/50">·</span>
+            <a
+              href={`tel:${siteConfig.phoneTel}`}
+              className="whitespace-nowrap underline-offset-2 hover:underline"
+            >
+              {siteConfig.phone}
+            </a>
+          </p>
+        </div>
         <div className="flex flex-wrap justify-center gap-2">
           <a
             href={siteConfig.realscoutOnboarding}

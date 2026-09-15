@@ -4,6 +4,7 @@ import { AlertCircle, Mic, MicOff, Search } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
 
 interface VoiceSearchIntegrationProps {
   maxSearches?: number;
@@ -47,23 +48,12 @@ export default function VoiceSearchIntegration({
     setIsProcessing(true);
 
     try {
-      // Process voice search with AI and get property results
-      const response = await fetch('/api/voice-property-search', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          query,
-          searchCount,
-          conversationHistory: [],
-        }),
-      });
-
-      const results = await response.json();
+      window.open(siteConfig.realscoutOnboarding, '_blank', 'noopener,noreferrer');
 
       const searchResult: SearchResult = {
         query,
         timestamp: Date.now(),
-        results: results.properties || [],
+        results: [],
       };
 
       setSearchHistory((prev) => [searchResult, ...prev.slice(0, 4)]);
@@ -300,8 +290,17 @@ export default function VoiceSearchIntegration({
             </div>
 
             <div className="text-xs text-gray-500">
-              Voice searches used today: {searchCount}/{maxSearches}
+              Voice opens live MLS with Dr. Jan Duffy. Call {siteConfig.phone}.
             </div>
+            <a
+              href={siteConfig.realscoutOnboarding}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
+            >
+              <Search className="w-4 h-4" aria-hidden="true" />
+              Search Homes
+            </a>
           </div>
         </CardContent>
       </Card>
@@ -315,7 +314,7 @@ export default function VoiceSearchIntegration({
               {searchHistory.slice(0, 3).map((search, index) => (
                 <div key={index} className="flex items-center justify-between text-sm">
                   <span className="text-gray-700 truncate flex-1">"{search.query}"</span>
-                  <span className="text-gray-500 ml-2">{search.results.length} results</span>
+                  <span className="text-gray-500 ml-2">Live MLS</span>
                 </div>
               ))}
             </div>
@@ -327,7 +326,7 @@ export default function VoiceSearchIntegration({
                   className="w-full bg-green-600 hover:bg-green-700"
                 >
                   <Search className="w-4 h-4 mr-2" />
-                  Continue with Full Search
+                  Search Homes
                 </Button>
               </div>
             )}

@@ -14,8 +14,8 @@ export default function VoiceSearchPage() {
   return (
     <>
       <PageHero
-        title="Voice-Activated Property Search"
-        subtitle="AI-powered voice search for Skye Canyon and northwest Las Vegas MLS listings."
+        title="Search Skye Canyon Homes by Voice"
+        subtitle="Speak a Skye Canyon search, then continue on live MLS with Dr. Jan Duffy in Las Vegas NV 89166. Call (702) 500-1902."
         {...getHeroImageProps('voice-search')}
         minHeight="md"
       >
@@ -68,26 +68,25 @@ export default function VoiceSearchPage() {
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Speak Naturally</h3>
                   <p className="text-gray-600 text-sm">
-                    Use natural language to describe what you're looking for. No need for specific
-                    search terms.
+                    Use everyday words for Skye Canyon homes in Las Vegas NV 89166.
                   </p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-blue-600 font-bold text-lg">2</span>
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">AI Processing</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Open live MLS</h3>
                   <p className="text-gray-600 text-sm">
-                    Our AI understands your requirements and searches through available properties.
+                    Voice search opens the same RealScout MLS onboarding buyers use on every page.
                   </p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-blue-600 font-bold text-lg">3</span>
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Get Results</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Tour with Dr. Duffy</h3>
                   <p className="text-gray-600 text-sm">
-                    Receive personalized property recommendations with detailed information.
+                    Call {siteConfig.phone} or search live MLS to tour matching Skye Canyon homes.
                   </p>
                 </div>
               </div>
@@ -98,7 +97,7 @@ export default function VoiceSearchPage() {
                   rel="noopener noreferrer"
                   className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
-                  Search Skye Canyon Homes
+                  Search Homes
                 </a>
               </div>
             </div>

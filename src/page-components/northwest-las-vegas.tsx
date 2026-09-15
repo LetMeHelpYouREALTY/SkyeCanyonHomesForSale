@@ -43,7 +43,7 @@ export default function NorthwestLasVegas() {
         {...getHeroImageProps('northwest-las-vegas')}
         badges={['89166', '89149', '89144']}
       >
-        <HeroSearchCtas searchLabel="Search Northwest Las Vegas Homes" />
+        <HeroSearchCtas />
       </PageHero>
 
       {/* Current Listings */}
