@@ -168,7 +168,7 @@ export default function SkyeCanyonSchools() {
               {...sectionImages.schools}
               className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
             />
-            <RealScoutListings className="w-full" variant="mid-range" />
+            <RealScoutListings className="w-full" variant="all-properties" />
           </div>
         </section>
 

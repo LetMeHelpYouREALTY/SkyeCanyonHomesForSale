@@ -46,7 +46,7 @@ export default function Properties() {
                   Showing properties matching your search criteria
                 </p>
               </div>
-              <RealScoutListings className="w-full" variant="all-properties" />
+              <RealScoutListings className="w-full" variant="all-properties" showValuation={false} />
             </div>
           </section>
         )}
@@ -59,7 +59,7 @@ export default function Properties() {
                 Current Skye Canyon MLS Listings Las Vegas Nevada
               </h2>
               <p className="text-xl text-gray-600">
-                Latest properties for sale from Dr. Jan Duffy's active portfolio
+                Latest live MLS homes for sale in Skye Canyon, Las Vegas NV 89166
               </p>
               <h3 className="text-lg font-medium text-gray-700 mb-4">Featured Listings</h3>
             </div>
@@ -67,7 +67,7 @@ export default function Properties() {
               {...sectionImages.listings}
               className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
             />
-            <RealScoutListings className="w-full" variant="mid-range" />
+            <RealScoutListings className="w-full" variant="mid-range" showValuation={false} />
           </div>
         </section>
 

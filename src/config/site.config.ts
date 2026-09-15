@@ -52,10 +52,9 @@ export const siteConfig = {
   directionsUrl:
     'https://www.google.com/maps/dir/?api=1&destination=10111+W+Skye+Canyon+Park+Dr,+Las+Vegas,+NV+89166&destination_place_id=ChIJ_yrcejWTyIARVpnwxqlS0Wg',
   social: {
-    facebook: 'https://facebook.com/skyecanyonhomes',
-    instagram: 'https://instagram.com/skyecanyonhomes',
-    linkedin: 'https://linkedin.com/in/drjanduffy',
-    youtube: 'https://youtube.com/@skyecanyonhomes',
+    facebook: 'https://www.facebook.com/SkyeCanyonHomes/',
+    instagram: 'https://www.instagram.com/skyecanyonhomes/',
+    linkedin: 'https://www.linkedin.com/in/drjanduffy',
   },
   realscoutOnboarding: 'https://drjanduffy.realscout.com/onboarding',
   ogImage: siteImage('og/skye-canyon-homes.jpg'),

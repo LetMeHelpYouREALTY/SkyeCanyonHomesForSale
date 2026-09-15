@@ -22,28 +22,28 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com/skyecanyonhomes"
+                href={siteConfig.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Facebook
               </a>
               <a
-                href="https://instagram.com/skyecanyonhomes"
+                href={siteConfig.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Instagram
               </a>
               <a
-                href="https://linkedin.com/in/drjanduffy"
+                href={siteConfig.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 LinkedIn
-              </a>
-              <a
-                href="https://youtube.com/@skyecanyonhomes"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                YouTube
               </a>
             </div>
           </div>

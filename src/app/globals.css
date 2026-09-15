@@ -199,41 +199,20 @@
   }
 }
 
-/* Enhanced RealScout Widget Styling */
-@layer components {
-  realscout-office-listings {
-    @apply w-full min-h-[500px] block;
-    margin: 2rem 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-  }
+/* RealScout office-listings: do not override descendant display/position.
+   Previous * { display:block; transform:none } rules collapsed pagination. */
+realscout-office-listings {
+  display: block;
+  width: 100%;
+  min-height: 500px;
+  margin: 2rem 0;
+}
 
-  realscout-office-listings * {
-    box-sizing: border-box !important;
-  }
-
-  realscout-office-listings img {
-    @apply w-full h-auto object-cover;
-    max-width: 100% !important;
-    border-radius: 8px;
-  }
-
-  realscout-office-listings .property-card {
-    @apply bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow;
-  }
-
-  realscout-office-listings .property-price {
-    @apply text-2xl font-bold text-blue-600;
-  }
-
-  realscout-office-listings .property-address {
-    @apply text-gray-700 font-medium;
-  }
-
-  realscout-office-listings .property-details {
-    @apply text-gray-600 text-sm;
-  }
+realscout-office-listings img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Critical CSS for immediate rendering */
@@ -257,34 +236,6 @@
   .footer-section {
     @apply bg-gray-900 text-white py-12;
   }
-}
-
-/* RealScout Widget Photo Display Fixes */
-realscout-office-listings,
-realscout-office-listings *,
-realscout-office-listings img,
-realscout-office-listings picture,
-realscout-office-listings [style*="background-image"] {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  transform: none !important;
-  position: relative !important;
-  overflow: visible !important;
-}
-
-/* Ensure images load and display */
-realscout-office-listings img {
-  max-width: 100% !important;
-  height: auto !important;
-  object-fit: cover !important;
-  border-radius: 8px !important;
-}
-
-/* Fix any lazy loading or intersection observer issues */
-realscout-office-listings [data-src],
-realscout-office-listings [src*="placeholder"] {
-  background: transparent !important;
 }
 
 /* Additional utility classes */

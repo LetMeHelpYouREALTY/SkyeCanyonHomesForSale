@@ -24,6 +24,7 @@ import HeadingImage from '@/components/heading-image';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
 export default function PropertyDetail() {
@@ -89,7 +90,12 @@ export default function PropertyDetail() {
               {...sectionImages.listings}
               className="w-full h-56 object-cover rounded-xl mb-6"
             />
-            <a href="/search" className="text-blue-600 font-semibold">
+            <a
+              href={siteConfig.realscoutOnboarding}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 font-semibold"
+            >
               Search Skye Canyon listings
             </a>
             <GbpLocalSection heading="Call the office about this listing" />
@@ -336,7 +342,7 @@ export default function PropertyDetail() {
             {...sectionImages.listings}
             className="w-full h-56 object-cover rounded-xl mb-10"
           />
-          <RealScoutListings className="w-full" variant="mid-range" />
+          <RealScoutListings className="w-full" variant="all-properties" />
         </div>
       </section>
 

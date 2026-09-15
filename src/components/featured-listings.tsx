@@ -24,7 +24,7 @@ export default function FeaturedListings() {
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 mb-8">
           <div className="text-center">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              Live Property Feed from Dr. Jan Duffy's Listings
+              Live MLS feed for Skye Canyon 89166
             </h3>
             <p className="text-gray-600 text-sm">
               Real-time updates from MLS • Skye Canyon, Centennial Hills & Northwest Las Vegas
@@ -36,7 +36,7 @@ export default function FeaturedListings() {
           {...sectionImages.listings}
           className="w-full h-56 md:h-72 object-cover rounded-xl mb-8"
         />
-        <RealScoutListings className="w-full shadow-lg rounded-xl overflow-hidden" />
+        <RealScoutListings className="w-full shadow-lg rounded-xl" />
 
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4 text-sm text-gray-600">

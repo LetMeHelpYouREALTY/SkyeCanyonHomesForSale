@@ -32,7 +32,11 @@ export default function NotFound() {
                   </a>
                 </Button>
                 <Button asChild variant="outline">
-                  <a href="/search">
+                  <a
+                    href={siteConfig.realscoutOnboarding}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Search className="w-4 h-4 mr-2" />
                     Search Properties
                   </a>
