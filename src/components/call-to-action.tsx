@@ -2,7 +2,6 @@
 
 import { Calendar, Phone } from 'lucide-react';
 import HeadingImage from '@/components/heading-image';
-import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
@@ -31,23 +30,20 @@ export default function CallToAction() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://drjanduffy.realscout.com/onboarding"
+            href={siteConfig.realscoutOnboarding}
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md bg-white px-8 py-4 font-semibold text-realscout-blue hover:bg-gray-100"
           >
-            <Button className="bg-white text-realscout-blue px-8 py-4 hover:bg-gray-100">
-              <Calendar className="w-5 h-5 mr-2" />
-              Search Homes
-            </Button>
+            <Calendar className="w-5 h-5 mr-2" />
+            Search Homes
           </a>
-          <a href={`tel:${siteConfig.phoneTel}`}>
-            <Button
-              variant="outline"
-              className="border-2 border-white text-white px-8 py-4 hover:bg-white hover:text-realscout-blue"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call {siteConfig.phone}
-            </Button>
+          <a
+            href={`tel:${siteConfig.phoneTel}`}
+            className="inline-flex items-center justify-center rounded-md border-2 border-white bg-realscout-navy/30 px-8 py-4 font-semibold text-white hover:bg-white hover:text-realscout-blue"
+          >
+            <Phone className="w-5 h-5 mr-2" />
+            Call {siteConfig.phone}
           </a>
         </div>
 
