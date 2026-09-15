@@ -15,10 +15,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="text-2xl font-bold mb-4">Skye Canyon</div>
+            <div className="text-2xl font-bold mb-4">{siteConfig.businessName}</div>
             <p className="text-gray-400 mb-4">
-              Your trusted partner for luxury real estate in Skye Canyon, Las Vegas. Specializing in
-              premium properties with exceptional service.
+              {siteConfig.name} at {siteConfig.brokerage}. Skye Canyon homes in Las Vegas NV{' '}
+              {siteConfig.address.zip}. Nevada License {siteConfig.license}.
             </p>
             <div className="flex space-x-4">
               <a
@@ -57,8 +57,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a
+                  href={siteConfig.realscoutOnboarding}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Search Homes
+                </a>
+              </li>
+              <li>
                 <a href="/properties" className="hover:text-white transition-colors">
-                  All Properties
+                  Skye Canyon Homes
                 </a>
               </li>
               <li>
@@ -127,9 +137,9 @@ export default function Footer() {
             <div className="mt-6 pt-4 border-t border-gray-600">
               <h5 className="text-sm font-semibold mb-3 text-white">Business Hours</h5>
               <div className="space-y-1 text-sm text-gray-400">
-                <div>Monday - Friday: 9:00 AM - 6:00 PM</div>
-                <div>Saturday: 9:00 AM - 5:00 PM</div>
-                <div>Sunday: 11:00 AM - 4:00 PM</div>
+                <div>{siteConfig.hours.weekdays.label}</div>
+                <div>{siteConfig.hours.saturday.label}</div>
+                <div>{siteConfig.hours.sunday.label}</div>
               </div>
               
               <div className="mt-4 pt-4 border-t border-gray-600">
@@ -192,7 +202,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>
-            &copy; 2026 Skye Canyon Homes for Sale. All rights reserved. | Dr. Jan Duffy, REALTOR®
+            &copy; 2026 {siteConfig.businessName}. All rights reserved. | {siteConfig.name}
           </p>
           <p className="text-sm mt-2">
             <a href="/privacy-policy" className="hover:text-white transition-colors">

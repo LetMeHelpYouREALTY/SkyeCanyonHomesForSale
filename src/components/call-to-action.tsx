@@ -17,9 +17,12 @@ export default function CallToAction() {
   return (
     <section className="py-16 bg-gradient-to-r from-realscout-blue to-realscout-light text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Call Skye Canyon Home?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          Search Skye Canyon Homes in Las Vegas NV 89166
+        </h2>
         <p className="text-xl mb-8 opacity-90">
-          Let Dr. Jan Duffy guide you to your perfect Skye Canyon property
+          Live MLS with {siteConfig.name}. Call {siteConfig.phone} to tour from{' '}
+          {siteConfig.address.street}.
         </p>
         <HeadingImage
           {...sectionImages.office}
@@ -37,13 +40,13 @@ export default function CallToAction() {
               Search Homes
             </Button>
           </a>
-          <a href="tel:+17025001902">
+          <a href={`tel:${siteConfig.phoneTel}`}>
             <Button
               variant="outline"
               className="border-2 border-white text-white px-8 py-4 hover:bg-white hover:text-realscout-blue"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call (702) 500-1902
+              Call {siteConfig.phone}
             </Button>
           </a>
         </div>

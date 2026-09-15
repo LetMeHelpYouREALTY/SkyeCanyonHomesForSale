@@ -35,7 +35,9 @@ export default function AgentBio() {
               <div className="text-xl text-realscout-blue font-semibold mb-2">
                 REALTOR® | Skye Canyon Specialist
               </div>
-              <div className="text-gray-600 mb-4">Licensed in Nevada | License# S.0197614</div>
+              <div className="text-gray-600 mb-4">
+                Licensed in Nevada | License# {siteConfig.license}
+              </div>
             </div>
 
             <div className="space-y-4 text-gray-700 mb-8">
@@ -58,9 +60,9 @@ export default function AgentBio() {
                 <h3 className="font-semibold text-gray-900 mb-2">Professional Credentials</h3>
                 <h4 className="font-medium text-gray-700 mb-2">Education & Licensing</h4>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Nevada Real Estate License S.0197614</li>
-                  <li>• Certified Luxury Specialist</li>
-                  <li>• Skye Canyon Market Specialist</li>
+                  <li>• Nevada Real Estate License {siteConfig.license}</li>
+                  <li>• Graduate, REALTOR® Institute (GRI)</li>
+                  <li>• {siteConfig.brokerage}</li>
                 </ul>
               </div>
               <div>
@@ -81,7 +83,7 @@ export default function AgentBio() {
               </div>
               <div className="flex items-center text-gray-700">
                 <Mail className="w-5 h-5 text-realscout-blue mr-3" />
-                <span>DrDuffy@SkyeCanyonHomesForSale.com</span>
+                <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
               </div>
               <div className="flex items-center text-gray-700">
                 <MapPin className="w-5 h-5 text-realscout-blue mr-3" />
@@ -90,8 +92,20 @@ export default function AgentBio() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={siteConfig.googleBusinessUrl} target="_blank" rel="noopener noreferrer">
+              <a
+                href={siteConfig.realscoutOnboarding}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-realscout-blue text-white hover:bg-realscout-navy">
+                  Search Homes
+                </Button>
+              </a>
+              <a href={siteConfig.googleBusinessUrl} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  className="border-realscout-blue text-realscout-blue hover:bg-realscout-blue hover:text-white"
+                >
                   Google Business Profile
                 </Button>
               </a>

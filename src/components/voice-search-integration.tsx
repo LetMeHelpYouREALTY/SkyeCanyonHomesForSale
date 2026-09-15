@@ -169,7 +169,7 @@ export default function VoiceSearchIntegration({
     popup.innerHTML = `
       <div style="margin-bottom: 1.5rem;">
         <h3 style="font-size: 1.5rem; font-weight: bold; color: #1f2937; margin-bottom: 0.5rem;">
-          Ready to Find Your Perfect Home?
+          Ready to Search Skye Canyon Homes?
         </h3>
         <p style="color: #6b7280; margin-bottom: 1.5rem;">
           You've reached your voice search limit. Continue with our full property search platform.
@@ -185,7 +185,7 @@ export default function VoiceSearchIntegration({
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
             <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
           </svg>
-          Search All Properties
+          Search Homes
         </a>
         <button onclick="document.getElementById('realscout-voice-overlay').remove()" 
                 style="background: transparent; border: 2px solid #3b82f6; color: #3b82f6; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer;">

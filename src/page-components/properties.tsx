@@ -5,7 +5,6 @@ import BackToTop from '@/components/back-to-top';
 import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 
-import FollowUpBossListings from '@/components/followup-boss-listings';
 import RealScoutListings from '@/components/realscout-listings';
 import GoogleMapEmbed from '@/components/google-map-embed';
 import PageHero from '@/components/sections/page-hero';
@@ -85,7 +84,7 @@ export default function Properties() {
               <p className="text-xl text-gray-600">
                 Complete listing of Skye Canyon homes and Las Vegas area properties
               </p>
-              <h3 className="text-lg font-medium text-gray-700 mb-4">Browse All Properties</h3>
+              <h3 className="text-lg font-medium text-gray-700 mb-4">Browse Skye Canyon MLS</h3>
             </div>
             <HeadingImage
               {...sectionImages.listings}
@@ -137,22 +136,31 @@ export default function Properties() {
           </div>
         </section>
 
-        {/* Client Portfolio */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Skye Canyon Homes Represented by Dr. Jan Duffy
+                Save a Skye Canyon MLS Search
               </h2>
               <p className="text-xl text-gray-600">
-                Current listings and client inventory in Las Vegas NV 89166
+                Filter live inventory in Las Vegas NV 89166, then call {siteConfig.phone} to tour.
               </p>
             </div>
             <HeadingImage
               {...sectionImages.listings}
               className="w-full h-52 object-cover rounded-xl mb-8"
             />
-            <FollowUpBossListings />
+            <RealScoutListings className="w-full" variant="luxury" showValuation={false} />
+            <div className="mt-8 text-center">
+              <a
+                href={siteConfig.realscoutOnboarding}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 rounded-md text-white bg-realscout-blue hover:bg-realscout-navy"
+              >
+                Search Homes
+              </a>
+            </div>
           </div>
         </section>
 

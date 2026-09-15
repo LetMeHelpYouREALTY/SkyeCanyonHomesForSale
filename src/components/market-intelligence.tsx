@@ -1,6 +1,5 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
 import HeadingImage from '@/components/heading-image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,17 +7,6 @@ import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
 
 export default function MarketIntelligence() {
-  const { data: marketInsights } = useQuery({
-    queryKey: ['/api/market-insights'],
-    queryFn: async () => {
-      const response = await fetch('/api/market-insights');
-      if (!response.ok) {
-        throw new Error('Failed to fetch market insights');
-      }
-      return response.json();
-    },
-  });
-
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4">
@@ -64,55 +52,6 @@ export default function MarketIntelligence() {
               </CardContent>
             </Card>
           </div>
-
-          {marketInsights?.insights && marketInsights.insights.length > 0 && (
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-6 text-center">Latest Market Insights</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                {marketInsights.insights.slice(0, 4).map(
-                  (
-                    insight: {
-                      imageUrl?: string;
-                      title: string;
-                      description: string;
-                      source: string;
-                      link: string;
-                    },
-                    index: number,
-                  ) => (
-                    <Card key={index} className="hover:shadow-lg transition-shadow overflow-hidden">
-                      {insight.imageUrl && (
-                        <div className="h-48 overflow-hidden">
-                          <img
-                            src={insight.imageUrl}
-                            alt={insight.title}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                          />
-                        </div>
-                      )}
-                      <CardContent className="p-6">
-                        <h4 className="font-semibold text-lg mb-2 line-clamp-2">{insight.title}</h4>
-                        <p className="text-gray-600 text-sm mb-3 line-clamp-3">
-                          {insight.description}
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs text-gray-500">{insight.source}</span>
-                          <Button
-                            variant="link"
-                            className="text-blue-600 p-0 h-auto"
-                            onClick={() => window.open(insight.link, '_blank', 'noopener,noreferrer')}
-                          >
-                            Read More →
-                          </Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ),
-                )}
-              </div>
-            </div>
-          )}
 
           <Card className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
             <CardContent className="p-6">

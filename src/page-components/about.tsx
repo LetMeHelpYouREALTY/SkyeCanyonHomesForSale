@@ -253,15 +253,15 @@ export default function About() {
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
-                          Nevada Real Estate License S.0197614
-                        </li>
-                        <li className="flex items-center">
-                          <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
-                          Certified Luxury Home Marketing Specialist
+                          Nevada Real Estate License {siteConfig.license}
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
                           Graduate, REALTOR® Institute (GRI)
+                        </li>
+                        <li className="flex items-center">
+                          <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+                          {siteConfig.brokerage}
                         </li>
                       </ul>
                     </div>
@@ -283,10 +283,6 @@ export default function About() {
                         <li className="flex items-center">
                           <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
                           Las Vegas REALTORS® Association
-                        </li>
-                        <li className="flex items-center">
-                          <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
-                          Institute for Luxury Home Marketing
                         </li>
                       </ul>
                     </div>
@@ -315,21 +311,25 @@ export default function About() {
                 <Phone className="w-6 h-6 mr-3" />
                 <div>
                   <div className="font-semibold">Call Direct</div>
-                  <div className="opacity-90">(702) 500-1902</div>
+                  <a href={`tel:${siteConfig.phoneTel}`} className="opacity-90 hover:underline">
+                    {siteConfig.phone}
+                  </a>
                 </div>
               </div>
               <div className="flex items-center justify-center">
                 <Mail className="w-6 h-6 mr-3" />
                 <div>
                   <div className="font-semibold">Email</div>
-                  <div className="opacity-90">DrDuffy@SkyeCanyonHomesForSale.com</div>
+                  <a href={`mailto:${siteConfig.email}`} className="opacity-90 hover:underline">
+                    {siteConfig.email}
+                  </a>
                 </div>
               </div>
               <div className="flex items-center justify-center">
                 <MapPin className="w-6 h-6 mr-3" />
                 <div>
                   <div className="font-semibold">Service Area</div>
-                  <div className="opacity-90">Skye Canyon, Las Vegas</div>
+                  <div className="opacity-90">{siteConfig.address.formatted}</div>
                 </div>
               </div>
             </div>
