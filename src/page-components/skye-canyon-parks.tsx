@@ -9,6 +9,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import { sectionImages } from '@/data/section-images';
 import { siteConfig } from '@/config/site.config';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 
 export default function SkyeCanyonParks() {
   const parksData = [
@@ -104,7 +105,9 @@ export default function SkyeCanyonParks() {
           subtitle="Play, run, or splash in one of Skye Canyon's community parks — fitness-inspired outdoor recreation in Las Vegas NV 89166."
           {...getHeroImageProps('skye-canyon-parks')}
           badges={['5 Community Parks', 'Splash Pads & Pool', 'Sports Courts & Fields']}
-        />
+        >
+          <HeroSearchCtas searchLabel="Search Homes Near Parks" />
+        </PageHero>
 
         {/* Current Listings */}
         <section className="py-16 bg-white">
@@ -119,7 +122,7 @@ export default function SkyeCanyonParks() {
               {...sectionImages.parks}
               className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
             />
-            <RealScoutListings className="w-full" />
+            <RealScoutListings className="w-full" variant="all-properties" />
           </div>
         </section>
 

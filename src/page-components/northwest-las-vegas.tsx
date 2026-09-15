@@ -6,9 +6,10 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import { sectionImages } from '@/data/section-images';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site.config';
 
 export default function NorthwestLasVegas() {
@@ -40,7 +41,9 @@ export default function NorthwestLasVegas() {
         subtitle="Luxury homes in Skye Canyon, Centennial Hills, and surrounding northwest Las Vegas zip codes 89149, 89166, and 89144."
         {...getHeroImageProps('northwest-las-vegas')}
         badges={['89166', '89149', '89144']}
-      />
+      >
+        <HeroSearchCtas searchLabel="Search Northwest Las Vegas Homes" />
+      </PageHero>
 
       {/* Current Listings */}
       <section className="py-16 bg-white">
@@ -167,15 +170,14 @@ export default function NorthwestLasVegas() {
                       </div>
                     ))}
                   </div>
-                  <Button
-                    className="w-full bg-realscout-blue text-white hover:bg-realscout-navy"
-                    onClick={() =>
-                      (window.location.href =
-                        neighborhood.name === 'Skye Canyon' ? '/' : '/properties')
-                    }
+                  <a
+                    href={siteConfig.realscoutOnboarding}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-realscout-blue text-white hover:bg-realscout-navy text-center rounded-md px-4 py-2 font-medium"
                   >
-                    View {neighborhood.name} Homes
-                  </Button>
+                    Search {neighborhood.name} Homes
+                  </a>
                 </CardContent>
               </Card>
               );
@@ -236,6 +238,16 @@ export default function NorthwestLasVegas() {
                 specialist with deep local market knowledge.
               </p>
               <div className="space-y-3">
+                <a
+                  href={siteConfig.realscoutOnboarding}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button className="w-full bg-realscout-blue text-white hover:bg-realscout-navy">
+                    Search Northwest Las Vegas Homes
+                  </Button>
+                </a>
                 <a href="/contact" className="block">
                   <Button className="w-full bg-realscout-blue text-white hover:bg-realscout-navy">
                     Schedule Your Consultation

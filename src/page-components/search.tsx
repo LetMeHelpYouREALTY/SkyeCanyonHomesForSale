@@ -8,13 +8,27 @@ import { siteConfig } from '@/config/site.config';
 import { getHeroImageProps } from '@/data/hero-images';
 import { sectionImages } from '@/data/section-images';
 
-export default function Search() {
+interface SearchProps {
+  query?: string;
+}
+
+export default function Search({ query }: SearchProps) {
+  const q = query?.trim();
+
   return (
     <>
       <div className="min-h-screen bg-gray-50">
         <PageHero
-          title="Search Skye Canyon Homes for Sale"
-          subtitle="Live MLS search for Skye Canyon, Las Vegas NV 89166 — filter by price, beds, and new construction."
+          title={
+            q
+              ? `Search Skye Canyon Homes: ${q}`
+              : 'Search Skye Canyon Homes for Sale'
+          }
+          subtitle={
+            q
+              ? `Live MLS for "${q}" in Skye Canyon and northwest Las Vegas NV 89166.`
+              : 'Live MLS search for Skye Canyon, Las Vegas NV 89166 — filter by price, beds, and new construction.'
+          }
           {...getHeroImageProps('properties')}
         >
           <a

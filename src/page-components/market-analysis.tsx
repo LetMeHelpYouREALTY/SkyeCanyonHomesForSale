@@ -10,6 +10,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import { sectionImages } from '@/data/section-images';
 
 export default function MarketAnalysis() {
@@ -21,7 +22,9 @@ export default function MarketAnalysis() {
           title="Skye Canyon Real Estate Market Trends Nevada 89166"
           subtitle="Comprehensive market insights and pricing trends for Skye Canyon, Las Vegas — stay informed on investment opportunities in northwest Las Vegas."
           {...getHeroImageProps('market-analysis')}
-        />
+        >
+          <HeroSearchCtas searchLabel="Search Current MLS Listings" />
+        </PageHero>
 
         {/* Breadcrumb Navigation */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
@@ -43,7 +46,7 @@ export default function MarketAnalysis() {
               {...sectionImages.market}
               className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
             />
-            <RealScoutListings className="w-full" />
+            <RealScoutListings className="w-full" variant="all-properties" />
           </div>
         </section>
 

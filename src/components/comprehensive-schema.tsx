@@ -1,7 +1,6 @@
 'use client';
 
 import { siteConfig } from '@/config/site.config';
-import { schemaImageList } from '@/lib/schema-images';
 
 interface SchemaMarkupProps {
   pageType?: 'homepage' | 'service' | 'about' | 'properties' | 'generic';
@@ -16,82 +15,6 @@ export default function ComprehensiveSchemaMarkup({
   serviceName,
   breadcrumbs = [],
 }: SchemaMarkupProps) {
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': ['RealEstateAgent', 'LocalBusiness'],
-    '@id': `${siteConfig.url}/#localbusiness`,
-    name: siteConfig.name,
-    alternateName: siteConfig.businessName,
-    description:
-      'Skye Canyon real estate specialist for luxury homes, new construction, and resale in Las Vegas NV 89166.',
-    url: siteConfig.url,
-    telephone: siteConfig.phone,
-    email: siteConfig.email,
-    image: schemaImageList,
-    hasMap: siteConfig.mapsUrl,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: siteConfig.address.street,
-      addressLocality: siteConfig.address.city,
-      addressRegion: siteConfig.address.state,
-      postalCode: siteConfig.address.zip,
-      addressCountry: siteConfig.address.country,
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: siteConfig.geo.latitude,
-      longitude: siteConfig.geo.longitude,
-    },
-    openingHours: siteConfig.openingHours,
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: siteConfig.hours.weekdays.opens,
-        closes: siteConfig.hours.weekdays.closes,
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Saturday',
-        opens: siteConfig.hours.saturday.opens,
-        closes: siteConfig.hours.saturday.closes,
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: siteConfig.hours.sunday.opens,
-        closes: siteConfig.hours.sunday.closes,
-      },
-    ],
-    areaServed: [
-      {
-        '@type': 'Place',
-        name: 'Skye Canyon',
-        address: {
-          '@type': 'PostalAddress',
-          postalCode: siteConfig.address.zip,
-          addressLocality: siteConfig.address.city,
-          addressRegion: siteConfig.address.state,
-          addressCountry: siteConfig.address.country,
-        },
-      },
-    ],
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      name: `Nevada Real Estate License ${siteConfig.license}`,
-      credentialCategory: 'license',
-      recognizedBy: {
-        '@type': 'Organization',
-        name: 'Nevada Real Estate Division',
-      },
-    },
-    memberOf: {
-      '@type': 'Organization',
-      name: siteConfig.brokerage,
-    },
-    sameAs: [...Object.values(siteConfig.social), siteConfig.googleMapsUrl, siteConfig.googleBusinessUrl],
-  };
-
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -113,6 +36,11 @@ export default function ComprehensiveSchemaMarkup({
       postalCode: siteConfig.address.zip,
       addressCountry: siteConfig.address.country,
     },
+    sameAs: [
+      ...Object.values(siteConfig.social),
+      siteConfig.googleMapsUrl,
+      siteConfig.googleBusinessUrl,
+    ],
   };
 
   const getServiceSchema = () => {
@@ -188,7 +116,7 @@ export default function ComprehensiveSchemaMarkup({
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${siteConfig.url}/properties?q={search_term_string}`,
+        urlTemplate: `${siteConfig.url}/search?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
     },
@@ -196,7 +124,6 @@ export default function ComprehensiveSchemaMarkup({
   };
 
   const schemas = [
-    localBusinessSchema,
     organizationSchema,
     websiteSchema,
     getServiceSchema(),

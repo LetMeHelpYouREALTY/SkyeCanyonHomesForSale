@@ -26,7 +26,7 @@ export default function HyperlocalListings({
           alt={listings.alt}
           className="w-full h-52 md:h-64 object-cover rounded-xl mb-8"
         />
-        <RealScoutListings className="w-full" />
+        <RealScoutListings className="w-full" variant="all-properties" />
       </div>
     </section>
   );

@@ -61,7 +61,7 @@ export default function RelocationServices() {
                 </p>
               </div>
             </div>
-            <RealScoutListings className="w-full" />
+            <RealScoutListings className="w-full" variant="all-properties" />
           </div>
         </section>
 

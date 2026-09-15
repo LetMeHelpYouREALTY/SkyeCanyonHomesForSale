@@ -6,10 +6,12 @@ import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
 
 export default function LasVegasRealEstate() {
   return (
@@ -20,7 +22,9 @@ export default function LasVegasRealEstate() {
           title="Las Vegas Real Estate Homes for Sale"
           subtitle="Comprehensive real estate services across Las Vegas communities — Skye Canyon specialist."
           {...getHeroImageProps('las-vegas-real-estate')}
-        />
+        >
+          <HeroSearchCtas searchLabel="Search Las Vegas MLS Homes" />
+        </PageHero>
 
         {/* Current Las Vegas Listings */}
         <section className="py-16 bg-white">
@@ -37,7 +41,7 @@ export default function LasVegasRealEstate() {
               {...sectionImages.listings}
               className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
             />
-            <RealScoutListings className="w-full" />
+            <RealScoutListings className="w-full" variant="all-properties" />
           </div>
         </section>
 
@@ -61,6 +65,12 @@ export default function LasVegasRealEstate() {
                   <p className="text-gray-600">
                     Guard-gated communities, golf courses, parks and trails
                   </p>
+                  <a
+                    href="/northwest-las-vegas"
+                    className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
+                  >
+                    Northwest Las Vegas homes
+                  </a>
                   </div>
                 </CardContent>
               </Card>
@@ -75,20 +85,36 @@ export default function LasVegasRealEstate() {
                   <h3 className="text-xl font-semibold mb-2">Henderson</h3>
                   <p className="text-realscout-blue font-semibold mb-2">Confirm live MLS</p>
                   <p className="text-gray-600">Planned communities, mountain views, parks</p>
+                  <a
+                    href={siteConfig.realscoutOnboarding}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
+                  >
+                    Search Henderson-area homes
+                  </a>
                   </div>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-0 overflow-hidden">
                   <HeadingImage
-                    {...sectionImages.golf}
-                    alt="Summerlin Las Vegas master-planned community parks"
+                    {...sectionImages.parks}
+                    alt="Summerlin Las Vegas parks and trail amenities Nevada"
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Summerlin</h3>
                   <p className="text-realscout-blue font-semibold mb-2">Confirm live MLS</p>
                   <p className="text-gray-600">Master-planned community, parks, shopping</p>
+                  <a
+                    href={siteConfig.realscoutOnboarding}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
+                  >
+                    Search Summerlin-area homes
+                  </a>
                   </div>
                 </CardContent>
               </Card>

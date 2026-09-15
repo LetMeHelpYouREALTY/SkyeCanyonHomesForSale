@@ -183,7 +183,7 @@ export default function NeighborhoodAnalysis() {
                 className="w-full h-52 object-cover rounded-xl mt-8"
               />
             </div>
-            <RealScoutListings />
+            <RealScoutListings variant="all-properties" />
           </div>
         </section>
 

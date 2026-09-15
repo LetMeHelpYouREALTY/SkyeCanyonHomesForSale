@@ -6,10 +6,12 @@ import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
 import RelatedSearches from '@/components/related-searches';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
 
 export default function LuxuryHomesLasVegas() {
   return (
@@ -20,7 +22,9 @@ export default function LuxuryHomesLasVegas() {
           title="Luxury Homes Las Vegas & Skye Canyon"
           subtitle="Guard-gated and golf-course homes in Skye Canyon and northwest Las Vegas NV 89166."
           {...getHeroImageProps('luxury-homes-las-vegas')}
-        />
+        >
+          <HeroSearchCtas searchLabel="Search Luxury Skye Canyon Homes" />
+        </PageHero>
 
         {/* Current Luxury Listings */}
         <section className="py-16 bg-white">
@@ -37,7 +41,7 @@ export default function LuxuryHomesLasVegas() {
               {...sectionImages.luxuryInterior}
               className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
             />
-            <RealScoutListings className="w-full" />
+            <RealScoutListings className="w-full" variant="luxury" />
           </div>
         </section>
 
@@ -66,20 +70,36 @@ export default function LuxuryHomesLasVegas() {
                   <p className="text-gray-600">
                     Guard-gated master plan with golf, parks, and rec center in NV 89166
                   </p>
+                  <a
+                    href={siteConfig.realscoutOnboarding}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
+                  >
+                    Search Skye Canyon luxury homes
+                  </a>
                   </div>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-0 overflow-hidden">
                   <HeadingImage
-                    {...sectionImages.golf}
-                    alt="Golf course luxury homes Las Vegas Nevada"
+                    {...sectionImages.northwest}
+                    alt="Hillside lots near Red Rock Canyon Las Vegas Nevada"
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">The Ridges</h3>
                   <p className="text-realscout-blue font-semibold mb-2">Confirm live MLS</p>
                   <p className="text-gray-600">Hillside lots with Red Rock and valley views</p>
+                  <a
+                    href={siteConfig.realscoutOnboarding}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
+                  >
+                    Search Ridges-area luxury homes
+                  </a>
                   </div>
                 </CardContent>
               </Card>
@@ -94,6 +114,14 @@ export default function LuxuryHomesLasVegas() {
                   <h3 className="text-xl font-semibold mb-2">Spanish Trail</h3>
                   <p className="text-realscout-blue font-semibold mb-2">Confirm live MLS</p>
                   <p className="text-gray-600">Golf course lots in southwest Las Vegas</p>
+                  <a
+                    href={siteConfig.realscoutOnboarding}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-realscout-blue font-semibold hover:underline"
+                  >
+                    Search golf-course luxury homes
+                  </a>
                   </div>
                 </CardContent>
               </Card>

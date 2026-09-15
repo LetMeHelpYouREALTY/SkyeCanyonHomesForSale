@@ -141,10 +141,10 @@ export default function About() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Current Client Listings
+                Current Skye Canyon MLS Listings
               </h2>
               <p className="text-xl text-gray-600">
-                Properties currently represented by Dr. Jan Duffy
+                Live MLS inventory for Skye Canyon Las Vegas NV 89166 — confirm addresses on listing.
               </p>
             </div>
             <HeadingImage
@@ -153,7 +153,7 @@ export default function About() {
               alt={sectionImages.listings.alt}
               className="w-full h-52 object-cover rounded-xl mb-8"
             />
-            <RealScoutListings className="w-full" />
+            <RealScoutListings className="w-full" variant="all-properties" />
           </div>
         </section>
 

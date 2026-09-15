@@ -8,6 +8,7 @@ import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import HeadingImage from '@/components/heading-image';
 import GbpLocalSection from '@/components/gbp-local-section';
+import HeroSearchCtas from '@/components/hero-search-ctas';
 import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -20,7 +21,9 @@ export default function SkyeCanyonGuide() {
           title="Skye Canyon Homes Community Guide Las Vegas 89166"
           subtitle="Guard-gated parks, golf, recreation, and named CCSD campuses in Las Vegas NV 89166."
           {...getHeroImageProps('skye-canyon-guide')}
-        />
+        >
+          <HeroSearchCtas />
+        </PageHero>
 
         {/* Current Listings */}
         <section className="py-16 bg-white">
@@ -37,7 +40,7 @@ export default function SkyeCanyonGuide() {
               alt={sectionImages.listings.alt}
               className="w-full h-52 object-cover rounded-xl mb-8"
             />
-            <RealScoutListings className="w-full" variant="luxury" />
+            <RealScoutListings className="w-full" variant="all-properties" />
           </div>
         </section>
 
