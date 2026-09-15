@@ -93,10 +93,15 @@ export default function ServicesOverview() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Complete Real Estate Services in Skye Canyon
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Dr. Jan Duffy offers comprehensive real estate services exclusively focused on Las
-            Vegas' premier guard-gated community with 15+ years of specialized expertise.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Buyer, seller, new construction, and relocation help for Skye Canyon and northwest Las
+            Vegas NV 89166 — 15+ years on this zip code.
           </p>
+          <HeadingImage
+            {...sectionImages.clubhouse}
+            alt="Skye Canyon clubhouse where buyers meet Dr. Jan Duffy Las Vegas NV 89166"
+            className="w-full h-48 md:h-64 object-cover rounded-xl"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -141,9 +146,9 @@ export default function ServicesOverview() {
             Ready to experience specialized Skye Canyon service?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={siteConfig.googleBusinessUrl} target="_blank" rel="noopener noreferrer">
+            <a href="/contact">
               <Button className="bg-realscout-blue hover:bg-realscout-navy text-white">
-                Schedule Free Consultation
+                Schedule a Consultation
               </Button>
             </a>
             <a href={`tel:${siteConfig.phoneTel}`}>
@@ -153,6 +158,9 @@ export default function ServicesOverview() {
               >
                 Call {siteConfig.phone}
               </Button>
+            </a>
+            <a href={siteConfig.googleMapsUrl} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline">Open Google Maps</Button>
             </a>
           </div>
         </div>

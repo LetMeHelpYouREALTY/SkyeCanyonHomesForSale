@@ -14,9 +14,9 @@ export default function NorthwestLasVegas() {
   const neighborhoods = [
     {
       name: 'Skye Canyon',
-      description: 'Premier guard-gated community with luxury homes',
+      description: 'Guard-gated community with golf-course and rec-center homes',
       priceRange: '$450K - $900K+',
-      features: ['24/7 Security', 'Golf Course', 'Resort Amenities'],
+      features: ['Guarded gate', 'Golf Course', 'Recreation center'],
     },
     {
       name: 'Centennial Hills',
@@ -168,6 +168,10 @@ export default function NorthwestLasVegas() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Why Choose Northwest Las Vegas?
               </h2>
+              <HeadingImage
+                {...sectionImages.northwest}
+                className="w-full h-48 object-cover rounded-xl mb-8"
+              />
               <div className="space-y-6">
                 <div className="flex items-start">
                   <Home className="w-6 h-6 text-realscout-blue mr-4 mt-1 flex-shrink-0" />

@@ -164,9 +164,13 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Proven Track Record
               </h2>
-              <p className="text-xl text-gray-600">
-                Delivering exceptional results for Skye Canyon clients
+              <p className="text-xl text-gray-600 mb-8">
+                Delivering results for Skye Canyon buyers and sellers in Las Vegas NV 89166
               </p>
+              <HeadingImage
+                {...sectionImages.monument}
+                className="w-full h-52 md:h-64 object-cover rounded-xl"
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -195,6 +199,10 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Professional Background
               </h2>
+              <HeadingImage
+                {...sectionImages.clubhouse}
+                className="w-full h-52 object-cover rounded-xl mb-8"
+              />
             </div>
 
             <Card>
@@ -202,8 +210,8 @@ export default function About() {
                 <div className="prose max-w-none">
                   <p className="text-lg leading-relaxed mb-6">
                     Dr. Jan Duffy brings over 15 years of exclusive expertise to Skye Canyon real estate, 
-                    having personally facilitated the sale of over 150 luxury properties in this premier 
-                    Las Vegas community. Her deep understanding of the local market dynamics, combined with 
+                    having personally facilitated the sale of over 150 luxury properties in Skye
+                    Canyon, Las Vegas NV 89166. Her deep understanding of the local market dynamics, combined with 
                     advanced technology tools and personalized service as a Skye Canyon REALTOR®
                     with Berkshire Hathaway HomeServices Nevada Properties.
                   </p>

@@ -1,5 +1,6 @@
 import { CalendlyPopupButton } from '@/components/calendly-widget';
 import PageHero from '@/components/sections/page-hero';
+import { siteConfig } from '@/config/site.config';
 import { getHeroImageProps } from '@/data/hero-images';
 
 export default function HeroSection() {
@@ -22,14 +23,14 @@ export default function HeroSection() {
           <div className="text-sm text-white/80">Years Experience</div>
         </div>
         <div className="text-center">
-          <div className="text-3xl font-bold">98%</div>
-          <div className="text-sm text-white/80">Client Satisfaction</div>
+          <div className="text-3xl font-bold">89166</div>
+          <div className="text-sm text-white/80">Skye Canyon office</div>
         </div>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
         <a
-          href="https://drjanduffy.realscout.com/onboarding"
+          href={siteConfig.realscoutOnboarding}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg text-center"
@@ -48,8 +49,29 @@ export default function HeroSection() {
         />
       </div>
 
-      <p className="text-sm text-white/70">
-        Berkshire Hathaway HomeServices Nevada Properties &bull; License S.0197614.LLC
+      <p className="text-sm text-white/70 mb-3">
+        {siteConfig.brokerage} &bull; License {siteConfig.license}.LLC
+      </p>
+      <p className="text-sm text-white/80">
+        <a
+          href={siteConfig.googleMapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-white"
+        >
+          Google Maps
+        </a>
+        <span className="mx-2">·</span>
+        <a
+          href={siteConfig.googleReviewUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-white"
+        >
+          Google reviews
+        </a>
+        <span className="mx-2">·</span>
+        {siteConfig.address.formatted}
       </p>
     </PageHero>
   );

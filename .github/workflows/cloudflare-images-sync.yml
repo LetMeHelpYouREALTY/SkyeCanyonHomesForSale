@@ -27,4 +27,8 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_IMAGES_TOKEN: ${{ secrets.CF_IMAGES_TOKEN }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: node scripts/cloudflare-images-sync.mjs
+        run: |
+          if [ -z "$CF_ACCOUNT_ID" ] || [ -z "${CF_IMAGES_TOKEN}${CLOUDFLARE_API_TOKEN}" ]; then
+            echo "::warning::Cloudflare Images secrets CF_ACCOUNT_ID and CF_IMAGES_TOKEN are empty. Git /images backup stays live on Vercel until those GitHub secrets exist."
+          fi
+          node scripts/cloudflare-images-sync.mjs

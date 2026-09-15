@@ -22,19 +22,16 @@ export default function GbpLocalSection({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <div>
-            <picture>
-              <source srcSet={office.srcWebp} type="image/webp" />
-              <img
-                src={office.src}
-                alt={office.alt}
-                className="w-full h-64 object-cover rounded-xl mb-6"
-                loading="lazy"
-              />
-            </picture>
-            <GoogleMapEmbed />
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-8">
+          <picture>
+            <source srcSet={office.srcWebp} type="image/webp" />
+            <img
+              src={office.src}
+              alt={office.alt}
+              className="w-full h-64 object-cover rounded-xl"
+              loading="lazy"
+            />
+          </picture>
 
           <div className="space-y-6">
             <div className="rounded-xl border border-gray-200 p-6">
@@ -92,6 +89,8 @@ export default function GbpLocalSection({
             </div>
           </div>
         </div>
+
+        <GoogleMapEmbed className="min-h-[360px]" />
       </div>
     </section>
   );

@@ -35,9 +35,9 @@ async function walk(dir, prefix = '') {
 }
 
 if (!ACCOUNT_ID || !TOKEN) {
-  console.log('Cloudflare Images credentials not set.');
-  console.log('Git backup remains in public/images/. Set CF_ACCOUNT_ID and CF_IMAGES_TOKEN to sync.');
-  console.log('Primary CDN URL: NEXT_PUBLIC_CF_IMAGES_BASE_URL or NEXT_PUBLIC_CF_IMAGES_ACCOUNT_HASH');
+  console.log('::warning::Cloudflare Images credentials not set. Git backup remains in public/images/.');
+  console.log('Set GitHub secrets CF_ACCOUNT_ID and CF_IMAGES_TOKEN, plus Vercel NEXT_PUBLIC_CF_IMAGES_BASE_URL or NEXT_PUBLIC_CF_IMAGES_ACCOUNT_HASH.');
+  console.log('Then CNAME images.skyecanyonhomesforsale.com to the Cloudflare Images custom domain (DNS-only, do not orange-cloud Vercel).');
   process.exit(0);
 }
 
