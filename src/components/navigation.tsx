@@ -45,18 +45,18 @@ export default function Navigation() {
           <div className="flex items-center">
             <div className="flex flex-col items-start">
               <a
-                href="tel:+17025001902"
+                href={`tel:${siteConfig.phoneTel}`}
                 className="group flex items-center text-2xl font-bold text-realscout-blue hover:text-realscout-navy transition-all duration-300"
               >
                 <Phone className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform duration-300" />
                 <span className="relative">
-                  (702) 500-1902
+                  {siteConfig.phone}
                   {/* Flashing effect */}
                   <span className="absolute inset-0 bg-realscout-blue opacity-20 animate-pulse rounded"></span>
                 </span>
               </a>
               <div className="text-sm text-gray-600 font-medium mt-1">
-                Skye Canyon Expert | Las Vegas NV 89166
+                Skye Canyon Real Estate | Las Vegas NV 89166
               </div>
             </div>
           </div>
@@ -294,12 +294,12 @@ export default function Navigation() {
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t shadow-lg">
             {/* Phone Number - Mobile */}
             <a
-              href="tel:+17025001902"
+              href={`tel:${siteConfig.phoneTel}`}
               className="flex items-center px-3 py-3 text-realscout-blue hover:text-realscout-navy hover:bg-blue-50 rounded-lg font-bold text-lg"
               onClick={() => setMobileMenuOpen(false)}
             >
               <Phone className="w-5 h-5 mr-3" />
-              (702) 500-1902
+              {siteConfig.phone}
             </a>
 
             {/* Home */}
