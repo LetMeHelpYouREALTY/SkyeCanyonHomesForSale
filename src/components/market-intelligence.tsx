@@ -125,7 +125,10 @@ export default function MarketIntelligence() {
                 <Button asChild variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
                   <a href="/contact">Schedule a consultation</a>
                 </Button>
-                <Button asChild variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button
+                  asChild
+                  className="border border-white bg-transparent text-white hover:bg-white/15 hover:text-white"
+                >
                   <a
                     href={siteConfig.realscoutOnboarding}
                     target="_blank"

@@ -132,7 +132,7 @@ export default function Contact() {
             <h2 className="text-3xl font-bold mb-8">Business Hours</h2>
             <HeadingImage
               {...sectionImages.monument}
-              className="w-full max-w-3xl mx-auto h-52 object-cover rounded-xl mb-8"
+              className="w-full max-w-3xl mx-auto h-52 object-cover object-bottom rounded-xl mb-8"
             />
             <div className="grid md:grid-cols-3 gap-6">
               <div>
