@@ -3,6 +3,7 @@
 import { Mail, MapPin, Navigation, Phone, Star } from 'lucide-react';
 import { CalendlyInline } from '@/components/calendly-widget';
 import GbpLocalSection from '@/components/gbp-local-section';
+import GoogleReviewCta from '@/components/google-review-cta';
 import HomebotWidget from '@/components/homebot-widget';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
@@ -166,6 +167,7 @@ export default function Contact() {
           </div>
         </section>
 
+        <GoogleReviewCta heading="Scan or click to review Dr. Jan Duffy on Google" />
         <GbpLocalSection heading="Map, hours, and Google reviews" />
       </main>
 

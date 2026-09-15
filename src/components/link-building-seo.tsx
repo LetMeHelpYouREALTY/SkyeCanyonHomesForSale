@@ -3,11 +3,12 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
 
 const localBusinessDirectories = [
   {
     name: 'Google Business Profile',
-    url: 'https://g.co/kgs/nbUf6Pj',
+    url: siteConfig.googleBusinessUrl,
     category: 'Primary',
     description: 'Las Vegas Premier Real Estate Expert',
   },
@@ -230,7 +231,7 @@ export default function LinkBuildingSEO() {
               Call (702) 500-1902
             </a>
             <a
-              href="https://g.co/kgs/nbUf6Pj"
+              href={siteConfig.googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 transition-colors"

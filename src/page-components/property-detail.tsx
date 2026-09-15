@@ -246,8 +246,8 @@ export default function PropertyDetail() {
               <CardContent>
                 <div className="text-center mb-6">
                   <img
-                    src="/images/sections/office-exterior.jpg"
-                    alt="Dr. Jan Duffy REALTOR office in Skye Canyon Las Vegas NV 89166"
+                    src={sectionImages.profile.src}
+                    alt={sectionImages.profile.alt}
                     className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
                   />
                   <h3 className="font-semibold text-lg">Dr. Jan Duffy</h3>
@@ -271,9 +271,7 @@ export default function PropertyDetail() {
                     </a>
                   </Button>
                   <a
-                    href="https://g.co/kgs/nbUf6Pj"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/contact"
                     className="w-full"
                   >
                     <Button variant="outline" className="w-full">

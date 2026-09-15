@@ -96,11 +96,9 @@ export default function BuyerAgentServices() {
 
               <div className="text-center">
                 <a
-                  href="https://g.co/kgs/nbUf6Pj"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/contact"
                   className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300"
-                  aria-label="Schedule consultation with Dr. Jan Duffy on Google Business Profile"
+                  aria-label="Schedule consultation with Dr. Jan Duffy"
                 >
                   Schedule Consultation
                 </a>

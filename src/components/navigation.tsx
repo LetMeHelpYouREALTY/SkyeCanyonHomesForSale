@@ -4,6 +4,7 @@ import { Menu, Phone, X, Home, Building2, TrendingUp, User, MessageCircle, MapPi
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/config/site.config';
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -244,19 +245,17 @@ export default function Navigation() {
             </Link>
 
             {/* Contact */}
-            <a
-              href="https://g.co/kgs/nbUf6Pj"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="flex items-center text-gray-700 hover:text-realscout-blue transition-colors font-medium group"
             >
               <MessageCircle className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-200" />
               Contact
-            </a>
+            </Link>
 
             {/* Reviews */}
             <a
-              href="https://g.page/r/CVaZ8MapUtFoEBM/review"
+              href={siteConfig.googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-gray-700 hover:text-realscout-blue transition-colors font-medium group"
@@ -450,7 +449,7 @@ export default function Navigation() {
 
             {/* Reviews */}
             <a
-              href="https://g.page/r/CVaZ8MapUtFoEBM/review"
+              href={siteConfig.googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center px-3 py-3 text-gray-700 hover:text-realscout-blue hover:bg-gray-50 rounded-lg font-medium"

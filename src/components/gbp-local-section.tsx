@@ -10,7 +10,7 @@ interface GbpLocalSectionProps {
 export default function GbpLocalSection({
   heading = 'Visit Dr. Jan Duffy in Skye Canyon',
 }: GbpLocalSectionProps) {
-  const office = sectionImages.office;
+  const office = sectionImages.monument;
 
   return (
     <section className="py-16 bg-white" id="visit">

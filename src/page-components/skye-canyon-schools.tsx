@@ -290,7 +290,7 @@ export default function SkyeCanyonSchools() {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   Comprehensive K-12 charter school offering personalized education with smaller
-                  class sizes and innovative teaching methods for Skye Canyon families.
+                  class sizes and named programs at the Skye Canyon campus.
                 </p>
                 <div className="bg-orange-50 rounded-lg p-4">
                   <h4 className="font-medium text-gray-900 mb-2">Charter Advantages:</h4>

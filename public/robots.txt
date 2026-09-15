@@ -16,6 +16,8 @@ Disallow: /lead-dashboard
 Disallow: /followup-boss-status
 Disallow: /performance-dashboard
 Disallow: /seo-management
+Disallow: /home-simple
+Disallow: /demo/
 Disallow: /_vite/
 Disallow: /src/
 

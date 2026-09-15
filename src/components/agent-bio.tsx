@@ -2,6 +2,7 @@
 
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/config/site.config';
 import { siteImage } from '@/lib/cloudflare-images';
 
 export default function AgentBio() {
@@ -18,10 +19,11 @@ export default function AgentBio() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src={siteImage('sections/office-exterior.jpg')}
-              alt="Skye Canyon office at 10111 W. Skye Canyon Park Drive, Las Vegas NV 89166"
-              className="rounded-xl shadow-lg w-full max-w-md mx-auto lg:mx-0"
-              style={{ imageRendering: 'auto', maxWidth: '400px', height: 'auto' }}
+              src={siteImage('gbp/profile.jpg')}
+              alt="Dr. Jan Duffy REALTOR at Skye Canyon Las Vegas NV 89166"
+              className="rounded-xl shadow-lg w-full max-w-md mx-auto lg:mx-0 object-cover"
+              width={800}
+              height={800}
             />
           </div>
 
@@ -76,7 +78,7 @@ export default function AgentBio() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-gray-700">
                 <Phone className="w-5 h-5 text-realscout-blue mr-3" />
-                <span>(702) 500-1902</span>
+                <a href={`tel:${siteConfig.phoneTel}`}>{siteConfig.phone}</a>
               </div>
               <div className="flex items-center text-gray-700">
                 <Mail className="w-5 h-5 text-realscout-blue mr-3" />
@@ -89,20 +91,19 @@ export default function AgentBio() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://g.co/kgs/nbUf6Pj" target="_blank" rel="noopener noreferrer">
+              <a href={siteConfig.googleBusinessUrl} target="_blank" rel="noopener noreferrer">
                 <Button className="bg-realscout-blue text-white hover:bg-realscout-navy">
-                  Schedule Consultation
+                  Google Business Profile
                 </Button>
               </a>
-              <Button
-                variant="outline"
-                className="border-realscout-blue text-realscout-blue hover:bg-realscout-blue hover:text-white"
-                onClick={() =>
-                  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
-                }
-              >
-                View Testimonials
-              </Button>
+              <a href={siteConfig.googleReviewUrl} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  className="border-realscout-blue text-realscout-blue hover:bg-realscout-blue hover:text-white"
+                >
+                  Read Google Reviews
+                </Button>
+              </a>
             </div>
           </div>
         </div>

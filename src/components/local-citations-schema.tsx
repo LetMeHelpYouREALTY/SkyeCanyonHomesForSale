@@ -86,7 +86,7 @@ export default function LocalCitationsSchema({ pageType: _pageType = 'homepage' 
       },
     ],
     sameAs: [
-      'https://g.co/kgs/nbUf6Pj',
+      siteConfig.googleBusinessUrl,
       'https://www.zillow.com/profile/DrJanDuffy/',
       'https://www.realtor.com/realestateagents/dr-jan-duffy_las-vegas_nv_2665289_000000000',
       'https://www.yelp.com/biz/dr-jan-duffy-realtor-las-vegas',

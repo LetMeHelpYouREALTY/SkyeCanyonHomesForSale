@@ -1,43 +1,31 @@
-import { QrCode } from 'lucide-react';
+import { siteConfig } from '@/config/site.config';
+import { siteImage } from '@/lib/cloudflare-images';
 
 interface QRCodePlaceholderProps {
-  reviewLink: string;
+  reviewLink?: string;
   className?: string;
 }
 
-export default function QRCodePlaceholder({ reviewLink, className = '' }: QRCodePlaceholderProps): JSX.Element {
+export default function QRCodePlaceholder({
+  reviewLink = siteConfig.googleReviewUrl,
+  className = '',
+}: QRCodePlaceholderProps): JSX.Element {
+  const qrSrc = siteImage('gbp/google-review-qr.png');
+
   return (
-    <div className={`bg-white p-6 rounded-lg border-2 border-dashed border-gray-300 text-center ${className}`}>
-      {/* Replace this placeholder with your actual QR code image */}
-      <div className="w-32 h-32 mx-auto mb-4 bg-gray-100 rounded-lg flex items-center justify-center">
-        <QrCode className="w-16 h-16 text-gray-400" />
-      </div>
-      
-      {/* Instructions for getting the real QR code */}
-      <div className="space-y-2">
-        <p className="text-sm text-gray-500 font-medium">
-          QR Code for Google Review
-        </p>
-        <p className="text-xs text-gray-400">
-          To get your actual QR code:
-        </p>
-        <ol className="text-xs text-gray-400 text-left max-w-xs mx-auto space-y-1">
-          <li>1. Go to your Google Business Profile</li>
-          <li>2. Navigate to Reviews section</li>
-          <li>3. Click "Share your reviews QR code"</li>
-          <li>4. Right-click and save the image</li>
-          <li>5. Replace this placeholder component</li>
-        </ol>
-      </div>
-      
-      {/* Review link display */}
-      <div className="mt-4 p-2 bg-gray-50 rounded text-xs text-gray-600 break-all">
-        {reviewLink}
-      </div>
-      
-      <p className="text-xs text-gray-400 mt-2">
-        Scan me to leave a review!
-      </p>
+    <div className={`bg-white p-6 rounded-lg border border-gray-200 text-center ${className}`}>
+      <a href={reviewLink} target="_blank" rel="noopener noreferrer">
+        <img
+          src={qrSrc}
+          alt="QR code to write a Google review for Dr. Jan Duffy Skye Canyon Las Vegas NV 89166"
+          width={192}
+          height={192}
+          className="w-40 h-40 mx-auto mb-4 bg-white"
+          loading="lazy"
+        />
+      </a>
+      <p className="text-sm text-gray-600 font-medium">Scan to write a Google review</p>
+      <p className="mt-2 text-xs text-gray-500 break-all">{reviewLink}</p>
     </div>
   );
 }

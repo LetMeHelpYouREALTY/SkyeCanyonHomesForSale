@@ -17,9 +17,9 @@ export function buildLocalBusinessJsonLd(): Record<string, unknown> {
     telephone: siteConfig.phone,
     email: siteConfig.email,
     image: [
-      absoluteSiteImage('og/skye-canyon-homes.jpg', imageBase),
+      absoluteSiteImage('gbp/cover.jpg', imageBase),
+      absoluteSiteImage('gbp/profile.jpg', imageBase),
       absoluteSiteImage('heroes/home.jpg', imageBase),
-      absoluteSiteImage('sections/office-exterior.jpg', imageBase),
     ],
     logo: {
       '@type': 'ImageObject',

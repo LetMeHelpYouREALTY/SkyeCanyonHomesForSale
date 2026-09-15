@@ -1,6 +1,5 @@
 'use client';
 
-// Using professional headshot from reliable source
 import {
   Award,
   Calendar,
@@ -9,7 +8,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Star,
   TrendingUp,
   Users,
 } from 'lucide-react';
@@ -21,6 +19,7 @@ import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
+import GoogleReviewCta from '@/components/google-review-cta';
 import HeadingImage from '@/components/heading-image';
 import { sectionImages } from '@/data/section-images';
 import { siteConfig } from '@/config/site.config';
@@ -35,39 +34,18 @@ const achievements = [
   },
   {
     icon: Users,
-    title: '98% Client Satisfaction',
-    description: 'Consistently rated 5 stars by clients',
+    title: 'Google-reviewed service',
+    description: 'Read current client reviews on Google Business Profile',
   },
   {
     icon: TrendingUp,
-    title: 'Top 1% Agent',
-    description: 'Ranked in top 1% of Las Vegas REALTORS®',
+    title: 'Skye Canyon specialist',
+    description: 'Luxury, new construction, and resale in Las Vegas NV 89166',
   },
   {
     icon: Award,
     title: '15+ Years Experience',
     description: 'Deep expertise in luxury real estate',
-  },
-];
-
-const testimonials = [
-  {
-    name: 'Michael & Sarah Chen',
-    location: 'Skye Canyon Drive',
-    text: 'Dr. Duffy made our home buying experience seamless. Her knowledge of Skye Canyon is unmatched.',
-    rating: 5,
-  },
-  {
-    name: 'Robert Johnson',
-    location: 'Canyon Vista Lane',
-    text: 'Professional, knowledgeable, and always available. Sold our home in just 10 days!',
-    rating: 5,
-  },
-  {
-    name: 'Jennifer Martinez',
-    location: 'Desert Bloom Court',
-    text: 'Outstanding service from start to finish. Dr. Duffy truly understands the luxury market.',
-    rating: 5,
   },
 ];
 
@@ -117,7 +95,7 @@ export default function About() {
                   cutting-edge technology to provide unmatched service to luxury home buyers and sellers.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="https://g.co/kgs/nbUf6Pj" target="_blank" rel="noopener noreferrer">
+                  <a href="/contact">
                     <Button className="bg-realscout-blue text-white hover:bg-realscout-navy">
                       <Calendar className="w-4 h-4 mr-2" />
                       Schedule Consultation
@@ -137,12 +115,16 @@ export default function About() {
               <div className="relative">
                 <div className="bg-gradient-to-br from-realscout-blue to-realscout-navy rounded-2xl p-1 shadow-2xl">
                   <div className="bg-white rounded-xl p-4">
-                    <img
-                      src={sectionImages.office.src}
-                      alt={sectionImages.office.alt}
-                      className="rounded-lg w-full max-w-md mx-auto object-cover"
-                      style={{ imageRendering: 'auto', maxWidth: '400px', height: 'auto' }}
-                    />
+                    <picture>
+                      <source srcSet={sectionImages.profile.srcWebp} type="image/webp" />
+                      <img
+                        src={sectionImages.profile.src}
+                        alt={sectionImages.profile.alt}
+                        className="rounded-lg w-full max-w-md mx-auto object-cover"
+                        width={800}
+                        height={800}
+                      />
+                    </picture>
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-xl border-2 border-realscout-blue">
@@ -222,8 +204,8 @@ export default function About() {
                     Dr. Jan Duffy brings over 15 years of exclusive expertise to Skye Canyon real estate, 
                     having personally facilitated the sale of over 150 luxury properties in this premier 
                     Las Vegas community. Her deep understanding of the local market dynamics, combined with 
-                    advanced technology tools and personalized service, has earned her recognition as one of 
-                    Nevada's top-performing real estate professionals.
+                    advanced technology tools and personalized service as a Skye Canyon REALTOR®
+                    with Berkshire Hathaway HomeServices Nevada Properties.
                   </p>
                   <p className="text-lg leading-relaxed mb-6">
                     Specializing in luxury homes, golf course properties, and new construction within 
@@ -307,36 +289,7 @@ export default function About() {
         {/* Performance Insights */}
         <PerformanceInsights />
 
-        {/* Testimonials */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Client Testimonials
-              </h2>
-              <p className="text-xl text-gray-600">Hear from satisfied Skye Canyon homeowners</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index}>
-                  <CardContent className="p-6">
-                    <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-                    <div>
-                      <div className="font-semibold">{testimonial.name}</div>
-                      <div className="text-sm text-gray-600">{testimonial.location}</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+        <GoogleReviewCta heading="Google reviews for Dr. Jan Duffy" />
 
         {/* Contact CTA */}
         <section id="contact" className="py-16 bg-realscout-blue text-white">
@@ -371,19 +324,21 @@ export default function About() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://g.co/kgs/nbUf6Pj" target="_blank" rel="noopener noreferrer">
+              <a href="/contact">
                 <Button className="bg-white text-realscout-blue hover:bg-gray-100">
                   <Calendar className="w-4 h-4 mr-2" />
                   Schedule Consultation
                 </Button>
               </a>
-              <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-realscout-blue"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                View Properties
-              </Button>
+              <a href="/properties">
+                <Button
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-realscout-blue"
+                >
+                  <Home className="w-4 h-4 mr-2" />
+                  View Properties
+                </Button>
+              </a>
             </div>
           </div>
         </section>

@@ -47,6 +47,12 @@ export default function SkyeCanyonGuide() {
             <h2 className="text-3xl font-bold text-center mb-12">
               Skye Canyon Community Overview Las Vegas Nevada
             </h2>
+            <HeadingImage
+              src={sectionImages.communityMap.src}
+              srcWebp={sectionImages.communityMap.srcWebp}
+              alt={sectionImages.communityMap.alt}
+              className="w-full h-64 object-cover object-top rounded-xl mb-10"
+            />
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <Card>
                 <CardContent className="p-6 text-center">
@@ -156,12 +162,12 @@ export default function SkyeCanyonGuide() {
             {
               question: 'What schools serve Skye Canyon residents?',
               answer:
-                'Skye Canyon is served by highly-rated schools in the Clark County School District, including top-performing elementary, middle, and high schools in the northwest Las Vegas area with excellent academic programs.',
+                'Skye Canyon addresses are served by Clark County School District campuses including Kenneth Divich Elementary, William & Mary Scherkenbach Elementary, James Bilbray Elementary, Ralph Cadwallader Middle, Edmundo Escobedo Sr Middle, and Arbor View High. Confirm the CCSD locator for a specific street.',
             },
             {
               question: 'How far is Skye Canyon from Las Vegas Strip and airport?',
               answer:
-                'Skye Canyon is approximately 25-30 minutes from the Las Vegas Strip and McCarran International Airport, offering convenient access to entertainment, dining, and travel while maintaining a peaceful residential setting.',
+                'Skye Canyon is about 25–30 minutes from the Las Vegas Strip and Harry Reid International Airport, with I-215 and the 215 Beltway as the usual drive.',
             },
             {
               question: 'Are there dining and shopping options near Skye Canyon?',

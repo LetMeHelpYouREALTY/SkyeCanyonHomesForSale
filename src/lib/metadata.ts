@@ -63,10 +63,12 @@ export function pageMetadata(
   title: string,
   description: string,
   path = '/',
+  index = true,
 ): Metadata {
   return {
     title,
     description,
+    robots: { index, follow: index },
     alternates: { canonical: path },
     openGraph: {
       title,

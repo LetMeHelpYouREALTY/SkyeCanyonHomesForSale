@@ -39,6 +39,12 @@ export const IMAGE_IDS: Record<string, string> = {
   'properties/property-luxury.jpg': 'skye-canyon/properties/property-luxury',
   'properties/property-new.jpg': 'skye-canyon/properties/property-new',
   'properties/property-single.jpg': 'skye-canyon/properties/property-single',
+  'gbp/cover.jpg': 'skye-canyon/gbp/cover',
+  'gbp/profile.jpg': 'skye-canyon/gbp/profile',
+  'gbp/park.jpg': 'skye-canyon/gbp/park',
+  'gbp/recreation.jpg': 'skye-canyon/gbp/recreation',
+  'gbp/community-map.jpg': 'skye-canyon/gbp/community-map',
+  'gbp/google-review-qr.png': 'skye-canyon/gbp/google-review-qr',
 };
 
 function normalizeKey(src: string): string {

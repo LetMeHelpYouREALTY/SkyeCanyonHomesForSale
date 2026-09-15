@@ -101,6 +101,12 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
               Skye Canyon Real Estate Market
             </h2>
+            <HeadingImage
+              src={sectionImages.market.src}
+              srcWebp={sectionImages.market.srcWebp}
+              alt={sectionImages.market.alt}
+              className="w-full h-48 object-cover rounded-xl mb-8"
+            />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="text-3xl font-bold text-blue-600 mb-2">$1.2M</div>
@@ -244,7 +250,7 @@ export default function Home() {
             {
               question: 'What schools serve the Skye Canyon area?',
               answer:
-                'Homes in zip 89166 are zoned in the Clark County School District. Dr. Jan Duffy can share current campus names and typical drive times from a specific address.',
+                'Zip 89166 addresses are served by Kenneth Divich, William & Mary Scherkenbach, and James Bilbray Elementary, Ralph Cadwallader and Edmundo Escobedo Sr Middle, and Arbor View High. Confirm the CCSD locator for a specific street.',
             },
             {
               question: 'Are there new construction homes available?',

@@ -148,14 +148,25 @@ const pages: Record<string, PageSeoEntry> = {
   },
 };
 
+const noIndexPaths = new Set([
+  '/lead-dashboard',
+  '/performance-dashboard',
+  '/followup-boss-status',
+  '/seo-management',
+  '/home-simple',
+  '/demo/maps',
+]);
+
 export function marketingMetadata(path: string): Metadata {
+  const index = !noIndexPaths.has(path);
   const entry = pages[path];
   if (!entry) {
     return pageMetadata(
       'Skye Canyon Real Estate | Las Vegas NV 89166',
       'Dr. Jan Duffy, REALTOR® — Skye Canyon homes in Las Vegas NV 89166. Call (702) 500-1902.',
       path,
+      index,
     );
   }
-  return pageMetadata(entry.title, entry.description, entry.path);
+  return pageMetadata(entry.title, entry.description, entry.path, index);
 }

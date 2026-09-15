@@ -90,11 +90,9 @@ export default function FirstTimeBuyerServices() {
 
               <div className="text-center">
                 <a
-                  href="https://g.co/kgs/nbUf6Pj"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/contact"
                   className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-300"
-                  aria-label="Schedule consultation with Dr. Jan Duffy on Google Business Profile"
+                  aria-label="Schedule consultation with Dr. Jan Duffy"
                 >
                   Schedule Consultation
                 </a>

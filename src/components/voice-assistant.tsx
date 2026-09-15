@@ -132,7 +132,7 @@ export default function VoiceAssistant() {
         lowerCommand.includes('expert')
       ) {
         response =
-          "I'm Dr. Jan Duffy, the leading Skye Canyon real estate expert with over 15 years specializing exclusively in this luxury Las Vegas community. I've helped hundreds of families find their dream homes in Skye Canyon and am recognized as the area's top-performing agent.";
+          "I'm Dr. Jan Duffy, a Nevada REALTOR® specializing in Skye Canyon luxury, new construction, and resale. Call (702) 500-1902 or visit 10111 W. Skye Canyon Park Drive.";
       } else if (
         lowerCommand.includes('why') &&
         (lowerCommand.includes('choose') || lowerCommand.includes('work'))

@@ -2,6 +2,7 @@
 
 import type { ReactNode } from 'react';
 import { useState } from 'react';
+import { siteImage } from '@/lib/cloudflare-images';
 
 export interface PageHeroProps {
   title: string;
@@ -23,8 +24,8 @@ const heightClasses = {
   lg: 'min-h-[550px] py-24',
 };
 
-const FALLBACK_IMAGE = '/images/heroes/home.jpg';
-const FALLBACK_MOBILE = '/images/heroes/home-mobile.jpg';
+const FALLBACK_IMAGE = siteImage('heroes/home.jpg');
+const FALLBACK_MOBILE = siteImage('heroes/home-mobile.jpg');
 
 export default function PageHero({
   title,

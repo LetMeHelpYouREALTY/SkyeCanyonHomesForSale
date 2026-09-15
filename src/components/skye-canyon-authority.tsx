@@ -125,9 +125,7 @@ export default function SkyeCanyonAuthority() {
               <p className="text-sm mb-2">Skye Canyon Specialist</p>
               <p className="text-sm mb-4">DrDuffy@SkyeCanyonHomesForSale.com</p>
               <a
-                href="https://g.co/kgs/nbUf6Pj"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact"
                 className="w-full"
               >
                 <Button className="w-full bg-white text-realscout-blue hover:bg-gray-100">

@@ -60,9 +60,9 @@ export const sectionImages = {
     alt: 'School campus serving Skye Canyon Las Vegas NV 89166',
   },
   parks: {
-    src: siteImage('heroes/parks.jpg'),
-    srcWebp: siteImageWebp('heroes/parks.jpg'),
-    alt: 'Skye Canyon Park trails and play area Las Vegas NV 89166',
+    src: siteImage('gbp/park.jpg'),
+    srcWebp: siteImageWebp('gbp/park.jpg'),
+    alt: 'Skye Canyon Park playground pool and trails Las Vegas NV 89166',
   },
   northwest: {
     src: siteImage('heroes/northwest.jpg'),
@@ -73,6 +73,21 @@ export const sectionImages = {
     src: siteImage('sections/new-construction.jpg'),
     srcWebp: siteImageWebp('sections/new-construction.jpg'),
     alt: 'Eaglepointe Marvella and Skyecrest new homes Skye Canyon Las Vegas',
+  },
+  monument: {
+    src: siteImage('gbp/cover.jpg'),
+    srcWebp: siteImageWebp('gbp/cover.jpg'),
+    alt: 'Skye Canyon monument gate at 10111 W. Skye Canyon Park Drive Las Vegas NV 89166',
+  },
+  profile: {
+    src: siteImage('gbp/profile.jpg'),
+    srcWebp: siteImageWebp('gbp/profile.jpg'),
+    alt: 'Dr. Jan Duffy REALTOR calling clients from Skye Canyon Las Vegas NV 89166',
+  },
+  communityMap: {
+    src: siteImage('gbp/community-map.jpg'),
+    srcWebp: siteImageWebp('gbp/community-map.jpg'),
+    alt: 'Skye Canyon community map of parks, campuses, and home villages Las Vegas NV 89166',
   },
 } as const;
 

@@ -2,6 +2,7 @@ import { Clock, ExternalLink, Gift, Star } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { siteConfig } from '@/config/site.config';
 
 const currentOffers = [
   {
@@ -11,6 +12,7 @@ const currentOffers = [
     value: '$500 Value',
     expiry: 'Limited Time',
     cta: 'Get Free Valuation',
+    href: '/contact',
     highlight: true,
   },
   {
@@ -20,6 +22,7 @@ const currentOffers = [
     value: 'Exclusive Access',
     expiry: 'For Qualified Buyers',
     cta: 'Join VIP Program',
+    href: siteConfig.realscoutOnboarding,
     highlight: false,
   },
   {
@@ -29,6 +32,7 @@ const currentOffers = [
     value: '$2,500 Value',
     expiry: 'This Quarter',
     cta: 'Learn More',
+    href: '/services/seller-agent',
     highlight: false,
   },
 ];
@@ -73,9 +77,9 @@ export default function SpecialOffers() {
                 <p className="text-gray-700 leading-relaxed">{offer.description}</p>
                 <div className="text-2xl font-bold text-realscout-blue">{offer.value}</div>
                 <a
-                  href="https://g.co/kgs/nbUf6Pj"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={offer.href}
+                  target={offer.href.startsWith('http') ? '_blank' : undefined}
+                  rel={offer.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="block"
                 >
                   <Button className="w-full bg-realscout-blue hover:bg-realscout-navy text-white">
@@ -98,7 +102,7 @@ export default function SpecialOffers() {
                 Call (702) 500-1902
               </Button>
             </a>
-            <a href="https://g.co/kgs/nbUf6Pj" target="_blank" rel="noopener noreferrer">
+            <a href="/contact">
               <Button
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-realscout-blue"

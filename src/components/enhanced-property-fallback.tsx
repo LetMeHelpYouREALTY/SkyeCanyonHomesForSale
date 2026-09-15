@@ -177,7 +177,7 @@ export default function EnhancedPropertyFallback() {
             <Phone className="w-4 h-4 mr-2" />
             (702) 500-1902
           </Button>
-          <a href="https://g.co/kgs/nbUf6Pj" target="_blank" rel="noopener noreferrer">
+          <a href="/contact">
             <Button variant="outline">Schedule Consultation</Button>
           </a>
         </div>

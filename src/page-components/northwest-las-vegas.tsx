@@ -204,9 +204,7 @@ export default function NorthwestLasVegas() {
                 specialist with deep local market knowledge.
               </p>
               <a
-                href="https://g.co/kgs/nbUf6Pj"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact"
                 className="w-full"
               >
                 <Button className="w-full bg-realscout-blue text-white hover:bg-realscout-navy">
