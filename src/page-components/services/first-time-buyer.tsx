@@ -68,8 +68,7 @@ export default function FirstTimeBuyerServices() {
                     Builder Incentive Programs
                   </h3>
                   <p className="text-gray-600">
-                    Access to exclusive builder incentives and first-time buyer programs for maximum
-                    savings.
+                    Access to builder incentives and first-time buyer loan programs.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">

@@ -91,7 +91,7 @@ export function ContextualContent() {
         <p>
           As Las Vegas' premier guard-gated community, <ContentLinks.SkyeCanyon /> offers
           unparalleled luxury living with direct access to the <ContentLinks.GolfCourse />. Our{' '}
-          <ContentLinks.Properties /> showcase the finest homes in the 89166 area.
+          <ContentLinks.Properties /> showcase current listings in the 89166 zip code.
         </p>
 
         <p>

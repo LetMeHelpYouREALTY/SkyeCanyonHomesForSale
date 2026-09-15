@@ -89,6 +89,11 @@ export const sectionImages = {
     srcWebp: siteImageWebp('gbp/community-map.jpg'),
     alt: 'Skye Canyon community map of parks, campuses, and home villages Las Vegas NV 89166',
   },
+  clubhouse: {
+    src: siteImage('gbp/clubhouse.jpg'),
+    srcWebp: siteImageWebp('gbp/clubhouse.jpg'),
+    alt: 'Skye Canyon recreation clubhouse terrace and firepit Las Vegas NV 89166',
+  },
 } as const;
 
 export const propertyImages = {

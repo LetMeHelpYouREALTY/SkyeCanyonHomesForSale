@@ -225,7 +225,7 @@ export default function LeadCaptureForm() {
                       <FormControl>
                         <Input
                           type="tel"
-                          placeholder="(555) 123-4567"
+                          placeholder="(702) 500-1902"
                           className="focus:ring-realscout-blue focus:border-realscout-blue"
                           {...field}
                         />

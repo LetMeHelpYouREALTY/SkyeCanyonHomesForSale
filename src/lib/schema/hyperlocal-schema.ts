@@ -1,5 +1,6 @@
 import { siteConfig } from '@/config/site.config';
 import type { HyperlocalFaq } from '@/data/hyperlocal/types';
+import { schemaImageList } from '@/lib/schema-images';
 
 interface PlaceSchemaInput {
   name: string;
@@ -36,6 +37,8 @@ export function buildPlaceSchema(input: PlaceSchemaInput) {
         addressCountry: siteConfig.address.country,
       },
     }),
+    image: schemaImageList,
+    hasMap: siteConfig.googleMapsUrl,
     ...(input.containedIn && {
       containedInPlace: {
         '@type': 'Place',

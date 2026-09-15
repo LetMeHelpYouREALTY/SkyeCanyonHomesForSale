@@ -8,6 +8,14 @@ export const schemaImages = {
   office: absoluteSiteImage('gbp/cover.jpg', siteConfig.url),
   listings: absoluteSiteImage('sections/listings.jpg', siteConfig.url),
   profile: absoluteSiteImage('gbp/profile.jpg', siteConfig.url),
+  park: absoluteSiteImage('gbp/park.jpg', siteConfig.url),
+  clubhouse: absoluteSiteImage('gbp/clubhouse.jpg', siteConfig.url),
 };
 
-export const schemaImageList = [schemaImages.office, schemaImages.profile, schemaImages.home];
+export const schemaImageList = [
+  schemaImages.office,
+  schemaImages.profile,
+  schemaImages.park,
+  schemaImages.clubhouse,
+  schemaImages.home,
+];

@@ -30,7 +30,7 @@ export default function LuxuryHomesLasVegas() {
                 Current Luxury Home Listings Skye Canyon Las Vegas
               </h2>
               <p className="text-xl text-gray-600">
-                Premium properties available in Las Vegas's finest communities
+                Guard-gated and golf-course homes in Skye Canyon and northwest Las Vegas
               </p>
             </div>
             <HeadingImage
@@ -45,8 +45,13 @@ export default function LuxuryHomesLasVegas() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-12">
-              Premier Luxury Communities Las Vegas Nevada
+              Luxury Communities in Las Vegas Nevada
             </h2>
+            <HeadingImage
+              {...sectionImages.clubhouse}
+              alt="Skye Canyon clubhouse terrace for luxury home buyers Las Vegas NV 89166"
+              className="w-full h-56 object-cover rounded-xl mb-10"
+            />
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card>
                 <CardContent className="p-0 overflow-hidden">

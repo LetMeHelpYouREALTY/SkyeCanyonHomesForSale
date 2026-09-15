@@ -44,6 +44,7 @@ export const IMAGE_IDS: Record<string, string> = {
   'gbp/park.jpg': 'skye-canyon/gbp/park',
   'gbp/recreation.jpg': 'skye-canyon/gbp/recreation',
   'gbp/community-map.jpg': 'skye-canyon/gbp/community-map',
+  'gbp/clubhouse.jpg': 'skye-canyon/gbp/clubhouse',
   'gbp/google-review-qr.png': 'skye-canyon/gbp/google-review-qr',
 };
 

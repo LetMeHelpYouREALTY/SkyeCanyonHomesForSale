@@ -8,6 +8,7 @@ import RealScoutListings from '@/components/realscout-listings';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import { sectionImages } from '@/data/section-images';
+import { siteConfig } from '@/config/site.config';
 
 export default function SkyeCanyonParks() {
   const parksData = [
@@ -41,9 +42,9 @@ export default function SkyeCanyonParks() {
     {
       name: 'Skye View Park',
       description:
-        'Scenic park offering beautiful mountain views and peaceful outdoor recreation opportunities.',
+        'Park with Red Rock and Sheep Mountain views, walking trails, and picnic tables.',
       features: ['Mountain views', 'Walking trails', 'Picnic areas'],
-      highlights: ['Scenic mountain vistas', 'Peaceful setting'],
+      highlights: ['Scenic mountain vistas', 'Walking trails'],
     },
     {
       name: 'Big Skye Park',
@@ -55,7 +56,7 @@ export default function SkyeCanyonParks() {
     {
       name: 'Starlight Park',
       description:
-        'Evening-friendly park with lighting for extended outdoor enjoyment and recreational activities.',
+        'Park with lighting for after-dusk walking and recreation.',
       features: ['Evening lighting', 'Play areas', 'Open spaces'],
       highlights: ['Extended hours usage', 'Lighted evening recreation'],
     },
@@ -176,16 +177,35 @@ export default function SkyeCanyonParks() {
         {/* All Parks Grid */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-6">
               All Skye Canyon Community Parks
             </h2>
+            <HeadingImage
+              {...sectionImages.parks}
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {parksData.slice(1).map((park, index) => (
+              {parksData.slice(1).map((park, index) => {
+                const parkPhotos = [
+                  sectionImages.parks,
+                  sectionImages.northwest,
+                  sectionImages.recreation,
+                  sectionImages.clubhouse,
+                ];
+                const photo = parkPhotos[index] ?? sectionImages.parks;
+                return (
                 <div
-                  key={index}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                  key={park.name}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
                 >
+                  <HeadingImage
+                    src={photo.src}
+                    srcWebp={photo.srcWebp}
+                    alt={`${park.name} in Skye Canyon Las Vegas NV 89166`}
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">{park.name}</h3>
                   <p className="text-gray-600 mb-4">{park.description}</p>
 
@@ -210,8 +230,10 @@ export default function SkyeCanyonParks() {
                       </span>
                     ))}
                   </div>
+                  </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -222,6 +244,10 @@ export default function SkyeCanyonParks() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Parks, Trails, and Recreation
             </h2>
+            <HeadingImage
+              {...sectionImages.clubhouse}
+              className="w-full h-56 object-cover rounded-xl mb-8"
+            />
             <p className="text-xl text-gray-600 mb-12">
               Splash pads, basketball courts, soccer fields, and play structures are available at
               Skye Canyon community parks in Las Vegas NV 89166.
@@ -277,7 +303,7 @@ export default function SkyeCanyonParks() {
               Find Your Home Near Skye Canyon Parks
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Discover luxury homes within walking distance of these amazing community amenities.
+              Compare current MLS homes near Skye Canyon Park, the rec center, and Desert Highlands.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -285,6 +311,14 @@ export default function SkyeCanyonParks() {
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 View Available Homes
+              </a>
+              <a
+                href={siteConfig.directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Get directions
               </a>
               <a
                 href="tel:+17025001902"

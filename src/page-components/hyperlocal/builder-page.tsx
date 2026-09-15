@@ -5,8 +5,10 @@ import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import HyperlocalCta from '@/components/sections/hyperlocal-cta';
 import GbpLocalSection from '@/components/gbp-local-section';
+import HeadingImage from '@/components/heading-image';
 import HyperlocalHero from '@/components/sections/hyperlocal-hero';
 import { getHeroImage, getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 import HyperlocalListings from '@/components/sections/hyperlocal-listings';
 import HyperlocalSchema from '@/components/schema/hyperlocal-schema';
 import { siteConfig } from '@/config/site.config';
@@ -58,17 +60,24 @@ export default function BuilderPage({ builder }: BuilderPageProps) {
       <section className="py-8 px-4 max-w-4xl mx-auto">
         <p className="text-gray-700 text-lg leading-relaxed">{builder.description}</p>
         {builder.communitySlugs.length > 0 && (
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {builder.communitySlugs.map((slug, i) => (
-              <Link
-                key={slug}
-                href={`/skye-canyon/${slug}`}
-                className="p-4 border rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-colors text-center"
-              >
-                <h3 className="font-semibold text-gray-900">{builder.communities[i]}</h3>
-                <span className="text-sm text-blue-600">View community &rarr;</span>
-              </Link>
-            ))}
+          <div className="mt-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{builder.name} Villages</h2>
+            <HeadingImage
+              {...sectionImages.newConstruction}
+              className="w-full h-48 object-cover rounded-xl mb-6"
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {builder.communitySlugs.map((slug, i) => (
+                <Link
+                  key={slug}
+                  href={`/skye-canyon/${slug}`}
+                  className="p-4 border rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-colors text-center"
+                >
+                  <h3 className="font-semibold text-gray-900">{builder.communities[i]}</h3>
+                  <span className="text-sm text-blue-600">View community &rarr;</span>
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </section>

@@ -4,9 +4,11 @@ import { Mail, MapPin, Navigation, Phone, Star } from 'lucide-react';
 import { CalendlyInline } from '@/components/calendly-widget';
 import GbpLocalSection from '@/components/gbp-local-section';
 import GoogleReviewCta from '@/components/google-review-cta';
+import HeadingImage from '@/components/heading-image';
 import HomebotWidget from '@/components/homebot-widget';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
+import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { siteConfig } from '@/config/site.config';
 
@@ -38,6 +40,10 @@ export default function Contact() {
               <div className="space-y-8">
                 <Card>
                   <CardContent className="p-8">
+                    <HeadingImage
+                      {...sectionImages.profile}
+                      className="w-full h-56 object-cover object-top rounded-xl mb-6"
+                    />
                     <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
 
                     <div className="space-y-6">

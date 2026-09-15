@@ -3,6 +3,7 @@ import HeadingImage from '@/components/heading-image';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site.config';
 import { sectionImages } from '@/data/section-images';
+import { siteImage } from '@/lib/cloudflare-images';
 
 export default function ReviewHighlights() {
   const office = sectionImages.monument;
@@ -22,6 +23,19 @@ export default function ReviewHighlights() {
           alt={office.alt}
           className="w-full h-56 md:h-72 object-cover rounded-xl mb-8"
         />
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+          <img
+            src={siteImage('gbp/google-review-qr.png')}
+            alt="QR code to Google reviews for Dr. Jan Duffy Skye Canyon Las Vegas NV 89166"
+            width={128}
+            height={128}
+            className="w-28 h-28 border border-gray-200 rounded-md bg-white p-1"
+            loading="lazy"
+          />
+          <p className="text-sm text-gray-600 max-w-xs text-left">
+            Scan to open Google reviews for {siteConfig.name} at {siteConfig.address.formatted}.
+          </p>
+        </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href={siteConfig.googleReviewUrl} target="_blank" rel="noopener noreferrer">
             <Button className="bg-realscout-blue hover:bg-realscout-navy text-white">

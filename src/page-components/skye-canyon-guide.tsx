@@ -86,6 +86,11 @@ export default function SkyeCanyonGuide() {
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-12">Premium Amenities</h2>
+            <HeadingImage
+              {...sectionImages.clubhouse}
+              alt="Skye Canyon clubhouse firepit and recreation terrace Las Vegas NV 89166"
+              className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
+            />
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card>
                 <CardContent className="p-0 overflow-hidden">
@@ -157,7 +162,7 @@ export default function SkyeCanyonGuide() {
             {
               question: 'What are the HOA fees in Skye Canyon?',
               answer:
-                'Skye Canyon HOA fees typically range from $180-$320 per month, which includes security, golf course maintenance, community amenities, landscaping of common areas, and exclusive club access.',
+                'Skye Canyon HOA fees typically range from $180-$320 per month, which includes the staffed gate, golf-course common-area upkeep, recreation amenities, and landscaping of shared spaces.',
             },
             {
               question: 'What schools serve Skye Canyon residents?',
