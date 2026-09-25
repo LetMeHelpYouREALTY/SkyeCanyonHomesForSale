@@ -19,7 +19,7 @@ export default function ComprehensiveSchemaMarkup({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${siteConfig.url}/#organization`,
-    name: siteConfig.legalName,
+    name: siteConfig.businessName,
     url: siteConfig.url,
     contactPoint: {
       '@type': 'ContactPoint',
