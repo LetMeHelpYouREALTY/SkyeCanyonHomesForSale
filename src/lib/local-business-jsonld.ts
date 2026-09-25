@@ -52,21 +52,17 @@ export function buildLocalBusinessJsonLd(): Record<string, unknown> {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: siteConfig.hours.weekdays.opens,
-        closes: siteConfig.hours.weekdays.closes,
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Saturday',
-        opens: siteConfig.hours.saturday.opens,
-        closes: siteConfig.hours.saturday.closes,
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: siteConfig.hours.sunday.opens,
-        closes: siteConfig.hours.sunday.closes,
+        dayOfWeek: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday',
+          'Sunday',
+        ],
+        opens: siteConfig.hours.daily.opens,
+        closes: siteConfig.hours.daily.closes,
       },
     ],
     areaServed: [

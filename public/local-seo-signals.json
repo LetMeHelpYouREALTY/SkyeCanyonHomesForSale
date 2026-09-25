@@ -70,9 +70,7 @@
     "Las Vegas 89166 Properties"
   ],
   "openingHours": [
-    "Mo-Fr 09:00-18:00",
-    "Sa 09:00-17:00", 
-    "Su 11:00-16:00"
+    "Mo-Su 08:00-20:00"
   ],
   "paymentAccepted": "Cash, Check, Wire Transfer",
   "currenciesAccepted": "USD"

@@ -65,11 +65,7 @@ export default function Contact() {
                             </a>
                           </p>
                           <p className="text-sm text-gray-500">
-                            {siteConfig.hours.weekdays.label}
-                            <br />
-                            {siteConfig.hours.saturday.label}
-                            <br />
-                            {siteConfig.hours.sunday.label}
+                            {siteConfig.hours.daily.label}
                           </p>
                         </div>
                       </div>
@@ -153,15 +149,9 @@ export default function Contact() {
               {...sectionImages.monument}
               className="w-full max-w-3xl mx-auto h-80 object-cover object-bottom rounded-xl mb-8"
             />
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-1 gap-6">
               <div>
-                <p className="text-gray-700 font-medium">{siteConfig.hours.weekdays.label}</p>
-              </div>
-              <div>
-                <p className="text-gray-700 font-medium">{siteConfig.hours.saturday.label}</p>
-              </div>
-              <div>
-                <p className="text-gray-700 font-medium">{siteConfig.hours.sunday.label}</p>
+                <p className="text-gray-700 font-medium">{siteConfig.hours.daily.label}</p>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-3 mt-8">

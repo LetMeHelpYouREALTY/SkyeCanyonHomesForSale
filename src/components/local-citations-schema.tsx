@@ -46,7 +46,7 @@ export default function LocalCitationsSchema({ pageType: _pageType = 'homepage' 
     priceRange: '$300,000 - $2,000,000+',
     paymentAccepted: ['Cash', 'Check', 'Credit Card'],
     currenciesAccepted: 'USD',
-    openingHours: ['Mo-Fr 09:00-18:00', 'Sa 09:00-17:00', 'Su 11:00-16:00'],
+    openingHours: ['Mo-Su 08:00-20:00'],
     specialties: [
       'Skye Canyon Real Estate',
       'Luxury Home Sales',

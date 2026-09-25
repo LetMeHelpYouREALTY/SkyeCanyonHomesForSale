@@ -71,7 +71,7 @@ export default function DeploymentSEOChecklist() {
     {
       id: 'business-hours',
       title: 'Business Hours Schema',
-      description: 'Mo-Fr 09:00-18:00, Sa 09:00-17:00, Su 11:00-16:00',
+      description: 'Mo-Su 08:00-20:00',
       status: 'completed',
       priority: 'medium',
       category: 'local',

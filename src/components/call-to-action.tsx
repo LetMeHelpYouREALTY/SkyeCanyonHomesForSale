@@ -48,10 +48,7 @@ export default function CallToAction() {
         </div>
 
         <div className="mt-8 text-sm opacity-80">
-          <p>
-            {siteConfig.hours.weekdays.label} · {siteConfig.hours.saturday.label} ·{' '}
-            {siteConfig.hours.sunday.label}
-          </p>
+          <p>{siteConfig.hours.daily.label}</p>
         </div>
       </div>
     </section>

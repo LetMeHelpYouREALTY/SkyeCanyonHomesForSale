@@ -137,9 +137,7 @@ export default function Footer() {
             <div className="mt-6 pt-4 border-t border-gray-600">
               <h5 className="text-sm font-semibold mb-3 text-white">Business Hours</h5>
               <div className="space-y-1 text-sm text-gray-400">
-                <div>{siteConfig.hours.weekdays.label}</div>
-                <div>{siteConfig.hours.saturday.label}</div>
-                <div>{siteConfig.hours.sunday.label}</div>
+                <div>{siteConfig.hours.daily.label}</div>
               </div>
               
               <div className="mt-4 pt-4 border-t border-gray-600">

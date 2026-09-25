@@ -278,8 +278,7 @@ export default function PropertyDetail() {
 
                 <div className="mt-6 pt-6 border-t">
                   <p className="text-sm text-gray-600 text-center">
-                    {siteConfig.hours.weekdays.label}. {siteConfig.hours.saturday.label}.{' '}
-                    {siteConfig.hours.sunday.label}. Consultations outside posted hours by appointment.
+                    {siteConfig.hours.daily.label}. Consultations outside posted hours by appointment.
                   </p>
                 </div>
               </CardContent>

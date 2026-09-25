@@ -37,15 +37,7 @@ export default function BusinessAuthoritySchema() {
       latitude: '36.2648',
       longitude: '-115.3275',
     },
-    openingHours: [
-      'Mo 09:00-18:00',
-      'Tu 09:00-18:00',
-      'We 09:00-18:00',
-      'Th 09:00-18:00',
-      'Fr 09:00-18:00',
-      'Sa 09:00-17:00',
-      'Su 11:00-16:00',
-    ],
+    openingHours: ['Mo-Su 08:00-20:00'],
     memberOf: [
       {
         '@type': 'Organization',

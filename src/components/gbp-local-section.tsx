@@ -52,13 +52,7 @@ export default function GbpLocalSection({
                 </li>
                 <li className="flex gap-3">
                   <Clock className="h-5 w-5 text-blue-600 mt-0.5 shrink-0" aria-hidden="true" />
-                  <span>
-                    {siteConfig.hours.weekdays.label}
-                    <br />
-                    {siteConfig.hours.saturday.label}
-                    <br />
-                    {siteConfig.hours.sunday.label}
-                  </span>
+                  <span>{siteConfig.hours.daily.label}</span>
                 </li>
               </ul>
             </div>

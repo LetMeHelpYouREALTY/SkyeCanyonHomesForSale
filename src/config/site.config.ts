@@ -31,9 +31,7 @@ export const siteConfig = {
     longitude: -115.3275,
   },
   hours: {
-    weekdays: { opens: '09:00', closes: '18:00', label: 'Monday - Friday: 9:00 AM - 6:00 PM' },
-    saturday: { opens: '09:00', closes: '17:00', label: 'Saturday: 9:00 AM - 5:00 PM' },
-    sunday: { opens: '11:00', closes: '16:00', label: 'Sunday: 11:00 AM - 4:00 PM' },
+    daily: { opens: '08:00', closes: '20:00', label: 'Monday - Sunday: 8:00 AM - 8:00 PM' },
   },
   /** Google Business Profile openInfo.openingDate — verified 2026-09-15 */
   opened: {
@@ -42,7 +40,7 @@ export const siteConfig = {
     day: 20,
     label: 'Since 2009',
   },
-  openingHours: ['Mo-Fr 09:00-18:00', 'Sa 09:00-17:00', 'Su 11:00-16:00'],
+  openingHours: ['Mo-Su 08:00-20:00'],
   googleReviewUrl: 'https://g.page/r/CVaZ8MapUtFoEBM/review',
   googleBusinessUrl: 'https://g.page/r/CVaZ8MapUtFoEBM',
   googleMapsUrl: 'https://maps.google.com/maps?cid=7552908939217639766',

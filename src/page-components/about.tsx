@@ -383,7 +383,7 @@ export default function About() {
             {
               question: 'How can I contact Dr. Jan Duffy?',
               answer:
-                `Call ${siteConfig.phone} or visit the office at 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166. ${siteConfig.hours.weekdays.label}. ${siteConfig.hours.saturday.label}. ${siteConfig.hours.sunday.label}.`,
+                `Call ${siteConfig.phone} or visit the office at 10111 W Skye Canyon Park Dr, Las Vegas, NV 89166. ${siteConfig.hours.daily.label}.`,
             },
             {
               question: 'Does Dr. Jan Duffy work with first-time buyers?',

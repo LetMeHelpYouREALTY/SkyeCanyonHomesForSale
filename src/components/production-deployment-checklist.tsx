@@ -354,7 +354,7 @@ export default function ProductionDeploymentChecklist() {
                   89166
                 </li>
                 <li>
-                  • Add business hours matching the schema: M-F 9AM-6PM, Sat 9AM-5PM, Sun 11AM-4PM
+                  • Add business hours matching the schema: 8AM-8PM daily
                 </li>
                 <li>• Upload professional photos of recent property listings</li>
                 <li>• Add services: Luxury Homes, New Construction, Toll Brothers, Lennar</li>
