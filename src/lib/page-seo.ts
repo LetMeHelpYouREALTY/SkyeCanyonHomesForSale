@@ -9,7 +9,7 @@ interface PageSeoEntry {
 
 const pages: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Skye Canyon Homes for Sale | Las Vegas NV 89166',
+    title: 'Skye Canyon Homes | Las Vegas 89166',
     description:
       'Skye Canyon homes for sale in Las Vegas NV 89166. Live MLS, valuations, and Dr. Jan Duffy, REALTOR®. Call (702) 500-1902.',
     path: '/',
