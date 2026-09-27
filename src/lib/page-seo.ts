@@ -74,6 +74,12 @@ const pages: Record<string, PageSeoEntry> = {
       'Skye Canyon guide: golf, parks, commute times, HOA, and homes for sale in Las Vegas NV 89166. Call (702) 500-1902.',
     path: '/skye-canyon-guide',
   },
+  '/amenities': {
+    title: 'Nearby Amenities in Skye Canyon | Las Vegas NV 89166',
+    description:
+      'Interactive map of parks, grocery, golf, healthcare, and schools near Skye Canyon Las Vegas NV 89166. Dr. Jan Duffy, REALTOR®. (702) 500-1902.',
+    path: '/amenities',
+  },
   '/skye-canyon-communities': {
     title: 'Skye Canyon New Construction | Eaglepointe Marvella Skyecrest',
     description:

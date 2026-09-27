@@ -22,6 +22,7 @@ const staticRoutes = [
   { path: '/las-vegas-real-estate', priority: 0.8, changeFrequency: 'weekly' as const },
   { path: '/luxury-homes-las-vegas', priority: 0.8, changeFrequency: 'weekly' as const },
   { path: '/skye-canyon-guide', priority: 0.8, changeFrequency: 'weekly' as const },
+  { path: '/amenities', priority: 0.85, changeFrequency: 'weekly' as const },
   { path: '/skye-canyon-communities', priority: 0.8, changeFrequency: 'weekly' as const },
   { path: '/skye-canyon-parks', priority: 0.7, changeFrequency: 'monthly' as const },
   { path: '/skye-canyon-schools', priority: 0.7, changeFrequency: 'monthly' as const },

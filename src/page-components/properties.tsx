@@ -7,6 +7,7 @@ import FAQSection from '@/components/faq-section';
 
 import RealScoutListings from '@/components/realscout-listings';
 import GoogleMapEmbed from '@/components/google-map-embed';
+import NearbyAmenitiesSection from '@/components/sections/nearby-amenities-section';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
@@ -135,6 +136,8 @@ export default function Properties() {
             </div>
           </div>
         </section>
+
+        <NearbyAmenitiesSection variant="compact" className="bg-white" />
 
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

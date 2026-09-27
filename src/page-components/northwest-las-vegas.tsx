@@ -12,6 +12,7 @@ import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site.config';
+import NearbyAmenitiesSection from '@/components/sections/nearby-amenities-section';
 
 export default function NorthwestLasVegas() {
   const neighborhoods = [
@@ -272,6 +273,8 @@ export default function NorthwestLasVegas() {
           </div>
         </div>
       </section>
+
+      <NearbyAmenitiesSection variant="compact" className="bg-white" />
 
       <GbpLocalSection heading="Visit the northwest Las Vegas office in Skye Canyon" />
       <RelatedSearches searchType="las-vegas" />
