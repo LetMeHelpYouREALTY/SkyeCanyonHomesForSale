@@ -11,6 +11,7 @@ import HeroSection from '@/components/hero-section';
 import HomebotWidget from '@/components/homebot-widget';
 import RealScoutListings from '@/components/realscout-listings';
 import HyperlocalExploreHub from '@/components/sections/hyperlocal-explore-hub';
+import NearbyAmenitiesSection from '@/components/sections/nearby-amenities-section';
 import GbpPosts from '@/components/gbp-posts';
 import RelatedSearches from '@/components/related-searches';
 import ReviewHighlights from '@/components/review-highlights';
@@ -46,6 +47,13 @@ const exploreCards = [
     description: 'Eaglepointe, Marvella, Skyecrest, and Century Communities new construction.',
     image: sectionImages.communities,
     cta: 'Explore',
+  },
+  {
+    href: '/amenities',
+    title: 'Nearby Amenities Map',
+    description: 'Interactive map of grocery, parks, golf, healthcare, and schools in 89166.',
+    image: sectionImages.parks,
+    cta: 'Open map',
   },
   {
     href: '/skye-canyon-parks',
@@ -237,6 +245,8 @@ export default function Home() {
         </section>
 
         <HyperlocalExploreHub />
+
+        <NearbyAmenitiesSection variant="compact" className="bg-gray-50" />
 
         <ReviewHighlights />
         <GbpPosts />

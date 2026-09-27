@@ -118,6 +118,13 @@ export default function Navigation() {
                   Skye Canyon Guide
                 </Link>
                 <Link
+                  href="/amenities"
+                  className="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-realscout-blue transition-colors group/item"
+                >
+                  <MapPin className="w-4 h-4 mr-3 text-gray-400 group-hover/item:text-realscout-blue transition-colors" />
+                  Nearby Amenities
+                </Link>
+                <Link
                   href="/skye-canyon-communities"
                   className="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-realscout-blue transition-colors group/item"
                 >
@@ -338,6 +345,14 @@ export default function Navigation() {
                 >
                   <MapPin className="w-4 h-4 mr-3 text-gray-400" />
                   Skye Canyon Guide
+                </Link>
+                <Link
+                  href="/amenities"
+                  className="flex items-center px-2 py-2 text-gray-600 hover:text-realscout-blue hover:bg-gray-50 rounded"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <MapPin className="w-4 h-4 mr-3 text-gray-400" />
+                  Nearby Amenities
                 </Link>
                 <Link
                   href="/skye-canyon-communities"

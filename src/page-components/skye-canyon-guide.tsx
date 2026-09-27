@@ -11,6 +11,7 @@ import GbpLocalSection from '@/components/gbp-local-section';
 import HeroSearchCtas from '@/components/hero-search-ctas';
 import { sectionImages } from '@/data/section-images';
 import { Card, CardContent } from '@/components/ui/card';
+import NearbyAmenitiesSection from '@/components/sections/nearby-amenities-section';
 
 export default function SkyeCanyonGuide() {
   return (
@@ -146,6 +147,8 @@ export default function SkyeCanyonGuide() {
             </div>
           </div>
         </section>
+
+        <NearbyAmenitiesSection variant="compact" className="bg-white" />
 
         {/* FAQ Section for Skye Canyon Community */}
         <FAQSection

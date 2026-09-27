@@ -87,6 +87,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/amenities" className="hover:text-white transition-colors">
+                  Nearby Amenities Map
+                </a>
+              </li>
+              <li>
                 <a href="/skye-canyon-parks" className="hover:text-white transition-colors">
                   Skye Canyon Parks
                 </a>

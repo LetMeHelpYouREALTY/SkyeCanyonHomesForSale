@@ -307,7 +307,8 @@ class MapsStaticAPI {
 }
 
 // Export singleton instance
-export const mapsStaticAPI = new MapsStaticAPI('AIzaSyDt84u_m6IGyrNZ9Eyc2W0fAIx6yD3peTo');
+const staticMapsKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY?.trim() ?? '';
+export const mapsStaticAPI = new MapsStaticAPI(staticMapsKey);
 
 // Export types and class for external use
 export { MapsStaticAPI };

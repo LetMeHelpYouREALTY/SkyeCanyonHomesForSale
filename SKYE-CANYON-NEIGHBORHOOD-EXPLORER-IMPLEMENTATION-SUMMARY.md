@@ -16,7 +16,7 @@ Successfully integrated a Google Maps-powered neighborhood exploration widget in
   - Responsive design for mobile and desktop
 
 ### 2. Google Maps API Integration
-- **API Key**: Integrated your provided key: `AIzaSyDt84u_m6IGyrNZ9Eyc2W0fAIx6yD3peTo`
+- **API Key**: Loaded from `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` (Vercel env var; never commit key values).
 - **Libraries**: Places, Geometry, and Maps services
 - **Center**: Skye Canyon area coordinates (36.3128948, -115.3158838)
 - **Radius**: 5km coverage area

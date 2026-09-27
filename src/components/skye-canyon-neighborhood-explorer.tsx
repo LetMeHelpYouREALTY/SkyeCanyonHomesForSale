@@ -65,7 +65,7 @@ export default function SkyeCanyonNeighborhoodExplorer({ className = '' }: Neigh
       { placeId: "ChIJS4ibrGSTyIARs5_olkBgSLo" },
       { placeId: "ChIJ2_h-uQ2TyIARGINpOirByZY" }
     ],
-    apiKey: 'AIzaSyDt84u_m6IGyrNZ9Eyc2W0fAIx6yD3peTo'
+    apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
   };
 
   useEffect(() => {
