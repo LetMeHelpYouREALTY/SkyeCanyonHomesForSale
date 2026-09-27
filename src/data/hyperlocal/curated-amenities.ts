@@ -67,19 +67,19 @@ export const curatedAmenities: CuratedAmenity[] = [
   {
     id: 'centennial-center',
     name: 'Centennial Center',
-    address: '8080 W Tropical Pkwy, Las Vegas, NV 89149',
+    address: '8060 W Tropical Pkwy, Las Vegas, NV 89149',
     category: 'shopping',
     schemaType: 'ShoppingCenter',
-    sourceUrl: 'https://www.centennialcenterlv.com/',
+    sourceUrl: 'https://kiterealty.com/properties/centennial-center',
     note: 'Retail center on Tropical Parkway near Centennial Hills.',
   },
   {
     id: 'centennial-square',
     name: 'Centennial Square',
-    address: '6408 N Durango Dr, Las Vegas, NV 89149',
+    address: '6446 N Durango Dr, Las Vegas, NV 89149',
     category: 'shopping',
     schemaType: 'ShoppingCenter',
-    sourceUrl: 'https://www.centennialsquarelv.com/',
+    sourceUrl: 'https://thepuppystorelasvegas.com/contact-us/',
     note: 'Durango Drive retail near the CC-215 beltway.',
   },
   {
@@ -154,7 +154,7 @@ export const amenityContentSections: AmenityContentSection[] = [
     heading: 'Shopping and errands',
     paragraphs: [
       "Daily groceries are at Smith's Marketplace on W Skye Canyon Park Dr in 89166.",
-      'Centennial Center on Tropical Parkway, Centennial Square on Durango Drive, and Downtown Summerlin extend retail and services within a regional drive of Skye Canyon.',
+      'Centennial Center on W Tropical Parkway, Centennial Square on Durango Drive, and Downtown Summerlin extend retail and services within a regional drive of Skye Canyon.',
     ],
   },
   {
