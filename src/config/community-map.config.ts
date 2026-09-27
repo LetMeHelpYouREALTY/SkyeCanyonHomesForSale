@@ -19,7 +19,7 @@ export const communityMapConfig = {
   communityAddress: siteConfig.address.formatted,
   /** Keyless embed when Maps JS API is unavailable. */
   fallbackEmbedUrl: `https://www.google.com/maps?q=${siteConfig.geo.latitude},${siteConfig.geo.longitude}&z=14&output=embed`,
-  /** Master-planned family community — category chip order (not 55+ / not high-rise). */
+  /** Master-planned community — category chip order. */
   categoryOrder: [
     'parks',
     'golf',

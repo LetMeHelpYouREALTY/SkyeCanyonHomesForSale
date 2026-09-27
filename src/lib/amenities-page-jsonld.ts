@@ -11,15 +11,18 @@ function placeJsonLd(item: CuratedAmenity): Record<string, unknown> {
   const base: Record<string, unknown> = {
     '@type': item.schemaType,
     name: item.name,
-    address: {
+    url: item.sourceUrl,
+  };
+  if (item.address) {
+    base.address = {
       '@type': 'PostalAddress',
       streetAddress: item.address.split(',')[0]?.trim(),
       addressLocality: siteConfig.address.city,
       addressRegion: siteConfig.address.state,
       postalCode: item.address.match(/\b(\d{5})\b/)?.[1] ?? communityMapConfig.zip,
       addressCountry: 'US',
-    },
-  };
+    };
+  }
   if (item.geo) {
     base.geo = {
       '@type': 'GeoCoordinates',

@@ -12,11 +12,14 @@ export type CuratedAmenitySchemaType =
 export interface CuratedAmenity {
   id: string;
   name: string;
+  /** Omit from JSON-LD if unverified; required for curated list display when present. */
   address: string;
   category: AmenityCategoryId;
   schemaType: CuratedAmenitySchemaType;
   geo?: { latitude: number; longitude: number };
   note?: string;
+  /** Official primary source used to verify name and address. */
+  sourceUrl: string;
 }
 
 /** Verified names and addresses — used for SSR copy, fallback list, and ItemList schema. */
@@ -28,7 +31,8 @@ export const curatedAmenities: CuratedAmenity[] = [
     category: 'parks',
     schemaType: 'Park',
     geo: { latitude: 36.2648, longitude: -115.3275 },
-    note: '15-acre community hub with pools, splash pad, sports fields, and walking paths.',
+    sourceUrl: 'https://skyecanyon.com/amenities/parks/',
+    note: '15-acre community hub with sports fields, splash pad, and walking paths (public hours 6:00 a.m.–9:00 p.m.).',
   },
   {
     id: 'smiths-skye-canyon',
@@ -36,7 +40,10 @@ export const curatedAmenities: CuratedAmenity[] = [
     address: '9710 W Skye Canyon Park Dr, Las Vegas, NV 89166',
     category: 'grocery',
     schemaType: 'GroceryStore',
-    note: 'Full grocery, pharmacy, and fuel at the Skye Canyon Marketplace.',
+    geo: { latitude: 36.3164, longitude: -115.308 },
+    sourceUrl:
+      'https://www.smithsfoodanddrug.com/stores/grocery/nv/las-vegas/smiths-marketplace/706/00367',
+    note: 'Grocery, pharmacy, and fuel at Skye Canyon Marketplace.',
   },
   {
     id: 'tpc-las-vegas',
@@ -45,6 +52,7 @@ export const curatedAmenities: CuratedAmenity[] = [
     category: 'golf',
     schemaType: 'GolfCourse',
     geo: { latitude: 36.1761, longitude: -115.3094 },
+    sourceUrl: 'https://tpc.com/lasvegas',
     note: 'Public PGA TOUR golf course in Summerlin, west of Skye Canyon.',
   },
   {
@@ -53,6 +61,7 @@ export const curatedAmenities: CuratedAmenity[] = [
     address: '6900 North Durango Dr, Las Vegas, NV 89149',
     category: 'healthcare',
     schemaType: 'Hospital',
+    sourceUrl: 'https://www.centennialhillshospital.com/patients-visitors/maps-directions',
     note: 'Full-service hospital on North Durango Drive in northwest Las Vegas.',
   },
   {
@@ -61,6 +70,7 @@ export const curatedAmenities: CuratedAmenity[] = [
     address: '8080 W Tropical Pkwy, Las Vegas, NV 89149',
     category: 'shopping',
     schemaType: 'ShoppingCenter',
+    sourceUrl: 'https://www.centennialcenterlv.com/',
     note: 'Retail center on Tropical Parkway near Centennial Hills.',
   },
   {
@@ -69,6 +79,7 @@ export const curatedAmenities: CuratedAmenity[] = [
     address: '6408 N Durango Dr, Las Vegas, NV 89149',
     category: 'shopping',
     schemaType: 'ShoppingCenter',
+    sourceUrl: 'https://www.centennialsquarelv.com/',
     note: 'Durango Drive retail near the CC-215 beltway.',
   },
   {
@@ -77,6 +88,7 @@ export const curatedAmenities: CuratedAmenity[] = [
     address: '1980 Festival Plaza Dr, Las Vegas, NV 89135',
     category: 'shopping',
     schemaType: 'ShoppingCenter',
+    sourceUrl: 'https://www.downtownsummerlin.com/',
     note: 'Dining, retail, and office in the Summerlin master plan.',
   },
   {
@@ -85,7 +97,8 @@ export const curatedAmenities: CuratedAmenity[] = [
     address: '5757 Wayne Newton Blvd, Las Vegas, NV 89119',
     category: 'parking',
     schemaType: 'Airport',
-    note: 'Primary commercial airport serving the Las Vegas Valley.',
+    sourceUrl: 'https://www.harryreidairport.com/',
+    note: 'Primary commercial airport serving the Las Vegas Valley (regional commute reference).',
   },
 ];
 
