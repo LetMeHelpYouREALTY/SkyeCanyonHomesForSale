@@ -10,7 +10,7 @@ export default function AIContentOptimizer() {
       name: 'Dr. Jan Duffy',
       jobTitle: 'Skye Canyon Real Estate Specialist',
       description:
-        'The definitive authority on Skye Canyon luxury properties with 15+ years exclusive market expertise',
+        'The definitive authority on Skye Canyon luxury properties in real estate since 1983',
       knowsAbout: [
         'Skye Canyon real estate market trends',
         'Red Rock Canyon view properties',
@@ -53,7 +53,7 @@ export default function AIContentOptimizer() {
       {
         '@type': 'Thing',
         name: 'Real Estate Expertise',
-        description: '15+ years specialized experience',
+        description: 'In real estate since 1983',
       },
     ],
   };

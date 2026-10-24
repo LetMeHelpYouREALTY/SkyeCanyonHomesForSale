@@ -9,15 +9,15 @@ export default function SkyeCanyonAuthority() {
   const credentials = [
     {
       icon: Award,
-      title: 'Skye Canyon Specialist Since 2009',
+      title: 'Skye Canyon Specialist, In Real Estate Since 1983',
       description:
-        '15+ years exclusively serving Skye Canyon residents with unmatched community expertise',
+        'In real estate since 1983, serving Skye Canyon residents with unmatched community expertise',
     },
     {
       icon: Users,
-      title: '150+ Skye Canyon Transactions',
+      title: '500+ Transactions',
       description:
-        '150+ Skye Canyon closings with a 89166 office at the monument gate',
+        '500+ closings with a 89166 office at the monument gate',
     },
     {
       icon: TrendingUp,
@@ -84,12 +84,12 @@ export default function SkyeCanyonAuthority() {
             </h3>
             <div className="space-y-4 text-gray-600">
               <p>
-                Dr. Jan Duffy has focused on Skye Canyon since 2009 from the office at 10111 W.
+                Dr. Jan Duffy has been in real estate since 1983 and focuses on Skye Canyon from the office at 10111 W.
                 Skye Canyon Park Drive. She represents buyers and sellers on live MLS, new
                 construction, and resale in zip 89166.
               </p>
               <p>
-                With a Doctorate in Business Administration and 150+ Skye Canyon closings, she pulls
+                With a Ph.D. in Research and 500+ closings, she pulls
                 current comps instead of stale portal averages. Call {siteConfig.phone} or read
                 Google reviews before you tour.
               </p>

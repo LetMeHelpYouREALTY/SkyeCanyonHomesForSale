@@ -4,7 +4,6 @@
 # TEAM
     Dr. Jan Duffy -- Real Estate Agent -- Las Vegas, Nevada
     Site: https://skyecanyonhomesforsale.com
-    License: S.0197614
     Speciality: Skye Canyon luxury homes and Las Vegas real estate
 
 # TECHNOLOGY COLOPHON

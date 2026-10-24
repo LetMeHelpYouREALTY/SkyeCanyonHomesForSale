@@ -15,16 +15,12 @@ export default function HeroSection() {
     >
       <div className="flex flex-wrap justify-center gap-8 mb-10">
         <div className="text-center">
-          <div className="text-3xl font-bold">{siteConfig.opened.year}</div>
-          <div className="text-sm text-white/80">Google Business Profile</div>
+          <div className="text-3xl font-bold">Since 1983</div>
+          <div className="text-sm text-white/80">In real estate</div>
         </div>
         <div className="text-center">
           <div className="text-3xl font-bold">{siteConfig.address.zip}</div>
           <div className="text-sm text-white/80">Skye Canyon office</div>
-        </div>
-        <div className="text-center">
-          <div className="text-3xl font-bold">{siteConfig.license}</div>
-          <div className="text-sm text-white/80">Nevada license</div>
         </div>
       </div>
 
@@ -49,9 +45,6 @@ export default function HeroSection() {
         />
       </div>
 
-      <p className="text-sm text-white/70 mb-3">
-        {siteConfig.brokerage} &bull; License {siteConfig.license}.LLC
-      </p>
       <p className="text-sm text-white/80">
         <a
           href={siteConfig.googleMapsUrl}

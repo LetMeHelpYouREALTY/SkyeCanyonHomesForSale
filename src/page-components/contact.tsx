@@ -105,7 +105,7 @@ export default function Contact() {
                     <ul className="space-y-3 text-gray-600">
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
-                        {siteConfig.opened.label} at this 89166 Google Business Profile
+                        In real estate since 1983
                       </li>
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
@@ -114,10 +114,6 @@ export default function Contact() {
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
                         Live MLS comps before you tour or list
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">✓</span>
-                        Nevada Real Estate License #S.0197614
                       </li>
                     </ul>
                   </CardContent>

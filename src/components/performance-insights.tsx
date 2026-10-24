@@ -14,9 +14,9 @@ const performanceStats = [
   },
   {
     icon: Award,
-    metric: siteConfig.opened.label,
-    label: 'Google Business Profile',
-    detail: `Nevada license ${siteConfig.license}`,
+    metric: 'Since 1983',
+    label: 'In real estate',
+    detail: 'Licensed Nevada REALTOR®',
   },
   {
     icon: MapPin,

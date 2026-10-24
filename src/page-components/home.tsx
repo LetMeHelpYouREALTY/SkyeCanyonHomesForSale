@@ -304,7 +304,7 @@ export default function Home() {
               </a>
             </div>
             <p className="text-sm text-blue-200 mt-4">
-              {siteConfig.address.formatted} &bull; {siteConfig.brokerage}
+              {siteConfig.address.formatted}
             </p>
           </div>
         </section>

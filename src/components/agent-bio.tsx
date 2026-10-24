@@ -36,7 +36,7 @@ export default function AgentBio() {
                 REALTOR® | Skye Canyon Specialist
               </div>
               <div className="text-gray-600 mb-4">
-                Licensed in Nevada | License# {siteConfig.license}
+                Top 1% Las Vegas REALTOR® | In real estate since 1983
               </div>
             </div>
 
@@ -60,9 +60,8 @@ export default function AgentBio() {
                 <h3 className="font-semibold text-gray-900 mb-2">Professional Credentials</h3>
                 <h4 className="font-medium text-gray-700 mb-2">Education & Licensing</h4>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Nevada Real Estate License {siteConfig.license}</li>
+                  <li>• Licensed Nevada REALTOR®</li>
                   <li>• Graduate, REALTOR® Institute (GRI)</li>
-                  <li>• {siteConfig.brokerage}</li>
                 </ul>
               </div>
               <div>

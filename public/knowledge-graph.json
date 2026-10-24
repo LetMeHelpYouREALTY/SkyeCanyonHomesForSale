@@ -6,7 +6,7 @@
       "@id": "https://skyecanyonhomesforsale.com/#person",
       "name": "Dr. Jan Duffy",
       "jobTitle": "REALTOR®",
-      "description": "Leading Skye Canyon real estate specialist in Las Vegas, Nevada with 15+ years experience in luxury guard-gated communities.",
+      "description": "Leading Skye Canyon real estate specialist in Las Vegas, Nevada in real estate since 1983, with expertise in luxury guard-gated communities.",
       "url": "https://skyecanyonhomesforsale.com",
       "image": "https://skyecanyonhomesforsale.com/images/dr-jan-duffy.jpg",
       "hasCredential": {
@@ -75,7 +75,7 @@
       "serviceArea": "Skye Canyon, Las Vegas, Nevada 89166",
       "specialization": "Luxury Guard-Gated Communities",
       "yearsExperience": "15",
-      "transactionCount": "150+",
+      "transactionCount": "500+",
       "averagePrice": "$750000",
       "languages": ["English"],
       "certifications": [

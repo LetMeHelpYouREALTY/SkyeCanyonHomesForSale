@@ -17,8 +17,8 @@ export default function Footer() {
           <div>
             <div className="text-2xl font-bold mb-4">{siteConfig.businessName}</div>
             <p className="text-gray-400 mb-4">
-              {siteConfig.name} at {siteConfig.brokerage}. Skye Canyon homes in Las Vegas NV{' '}
-              {siteConfig.address.zip}. Nevada License {siteConfig.license}.
+              {siteConfig.name}. Skye Canyon homes in Las Vegas NV{' '}
+              {siteConfig.address.zip}.
             </p>
             <div className="flex space-x-4">
               <a
@@ -128,10 +128,6 @@ export default function Footer() {
                 <span className="mr-3">📍</span>
                 <span>{siteConfig.address.formatted}</span>
               </div>
-              <div className="flex items-center">
-                <span className="mr-3">🆔</span>
-                <span>Nevada License# {siteConfig.license}</span>
-              </div>
             </div>
 
             <div className="mt-6 pt-4 border-t border-gray-600">
@@ -201,6 +197,9 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>
             &copy; 2026 {siteConfig.businessName}. All rights reserved. | {siteConfig.name}
+          </p>
+          <p className="text-sm mt-2">
+            Berkshire Hathaway HomeServices Nevada Properties since September 2008 · License S.0197614.LLC
           </p>
           <p className="text-sm mt-2">
             <a href="/privacy-policy" className="hover:text-white transition-colors">

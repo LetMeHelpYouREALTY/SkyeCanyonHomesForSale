@@ -17,7 +17,7 @@ const pages: Record<string, PageSeoEntry> = {
   '/about': {
     title: 'About Dr. Jan Duffy | Skye Canyon REALTOR® Las Vegas NV 89166',
     description:
-      'Dr. Jan Duffy is a Skye Canyon REALTOR® with BHHS Nevada Properties. Luxury, new construction, and resale in Las Vegas NV 89166.',
+      'Dr. Jan Duffy is a Skye Canyon REALTOR®, in real estate since 1983. Luxury, new construction, and resale in Las Vegas NV 89166.',
     path: '/about',
   },
   '/contact': {

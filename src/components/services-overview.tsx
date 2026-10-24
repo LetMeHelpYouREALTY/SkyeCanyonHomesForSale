@@ -95,7 +95,7 @@ export default function ServicesOverview() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Buyer, seller, new construction, and relocation help for Skye Canyon and northwest Las
-            Vegas NV 89166 — Google Business Profile {siteConfig.opened.label.toLowerCase()}.
+            Vegas NV 89166 — from Dr. Jan Duffy, in real estate since 1983.
           </p>
           <HeadingImage
             {...sectionImages.clubhouse}
