@@ -1,4 +1,5 @@
 import RealScoutListings from '@/components/realscout-listings';
+import { CalendlyAfterListings } from '@/components/calendly-widget';
 import HeadingImage from '@/components/heading-image';
 import { sectionImages } from '@/data/section-images';
 
@@ -27,6 +28,7 @@ export default function HyperlocalListings({
           className="w-full h-52 md:h-64 object-cover rounded-xl mb-8"
         />
         <RealScoutListings className="w-full" variant="all-properties" />
+        <CalendlyAfterListings />
       </div>
     </section>
   );

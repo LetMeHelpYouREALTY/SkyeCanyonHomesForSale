@@ -1,7 +1,7 @@
 'use client';
 
 import AgentBio from '@/components/agent-bio';
-import { CalendlyPopupButton } from '@/components/calendly-widget';
+import { CalendlyPopupButton, CalendlyAfterListings } from '@/components/calendly-widget';
 import CallToAction from '@/components/call-to-action';
 import ComprehensiveSchemaMarkup from '@/components/comprehensive-schema';
 import FAQSection from '@/components/faq-section';
@@ -95,6 +95,7 @@ export default function Home() {
               className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
             />
             <RealScoutListings className="w-full" />
+            <CalendlyAfterListings />
           </div>
         </section>
 

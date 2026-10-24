@@ -3,6 +3,7 @@
 import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
 import RealScoutListings from '@/components/realscout-listings';
+import { CalendlyAfterListings } from '@/components/calendly-widget';
 import RelatedSearches from '@/components/related-searches';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
@@ -41,6 +42,7 @@ export default function SkyeCanyonGuide() {
               className="w-full h-52 object-cover rounded-xl mb-8"
             />
             <RealScoutListings className="w-full" variant="all-properties" />
+            <CalendlyAfterListings />
           </div>
         </section>
 

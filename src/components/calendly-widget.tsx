@@ -1,8 +1,8 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
-
-const CALENDLY_URL = 'https://calendly.com/drjanduffy';
+import { calendlyUrlFor } from '@/lib/calendly';
 
 let calendlyScriptLoaded = false;
 
@@ -32,14 +32,34 @@ function loadCalendlyScript() {
  * Use on the Contact page to replace forms.
  */
 export function CalendlyInline({ className = '' }: { className?: string }) {
+  const pathname = usePathname() || '/';
+  const url = calendlyUrlFor(pathname, 'inline');
+  const parentRef = useRef<HTMLDivElement>(null);
+
+  // widget.js only auto-mounts inline widgets present at first load; mount explicitly
+  // so client-side navigation to the page still shows the scheduler.
   useEffect(() => {
     loadCalendlyScript();
-  }, []);
+    const parent = parentRef.current;
+    if (!parent) return;
+    const mount = () => {
+      const w = window as any;
+      if (!w.Calendly?.initInlineWidget) return false;
+      parent.innerHTML = '';
+      w.Calendly.initInlineWidget({ url, parentElement: parent });
+      return true;
+    };
+    if (mount()) return;
+    const interval = setInterval(() => {
+      if (mount()) clearInterval(interval);
+    }, 300);
+    return () => clearInterval(interval);
+  }, [url]);
 
   return (
     <div
-      className={`calendly-inline-widget ${className}`}
-      data-url={CALENDLY_URL}
+      ref={parentRef}
+      className={className}
       style={{ minWidth: '320px', height: '700px' }}
     />
   );
@@ -50,45 +70,43 @@ export function CalendlyInline({ className = '' }: { className?: string }) {
  * Add once in App.tsx for site-wide availability.
  */
 export function CalendlyPopupWidget() {
-  const initialized = useRef(false);
+  const pathname = usePathname() || '/';
 
+  // Rebuilt on each route change so the badge's event and utm_campaign match the page.
   useEffect(() => {
-    if (initialized.current) return;
     loadCalendlyScript();
 
-    // Wait for script to load, then initialize badge widget
     const initBadge = () => {
       const w = window as any;
-      if (w.Calendly?.initBadgeWidget) {
-        w.Calendly.initBadgeWidget({
-          url: CALENDLY_URL,
-          text: 'Schedule a Consultation',
-          color: '#1e40af',
-          textColor: '#ffffff',
-          branding: false,
-        });
-        initialized.current = true;
+      if (!w.Calendly?.initBadgeWidget) return false;
+      if (w.Calendly.destroyBadgeWidget) {
+        w.Calendly.destroyBadgeWidget();
+      } else {
+        document.querySelector('.calendly-badge-widget')?.remove();
       }
+      w.Calendly.initBadgeWidget({
+        url: calendlyUrlFor(pathname, 'badge'),
+        text: 'Schedule a Consultation',
+        color: '#1e40af',
+        textColor: '#ffffff',
+        branding: false,
+      });
+      return true;
     };
 
-    // Try immediately, then retry after script loads
-    initBadge();
+    if (initBadge()) return;
     const interval = setInterval(() => {
-      const w = window as any;
-      if (w.Calendly?.initBadgeWidget) {
-        initBadge();
-        clearInterval(interval);
-      }
+      if (initBadge()) clearInterval(interval);
     }, 500);
 
-    // Cleanup after 10s max
+    // Stop retrying after 10s
     const timeout = setTimeout(() => clearInterval(interval), 10000);
 
     return () => {
       clearInterval(interval);
       clearTimeout(timeout);
     };
-  }, []);
+  }, [pathname]);
 
   return null; // Badge widget is injected by Calendly into the DOM
 }
@@ -104,11 +122,15 @@ export function CalendlyPopupButton({
   text?: string;
   className?: string;
 }) {
+  const pathname = usePathname() || '/';
   const handleClick = () => {
     loadCalendlyScript();
+    const url = calendlyUrlFor(pathname, 'popup');
     const w = window as any;
     if (w.Calendly?.initPopupWidget) {
-      w.Calendly.initPopupWidget({ url: CALENDLY_URL });
+      w.Calendly.initPopupWidget({ url });
+    } else {
+      window.open(url, '_blank', 'noopener,noreferrer');
     }
   };
 
@@ -120,5 +142,31 @@ export function CalendlyPopupButton({
     >
       {text}
     </button>
+  );
+}
+
+/** Booking strip placed directly after a RealScout listings widget. */
+export function CalendlyAfterListings() {
+  const pathname = usePathname() || '/';
+  const url = calendlyUrlFor(pathname, 'after-listings');
+
+  return (
+    <div className="mx-auto mt-8 flex max-w-5xl flex-col items-center justify-between gap-4 rounded-lg border border-gray-200 bg-white px-6 py-5 sm:flex-row">
+      <p className="text-base text-gray-800">See a home you like? Pick a time with Dr. Jan Duffy.</p>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(event) => {
+          const w = window as any;
+          if (event.metaKey || event.ctrlKey || event.shiftKey || !w.Calendly?.initPopupWidget) return;
+          event.preventDefault();
+          w.Calendly.initPopupWidget({ url });
+        }}
+        className="inline-flex items-center justify-center rounded-lg bg-blue-800 px-6 py-3 font-semibold text-white hover:bg-blue-900"
+      >
+        Schedule time with me
+      </a>
+    </div>
   );
 }

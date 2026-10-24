@@ -4,6 +4,7 @@ import BackToTop from '@/components/back-to-top';
 import FAQSection from '@/components/faq-section';
 import NeighborhoodHeatmap from '@/components/neighborhood-heatmap';
 import RealScoutListings from '@/components/realscout-listings';
+import { CalendlyAfterListings } from '@/components/calendly-widget';
 import RelatedSearches from '@/components/related-searches';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
@@ -186,6 +187,7 @@ export default function NeighborhoodAnalysis() {
               />
             </div>
             <RealScoutListings variant="all-properties" />
+            <CalendlyAfterListings />
           </div>
         </section>
 

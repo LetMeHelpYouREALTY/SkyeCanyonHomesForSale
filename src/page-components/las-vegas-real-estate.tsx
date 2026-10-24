@@ -5,6 +5,7 @@ import FAQSection from '@/components/faq-section';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
+import { CalendlyAfterListings } from '@/components/calendly-widget';
 import RelatedSearches from '@/components/related-searches';
 import HeroSearchCtas from '@/components/hero-search-ctas';
 import PageHero from '@/components/sections/page-hero';
@@ -42,6 +43,7 @@ export default function LasVegasRealEstate() {
               className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
             />
             <RealScoutListings className="w-full" variant="all-properties" />
+            <CalendlyAfterListings />
           </div>
         </section>
 

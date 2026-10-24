@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import RealScoutListings from '@/components/realscout-listings';
+import { CalendlyAfterListings } from '@/components/calendly-widget';
 import RelatedSearches from '@/components/related-searches';
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
@@ -332,6 +333,7 @@ export default function PropertyDetail() {
             className="w-full h-56 object-cover rounded-xl mb-10"
           />
           <RealScoutListings className="w-full" variant="all-properties" />
+          <CalendlyAfterListings />
         </div>
       </section>
 

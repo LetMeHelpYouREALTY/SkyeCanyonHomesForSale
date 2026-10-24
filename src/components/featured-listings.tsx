@@ -1,5 +1,6 @@
 import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
+import { CalendlyAfterListings } from '@/components/calendly-widget';
 import { sectionImages } from '@/data/section-images';
 
 export default function FeaturedListings() {
@@ -37,6 +38,7 @@ export default function FeaturedListings() {
           className="w-full h-56 md:h-72 object-cover rounded-xl mb-8"
         />
         <RealScoutListings className="w-full shadow-lg rounded-xl" />
+        <CalendlyAfterListings />
 
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4 text-sm text-gray-600">
