@@ -16,6 +16,7 @@ import Breadcrumb from '@/components/breadcrumb';
 import FAQSection from '@/components/faq-section';
 import PerformanceInsights from '@/components/performance-insights';
 import RealScoutListings from '@/components/realscout-listings';
+import { CalendlyAfterListings } from '@/components/calendly-widget';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
@@ -157,6 +158,7 @@ export default function About() {
               className="w-full h-52 object-cover rounded-xl mb-8"
             />
             <RealScoutListings className="w-full" variant="all-properties" />
+            <CalendlyAfterListings />
           </div>
         </section>
 

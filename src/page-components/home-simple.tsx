@@ -3,6 +3,7 @@
 import GbpLocalSection from '@/components/gbp-local-section';
 import HeadingImage from '@/components/heading-image';
 import RealScoutListings from '@/components/realscout-listings';
+import { CalendlyAfterListings } from '@/components/calendly-widget';
 import PageHero from '@/components/sections/page-hero';
 import { siteConfig } from '@/config/site.config';
 import { getHeroImageProps } from '@/data/hero-images';
@@ -50,6 +51,7 @@ export default function HomeSimple() {
               </a>
             </div>
             <RealScoutListings className="w-full" />
+            <CalendlyAfterListings />
           </div>
         </section>
 

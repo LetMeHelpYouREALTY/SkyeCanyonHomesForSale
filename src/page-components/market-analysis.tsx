@@ -6,6 +6,7 @@ import FAQSection from '@/components/faq-section';
 import MarketIntelligence from '@/components/market-intelligence';
 import MarketStats from '@/components/market-stats';
 import RealScoutListings from '@/components/realscout-listings';
+import { CalendlyAfterListings } from '@/components/calendly-widget';
 import PageHero from '@/components/sections/page-hero';
 import { getHeroImageProps } from '@/data/hero-images';
 import GbpLocalSection from '@/components/gbp-local-section';
@@ -48,6 +49,7 @@ export default function MarketAnalysis() {
               className="w-full h-56 md:h-72 object-cover rounded-xl mb-10"
             />
             <RealScoutListings className="w-full" variant="all-properties" />
+            <CalendlyAfterListings />
           </div>
         </section>
 
