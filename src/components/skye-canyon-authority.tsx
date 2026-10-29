@@ -9,9 +9,9 @@ export default function SkyeCanyonAuthority() {
   const credentials = [
     {
       icon: Award,
-      title: 'Skye Canyon Specialist, In Real Estate Since 1983',
+      title: 'Skye Canyon Specialist, Licensed Since 2008',
       description:
-        'In real estate since 1983, serving Skye Canyon residents with unmatched community expertise',
+        'Licensed since 2008 · 35 years in Las Vegas, serving Skye Canyon residents with unmatched community expertise',
     },
     {
       icon: Users,
@@ -84,7 +84,7 @@ export default function SkyeCanyonAuthority() {
             </h3>
             <div className="space-y-4 text-gray-600">
               <p>
-                Dr. Jan Duffy has been in real estate since 1983 and focuses on Skye Canyon from the office at 10111 W.
+                Dr. Jan Duffy has been licensed since 2008, with 35 years in Las Vegas, and focuses on Skye Canyon from the office at 10111 W.
                 Skye Canyon Park Drive. She represents buyers and sellers on live MLS, new
                 construction, and resale in zip 89166.
               </p>

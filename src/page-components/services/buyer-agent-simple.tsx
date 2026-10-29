@@ -8,7 +8,7 @@ export default function BuyerAgentServicesSimple() {
       <ServiceHeroSimple
         heroKey="buyer-agent"
         title="Skye Canyon Expert Buyer Agent"
-        subtitle="In real estate since 1983, with Skye Canyon specialization, direct builder relationships and off-market access."
+        subtitle="Licensed since 2008 · 35 years in Las Vegas, with Skye Canyon specialization, direct builder relationships and off-market access."
       />
     </div>
   );

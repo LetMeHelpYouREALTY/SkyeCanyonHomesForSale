@@ -36,7 +36,7 @@ export default function AgentBio() {
                 REALTOR® | Skye Canyon Specialist
               </div>
               <div className="text-gray-600 mb-4">
-                Top 1% Las Vegas REALTOR® | In real estate since 1983
+                Las Vegas REALTOR® | Licensed since 2008 · 35 years in Las Vegas
               </div>
             </div>
 

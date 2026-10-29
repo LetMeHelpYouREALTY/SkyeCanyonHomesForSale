@@ -25,9 +25,9 @@ const performanceStats = [
   },
   {
     icon: Award,
-    metric: 'Top 1%',
-    label: 'Las Vegas REALTORS®',
-    trend: 'Consistent ranking',
+    metric: '5.0★',
+    label: 'Realtor.com (50 reviews)',
+    trend: 'Verified client reviews',
     color: 'text-yellow-600',
   },
 ];

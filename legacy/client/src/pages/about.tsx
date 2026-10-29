@@ -34,7 +34,7 @@ const achievements = [
   },
   {
     icon: TrendingUp,
-    title: 'Top 1% Agent',
+    title: '5.0★ on Realtor.com',
     description: 'Ranked in top 1% of Las Vegas REALTORS®',
   },
   {
@@ -130,7 +130,7 @@ export default function About() {
               'Desert Highlands Golf Course'
             ],
             award: [
-              'Top 1% Agent',
+              '5.0★ on Realtor.com',
               '98% Client Satisfaction',
               '150+ Homes Sold'
             ]

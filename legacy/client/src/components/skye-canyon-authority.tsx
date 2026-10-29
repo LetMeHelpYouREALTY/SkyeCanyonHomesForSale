@@ -24,7 +24,7 @@ export default function SkyeCanyonAuthority() {
     },
     {
       icon: Crown,
-      title: 'Top 1% REALTOR® Las Vegas',
+      title: 'REALTOR® Las Vegas',
       description:
         'Consistently ranked among the highest-performing real estate professionals in Nevada',
     },
