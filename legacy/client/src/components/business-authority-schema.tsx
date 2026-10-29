@@ -65,13 +65,6 @@ export default function BusinessAuthoritySchema() {
       'New Construction Partner - Toll Brothers',
       'New Construction Partner - Lennar',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '47',
-      bestRating: '5',
-      worstRating: '1',
-    },
     knowsAbout: [
       'Luxury Real Estate Sales',
       'New Construction Homes',

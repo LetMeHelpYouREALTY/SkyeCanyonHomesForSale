@@ -91,13 +91,6 @@ export default function EnhancedStructuredData() {
     openingHours: 'Mo-Fr 09:00-18:00, Sa 09:00-17:00, Su 11:00-16:00',
     priceRange: '$$$$',
     paymentAccepted: 'Cash, Check, Financing',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 
   const expertiseSchema = {

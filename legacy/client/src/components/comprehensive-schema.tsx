@@ -220,13 +220,6 @@ export default function ComprehensiveSchemaMarkup({
       postalCode: '89166',
       addressCountry: 'US',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 
   // Service Schema (dynamic based on page)
