@@ -15,8 +15,8 @@ export default function HeroSection() {
     >
       <div className="flex flex-wrap justify-center gap-8 mb-10">
         <div className="text-center">
-          <div className="text-3xl font-bold">Since 1983</div>
-          <div className="text-sm text-white/80">In real estate</div>
+          <div className="text-3xl font-bold">Since 2008</div>
+          <div className="text-sm text-white/80">Licensed</div>
         </div>
         <div className="text-center">
           <div className="text-3xl font-bold">{siteConfig.address.zip}</div>

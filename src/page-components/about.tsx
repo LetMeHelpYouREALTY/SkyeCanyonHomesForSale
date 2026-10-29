@@ -47,8 +47,8 @@ const achievements = [
   },
   {
     icon: Award,
-    title: 'Since 1983',
-    description: 'In real estate since 1983',
+    title: 'Since 2008',
+    description: 'Licensed since 2008 · 35 years in Las Vegas',
   },
 ];
 
@@ -66,7 +66,7 @@ export default function About() {
 
         <PageHero
           title="Meet Dr. Jan Duffy, REALTOR®"
-          subtitle="Skye Canyon REALTOR® for luxury, new construction, and resale in Las Vegas NV 89166. In real estate since 1983."
+          subtitle="Skye Canyon REALTOR® for luxury, new construction, and resale in Las Vegas NV 89166. Licensed since 2008 · 35 years in Las Vegas."
           {...getHeroImageProps('about')}
           minHeight="md"
         >
@@ -94,8 +94,8 @@ export default function About() {
                   Skye Canyon homes for sale in Las Vegas NV 89166
                 </p>
                 <p className="text-lg mb-8 text-gray-600 leading-relaxed">
-                  Dr. Jan Duffy is a Top 1% Las Vegas REALTOR® at {siteConfig.address.formatted},
-                  in real estate since 1983. She represents buyers and sellers on luxury, new construction, and resale homes
+                  Dr. Jan Duffy is a Las Vegas REALTOR® at {siteConfig.address.formatted},
+                  licensed since 2008 · 35 years in Las Vegas. She represents buyers and sellers on luxury, new construction, and resale homes
                   in Skye Canyon and northwest Las Vegas NV 89166.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -132,8 +132,8 @@ export default function About() {
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-xl border-2 border-realscout-blue">
-                  <div className="text-realscout-blue text-2xl font-bold">Since 1983</div>
-                  <div className="text-gray-600 text-sm font-medium">In real estate</div>
+                  <div className="text-realscout-blue text-2xl font-bold">Since 2008</div>
+                  <div className="text-gray-600 text-sm font-medium">Licensed</div>
                 </div>
               </div>
             </div>
@@ -214,8 +214,7 @@ export default function About() {
               <CardContent className="p-8">
                 <div className="prose max-w-none">
                   <p className="text-lg leading-relaxed mb-6">
-                    Dr. Jan Duffy is a Skye Canyon REALTOR®, licensed in Nevada and in real estate
-                    since 1983. Confirm current inventory on live MLS and read reviews on Google Maps.
+                    Dr. Jan Duffy is a Skye Canyon REALTOR®, licensed in Nevada and licensed since 2008 · 35 years in Las Vegas. Confirm current inventory on live MLS and read reviews on Google Maps.
                   </p>
                   <p className="text-lg leading-relaxed mb-6">
                     Specializing in luxury homes, golf course properties, and new construction within 
@@ -363,7 +362,7 @@ export default function About() {
             {
               question: "What are Dr. Jan Duffy's qualifications as a REALTOR®?",
               answer:
-                'Dr. Jan Duffy is a licensed Nevada REALTOR® and Graduate, REALTOR® Institute (GRI), in real estate since 1983. Her Skye Canyon office is at 10111 W Skye Canyon Park Dr.',
+                'Dr. Jan Duffy is a licensed Nevada REALTOR® and Graduate, REALTOR® Institute (GRI), licensed since 2008 · 35 years in Las Vegas. Her Skye Canyon office is at 10111 W Skye Canyon Park Dr.',
             },
             {
               question: 'Why choose Dr. Jan Duffy for Skye Canyon homes?',

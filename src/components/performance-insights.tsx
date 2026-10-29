@@ -14,7 +14,7 @@ const performanceStats = [
   },
   {
     icon: Award,
-    metric: 'Since 1983',
+    metric: 'Since 2008',
     label: 'In real estate',
     detail: 'Licensed Nevada REALTOR®',
   },

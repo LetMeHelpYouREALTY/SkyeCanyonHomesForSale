@@ -105,7 +105,7 @@ export default function Contact() {
                     <ul className="space-y-3 text-gray-600">
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
-                        In real estate since 1983
+                        Licensed since 2008 · 35 years in Las Vegas
                       </li>
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
