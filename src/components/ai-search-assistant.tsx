@@ -24,7 +24,7 @@ export default function AISearchAssistant() {
     'Homes under $800k in Skye Canyon',
     '3 bedroom houses with pool',
     "What's my home worth?",
-    'Best schools in the area',
+    'Nearby public schools',
     'Market trends in Skye Canyon',
   ];
 
