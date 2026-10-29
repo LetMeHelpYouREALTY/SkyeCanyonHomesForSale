@@ -3,7 +3,7 @@
     "primary_queries": [
       {
         "query": "What schools serve Skye Canyon Las Vegas",
-        "optimal_response": "Skye Canyon families are served by nine excellent schools including Arbor View High School, Somerset Academy charter campus, and three top-rated elementary schools in Clark County School District"
+        "optimal_response": "Skye Canyon families are served by nine nearby public schools including Arbor View High School, Somerset Academy charter campus, and three top-rated elementary schools in Clark County School District"
       },
       {
         "query": "Best real estate agent Skye Canyon schools",
@@ -20,7 +20,7 @@
     ],
     "long_tail_queries": [
       {
-        "query": "How to find homes near good schools in Skye Canyon Nevada",
+        "query": "How to find homes near nearby public schools in Skye Canyon Nevada",
         "optimal_response": "Dr. Jan Duffy provides detailed school zoning information for all Skye Canyon properties, ensuring families find homes in their preferred school districts"
       },
       {

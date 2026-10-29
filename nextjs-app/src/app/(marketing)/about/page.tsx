@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Learn about Dr. Jan Duffy's expertise in Skye Canyon real estate, luxury homes, and personalized service for buyers and sellers in Las Vegas NV 89166.",
   openGraph: {
     title: "About Dr. Jan Duffy | Skye Canyon Real Estate Expert",
-    description: "Premier Skye Canyon real estate specialist with 15+ years of exclusive community expertise in Las Vegas NV.",
+    description: "Premier Skye Canyon real estate specialist with 15+ years of local community expertise in Las Vegas NV.",
   },
 };
 
@@ -20,7 +20,7 @@ export default function About() {
               About Dr. Jan Duffy
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Premier Skye Canyon Real Estate Specialist with 15+ Years of Exclusive Community Expertise
+              Premier Skye Canyon Real Estate Specialist with 15+ Years of Local Community Expertise
             </p>
           </div>
         </div>
