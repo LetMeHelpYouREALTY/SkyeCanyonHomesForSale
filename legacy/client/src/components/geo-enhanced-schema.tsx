@@ -159,13 +159,6 @@ export default function GeoEnhancedSchema() {
           'Su 11:00-16:00',
         ],
         priceRange: '$$',
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.9',
-          reviewCount: '47',
-          bestRating: '5',
-          worstRating: '1',
-        },
       },
       {
         '@type': 'WebSite',

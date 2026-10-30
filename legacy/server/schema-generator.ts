@@ -166,13 +166,6 @@ export function generateSchemaMarkup(config: SchemaConfig = {}): string {
         name: 'Nevada Real Estate Division',
       },
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
     sameAs: [
       'https://www.facebook.com/DrJanDuffyRealtor',
       'https://www.linkedin.com/in/drjanduffy',
@@ -216,13 +209,6 @@ export function generateSchemaMarkup(config: SchemaConfig = {}): string {
       addressRegion: 'NV',
       postalCode: '89166',
       addressCountry: 'US',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
     },
   };
 
